@@ -22,10 +22,19 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/app-mixin.js' },
+    { src: '~/plugins/global-mixin.js' },
+
+    { src: '~/plugins/app/index.js', mode: 'client' },
+    { src: '~/plugins/utils.js', mode: 'client' },
+    
+    { src: '~/plugins/components/quill-editor.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    { path: '~/components', pathPrefix: false },
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -75,5 +84,25 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    extend(config, { isDev, isClient }) {
+      config.resolve.alias["vue"] = "vue/dist/vue.common"
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    },
+    plugins: [
+      new (require('webpack')).ProvidePlugin({
+        'window.Quill': 'quill/dist/quill.js',
+        'Quill': 'quill/dist/quill.js',
+      }),
+    ],
+  },
+  
+  server: {
+    host: "0.0.0.0",
+  },
 }
