@@ -26,6 +26,7 @@ pages.create = (name) => {
       
       selected: {},
       activeId: null,
+      editing: false,
     },
 
 

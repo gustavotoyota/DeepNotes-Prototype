@@ -12,6 +12,8 @@ export default {
   methods: {
 
     onPointerDown(event) {
+      $getters.currentPage.elems.editing = false
+
       if (event.button === 0 && !event.ctrlKey)
         $app.selection.clear()
 
@@ -19,10 +21,7 @@ export default {
     },
 
     onDoubleClick(event) {
-      const displayPos = $app.display.getMousePos(event)
-      const worldPos = $app.pages.displayToWorld($getters.currentPage, displayPos)
-
-      $app.notes.create(worldPos)
+      $app.creation.perform(event)
     },
 
   },

@@ -3,20 +3,23 @@
   <div :style="`position: absolute; width: 0; height: 0;
   left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
-    <div :id="`elem-${elem.id}`"
+    <v-sheet :id="`elem-${elem.id}`"
+    rounded elevation="6"
+    :color="isActive ? `light-blue darken-2` :
+      (isSelected ? `light-blue darken-4` : `grey darken-3`)"
     :style="`position: absolute;
-    border: 1px solid ${ isSelected ? 'blue' : 'white' };
-    background-color: #404040;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
     padding: 7px 9px`"
-    @pointerdown="onPointerDown">
+    @pointerdown="onPointerDown"
+    @dblclick="onDoubleClick">
 
       <quill-editor
+      ref="quillEditor"
       v-model="elem.content"
-      :options="editorOptions"/>
+      :options="editorOptions"
+      :disabled="!isActive || !page.elems.editing"/>
 
-    </div>
+    </v-sheet>
 
   </div>
     
@@ -49,10 +52,19 @@ export default {
   methods: {
 
     onPointerDown(event) {
+      if (this.elem.id != this.page.elems.activeId)
+        this.page.elems.editing = false
+
       $app.clickSelection.perform(this.elem, event)
 
-      if ($app.elems.isSelected(this.elem))
+      if ($app.elems.isSelected(this.elem)
+      && !this.page.elems.editing)
         $app.dragging.start(event)
+    },
+
+    onDoubleClick(event) {
+      if (event.button === 0)
+        $app.editing.start(this.elem)
     },
 
   },
@@ -61,6 +73,13 @@ export default {
 
   computed: {
 
+    page() {
+      return $getters.currentPage
+    },
+
+    isActive() {
+      return this.page.elems.activeId == this.elem.id
+    },
     isSelected() {
       return $app.elems.isSelected(this.elem)
     },
@@ -75,7 +94,7 @@ export default {
 .ql-editor {
   padding: 0 !important;
 
-  min-width: 15px;
+  min-width: 1px;
   width: max-content;
 }
 

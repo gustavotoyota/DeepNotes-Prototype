@@ -10,9 +10,12 @@ $app.pages = require('./pages/index')
 $app.elems = require('./pages/elems')
 $app.notes = require('./pages/notes')
 
-$app.zooming = require('./features/zooming')
-$app.panning = require('./features/panning')
-$app.dragging = require('./features/dragging')
+$app.zooming = require('./features/camera/zooming')
+$app.panning = require('./features/camera/panning')
+
+$app.creation = require('./features/elems/creation')
+$app.editing = require('./features/elems/editing')
+$app.dragging = require('./features/elems/dragging')
 
 $app.selection = require('./features/selection/selection')
 $app.clickSelection = require('./features/selection/click-selection')

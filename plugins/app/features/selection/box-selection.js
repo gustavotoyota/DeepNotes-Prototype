@@ -58,9 +58,9 @@ boxSelection.finish = (event) => {
       continue
 
     if ($app.elems.isSelected(elem))
-      $app.elems.unselect(elem)
+      $app.elems.removeFromSelection(elem)
     else
-      $app.elems.select(elem)
+      $app.elems.addToSelection(elem)
   }
 
   $state.boxSelection.active = false

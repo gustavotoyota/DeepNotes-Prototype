@@ -27,10 +27,10 @@ elems.getById = (id) => {
 
 
 
-elems.select = (elem) => {
+elems.addToSelection = (elem) => {
   $set($getters.currentPage.elems.selected, elem.id, true)
 }
-elems.unselect = (elem) => {
+elems.removeFromSelection = (elem) => {
   $delete($getters.currentPage.elems.selected, elem.id)
 }
 elems.isSelected = (elem) => {

@@ -5,6 +5,7 @@ export default async function ({ app }) {
       
       globalThis.$set = $nuxt.$set
       globalThis.$delete = $nuxt.$delete
+      globalThis.$nextTick = $nuxt.$nextTick
 
       globalThis.$store = $nuxt.$store
       globalThis.$getters = $store.getters
