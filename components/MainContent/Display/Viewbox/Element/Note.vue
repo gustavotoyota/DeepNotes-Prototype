@@ -69,6 +69,7 @@ export default {
       $app.clickSelection.perform(this.elem, event)
 
       if ($app.elems.isSelected(this.elem)
+      && this.elem.movable
       && !this.page.elems.editing)
         $app.dragging.start(event)
     },
