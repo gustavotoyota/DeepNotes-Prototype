@@ -5,11 +5,11 @@
 
     <v-sheet :id="`elem-${elem.id}`"
     rounded elevation="6"
-    :color="isActive ? `light-blue darken-2` :
-      (isSelected ? `light-blue darken-4` : `grey darken-3`)"
+    :color="isActive ? `grey darken-1` :
+      (isSelected ? `grey darken-2` : `grey darken-3`)"
     :style="`position: absolute;
     transform: translate(-50%, -50%);
-    padding: 7px 9px`"
+    padding: 9px 11px`"
     @pointerdown="onPointerDown"
     @dblclick="onDoubleClick">
 

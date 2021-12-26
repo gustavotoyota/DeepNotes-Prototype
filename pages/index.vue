@@ -2,45 +2,12 @@
 
   <v-app dark v-if="!!$state.project">
     
-    <v-app-bar app clipped-left clipped-right dense>
-      
-      <v-app-bar-title style="flex: none">
-        <div>DeepNotes</div>
-      </v-app-bar-title>
-      
-    </v-app-bar>
+    <MainMenu/>
+    <LeftSidebar/>
+    <MainContent/>
+    <RightSidebar/>
     
-    <v-navigation-drawer
-    app width="300"
-    permanent clipped touchless>
-    </v-navigation-drawer>
-    
-    <v-main>
-
-      <Display/>
-
-    </v-main>
-    
-    <v-navigation-drawer
-    app width="300" right
-    permanent clipped touchless>
-    </v-navigation-drawer>
-
-    <v-menu v-model="$state.popup.visible" absolute
-    :position-x="$state.popup.pos.x"
-    :position-y="$state.popup.pos.y">
-      <v-list dense>
-        <v-list-item @click="$app.creation.perform($state.popup.pos)">
-          <v-list-item-title>Note</v-list-item-title>
-        </v-list-item>
-        <v-list-item @click.prevent="">
-          <v-list-item-title>Container</v-list-item-title>
-        </v-list-item>
-        <v-list-item @click.prevent="">
-          <v-list-item-title>Arrow</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+    <ElemCreationPopup/>
 
   </v-app>
 
@@ -52,19 +19,58 @@ export default {
 </script>
 
 <style>
-  html, body, #__nuxt, #__layout {
-    height: 100%;
-  }
+html, body, #__nuxt, #__layout {
+  height: 100%;
+}
+
   
-  body {
-    margin: 0;
-  }
+html {
+  /* Hide scrollbar */
+  overflow-y: hidden;
 
-  * {
-    user-select: none;
-  }
+  /* Disable pull-to-refresh */
+  overscroll-behavior-y: none;
 
-  .v-list {
-    padding: 0;
-  }
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+}
+  
+body {
+  margin: 0;
+}
+
+* {
+  user-select: none;
+}
+
+
+
+
+/* List padding */
+
+.v-menu__content .v-list {
+  padding: 0 !important
+}
+
+
+
+
+/* Scrollbars */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #202020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #303030;
+  border: solid 1px #404040;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
 </style>
