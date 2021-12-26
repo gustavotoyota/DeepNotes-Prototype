@@ -47,23 +47,3 @@ pages.create = (name) => {
 
   return page
 }
-
-
-
-
-pages.worldToDisplay = (page, worldPos) => {
-  const displayRect = $app.display.getRect()
-
-  return {
-    x: displayRect.width / 2 + (worldPos.x - page.camera.pos.x) * page.camera.zoom,
-    y: displayRect.height / 2 + (worldPos.y - page.camera.pos.y) * page.camera.zoom,
-  }
-}
-pages.displayToWorld = (page, displayPos) => {
-  const displayRect = $app.display.getRect()
-
-  return {
-    x: page.camera.pos.x + (displayPos.x - displayRect.width / 2) / page.camera.zoom,
-    y: page.camera.pos.y + (displayPos.y - displayRect.height / 2) / page.camera.zoom,
-  }
-}

@@ -47,11 +47,13 @@ export default async function ({ app }) {
         $app.panning.update(event)
         $app.dragging.update(event)
         $app.boxSelection.update(event)
+        $app.resizing.update(event)
       },
       onPointerUp(event) {
         $app.panning.finish(event)
         $app.dragging.finish(event)
         $app.boxSelection.finish(event)
+        $app.resizing.finish(event)
       },
 
 

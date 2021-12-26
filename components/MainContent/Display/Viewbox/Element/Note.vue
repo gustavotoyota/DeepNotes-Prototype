@@ -8,6 +8,9 @@
     :color="isActive ? `grey darken-1` :
       (isSelected ? `grey darken-2` : `grey darken-3`)"
     :style="`position: absolute;
+    border-radius: 7px !important;
+    width: ${elem.size.x == null ? 'auto' : elem.size.x + 'px'};
+    height: ${elem.size.y == null ? 'auto' : elem.size.y + 'px'};
     display: flex; flex-direction: column;
     transform: translate(-50%, -50%)`"
     @pointerdown="onPointerDown">

@@ -13,7 +13,7 @@ boxSelection.start = (event) => {
   if (event.button !== 0)
     return
 
-  const displayPos = $app.display.getMousePos(event)
+  const displayPos = $app.coords.getDisplayPos(event)
 
   $state.boxSelection = {
     active: true,
@@ -27,7 +27,7 @@ boxSelection.update = (event) => {
   if (!$state.boxSelection.active)
     return
 
-  const displayPos = $app.display.getMousePos(event)
+  const displayPos = $app.coords.getDisplayPos(event)
 
   $state.boxSelection.endPos = $utils.shallowCopy(displayPos)
 }
@@ -36,8 +36,8 @@ boxSelection.finish = (event) => {
   if (!$state.boxSelection.active || event.button !== 0)
     return
 
-  const startPos = $app.display.toClient($state.boxSelection.startPos)
-  const endPos = $app.display.toClient($state.boxSelection.endPos)
+  const startPos = $app.coords.displayToClient($state.boxSelection.startPos)
+  const endPos = $app.coords.displayToClient($state.boxSelection.endPos)
 
   const topLeft = {
     x: Math.min(startPos.x, endPos.x),

@@ -14,19 +14,19 @@ dragging.start = (event) => {
   if (event.button !== 0)
     return
 
-  const displayPos = $app.display.getMousePos(event)
+  const clientPos = $app.coords.getClientPos(event)
 
   $state.dragging = {
     active: true,
 
-    currentPos: $utils.shallowCopy(displayPos),
+    currentPos: $utils.shallowCopy(clientPos),
   }
 }
 dragging.update = (event) => {
   if (!$state.dragging.active)
     return
 
-  const displayPos = $app.display.getMousePos(event)
+  const clientPos = $app.coords.getClientPos(event)
 
   const page = $getters.currentPage
 
@@ -34,12 +34,12 @@ dragging.update = (event) => {
     const elem = $app.elems.getById(elemId)
 
     if (elem.pos) {
-      elem.pos.x += (displayPos.x - $state.dragging.currentPos.x) / page.camera.zoom
-      elem.pos.y += (displayPos.y - $state.dragging.currentPos.y) / page.camera.zoom
+      elem.pos.x += (clientPos.x - $state.dragging.currentPos.x) / page.camera.zoom
+      elem.pos.y += (clientPos.y - $state.dragging.currentPos.y) / page.camera.zoom
     }
   }
 
-  $state.dragging.currentPos = $utils.shallowCopy(displayPos)
+  $state.dragging.currentPos = $utils.shallowCopy(clientPos)
 }
 dragging.finish = (event) => {
   if (!$state.dragging.active || event.button !== 0)

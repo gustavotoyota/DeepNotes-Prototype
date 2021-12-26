@@ -8,7 +8,7 @@
   width: 10px; height: 10px;
   transform: translate(-50%, -50%) ` +
   `scale(${1 / $getters.currentPage.camera.zoom})`"
-  @pointerdown.stop="">
+  @pointerdown.stop="onPointerDown">
   </div>
   
 </template>
@@ -18,6 +18,15 @@ export default {
 
   props: {
     side: { type: String },
+  },
+
+
+  methods: {
+
+    onPointerDown(event) {
+      $app.resizing.start(event, this.side)
+    },
+
   },
 
 }
