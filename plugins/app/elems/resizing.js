@@ -26,19 +26,11 @@ resizing.update = (event) => {
     return
 
   const elem = $getters.activeElem
-
-  const node = document.getElementById(`elem-${elem.id}`)
-  const clientRect = node.getBoundingClientRect()
+  const clientRect = $app.elems.getClientRect(elem)
 
   const result = {
-    start: {
-      x: clientRect.x,
-      y: clientRect.y,
-    },
-    end: {
-      x: clientRect.right,
-      y: clientRect.bottom,
-    },
+    start: { x: clientRect.x, y: clientRect.y },
+    end: { x: clientRect.right, y: clientRect.bottom },
   }
 
   if ($state.resizing.side.includes('w'))
@@ -49,6 +41,18 @@ resizing.update = (event) => {
     result.end.x = event.clientX
   if ($state.resizing.side.includes('s'))
     result.end.y = event.clientY
+
+  result.start = $app.coords.clientToWorld(result.start)
+  result.end = $app.coords.clientToWorld(result.end)
+
+  elem.pos = {
+    x: (result.start.x + result.end.x) / 2,
+    y: (result.start.y + result.end.y) / 2,
+  }
+  elem.size = {
+    x: result.end.x - result.start.x,
+    y: result.end.y - result.start.y,
+  }
 }
 
 resizing.finish = (event) => {

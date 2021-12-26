@@ -20,7 +20,7 @@ coords.getWorldPos = (event) => {
 
 
 coords.clientToDisplay = (clientPos) => {
-  const displayRect = $app.display.getRect()
+  const displayRect = $app.display.getClientRect()
 
   return {
     x: clientPos.x - displayRect.x,
@@ -28,7 +28,7 @@ coords.clientToDisplay = (clientPos) => {
   }
 }
 coords.displayToClient = (displayPos) => {
-  const displayRect = $app.display.getRect()
+  const displayRect = $app.display.getClientRect()
 
   return {
     x: displayPos.x + displayRect.x,
@@ -40,7 +40,7 @@ coords.displayToClient = (displayPos) => {
 
 
 coords.displayToWorld = (displayPos) => {
-  const displayRect = $app.display.getRect()
+  const displayRect = $app.display.getClientRect()
 
   const page = $getters.currentPage
 
@@ -50,7 +50,7 @@ coords.displayToWorld = (displayPos) => {
   }
 }
 coords.worldToDisplay = (worldPos) => {
-  const displayRect = $app.display.getRect()
+  const displayRect = $app.display.getClientRect()
 
   const page = $getters.currentPage
 

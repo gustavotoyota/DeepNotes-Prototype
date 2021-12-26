@@ -49,9 +49,7 @@ boxSelection.finish = (event) => {
   }
 
   for (const elem of $getters.currentPage.elems.list) {
-    const node = document.getElementById(`elem-${elem.id}`)
-
-    const clientRect = node.getBoundingClientRect()
+    const clientRect = $app.elems.getClientRect(elem)
 
     if (clientRect.left < topLeft.x || clientRect.top < topLeft.y
     || clientRect.right > bottomRight.x || clientRect.bottom > bottomRight.y)

@@ -3,6 +3,6 @@ const display = module.exports = {}
 
 
 
-display.getRect = () => {
+display.getClientRect = () => {
   return document.getElementById('display').getBoundingClientRect()
 }

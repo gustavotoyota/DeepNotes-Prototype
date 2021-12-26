@@ -30,6 +30,15 @@ elems.getIndexById = (id) => {
 
 
 
+elems.getNode = (elem) => {
+  return document.getElementById(`elem-${elem.id}`)
+}
+elems.getClientRect = (elem) => {
+  return $app.elems.getNode(elem).getBoundingClientRect()
+}
+
+
+
 elems.addToSelection = (elem) => {
   $set($getters.currentPage.elems.selected, elem.id, true)
 }
