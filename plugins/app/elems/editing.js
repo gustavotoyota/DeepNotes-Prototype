@@ -36,11 +36,11 @@ editing.stop = () => {
     return
   
   page.elems.editing = false
-
-  if (page.elems.activeId == null)
-    return
   
   const elem = $app.elems.getById(page.elems.activeId)
+  if (!elem)
+    return
+
   const quillEditors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)
 
   for (const quillEditor of quillEditors) {

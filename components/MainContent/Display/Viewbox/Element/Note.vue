@@ -36,6 +36,19 @@
         @focus="onEditorFocus"/>
       </div>
 
+      <div v-if="isSelected && elem.resizable"
+      style="position: absolute; pointer-events: none;
+      left: 0; right: 0; top: 0; bottom: 0">
+        <Handle style="left: 0%; top: 0%" side="nw"/>
+        <Handle style="left: 50%; top: 0%" side="n"/>
+        <Handle style="left: 100%; top: 0%" side="ne"/>
+        <Handle style="left: 0%; top: 50%" side="w"/>
+        <Handle style="left: 100%; top: 50%" side="e"/>
+        <Handle style="left: 0%; top: 100%" side="sw"/>
+        <Handle style="left: 50%; top: 100%" side="s"/>
+        <Handle style="left: 100%; top: 100%" side="se"/>
+      </div>
+
     </v-sheet>
 
   </div>

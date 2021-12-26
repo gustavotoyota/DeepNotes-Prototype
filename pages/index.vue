@@ -19,6 +19,11 @@ export default {
 </script>
 
 <style>
+* {
+  user-select: none;
+}
+
+
 html, body, #__nuxt, #__layout {
   height: 100%;
 }
@@ -37,10 +42,6 @@ html {
   
 body {
   margin: 0;
-}
-
-* {
-  user-select: none;
 }
 
 

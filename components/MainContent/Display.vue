@@ -2,7 +2,6 @@
 
   <div id="display"
   :style="`height: 100%;
-  position: relative;
   overflow: hidden`"
   @mousewheel="onMouseWheel"
   @pointerdown="onPointerDown">
