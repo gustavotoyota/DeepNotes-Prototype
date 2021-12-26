@@ -64,7 +64,7 @@ export default {
 
     onPointerDown(event) {
       if (this.elem.id != this.page.elems.activeId)
-        this.page.elems.editing = false
+        $app.editing.stop()
 
       $app.clickSelection.perform(this.elem, event)
 

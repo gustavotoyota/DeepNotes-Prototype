@@ -12,7 +12,7 @@ export default {
   methods: {
 
     onPointerDown(event) {
-      $getters.currentPage.elems.editing = false
+      $app.editing.stop()
 
       if (event.button === 0 && !event.ctrlKey)
         $app.selection.clear()

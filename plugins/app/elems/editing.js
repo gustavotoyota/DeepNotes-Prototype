@@ -14,6 +14,7 @@ editing.start = (elem, editorIndex) => {
 
   $app.selection.clear()
   $app.elems.addToSelection(elem)
+
   page.elems.activeId = elem.id
   page.elems.editing = true
 
@@ -22,6 +23,26 @@ editing.start = (elem, editorIndex) => {
     const quill = quillEditors[editorIndex ?? 1].__vue__.quill
 
     quill.focus()
-    quill.setSelection(0, Infinity)
+    quill.setSelection(0, Infinity, 'user')
   })
+}
+
+
+
+editing.stop = () => {
+  const page = $getters.currentPage
+
+  if (!page.elems.editing)
+    return
+  
+  page.elems.editing = false
+  
+  const elem = $app.elems.getById(page.elems.activeId)
+  const quillEditors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)
+
+  for (const quillEditor of quillEditors) {
+    const quill = quillEditor.__vue__.quill
+
+    quill.setSelection(0, 0, 'user')
+  }
 }
