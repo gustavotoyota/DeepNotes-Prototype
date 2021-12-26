@@ -4,6 +4,9 @@ const editing = module.exports = {}
 
 
 editing.start = (elem, editorIndex) => {
+  if (elem.readOnly)
+    return
+
   const page = $getters.currentPage
 
   if (page.elems.editing)

@@ -17,7 +17,7 @@
           <quill-editor
           v-model="elem.title"
           :options="editorOptions"
-          :disabled="!isEditing"/>
+          :disabled="!isEditing || elem.readOnly"/>
         </div>
 
         <v-divider/>
@@ -28,7 +28,7 @@
         <quill-editor
         v-model="elem.content"
         :options="editorOptions"
-        :disabled="!isEditing"/>
+        :disabled="!isEditing || elem.readOnly"/>
       </div>
 
     </v-sheet>
