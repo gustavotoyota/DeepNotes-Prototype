@@ -17,7 +17,7 @@
           <quill-editor
           v-model="elem.title"
           :options="editorOptions"
-          :disabled="!isActive || !page.elems.editing"/>
+          :disabled="!isEditing"/>
         </div>
 
         <v-divider/>
@@ -27,7 +27,7 @@
         <quill-editor
         v-model="elem.content"
         :options="editorOptions"
-        :disabled="!isActive || !page.elems.editing"/>
+        :disabled="!isEditing"/>
       </div>
 
     </v-sheet>
@@ -87,11 +87,14 @@ export default {
       return $getters.currentPage
     },
 
+    isSelected() {
+      return $app.elems.isSelected(this.elem)
+    },
     isActive() {
       return this.page.elems.activeId == this.elem.id
     },
-    isSelected() {
-      return $app.elems.isSelected(this.elem)
+    isEditing() {
+      return this.isActive && this.page.elems.editing
     },
 
   },
@@ -105,6 +108,10 @@ export default {
 
   min-width: calc(100% + 1px);
   width: max-content;
+}
+
+.ql-editor > * {
+  cursor: auto !important;
 }
 
 .ql-tooltip {
