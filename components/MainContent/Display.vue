@@ -32,16 +32,8 @@ export default {
 
   watch: {
 
-    '$getters.currentPage.camera.zoom'(value) {
-      if (!$getters.activeElem)
-        return
-
-      const tooltips = document.querySelectorAll(`#elem-${$getters.activeElem.id} .ql-tooltip`)
-      if (tooltips.length === 0)
-        return
-      
-      for (const tooltip of tooltips)
-        tooltip.style.transform = `scale(${1 / value})`
+    '$getters.currentPage.camera.zoom'() {
+      $app.tooltips.fix()
     },
 
   },

@@ -36,6 +36,9 @@ editing.stop = () => {
     return
   
   page.elems.editing = false
+
+  if (page.elems.activeId == null)
+    return
   
   const elem = $app.elems.getById(page.elems.activeId)
   const quillEditors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)

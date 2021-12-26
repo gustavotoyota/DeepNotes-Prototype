@@ -8,27 +8,32 @@
     :color="isActive ? `grey darken-1` :
       (isSelected ? `grey darken-2` : `grey darken-3`)"
     :style="`position: absolute;
+    display: flex; flex-direction: column;
     transform: translate(-50%, -50%)`"
     @pointerdown="onPointerDown">
 
       <div v-show="elem.hasTitle"
+      style="flex: none"
       @dblclick="onTitleDoubleClick">
-        <div style="padding: 9px 11px">
+        <div style="padding: 11px">
           <quill-editor
           v-model="elem.title"
           :options="editorOptions"
-          :disabled="!isEditing || elem.readOnly"/>
+          :disabled="!isEditing || elem.readOnly"
+          @focus="onEditorFocus"/>
         </div>
 
         <v-divider/>
       </div>
 
-      <div style="padding: 9px 11px"
+      <div style="padding: 11px; flex: 1; height: 0"
       @dblclick="onContentDoubleClick">
         <quill-editor
         v-model="elem.content"
         :options="editorOptions"
-        :disabled="!isEditing || elem.readOnly"/>
+        :disabled="!isEditing || elem.readOnly"
+        style="height: 100%"
+        @focus="onEditorFocus"/>
       </div>
 
     </v-sheet>
@@ -47,6 +52,8 @@ export default {
   created() {
     this.editorOptions = {
       theme: 'bubble',
+      
+      bounds: '#display',
 
       placeholder: '',
 
@@ -83,6 +90,11 @@ export default {
         $app.editing.start(this.elem, 1)
     },
 
+
+    onEditorFocus(editor) {
+      $app.tooltips.fix()
+    },
+
   },
 
 
@@ -109,10 +121,16 @@ export default {
 </script>
 
 <style>
+.quill-editor {
+  min-width: 1px;
+}
+
 .ql-editor {
   padding: 0 !important;
 
-  min-width: calc(100% + 1px);
+  min-width: 100%;
+  max-width: 100%;
+
   width: max-content;
 }
 

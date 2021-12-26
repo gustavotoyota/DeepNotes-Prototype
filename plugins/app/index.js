@@ -18,6 +18,7 @@ $app.creation = require('./elems/creation')
 $app.editing = require('./elems/editing')
 $app.dragging = require('./elems/dragging')
 $app.deleting = require('./elems/deleting')
+$app.tooltips = require('./elems/tooltips')
 
 $app.selection = require('./selection/selection')
 $app.clickSelection = require('./selection/click-selection')
