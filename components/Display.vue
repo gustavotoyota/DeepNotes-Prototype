@@ -33,7 +33,10 @@ export default {
   watch: {
 
     '$getters.currentPage.camera.zoom'(value) {
-      document.querySelector('.ql-tooltip').style.transform = `scale(${1 / value})`
+      const node = document.querySelector('.ql-tooltip')
+
+      if (node)
+        node.style.transform = `scale(${1 / value})`
     },
 
   },

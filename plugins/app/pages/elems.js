@@ -24,6 +24,9 @@ elems.create = (type, parent) => {
 elems.getById = (id) => {
   return $getters.currentPage.elems.list.find((elem) => elem.id == id)
 }
+elems.getIndexById = (id) => {
+  return $getters.currentPage.elems.list.findIndex((elem) => elem.id == id)
+}
 
 
 
@@ -35,4 +38,12 @@ elems.removeFromSelection = (elem) => {
 }
 elems.isSelected = (elem) => {
   return elem.id in $getters.currentPage.elems.selected
+}
+
+
+
+elems.delete = (elemId) => {
+  const index = $app.elems.getIndexById(elemId)
+
+  $delete($getters.currentPage.elems.list, index)
 }

@@ -3,9 +3,13 @@ export default async function ({ app }) {
     beforeCreate() {
       globalThis.$nuxt = this
       
+      globalThis.$nextTick = $nuxt.$nextTick
       globalThis.$set = $nuxt.$set
       globalThis.$delete = $nuxt.$delete
-      globalThis.$nextTick = $nuxt.$nextTick
+      globalThis.$assign = (target, source) => {
+        for (const key of Object.keys(source))
+          $set(target, key, source[key])
+      }
 
       globalThis.$store = $nuxt.$store
       globalThis.$getters = $store.getters
@@ -21,6 +25,8 @@ export default async function ({ app }) {
       document.addEventListener('pointerdown', this.onPointerDown, true)
       document.addEventListener('pointermove', this.onPointerMove)
       document.addEventListener('pointerup', this.onPointerUp)
+      
+      document.addEventListener('keydown', this.onKeyDown)
 
       $app.init()
     },
@@ -29,6 +35,8 @@ export default async function ({ app }) {
       document.removeEventListener('pointerdown', this.onPointerDown, true)
       document.removeEventListener('pointermove', this.onPointerMove)
       document.removeEventListener('pointerup', this.onPointerUp)
+      
+      document.removeEventListener('keydown', this.onKeyDown)
     },
 
     methods: {
@@ -44,6 +52,18 @@ export default async function ({ app }) {
         $app.panning.finish(event)
         $app.dragging.finish(event)
         $app.boxSelection.finish(event)
+      },
+
+
+
+      onKeyDown(event) {
+        if (event.target.nodeName === 'INPUT'
+        || event.target.nodeName === 'TEXTAREA')
+          return
+
+
+
+        $app.deleting.perform(event)
       },
 
     },

@@ -21,7 +21,7 @@ export default {
     },
 
     onDoubleClick(event) {
-      $app.creation.perform(event)
+      $app.popup.show(event)
     },
 
   },

@@ -10,16 +10,18 @@ $app.pages = require('./pages/index')
 $app.elems = require('./pages/elems')
 $app.notes = require('./pages/notes')
 
-$app.zooming = require('./features/camera/zooming')
-$app.panning = require('./features/camera/panning')
+$app.zooming = require('./camera/zooming')
+$app.panning = require('./camera/panning')
 
-$app.creation = require('./features/elems/creation')
-$app.editing = require('./features/elems/editing')
-$app.dragging = require('./features/elems/dragging')
+$app.popup = require('./elems/popup')
+$app.creation = require('./elems/creation')
+$app.editing = require('./elems/editing')
+$app.dragging = require('./elems/dragging')
+$app.deleting = require('./elems/deleting')
 
-$app.selection = require('./features/selection/selection')
-$app.clickSelection = require('./features/selection/click-selection')
-$app.boxSelection = require('./features/selection/box-selection')
+$app.selection = require('./selection/selection')
+$app.clickSelection = require('./selection/click-selection')
+$app.boxSelection = require('./selection/box-selection')
 
 
 
@@ -28,6 +30,7 @@ $app.init = () => {
   $app.panning.init()
   $app.dragging.init()
   $app.boxSelection.init()
+  $app.popup.init()
   
   $app.project.reset()
 }
