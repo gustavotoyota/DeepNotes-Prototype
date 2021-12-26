@@ -3,7 +3,7 @@ const editing = module.exports = {}
 
 
 
-editing.start = (elem) => {
+editing.start = (elem, editorIndex) => {
   const page = $getters.currentPage
 
   if (page.elems.editing)
@@ -15,7 +15,8 @@ editing.start = (elem) => {
   page.elems.editing = true
 
   $nextTick(() => {
-    const quill = document.querySelector(`#elem-${elem.id} .quill-editor`).__vue__.quill
+    const quillEditors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)
+    const quill = quillEditors[editorIndex ?? 1].__vue__.quill
 
     quill.focus()
     quill.setSelection(0, Infinity)

@@ -9,10 +9,10 @@
       (isSelected ? `grey darken-2` : `grey darken-3`)"
     :style="`position: absolute;
     transform: translate(-50%, -50%)`"
-    @pointerdown="onPointerDown"
-    @dblclick="onDoubleClick">
+    @pointerdown="onPointerDown">
 
-      <div v-if="elem.hasTitle">
+      <div v-show="elem.hasTitle"
+      @dblclick="onTitleDoubleClick">
         <div style="padding: 9px 11px">
           <quill-editor
           v-model="elem.title"
@@ -23,7 +23,8 @@
         <v-divider/>
       </div>
 
-      <div style="padding: 9px 11px">
+      <div style="padding: 9px 11px"
+      @dblclick="onContentDoubleClick">
         <quill-editor
         v-model="elem.content"
         :options="editorOptions"
@@ -72,9 +73,13 @@ export default {
         $app.dragging.start(event)
     },
 
-    onDoubleClick(event) {
+    onTitleDoubleClick(event) {
       if (event.button === 0)
-        $app.editing.start(this.elem)
+        $app.editing.start(this.elem, 0)
+    },
+    onContentDoubleClick(event) {
+      if (event.button === 0)
+        $app.editing.start(this.elem, 1)
     },
 
   },
