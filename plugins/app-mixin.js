@@ -61,8 +61,6 @@ export default async function ({ app }) {
         || event.target.nodeName === 'TEXTAREA')
           return
 
-
-
         $app.deleting.perform(event)
       },
 
