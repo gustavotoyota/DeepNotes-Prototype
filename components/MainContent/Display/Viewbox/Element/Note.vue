@@ -8,16 +8,27 @@
     :color="isActive ? `grey darken-1` :
       (isSelected ? `grey darken-2` : `grey darken-3`)"
     :style="`position: absolute;
-    transform: translate(-50%, -50%);
-    padding: 9px 11px`"
+    transform: translate(-50%, -50%)`"
     @pointerdown="onPointerDown"
     @dblclick="onDoubleClick">
 
-      <quill-editor
-      ref="quillEditor"
-      v-model="elem.content"
-      :options="editorOptions"
-      :disabled="!isActive || !page.elems.editing"/>
+      <div v-if="elem.hasTitle">
+        <div style="padding: 9px 11px">
+          <quill-editor
+          v-model="elem.title"
+          :options="editorOptions"
+          :disabled="!isActive || !page.elems.editing"/>
+        </div>
+
+        <v-divider/>
+      </div>
+
+      <div style="padding: 9px 11px">
+        <quill-editor
+        v-model="elem.content"
+        :options="editorOptions"
+        :disabled="!isActive || !page.elems.editing"/>
+      </div>
 
     </v-sheet>
 
@@ -89,5 +100,33 @@ export default {
 </script>
 
 <style>
+.ql-editor {
+  padding: 0 !important;
 
+  min-width: calc(100% + 1px);
+  width: max-content;
+}
+
+.ql-tooltip {
+  width: max-content;
+
+  z-index: 9999;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+li {
+  padding-left: 1em !important;
+}
+.ql-indent-1 {
+  padding-left: 2em !important;
+}
+.ql-indent-2 {
+  padding-left: 3em !important;
+}
+.ql-indent-3 {
+  padding-left: 4em !important;
+}
 </style>

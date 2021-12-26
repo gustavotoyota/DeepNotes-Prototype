@@ -15,7 +15,7 @@ editing.start = (elem) => {
   page.elems.editing = true
 
   $nextTick(() => {
-    const quill = document.getElementById(`elem-${elem.id}`).children[0].__vue__.quill
+    const quill = document.querySelector(`#elem-${elem.id} .quill-editor`).__vue__.quill
 
     quill.focus()
     quill.setSelection(0, Infinity)
