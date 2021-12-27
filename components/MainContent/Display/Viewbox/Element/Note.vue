@@ -27,7 +27,7 @@
           v-model="elem.title"
           :options="editorOptions"
           :disabled="!isEditing || elem.readOnly"
-          @focus="onEditorFocus"/>
+          @ready="onEditorReady"/>
         </div>
 
         <v-divider/>
@@ -40,7 +40,7 @@
         v-model="elem.content"
         :options="editorOptions"
         :disabled="!isEditing || elem.readOnly"
-        @focus="onEditorFocus"/>
+        @ready="onEditorReady"/>
       </div>
 
       <div v-if="isSelected && elem.resizable"
@@ -89,6 +89,16 @@ export default {
 
   methods: {
 
+    onEditorReady(quill) {
+      quill.on('selection-change', () => {
+        $app.tooltips.fix()
+      })
+    },
+
+
+
+
+
     onPointerDown(event) {
       if (this.elem.id != this.page.elems.activeId)
         $app.editing.stop()
@@ -110,11 +120,6 @@ export default {
     onContentDoubleClick(event) {
       if (event.button === 0)
         $app.editing.start(this.elem, 1)
-    },
-
-
-    onEditorFocus(editor) {
-      $app.tooltips.fix()
     },
 
   },
