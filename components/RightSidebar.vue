@@ -65,18 +65,6 @@
 
           <v-divider class="mt-4"/>
             
-          <div class="mx-5 mt-4">
-            <v-checkbox hide-details label="Horizontal scrollbars"
-            v-model="activeElem.horizontalScrollbars">
-            </v-checkbox>
-            
-            <v-checkbox hide-details label="Vertical scrollbars"
-            v-model="activeElem.verticalScrollbars">
-            </v-checkbox>
-          </div>
-
-          <v-divider class="mt-4"/>
-            
           <div class="mx-5"
           style="display: flex">
             <v-checkbox hide-details label="Wrap text"

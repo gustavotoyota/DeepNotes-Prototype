@@ -22,9 +22,6 @@ notes.create = (pos) => {
     autoWidth: true,
     autoHeight: true,
 
-    horizontalScrollbars: true,
-    verticalScrollbars: true,
-
     wrapText: true,
     readOnly: false,
   })
