@@ -4,8 +4,10 @@ globalThis.$app = {}
 
 
 $app.project = require('./project')
+
 $app.display = require('./display')
 $app.coords = require('./coords')
+$app.sizes = require('./sizes')
 
 $app.pages = require('./pages/index')
 $app.elems = require('./pages/elems')

@@ -3,7 +3,7 @@
   <div id="display"
   :style="`height: 100%;
   overflow: hidden`"
-  @mousewheel="onMouseWheel"
+  @wheel="onWheel"
   @pointerdown="onPointerDown">
 
     <Background/>
@@ -19,7 +19,7 @@ export default {
 
   methods: {
 
-    onMouseWheel(event) {
+    onWheel(event) {
       $app.zooming.perform(event)
     },
 
