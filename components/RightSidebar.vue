@@ -52,14 +52,16 @@
             
           <div class="mx-5"
           style="display: flex">
-            <v-checkbox hide-details label="Auto width"
-            style="flex: 1"
-            v-model="activeElem.autoWidth">
+            <v-checkbox hide-details
+            label="Auto width" style="flex: 1"
+            :input-value="activeElem.size.x == null"
+            @change="onAutoWidthChange">
             </v-checkbox>
             
-            <v-checkbox hide-details label="Auto height"
-            style="flex: 1"
-            v-model="activeElem.autoHeight">
+            <v-checkbox hide-details
+            label="Auto height" style="flex: 1"
+            :input-value="activeElem.size.y == null"
+            @change="onAutoHeightChange">
             </v-checkbox>
           </div>
 
@@ -95,6 +97,31 @@ export default {
 
     activeElem() {
       return $getters.activeElem
+    },
+
+  },
+
+
+
+  methods: {
+
+    onAutoWidthChange(value) {
+      if (value)
+        this.activeElem.size.x = null
+      else {
+        const clientRect = $app.elems.getClientRect(this.activeElem)
+
+        this.activeElem.size.x = clientRect.width / $getters.currentPage.camera.zoom
+      }
+    },
+    onAutoHeightChange(value) {
+      if (value)
+        this.activeElem.size.y = null
+      else {
+        const clientRect = $app.elems.getClientRect(this.activeElem)
+
+        this.activeElem.size.y = clientRect.height / $getters.currentPage.camera.zoom
+      }
     },
 
   },
