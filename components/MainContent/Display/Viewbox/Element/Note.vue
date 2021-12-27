@@ -10,7 +10,7 @@
     :style="`position: absolute;
     transform: translate(-50%, -50%);
     border-radius: 7px !important;
-    min-width: 23px; min-height: 41px;
+    min-width: 23px; min-height: 40px;
     width: ${elem.size.x == null ? 'auto' : elem.size.x + 'px'};
     height: ${elem.size.y == null ? 'auto' : elem.size.y + 'px'};
     display: flex; flex-direction: column`"
