@@ -47,3 +47,9 @@ pages.create = (name) => {
 
   return page
 }
+
+
+
+pages.getById = (pageId) => {
+  return $state.project.pages.list.find((page) => page.id == pageId)
+}
