@@ -1,28 +1,21 @@
 <template>
 
-  <div :style="`position: absolute; width: 0; height: 0;
-  left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
+  <div class="anchor"
+  :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
-    <v-sheet :id="`elem-${elem.id}`"
-    rounded elevation="6"
+    <v-sheet class="note"
+    :id="`elem-${elem.id}`" rounded elevation="6"
     :color="isActive ? `grey darken-1` :
       (isSelected ? `grey darken-2` : `grey darken-3`)"
-    :style="`position: absolute;
-    transform: translate(-50%, -50%);
-    border-radius: 7px !important;
-    min-width: 23px; min-height: 40px;
-    width: ${elem.size.x == null ? 'auto' : elem.size.x + 'px'};
+    :style="`width: ${elem.size.x == null ? 'auto' : elem.size.x + 'px'};
     height: ${elem.size.y == null ? 'auto' : elem.size.y + 'px'};
-    white-space: ${elem.wrapText ? 'normal' : 'nowrap'};
-    display: flex; flex-direction: column`"
+    white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
     @pointerdown="onPointerDown">
 
       <div v-show="elem.hasTitle"
-      style="flex: none;
-      max-height: 100%; white-space: inherit"
+      class="title-outer-div"
       @dblclick="onTitleDoubleClick">
-        <div style="padding: 11px;
-        height: 100%; white-space: inherit">
+        <div class="title-inner-div">
           <quill-editor
           v-model="elem.title"
           :options="editorOptions"
@@ -33,8 +26,7 @@
         <v-divider/>
       </div>
 
-      <div style="padding: 11px;
-      flex: 1; height: 0; white-space: inherit"
+      <div class="content-div"
       @dblclick="onContentDoubleClick">
         <quill-editor
         v-model="elem.content"
@@ -44,8 +36,7 @@
       </div>
 
       <div v-if="isSelected && elem.resizable"
-      style="position: absolute; pointer-events: none;
-      left: 0; right: 0; top: 0; bottom: 0">
+      class="handlers">
         <Handle style="left: 0%; top: 0%" side="nw"/>
         <Handle style="left: 50%; top: 0%" side="n"/>
         <Handle style="left: 100%; top: 0%" side="ne"/>
@@ -147,7 +138,48 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.anchor {
+  position: absolute; width: 0; height: 0;
+}
+
+.note {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 7px !important;
+  min-width: 23px; min-height: 40px;
+  display: flex; flex-direction: column;
+}
+
+.title-outer-div {
+  flex: none;
+  max-height: 100%;
+  white-space: inherit;
+}
+
+.title-inner-div {
+  padding: 11px;
+  height: 100%;
+  white-space: inherit;
+}
+
+.content-div {
+  padding: 11px;
+  flex: 1;
+  height: 0;
+  white-space: inherit;
+}
+
+.handlers {
+  position: absolute;
+  pointer-events: none;
+  
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
 .quill-editor {
   min-width: 1px;
 
@@ -156,11 +188,11 @@ export default {
   height: 100%;
 }
 
-.ql-container {
+.quill-editor /deep/ .ql-container {
   white-space: inherit;
 }
 
-.ql-editor {
+.quill-editor /deep/ .ql-editor {
   padding: 0 !important;
 
   min-width: 100%;
@@ -171,30 +203,30 @@ export default {
   white-space: inherit !important;
 }
 
-.ql-editor > * {
+.quill-editor /deep/ .ql-editor > * {
   cursor: auto !important;
 }
 
-.ql-tooltip {
+.quill-editor /deep/ .ql-tooltip {
   width: max-content;
 
   z-index: 9999;
 }
 
-ul {
+.quill-editor /deep/ ul {
   padding-left: 0 !important;
 }
 
-li {
+.quill-editor /deep/ li {
   padding-left: 1em !important;
 }
-.ql-indent-1 {
+.quill-editor /deep/ .ql-indent-1 {
   padding-left: 2em !important;
 }
-.ql-indent-2 {
+.quill-editor /deep/ .ql-indent-2 {
   padding-left: 3em !important;
 }
-.ql-indent-3 {
+.quill-editor /deep/ .ql-indent-3 {
   padding-left: 4em !important;
 }
 
@@ -202,9 +234,10 @@ li {
 
 /* Remove link before */
 
-a::before {
+.quill-editor /deep/ a::before {
   display: none;
-}a::after {
+}
+.quill-editor /deep/ a::after {
   display: none;
 }
 </style>
