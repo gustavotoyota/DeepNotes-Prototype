@@ -197,4 +197,14 @@ li {
 .ql-indent-3 {
   padding-left: 4em !important;
 }
+
+
+
+/* Remove link before */
+
+a::before {
+  display: none;
+}a::after {
+  display: none;
+}
 </style>

@@ -74,4 +74,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #404040;
 }
+
+
+
+
+/* Remove link underline */
+
+a {
+  text-decoration: none !important;
+}
 </style>
