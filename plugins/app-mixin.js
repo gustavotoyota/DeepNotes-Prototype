@@ -67,5 +67,23 @@ export default async function ({ app }) {
       },
 
     },
+
+    watch: {
+  
+      '$state.project': {
+        deep: true,
+        
+        handler() {
+          $state.storage.modified = true
+  
+          clearTimeout($state.storage.timeout)
+  
+          $state.storage.timeout = setTimeout(() => {
+            $app.storage.saveProject()
+          }, 1000)
+        },
+      },
+  
+    },
 	})
 }

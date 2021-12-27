@@ -5,6 +5,8 @@ globalThis.$app = {}
 
 $app.project = require('./project')
 
+$app.storage = require('./storage/storage')
+
 $app.display = require('./display')
 $app.coords = require('./coords')
 $app.sizes = require('./sizes')
@@ -38,5 +40,6 @@ $app.init = () => {
   $app.popup.init()
   $app.resizing.init()
   
+  $app.storage.reset()
   $app.project.reset()
 }
