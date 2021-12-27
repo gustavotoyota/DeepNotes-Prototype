@@ -5,11 +5,11 @@
 
     <v-sheet class="note"
     :id="`elem-${elem.id}`" rounded elevation="6"
-    :color="isActive ? `grey darken-1` :
-      (isSelected ? `grey darken-2` : `grey darken-3`)"
-    :style="`width: ${elem.size.x == null ? 'auto' : elem.size.x + 'px'};
-    height: ${elem.size.y == null ? 'auto' : elem.size.y + 'px'};
-    white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
+    :color="active ? `grey darken-1` :
+      (selected ? `grey darken-2` : `grey darken-3`)"
+    :style="`width: ${elem[sizeProp].x == null ? 'auto' : elem[sizeProp].x + 'px'}; ` +
+    `height: ${elem[sizeProp].y == null ? 'auto' : elem[sizeProp].y + 'px'}; ` +
+    `white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
     @pointerdown="onPointerDown">
 
       <div v-show="elem.hasTitle"
@@ -19,23 +19,24 @@
           <quill-editor
           v-model="elem.title"
           :options="editorOptions"
-          :disabled="!isEditing || elem.readOnly"
+          :disabled="!editing || elem.readOnly"
           @ready="onEditorReady"/>
         </div>
 
-        <v-divider/>
+        <v-divider v-if="!elem.collapsed"/>
       </div>
 
       <div class="content-div"
+      v-if="!elem.collapsed || !elem.hasTitle"
       @dblclick="onContentDoubleClick">
         <quill-editor
         v-model="elem.content"
         :options="editorOptions"
-        :disabled="!isEditing || elem.readOnly"
+        :disabled="!editing || elem.readOnly"
         @ready="onEditorReady"/>
       </div>
 
-      <div v-if="isSelected && elem.resizable"
+      <div v-if="selected && elem.resizable"
       class="handlers">
         <Handle style="left: 0%; top: 0%" side="nw"/>
         <Handle style="left: 50%; top: 0%" side="n"/>
@@ -123,14 +124,18 @@ export default {
       return $getters.currentPage
     },
 
-    isSelected() {
+    selected() {
       return $app.elems.isSelected(this.elem)
     },
-    isActive() {
+    active() {
       return this.page.elems.activeId == this.elem.id
     },
-    isEditing() {
-      return this.isActive && this.page.elems.editing
+    editing() {
+      return this.active && this.page.elems.editing
+    },
+
+    sizeProp() {
+      return this.elem.collapsed ? 'collapsedSize' : 'size'
     },
 
   },
@@ -145,7 +150,6 @@ export default {
 
 .note {
   position: absolute;
-  transform: translate(-50%, -50%);
   border-radius: 7px !important;
   min-width: 23px; min-height: 40px;
   display: flex; flex-direction: column;

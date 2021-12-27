@@ -14,7 +14,10 @@ notes.create = (pos) => {
     content: '',
 
     hasTitle: false,
+
     collapsible: false,
+    collapsed: false,
+    collapsedSize: { x: null, y: null },
 
     movable: true,
     resizable: true,

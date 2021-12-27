@@ -14,68 +14,6 @@
 
     
     <div style="flex: 1; overflow-y: auto" class="pb-6">
-        
-      <div class="mx-5"
-      style="display: flex">
-        <v-checkbox hide-details label="Has title"
-        style="flex: 1"
-        v-model="elem.hasTitle">
-        </v-checkbox>
-        
-        <v-checkbox hide-details label="Collapsible"
-        style="flex: 1"
-        v-model="elem.collapsible">
-        </v-checkbox>
-      </div>
-
-      <v-divider class="mt-4"/>
-        
-      <div class="mx-5"
-      style="display: flex">
-        <v-checkbox hide-details label="Movable"
-        style="flex: 1"
-        v-model="elem.movable">
-        </v-checkbox>
-        
-        <v-checkbox hide-details label="Resizable"
-        style="flex: 1"
-        v-model="elem.resizable">
-        </v-checkbox>
-      </div>
-
-      <v-divider class="mt-4"/>
-        
-      <div class="mx-5"
-      style="display: flex">
-        <v-checkbox hide-details
-        label="Auto width" style="flex: 1"
-        :input-value="elem.size.x == null"
-        @change="onAutoWidthChange">
-        </v-checkbox>
-        
-        <v-checkbox hide-details
-        label="Auto height" style="flex: 1"
-        :input-value="elem.size.y == null"
-        @change="onAutoHeightChange">
-        </v-checkbox>
-      </div>
-
-      <v-divider class="mt-4"/>
-        
-      <div class="mx-5"
-      style="display: flex">
-        <v-checkbox hide-details label="Wrap text"
-        style="flex: 1"
-        v-model="elem.wrapText">
-        </v-checkbox>
-        
-        <v-checkbox hide-details label="Read-only"
-        style="flex: 1"
-        v-model="elem.readOnly">
-        </v-checkbox>
-      </div>
-
-      <v-divider class="mt-4"/>
       
       <div class="mx-5 mt-5">
         <div class="body-2 grey--text text--lighten-1"
@@ -99,6 +37,79 @@
         </v-btn>
       </div>
 
+      <v-divider class="mt-6"/>
+        
+      <div class="mx-5"
+      style="display: flex">
+        <v-checkbox hide-details label="Has title"
+        style="flex: 1"
+        v-model="elem.hasTitle">
+        </v-checkbox>
+      </div>
+
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5"
+      style="display: flex">
+        <v-checkbox hide-details label="Collapsible"
+        style="flex: 1"
+        v-model="elem.collapsible">
+        </v-checkbox>
+        
+        <v-checkbox hide-details label="Collapsed"
+        style="flex: 1"
+        :disabled="!elem.collapsible"
+        v-model="elem.collapsed">
+        </v-checkbox>
+      </div>
+
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5"
+      style="display: flex">
+        <v-checkbox hide-details
+        label="Auto width" style="flex: 1"
+        :input-value="elem[sizeProp].x == null"
+        @change="onAutoWidthChange">
+        </v-checkbox>
+        
+        <v-checkbox hide-details
+        label="Auto height" style="flex: 1"
+        :input-value="elem[sizeProp].y == null"
+        @change="onAutoHeightChange">
+        </v-checkbox>
+      </div>
+
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5"
+      style="display: flex">
+        <v-checkbox hide-details label="Movable"
+        style="flex: 1"
+        v-model="elem.movable">
+        </v-checkbox>
+        
+        <v-checkbox hide-details label="Resizable"
+        style="flex: 1"
+        v-model="elem.resizable">
+        </v-checkbox>
+      </div>
+
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5"
+      style="display: flex">
+        <v-checkbox hide-details label="Wrap text"
+        style="flex: 1"
+        v-model="elem.wrapText">
+        </v-checkbox>
+        
+        <v-checkbox hide-details label="Read-only"
+        style="flex: 1"
+        v-model="elem.readOnly">
+        </v-checkbox>
+      </div>
+
     </div>
 
   </div>
@@ -112,6 +123,10 @@ export default {
 
     elem() {
       return $getters.activeElem
+    },
+
+    sizeProp() {
+      return this.elem.collapsed ? 'collapsedSize' : 'size'
     },
 
     recentPages() {
@@ -137,21 +152,32 @@ export default {
 
     onAutoWidthChange(value) {
       if (value)
-        this.elem.size.x = null
+        this.elem[this.sizeProp].x = null
       else {
         const clientRect = $app.elems.getClientRect(this.elem)
 
-        this.elem.size.x = clientRect.width / $getters.currentPage.camera.zoom
+        this.elem[this.sizeProp].x = clientRect.width / $getters.currentPage.camera.zoom
       }
     },
     onAutoHeightChange(value) {
       if (value)
-        this.elem.size.y = null
+        this.elem[this.sizeProp].y = null
       else {
         const clientRect = $app.elems.getClientRect(this.elem)
 
-        this.elem.size.y = clientRect.height / $getters.currentPage.camera.zoom
+        this.elem[this.sizeProp].y = clientRect.height / $getters.currentPage.camera.zoom
       }
+    },
+
+  },
+
+
+
+  watch: {
+
+    'elem.collapsible'(value) {
+      if (value != null && !value)
+        this.elem.collapsed = false
     },
 
   },
