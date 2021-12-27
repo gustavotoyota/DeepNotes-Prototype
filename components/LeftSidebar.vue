@@ -18,12 +18,14 @@
       
       <v-list dense style="flex: 1; overflow-y: auto">
         
-        <v-list-item @click.prevent=""
-        v-for="pageId of $state.project.pages.path" :key="pageId">
+        <v-list-item
+        v-for="(pageId, idx) of $state.project.pages.path" :key="pageId"
+        @click="onPageClick(idx)"
+        :input-value="idx === $state.project.pages.path.length - 1">
 
           <v-list-item-title class="body-2"
           style="word-break: break-all; white-space: normal">
-            {{ $state.project.pages.list.find((page) => page.id == pageId).name }}
+            {{ $app.pages.getById(pageId).name }}
           </v-list-item-title>
 
         </v-list-item>
@@ -38,6 +40,14 @@
 
 <script>
 export default {
+
+  methods: {
+
+    onPageClick(idx) {
+      $state.project.pages.path.splice(idx + 1)
+    },
+
+  },
 
 }
 </script>

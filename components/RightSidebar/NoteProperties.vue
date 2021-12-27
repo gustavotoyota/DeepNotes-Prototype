@@ -31,10 +31,9 @@
         </v-select>
 
         <Gap height="10px"/>
-          
-        <v-btn style="width: 100%">
-          Create new page
-        </v-btn>
+        
+        
+        <NewPageDialog :elem="elem"/>
       </div>
 
       <v-divider class="mt-6"/>

@@ -1,0 +1,90 @@
+<template>
+
+  <v-dialog max-width="280" v-model="active">
+
+
+    <template v-slot:activator="{ on }">
+      <v-btn style="width: 100%" v-on="on">
+        Create new page
+      </v-btn>
+    </template>
+
+
+
+    <v-form @submit.prevent="onSubmit">
+    
+      <v-card>
+
+        <v-card-title>
+          New Page
+        </v-card-title>
+
+        <v-card-text>
+
+          <v-text-field ref="name"
+          label="Page name"
+          v-model="name">
+          </v-text-field>
+
+        </v-card-text>
+
+        <v-divider/>
+
+        <v-card-actions>
+
+          <v-spacer/>
+
+          <v-btn color="primary" text type="submit">
+            Ok
+          </v-btn>
+
+          <v-btn color="primary" text @click="active = false">
+            Cancel
+          </v-btn>
+
+        </v-card-actions>
+
+      </v-card>
+
+    </v-form>
+
+  </v-dialog>
+
+</template>
+
+<script>
+export default {
+
+  props: {
+    elem: { type: Object },
+  },
+
+
+
+  data() {
+    return {
+      active: false,
+      name: '',
+    }
+  },
+
+
+
+  methods: {
+
+    onSubmit() {
+      this.active = false
+      
+      const page = $app.pages.create(this.name)
+
+      this.elem.linkedPage = page.id
+    },
+
+  },
+
+}
+</script>
+
+<style>
+
+</style>

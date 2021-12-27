@@ -42,6 +42,8 @@ pages.create = (name) => {
 
 
   $state.project.pages.list.push(page)
+  $state.project.pages.path.push(page.id)
+  $state.project.pages.recent.push(page.id)
 
 
 

@@ -14,8 +14,5 @@ project.reset = () => {
     },
   })
 
-  const mainPage = $app.pages.create('Main Page')
-
-  $state.project.pages.path.push(mainPage.id)
-  $state.project.pages.recent.push(mainPage.id)
+  $app.pages.create('Main Page')
 }
