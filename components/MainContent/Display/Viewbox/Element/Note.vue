@@ -13,31 +13,33 @@
     min-width: 23px; min-height: 40px;
     width: ${elem.size.x == null ? 'auto' : elem.size.x + 'px'};
     height: ${elem.size.y == null ? 'auto' : elem.size.y + 'px'};
+    white-space: ${elem.wrapText ? 'normal' : 'nowrap'};
     display: flex; flex-direction: column`"
     @pointerdown="onPointerDown">
 
       <div v-show="elem.hasTitle"
-      style="flex: none; max-height: 100%"
+      style="flex: none;
+      max-height: 100%; white-space: inherit"
       @dblclick="onTitleDoubleClick">
-        <div style="padding: 11px; height: 100%">
+        <div style="padding: 11px;
+        height: 100%; white-space: inherit">
           <quill-editor
           v-model="elem.title"
           :options="editorOptions"
           :disabled="!isEditing || elem.readOnly"
-          style="height: 100%"
           @focus="onEditorFocus"/>
         </div>
 
         <v-divider/>
       </div>
 
-      <div style="padding: 11px; flex: 1; height: 0"
+      <div style="padding: 11px;
+      flex: 1; height: 0; white-space: inherit"
       @dblclick="onContentDoubleClick">
         <quill-editor
         v-model="elem.content"
         :options="editorOptions"
         :disabled="!isEditing || elem.readOnly"
-        style="height: 100%"
         @focus="onEditorFocus"/>
       </div>
 
@@ -143,6 +145,14 @@ export default {
 <style>
 .quill-editor {
   min-width: 1px;
+
+  white-space: inherit;
+  
+  height: 100%;
+}
+
+.ql-container {
+  white-space: inherit;
 }
 
 .ql-editor {
@@ -152,6 +162,8 @@ export default {
   max-width: 100%;
 
   width: max-content;
+  
+  white-space: inherit !important;
 }
 
 .ql-editor > * {
