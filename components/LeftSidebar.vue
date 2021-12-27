@@ -10,7 +10,7 @@
       <v-toolbar dense style="flex: none">
 
         <v-toolbar-title>
-          <span style="position: relative; top: 2px">Page path</span>
+          <span style="position: relative; top: 2px">Page Path</span>
         </v-toolbar-title>
 
       </v-toolbar>
