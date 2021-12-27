@@ -8,21 +8,23 @@
     :color="isActive ? `grey darken-1` :
       (isSelected ? `grey darken-2` : `grey darken-3`)"
     :style="`position: absolute;
+    transform: translate(-50%, -50%);
     border-radius: 7px !important;
+    min-width: 23px; min-height: 41px;
     width: ${elem.size.x == null ? 'auto' : elem.size.x + 'px'};
     height: ${elem.size.y == null ? 'auto' : elem.size.y + 'px'};
-    display: flex; flex-direction: column;
-    transform: translate(-50%, -50%)`"
+    display: flex; flex-direction: column`"
     @pointerdown="onPointerDown">
 
       <div v-show="elem.hasTitle"
-      style="flex: none"
+      style="flex: none; max-height: 100%"
       @dblclick="onTitleDoubleClick">
-        <div style="padding: 11px">
+        <div style="padding: 11px; height: 100%">
           <quill-editor
           v-model="elem.title"
           :options="editorOptions"
           :disabled="!isEditing || elem.readOnly"
+          style="height: 100%"
           @focus="onEditorFocus"/>
         </div>
 
@@ -96,6 +98,8 @@ export default {
       && !this.page.elems.editing)
         $app.dragging.start(event)
     },
+
+
 
     onTitleDoubleClick(event) {
       if (event.button === 0)
