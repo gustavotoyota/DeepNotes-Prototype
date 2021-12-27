@@ -30,5 +30,7 @@ clickSelection.perform = (elem, event) => {
     $set(page.elems.selected, elem.id, true)
 
     page.elems.activeId = elem.id
+
+    $app.elems.bringToTop(elem)
   }
 }

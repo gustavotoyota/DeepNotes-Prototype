@@ -56,3 +56,11 @@ elems.delete = (elemId) => {
 
   $delete($getters.currentPage.elems.list, index)
 }
+
+
+
+elems.bringToTop = (elem) => {
+  $app.elems.delete(elem.id)
+
+  $getters.currentPage.elems.list.push(elem)
+}
