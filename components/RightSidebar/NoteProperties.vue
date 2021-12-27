@@ -156,7 +156,7 @@ export default {
       else {
         const clientRect = $app.elems.getClientRect(this.elem)
 
-        this.elem[this.sizeProp].x = clientRect.width / $getters.currentPage.camera.zoom
+        this.elem[this.sizeProp].x = $app.sizes.screenToWorld1D(clientRect.width)
       }
     },
     onAutoHeightChange(value) {
@@ -165,7 +165,7 @@ export default {
       else {
         const clientRect = $app.elems.getClientRect(this.elem)
 
-        this.elem[this.sizeProp].y = clientRect.height / $getters.currentPage.camera.zoom
+        this.elem[this.sizeProp].y = $app.sizes.screenToWorld1D(clientRect.height)
       }
     },
 
