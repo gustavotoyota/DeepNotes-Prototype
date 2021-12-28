@@ -9,3 +9,25 @@ selection.clear = () => {
   page.elems.selected = {}
   page.elems.activeId = null
 }
+
+
+
+selection.duplicate = () => {
+  const page = $getters.currentPage
+
+  for (const elemId of Object.keys(page.elems.selected)) {
+    const elem = $app.elems.getById(elemId)
+
+    const newElem = $utils.deepCopy(elem)
+    newElem.id = page.elems.nextId++
+    newElem.pos.x += 8
+    newElem.pos.y += 8
+    page.elems.list.push(newElem)
+
+    $app.elems.removeFromSelection(elem)
+    $app.elems.addToSelection(newElem)
+
+    if (elem.id == page.elems.activeId)
+      page.elems.activeId = newElem.id
+  }
+}

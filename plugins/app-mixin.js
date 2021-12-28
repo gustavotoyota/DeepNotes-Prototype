@@ -62,8 +62,14 @@ export default async function ({ app }) {
         if (event.target.nodeName === 'INPUT'
         || event.target.nodeName === 'TEXTAREA')
           return
+        
+        if (event.code === 'Delete')
+          $app.deleting.perform(event)
 
-        $app.deleting.perform(event)
+        if (event.code === 'KeyD' && event.ctrlKey) {
+          $app.selection.duplicate()
+          event.preventDefault()
+        }
       },
 
     },
