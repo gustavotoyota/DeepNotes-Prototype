@@ -10,6 +10,8 @@ project.reset = () => {
       nextId: 0,
 
       path: [],
+      depth: -1,
+
       recent: [],
     },
   })

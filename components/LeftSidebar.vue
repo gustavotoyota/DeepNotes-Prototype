@@ -21,7 +21,7 @@
         <v-list-item
         v-for="(pageId, idx) of $state.project.pages.path" :key="pageId"
         @click="onPageClick(idx)"
-        :input-value="idx === $state.project.pages.path.length - 1">
+        :input-value="idx === $state.project.pages.depth">
 
           <v-list-item-title class="body-2"
           style="word-break: break-all; white-space: normal">
@@ -44,7 +44,7 @@ export default {
   methods: {
 
     onPageClick(idx) {
-      $state.project.pages.path.splice(idx + 1)
+      $state.project.pages.depth = idx
     },
 
   },
