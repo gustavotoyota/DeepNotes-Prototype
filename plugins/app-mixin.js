@@ -73,6 +73,9 @@ export default async function ({ app }) {
 
         if (event.code === 'F2')
           $app.editing.start($getters.activeElem)
+
+        if (event.code === 'Backspace')
+          $app.pages.back()
       },
 
     },

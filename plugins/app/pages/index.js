@@ -62,3 +62,10 @@ pages.navigate = (pageId) => {
   $state.project.pages.path.push(pageId)
   $state.project.pages.recent.push(pageId)
 }
+
+
+
+pages.back = () => {
+  const pageId = $state.project.pages.path.pop()
+  $state.project.pages.recent.push(pageId)
+}
