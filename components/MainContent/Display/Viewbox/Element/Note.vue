@@ -16,9 +16,10 @@
 
       <div v-show="elem.hasTitle"
       class="title-outer-div"
+      @pointerdown="onTitlePointerDown"
       @dblclick="onTitleDoubleClick">
         <div class="title-inner-div">
-          <quill-editor
+          <quill-editor ref="title"
           v-model="elem.title"
           :options="editorOptions"
           :disabled="!editing || elem.readOnly"
@@ -30,8 +31,9 @@
 
       <div class="content-div"
       v-if="!elem.collapsed || !elem.hasTitle"
+      @pointerdown="onContentPointerDown"
       @dblclick="onContentDoubleClick">
-        <quill-editor
+        <quill-editor ref="content"
         v-model="elem.content"
         :options="editorOptions"
         :disabled="!editing || elem.readOnly"
@@ -117,6 +119,23 @@ export default {
         return
 
       $app.pages.navigate(this.elem.linkedPageId)
+    },
+
+
+
+    onTitlePointerDown(event) {
+      if (event.button === 0 && this.editing
+      && !event.target.isContentEditable) {
+        this.$refs.title.quill.focus()
+        event.preventDefault()
+      }
+    },
+    onContentPointerDown(event) {
+      if (event.button === 0 && this.editing
+      && !event.target.isContentEditable) {
+        this.$refs.content.quill.focus()
+        event.preventDefault()
+      }
     },
 
 
