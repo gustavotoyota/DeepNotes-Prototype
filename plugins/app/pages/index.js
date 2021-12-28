@@ -60,6 +60,11 @@ pages.getById = (pageId) => {
 
 pages.navigate = (pageId) => {
   $state.project.pages.path.push(pageId)
+
+  const pageIdx = $state.project.pages.recent.indexOf(pageId)
+  if (pageIdx >= 0)
+    $delete($state.project.pages.recent, pageIdx)
+
   $state.project.pages.recent.push(pageId)
 }
 

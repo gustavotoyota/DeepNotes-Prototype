@@ -131,7 +131,9 @@ export default {
     recentPages() {
       const recentPages = []
 
-      for (const recentPageId of $state.project.pages.recent) {
+      for (let i = $state.project.pages.recent.length - 1; i >= 0; --i) {
+        const recentPageId = $state.project.pages.recent[i]
+
         if (recentPageId == $getters.currentPage.id)
           continue
 
