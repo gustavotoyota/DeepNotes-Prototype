@@ -22,11 +22,12 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/app-mixin.js' },
-    { src: '~/plugins/global-mixin.js' },
-
+    { src: '~/plugins/global-mixin.js', mode: 'client' },
+    
     { src: '~/plugins/app/index.js', mode: 'client' },
     { src: '~/plugins/utils.js', mode: 'client' },
+
+    { src: '~/plugins/app-mixin.js', mode: 'client' },
     
     { src: '~/plugins/components/quill-editor.js', mode: 'client' },
   ],
