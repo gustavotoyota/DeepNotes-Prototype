@@ -7,8 +7,9 @@
   @pointerdown="onPointerDown">
 
     <Background/>
-    <Viewbox/>
+    <DisplayView/>
     <BoxSelection/>
+    <DisplayButtons/>
 
   </div>
 

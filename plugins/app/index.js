@@ -11,10 +11,11 @@ $app.display = require('./display')
 $app.coords = require('./coords')
 $app.sizes = require('./sizes')
 
-$app.pages = require('./pages/index')
+$app.pages = require('./pages/pages')
 $app.elems = require('./pages/elems')
 $app.notes = require('./pages/notes')
 
+$app.camera = require('./camera/camera')
 $app.zooming = require('./camera/zooming')
 $app.panning = require('./camera/panning')
 
