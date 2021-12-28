@@ -23,9 +23,6 @@ notes.create = (pos) => {
     movable: true,
     resizable: true,
 
-    autoWidth: true,
-    autoHeight: true,
-
     wrapText: true,
     readOnly: false,
   })
