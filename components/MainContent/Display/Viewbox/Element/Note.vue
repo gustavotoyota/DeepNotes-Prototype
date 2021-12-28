@@ -14,11 +14,7 @@
     @pointerdown="onPointerDown"
     @click="onClick">
 
-      <div style="
-      flex: none;
-      padding: 11px;
-      white-space: inherit;
-      "
+      <div class="content-0"
       @pointerdown="onContentPointerDown($event, 0)"
       @dblclick="onContentDoubleClick($event, 0)">
         <quill-editor ref="content0"
@@ -29,19 +25,10 @@
       </div>
 
       <div v-show="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')"
-      style="
-      flex: 1;
-      height: 0;
-      max-height: 100%;
-      white-space: inherit;
-      ">
-        <v-divider/>
+      class="content-1-outer">
+        <div class="rule"></div>
 
-        <div style="
-        padding: 11px;
-        height: 100%;
-        white-space: inherit;
-        "
+        <div class="content-1-inner"
         @pointerdown="onContentPointerDown($event, 1)"
         @dblclick="onContentDoubleClick($event, 1)">
           <quill-editor ref="content1"
@@ -204,6 +191,30 @@ export default {
   border-radius: 7px !important;
   min-width: 23px; min-height: 40px;
   display: flex; flex-direction: column;
+}
+
+.content-0 {
+  flex: none;
+  padding: 11px;
+  max-height: 100%;
+  white-space: inherit;
+}
+
+.rule {
+  height: 1px;
+  max-height: 100%;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.content-1-outer {
+  flex: 1;
+  height: 0;
+  white-space: inherit;
+}
+.content-1-inner {
+  padding: 11px;
+  height: 100%;
+  white-space: inherit;
 }
 
 .handlers {
