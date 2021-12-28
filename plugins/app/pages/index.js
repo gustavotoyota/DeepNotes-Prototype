@@ -59,6 +59,8 @@ pages.getById = (pageId) => {
 
 
 pages.navigate = (pageId) => {
+  $app.selection.clear()
+
   $state.project.pages.path.push(pageId)
 
   const pageIdx = $state.project.pages.recent.indexOf(pageId)

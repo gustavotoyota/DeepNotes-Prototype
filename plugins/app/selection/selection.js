@@ -6,6 +6,9 @@ const selection = module.exports = {}
 selection.clear = () => {
   const page = $getters.currentPage
 
+  if (!page)
+    return
+
   page.elems.selected = {}
   page.elems.activeId = null
 }
