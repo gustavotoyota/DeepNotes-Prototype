@@ -40,9 +40,9 @@
         
       <div class="mx-5 mt-4"
       style="display: flex">
-        <v-checkbox hide-details label="Has title"
+        <v-checkbox hide-details label="Has body"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        v-model="elem.hasTitle">
+        v-model="elem.hasBody">
         </v-checkbox>
       </div>
 

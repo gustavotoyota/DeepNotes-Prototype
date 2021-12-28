@@ -14,30 +14,42 @@
     @pointerdown="onPointerDown"
     @click="onClick">
 
-      <div v-show="elem.hasTitle"
-      class="title-outer-div"
-      @pointerdown="onTitlePointerDown"
-      @dblclick="onTitleDoubleClick">
-        <div class="title-inner-div">
-          <quill-editor ref="title"
-          v-model="elem.title"
+      <div style="
+      flex: none;
+      padding: 11px;
+      white-space: inherit;
+      "
+      @pointerdown="onContentPointerDown($event, 0)"
+      @dblclick="onContentDoubleClick($event, 0)">
+        <quill-editor ref="content0"
+        v-model="elem.content[0]"
+        :options="editorOptions"
+        :disabled="!editing || elem.readOnly"
+        @ready="onEditorReady"/>
+      </div>
+
+      <div v-show="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')"
+      style="
+      flex: 1;
+      height: 0;
+      max-height: 100%;
+      white-space: inherit;
+      ">
+        <v-divider/>
+
+        <div style="
+        padding: 11px;
+        height: 100%;
+        white-space: inherit;
+        "
+        @pointerdown="onContentPointerDown($event, 1)"
+        @dblclick="onContentDoubleClick($event, 1)">
+          <quill-editor ref="content1"
+          v-model="elem.content[1]"
           :options="editorOptions"
           :disabled="!editing || elem.readOnly"
           @ready="onEditorReady"/>
         </div>
-
-        <v-divider v-if="!elem.collapsed || elem.collapsedSize.y !== 'auto'"/>
-      </div>
-
-      <div class="content-div"
-      v-if="!elem.collapsed || !elem.hasTitle || elem.collapsedSize.y !== 'auto'"
-      @pointerdown="onContentPointerDown"
-      @dblclick="onContentDoubleClick">
-        <quill-editor ref="content"
-        v-model="elem.content"
-        :options="editorOptions"
-        :disabled="!editing || elem.readOnly"
-        @ready="onEditorReady"/>
       </div>
 
       <div v-if="selected && elem.resizable"
@@ -123,30 +135,16 @@ export default {
 
 
 
-    onTitlePointerDown(event) {
+    onContentPointerDown(event, idx) {
       if (event.button === 0 && this.editing
       && !event.target.isContentEditable) {
-        this.$refs.title.quill.focus()
+        this.$refs[`content${idx}`].quill.focus()
         event.preventDefault()
       }
     },
-    onContentPointerDown(event) {
-      if (event.button === 0 && this.editing
-      && !event.target.isContentEditable) {
-        this.$refs.content.quill.focus()
-        event.preventDefault()
-      }
-    },
-
-
-
-    onTitleDoubleClick(event) {
+    onContentDoubleClick(event, idx) {
       if (event.button === 0)
-        $app.editing.start(this.elem, 0)
-    },
-    onContentDoubleClick(event) {
-      if (event.button === 0)
-        $app.editing.start(this.elem, 1)
+        $app.editing.start(this.elem, idx)
     },
 
   },
@@ -206,25 +204,6 @@ export default {
   border-radius: 7px !important;
   min-width: 23px; min-height: 40px;
   display: flex; flex-direction: column;
-}
-
-.title-outer-div {
-  flex: none;
-  max-height: 100%;
-  white-space: inherit;
-}
-
-.title-inner-div {
-  padding: 11px;
-  height: 100%;
-  white-space: inherit;
-}
-
-.content-div {
-  padding: 11px;
-  flex: 1;
-  height: 0;
-  white-space: inherit;
 }
 
 .handlers {

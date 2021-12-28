@@ -11,10 +11,9 @@ notes.create = (pos) => {
     size: { x: 'auto', y: 'auto' },
     anchor: { x: 0.5, y: 0.5 },
 
-    title: '',
-    content: '',
+    content: ['', ''],
 
-    hasTitle: false,
+    hasBody: false,
 
     collapsible: false,
     collapsed: false,
