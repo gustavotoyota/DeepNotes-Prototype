@@ -42,19 +42,31 @@ resizing.update = (event) => {
   if ($state.resizing.side.includes('s'))
     newClientRect.end.y = event.clientY
 
-  const newScreenSize = {
+  newClientRect.size = {
     x: newClientRect.end.x - newClientRect.start.x,
     y: newClientRect.end.y - newClientRect.start.y,
   }
 
+  const newWorldRect = {
+    start: $app.coords.clientToWorld(newClientRect.start),
+    end: $app.coords.clientToWorld(newClientRect.end),
+  }
+  newWorldRect.size = {
+    x: newWorldRect.end.x - newWorldRect.start.x,
+    y: newWorldRect.end.y - newWorldRect.start.y,
+  }
+
   const sizeProp = elem.collapsed ? 'collapsedSize' : 'size'
 
-  if (newScreenSize.x !== clientRect.width)
-    elem[sizeProp].x = $app.sizes.screenToWorld1D(newScreenSize.x)
-  if (newScreenSize.y !== clientRect.height)
-    elem[sizeProp].y = $app.sizes.screenToWorld1D(newScreenSize.y)
+  if (newClientRect.size.x !== clientRect.width)
+    elem[sizeProp].x = newWorldRect.size.x
+  if (newClientRect.size.y !== clientRect.height)
+    elem[sizeProp].y = newWorldRect.size.y
 
-  elem.pos = $app.coords.clientToWorld(newClientRect.start)
+  elem.pos = {
+    x: newWorldRect.start.x + newWorldRect.size.x * elem.anchor.x,
+    y: newWorldRect.start.y + newWorldRect.size.y * elem.anchor.y,
+  }
 }
 
 resizing.finish = (event) => {

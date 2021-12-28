@@ -10,6 +10,7 @@
     :style="`width: ${elem[sizeProp].x == null ? 'auto' : elem[sizeProp].x + 'px'}; ` +
     `height: ${elem[sizeProp].y == null ? 'auto' : elem[sizeProp].y + 'px'}; ` +
     `cursor: ${elem.linkedPageId == null || selected ? 'auto' : 'pointer' }; ` +
+    `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` +
     `white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
     @pointerdown="onPointerDown"
     @click="onClick">

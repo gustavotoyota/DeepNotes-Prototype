@@ -9,6 +9,7 @@ notes.create = (pos) => {
   $assign(note, {
     pos: $utils.shallowCopy(pos),
     size: { x: null, y: null },
+    anchor: { x: 0.5, y: 0.5 },
 
     title: '',
     content: '',
