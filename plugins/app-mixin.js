@@ -21,14 +21,16 @@ export default async function ({ app }) {
       })
     },
 
+    created() {
+      $app.init()
+    },
+
     mounted() {
       document.addEventListener('pointerdown', this.onPointerDown, true)
       document.addEventListener('pointermove', this.onPointerMove)
       document.addEventListener('pointerup', this.onPointerUp)
       
       document.addEventListener('keydown', this.onKeyDown)
-
-      $app.init()
     },
 
     beforeDestroy() {

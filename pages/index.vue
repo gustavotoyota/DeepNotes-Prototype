@@ -1,6 +1,6 @@
 <template>
 
-  <v-app dark v-if="!!$state.project" spellcheck="false">
+  <v-app dark v-if="!!$state && !!$state.project" spellcheck="false">
     
     <MainMenu/>
     <LeftSidebar/>
