@@ -17,9 +17,6 @@ popup.show = (event) => {
   $state.popup = {
     visible: true,
 
-    pos: {
-      x: event.clientX,
-      y: event.clientY,
-    },
+    pos: $app.coords.getClientPos(event),
   }
 }

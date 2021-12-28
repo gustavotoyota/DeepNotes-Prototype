@@ -21,7 +21,7 @@ export default {
     },
 
     onDoubleClick(event) {
-      $app.popup.show(event)
+      $app.creation.perform($app.coords.getClientPos(event))
     },
 
   },

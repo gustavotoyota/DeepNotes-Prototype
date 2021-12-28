@@ -60,7 +60,8 @@ export default async function ({ app }) {
 
       onKeyDown(event) {
         if (event.target.nodeName === 'INPUT'
-        || event.target.nodeName === 'TEXTAREA')
+        || event.target.nodeName === 'TEXTAREA'
+        || event.target.isContentEditable)
           return
         
         if (event.code === 'Delete')
