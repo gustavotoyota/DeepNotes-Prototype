@@ -1,0 +1,1499 @@
+{
+  "pages": {
+    "list": [
+      {
+        "id": 0,
+        "name": "Main Page",
+        "createdAt": "2021-12-27T23:40:05.256Z",
+        "modifiedAt": "2021-12-27T23:40:05.256Z",
+        "elems": {
+          "list": [
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -54.31111111111113,
+                "y": -159.4754629629631
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Work</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 8
+            },
+            {
+              "id": 4,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 66.02222222222218,
+                "y": -160.97546296296298
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Projects</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 3
+            },
+            {
+              "id": 5,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -78.81111111111088,
+                "y": -244.47546296296298
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Random</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 5
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 57.35555555555551,
+                "y": -245.64212962962932
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Knowledge</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 4
+            }
+          ],
+          "nextId": 12,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 74.52222222222224,
+            "y": -140.3921296296295
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 1,
+        "name": "Biology",
+        "createdAt": "2021-12-27T23:47:21.869Z",
+        "modifiedAt": "2021-12-27T23:47:21.869Z",
+        "elems": {
+          "list": [],
+          "nextId": 1,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 2,
+        "name": "Computing",
+        "createdAt": "2021-12-28T00:12:03.869Z",
+        "modifiedAt": "2021-12-28T00:12:03.869Z",
+        "elems": {
+          "list": [
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -221,
+                "y": -47.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Data Structures</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -83,
+                "y": -143.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Data Structures</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 3,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 3,
+        "name": "Projects",
+        "createdAt": "2021-12-28T00:15:47.633Z",
+        "modifiedAt": "2021-12-28T00:15:47.633Z",
+        "elems": {
+          "list": [
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -169.00000000000006,
+                "y": -148.50000000000003
+              },
+              "size": {
+                "x": 144,
+                "y": null
+              },
+              "title": "<h2>Visual SQL</h2>",
+              "content": "<p>A visual SQL query building tool</p>",
+              "hasTitle": true,
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 10
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 31,
+                "y": -150.5
+              },
+              "size": {
+                "x": 156,
+                "y": null
+              },
+              "title": "<h2>DeepNotes</h2>",
+              "content": "<p>A visual information organization tool</p>",
+              "hasTitle": true,
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 11
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -58.3333333333333,
+                "y": 13.833333333333334
+              },
+              "size": {
+                "x": 127,
+                "y": null
+              },
+              "title": "<h2>MemUp</h2>",
+              "content": "<p>A convenient memorization tool</p>",
+              "hasTitle": true,
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 13
+            }
+          ],
+          "nextId": 3,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 18.250000000000014,
+            "y": -8.888888888888891
+          },
+          "zoom": 1.2
+        }
+      },
+      {
+        "id": 4,
+        "name": "Knowledge",
+        "createdAt": "2021-12-28T00:20:38.530Z",
+        "modifiedAt": "2021-12-28T00:20:38.530Z",
+        "elems": {
+          "list": [
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -155,
+                "y": -87.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Biology</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 1
+            },
+            {
+              "id": 4,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -134,
+                "y": 23.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Stoicism</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 15
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -76,
+                "y": -195.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Languages</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 7
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 50,
+                "y": -92.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>History</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 6
+            },
+            {
+              "id": 5,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 45,
+                "y": 24.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Math</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 20
+            }
+          ],
+          "nextId": 6,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 2,
+            "y": -45
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 5,
+        "name": "Random",
+        "createdAt": "2021-12-28T00:21:23.508Z",
+        "modifiedAt": "2021-12-28T00:21:23.508Z",
+        "elems": {
+          "list": [],
+          "nextId": 3,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": -12,
+            "y": 38
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 6,
+        "name": "History",
+        "createdAt": "2021-12-28T00:24:08.286Z",
+        "modifiedAt": "2021-12-28T00:24:08.286Z",
+        "elems": {
+          "list": [
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -321.6666666666669,
+                "y": 30.16666666666666
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "<h2>Post-Classical History</h2>",
+              "content": "<p>A.D. 476 -A.D. 1450</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 17
+            },
+            {
+              "id": 5,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -205.3333333333334,
+                "y": 162.00000000000006
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "<h2>Post-Modern History</h2>",
+              "content": "<p>From A.D. 1750</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 19
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -267.83333333333326,
+                "y": -98.66666666666664
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "<h2>Prehistory</h2>",
+              "content": "<p>Until&nbsp;B.C. 600</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 9
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -105.66666666666664,
+                "y": -98.83333333333329
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "<h2>Ancient History</h2>",
+              "content": "<p>B.C. 600 - A.D. 476</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 16
+            },
+            {
+              "id": 4,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -53.3333333333333,
+                "y": 29.000000000000014
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "<h2>Modern History</h2>",
+              "content": "<p>A.D. 1450-A.D. 1750</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 18
+            }
+          ],
+          "nextId": 6,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": -100.16666666666661,
+            "y": 64.50000000000004
+          },
+          "zoom": 1.2
+        }
+      },
+      {
+        "id": 7,
+        "name": "Languages",
+        "createdAt": "2021-12-28T00:47:52.131Z",
+        "modifiedAt": "2021-12-28T00:47:52.131Z",
+        "elems": {
+          "list": [
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -64,
+                "y": -10.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Portuguese</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 24,
+                "y": -105.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>English</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -128,
+                "y": -105.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<h2>Japanese</h2>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 14
+            }
+          ],
+          "nextId": 3,
+          "selected": {
+            "0": true
+          },
+          "activeId": 0,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 8,
+        "name": "Work",
+        "createdAt": "2021-12-28T00:50:47.852Z",
+        "modifiedAt": "2021-12-28T00:50:47.852Z",
+        "elems": {
+          "list": [
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -169,
+                "y": -77.5
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 1,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 9,
+        "name": "Prehistory",
+        "createdAt": "2021-12-28T00:58:02.455Z",
+        "modifiedAt": "2021-12-28T00:58:02.455Z",
+        "elems": {
+          "list": [
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -175,
+                "y": -136.5
+              },
+              "size": {
+                "x": 326,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>asdasdasjdahjsdsd g</p><p>dfg dsfg sdfg sdfg&nbsp;</p><p>sdf</p><p>g sdfg fsdg sdfgd dfgs dksfg sdfg sdfg sdfg sdf gsdf</p><p>&nbsp;gsdf gsdfg sdf</p><p>&nbsp;gsdf gsdf g</p><p>sdf g</p><p>&nbsp;sfg sdfg sdfg sdfg dsfg sdfg&nbsp;</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 1,
+          "selected": {
+            "0": true
+          },
+          "activeId": 0,
+          "editing": true
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 10,
+        "name": "Visual SQL",
+        "createdAt": "2021-12-28T01:03:30.133Z",
+        "modifiedAt": "2021-12-28T01:03:30.133Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 11,
+        "name": "DeepNotes",
+        "createdAt": "2021-12-28T01:03:43.573Z",
+        "modifiedAt": "2021-12-28T01:03:43.573Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 12,
+        "name": "Ideas",
+        "createdAt": "2021-12-28T01:04:18.138Z",
+        "modifiedAt": "2021-12-28T01:04:18.138Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 13,
+        "name": "MemUp",
+        "createdAt": "2021-12-28T02:09:26.008Z",
+        "modifiedAt": "2021-12-28T02:09:26.008Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 14,
+        "name": "Japanese",
+        "createdAt": "2021-12-28T02:10:27.675Z",
+        "modifiedAt": "2021-12-28T02:10:27.675Z",
+        "elems": {
+          "list": [],
+          "nextId": 1,
+          "selected": {
+            "0": true
+          },
+          "activeId": 0,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 15,
+        "name": "Stoicism",
+        "createdAt": "2021-12-28T02:11:05.516Z",
+        "modifiedAt": "2021-12-28T02:11:05.516Z",
+        "elems": {
+          "list": [
+            {
+              "id": 7,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -221.94666666666663,
+                "y": 221.26000000000002
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Choice</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 11,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -271.9466666666665,
+                "y": 167.25999999999996
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Decisions</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 5,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -532,
+                "y": -100
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Attention</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 9,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -609,
+                "y": -99
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Events</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 4,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -553.4000000000001,
+                "y": -151.3
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Circumstances</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 8,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -625.3999999999991,
+                "y": -152.40000000000015
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Things</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 16,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -638.8800000000006,
+                "y": 21.744395345052048
+              },
+              "size": {
+                "x": 211,
+                "y": null
+              },
+              "title": "<h2>Available resources</h2>",
+              "content": "<p>Nature determines which resources are and aren't available in every single moment</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -309.9466666666665,
+                "y": 222.26000000000002
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Reaction</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -332.34686083984394,
+                "y": 15.940624348958377
+              },
+              "size": {
+                "x": 206.29486083984375,
+                "y": null
+              },
+              "title": "<h2>The use of available resources</h2>",
+              "content": "<p>This is the only thing really that matters in life</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -296.40000000000003,
+                "y": -280.46666666666664
+              },
+              "size": {
+                "x": null,
+                "y": null
+              },
+              "title": "<h2>Resources</h2>",
+              "content": "<p>Usable things</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -616.4,
+                "y": -278.70000000000005
+              },
+              "size": {
+                "x": 166,
+                "y": null
+              },
+              "title": "<h2>Nature</h2>",
+              "content": "<p>Uncontrollable thing that constantly unrolls itself</p>",
+              "hasTitle": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 19,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -334.0468723687068,
+                "y": -173.82813311089407
+              },
+              "size": {
+                "x": 199.99765014648438,
+                "y": null
+              },
+              "title": "",
+              "content": "<p>Some resources don't change.</p><p>Some become&nbsp;available.</p><p>Some become unavailable.</p><p>Some become strengthened.</p><p>Some become weakened.</p>",
+              "hasTitle": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": null,
+                "y": null
+              },
+              "movable": true,
+              "resizable": true,
+              "autoWidth": true,
+              "autoHeight": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 20,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": -373.04922222222245,
+            "y": -3.6632222222221884
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 16,
+        "name": "Ancient History",
+        "createdAt": "2021-12-28T03:07:33.331Z",
+        "modifiedAt": "2021-12-28T03:07:33.331Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 17,
+        "name": "Post-Classical History",
+        "createdAt": "2021-12-28T03:07:43.360Z",
+        "modifiedAt": "2021-12-28T03:07:43.360Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 18,
+        "name": "Modern History",
+        "createdAt": "2021-12-28T03:10:02.754Z",
+        "modifiedAt": "2021-12-28T03:10:02.754Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 19,
+        "name": "Post-Modern History",
+        "createdAt": "2021-12-28T03:11:43.837Z",
+        "modifiedAt": "2021-12-28T03:11:43.837Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 20,
+        "name": "Math",
+        "createdAt": "2021-12-28T03:30:59.977Z",
+        "modifiedAt": "2021-12-28T03:30:59.977Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      }
+    ],
+    "nextId": 21,
+    "path": [
+      0,
+      8
+    ],
+    "recent": [
+      0,
+      2,
+      10,
+      13,
+      7,
+      14,
+      12,
+      3,
+      11,
+      17,
+      6,
+      18,
+      19,
+      9,
+      16,
+      4,
+      15,
+      15,
+      1,
+      20,
+      5,
+      4,
+      15,
+      8
+    ],
+    "depth": 1
+  }
+}
