@@ -7,8 +7,7 @@
     :id="`elem-${elem.id}`" rounded elevation="6"
     :color="active ? `grey darken-1` :
       (selected ? `grey darken-2` : `grey darken-3`)"
-    :style="`width: ${elem[sizeProp].x == null ? 'auto' : elem[sizeProp].x + 'px'}; ` +
-    `height: ${elem[sizeProp].y == null ? 'auto' : elem[sizeProp].y + 'px'}; ` +
+    :style="`width: ${width}; height: ${height}; ` +
     `cursor: ${elem.linkedPageId == null || selected ? 'auto' : 'pointer' }; ` +
     `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` +
     `white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
@@ -160,6 +159,8 @@ export default {
       return $getters.currentPage
     },
 
+
+
     selected() {
       return $app.elems.isSelected(this.elem)
     },
@@ -170,8 +171,24 @@ export default {
       return this.active && this.page.elems.editing
     },
 
+
+
     sizeProp() {
       return this.elem.collapsed ? 'collapsedSize' : 'size'
+    },
+    width() {
+      if (this.elem[this.sizeProp].x === 'auto')
+        return 'auto'
+      else if (this.elem[this.sizeProp].x === 'expanded')
+        return `${this.elem.expandedWidth}px`
+      else
+        return `${this.elem[this.sizeProp].x}px`
+    },
+    height() {
+      if (this.elem[this.sizeProp].y === 'auto')
+        return 'auto'
+      else
+        return `${this.elem[this.sizeProp].y}px`
     },
 
   },

@@ -8,7 +8,7 @@ notes.create = (pos) => {
 
   $assign(note, {
     pos: $utils.shallowCopy(pos),
-    size: { x: null, y: null },
+    size: { x: 'auto', y: 'auto' },
     anchor: { x: 0.5, y: 0.5 },
 
     title: '',
@@ -18,7 +18,9 @@ notes.create = (pos) => {
 
     collapsible: false,
     collapsed: false,
-    collapsedSize: { x: null, y: null },
+    collapsedSize: { x: 'expanded', y: 'auto' },
+
+    expandedWidth: 0,
 
     movable: true,
     resizable: true,

@@ -112,23 +112,49 @@
 
       <v-divider class="mt-4"/>
         
-      <div class="mx-5 mt-4"
-      style="display: flex">
-        <v-checkbox hide-details
-        label="Auto width"
-        style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem[sizeProp].x == null"
-        @change="onAutoWidthChange">
-        </v-checkbox>
+      <div class="mx-5 mt-4" style="display: flex">
+        <div style="flex: 1; width: 0">
+          <div class="body-2 grey--text text--lighten-1"
+          style="margin-left: 1px">
+            Width:
+          </div>
+
+          <Gap height="2px"/>
+
+          <v-select dense outlined hide-details
+          background-color="#181818"
+          :items="[
+            { text: 'Auto', value: 'auto' },
+            ...(elem.collapsed ? [{ text: 'Expanded', value: 'expanded' }] : []),
+            { text: 'Custom', value: 'custom' },
+          ]" item-text="text" item-value="value"
+          :menu-props="{ top: false, offsetY: true }"
+          :value="!isNaN(elem[sizeProp].x) ? 'custom' : elem[sizeProp].x"
+          @change="onWidthChange">
+          </v-select>
+        </div>
 
         <Gap width="16px" style="flex: none"/>
-        
-        <v-checkbox hide-details
-        label="Auto height"
-        style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem[sizeProp].y == null"
-        @change="onAutoHeightChange">
-        </v-checkbox>
+
+        <div style="flex: 1">
+          <div class="body-2 grey--text text--lighten-1"
+          style="margin-left: 1px">
+            Height:
+          </div>
+
+          <Gap height="2px"/>
+
+          <v-select dense outlined hide-details
+          background-color="#181818"
+          :items="[
+            { text: 'Auto', value: 'auto' },
+            { text: 'Custom', value: 'custom' },
+          ]" item-text="text" item-value="value"
+          :menu-props="{ top: false, offsetY: true }"
+          :value="!isNaN(elem[sizeProp].y) ? 'custom' : elem[sizeProp].y"
+          @change="onHeightChange">
+          </v-select>
+        </div>
       </div>
 
       <v-divider class="mt-4"/>
@@ -207,23 +233,21 @@ export default {
 
   methods: {
 
-    onAutoWidthChange(value) {
-      if (value)
-        this.elem[this.sizeProp].x = null
-      else {
+    onWidthChange(value) {
+      if (value === 'custom') {
         const clientRect = $app.elems.getClientRect(this.elem)
 
         this.elem[this.sizeProp].x = $app.sizes.screenToWorld1D(clientRect.width)
-      }
+      } else
+        this.elem[this.sizeProp].x = value
     },
-    onAutoHeightChange(value) {
-      if (value)
-        this.elem[this.sizeProp].y = null
-      else {
+    onHeightChange(value) {
+      if (value === 'custom') {
         const clientRect = $app.elems.getClientRect(this.elem)
 
         this.elem[this.sizeProp].y = $app.sizes.screenToWorld1D(clientRect.height)
-      }
+      } else
+        this.elem[this.sizeProp].y = value
     },
 
   },
@@ -235,6 +259,14 @@ export default {
     'elem.collapsible'(value) {
       if (value != null && !value)
         this.elem.collapsed = false
+    },
+
+    'elem.collapsed'(value) {
+      if (value != null && value) {
+        const clientRect = $app.elems.getClientRect(this.elem)
+
+        this.elem.expandedWidth = $app.sizes.screenToWorld1D(clientRect.width)
+      }
     },
 
   },
