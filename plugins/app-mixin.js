@@ -70,6 +70,9 @@ export default async function ({ app }) {
           $app.selection.duplicate()
           event.preventDefault()
         }
+
+        if (event.code === 'F2')
+          $app.editing.start($getters.activeElem)
       },
 
     },
