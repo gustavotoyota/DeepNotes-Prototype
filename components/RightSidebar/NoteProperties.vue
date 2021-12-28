@@ -109,8 +109,6 @@
         v-model="elem.collapsed">
         </v-checkbox>
       </div>
-
-      <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4" style="display: flex">
         <div style="flex: 1; width: 0">
