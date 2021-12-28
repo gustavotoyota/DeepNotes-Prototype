@@ -26,11 +26,11 @@
           @ready="onEditorReady"/>
         </div>
 
-        <v-divider v-if="!elem.collapsed"/>
+        <v-divider v-if="!elem.collapsed || elem.collapsedSize.y !== 'auto'"/>
       </div>
 
       <div class="content-div"
-      v-if="!elem.collapsed || !elem.hasTitle"
+      v-if="!elem.collapsed || !elem.hasTitle || elem.collapsedSize.y !== 'auto'"
       @pointerdown="onContentPointerDown"
       @dblclick="onContentDoubleClick">
         <quill-editor ref="content"
