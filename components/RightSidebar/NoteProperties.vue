@@ -27,7 +27,7 @@
         background-color="#181818" clearable
         :items="recentPages" item-text="text" item-value="value"
         :menu-props="{ top: false, offsetY: true }"
-        v-model="elem.linkedPage">
+        v-model="elem.linkedPageId">
         </v-select>
 
         <Gap height="10px"/>

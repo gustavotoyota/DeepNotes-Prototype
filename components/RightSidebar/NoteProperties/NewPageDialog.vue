@@ -77,8 +77,23 @@ export default {
       
       const page = $app.pages.create(this.name)
 
-      this.elem.linkedPage = page.id
+      this.elem.linkedPageId = page.id
     },
+
+  },
+
+
+
+  watch: {
+
+    active(value) {
+      if (!value)
+        return
+
+      setTimeout(() => {
+        this.$refs.name.focus()
+      })
+    }
 
   },
 

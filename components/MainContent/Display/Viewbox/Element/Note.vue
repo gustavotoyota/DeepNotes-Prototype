@@ -9,8 +9,10 @@
       (selected ? `grey darken-2` : `grey darken-3`)"
     :style="`width: ${elem[sizeProp].x == null ? 'auto' : elem[sizeProp].x + 'px'}; ` +
     `height: ${elem[sizeProp].y == null ? 'auto' : elem[sizeProp].y + 'px'}; ` +
+    `cursor: ${elem.linkedPageId == null || selected ? 'auto' : 'pointer' }; ` +
     `white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
-    @pointerdown="onPointerDown">
+    @pointerdown="onPointerDown"
+    @click="onClick">
 
       <div v-show="elem.hasTitle"
       class="title-outer-div"
@@ -95,12 +97,26 @@ export default {
       if (this.elem.id != this.page.elems.activeId)
         $app.editing.stop()
 
+      if (this.elem.linkedPageId != null
+      && !event.altKey && !this.selected)
+        return
+
       $app.clickSelection.perform(this.elem, event)
 
       if ($app.elems.isSelected(this.elem)
       && this.elem.movable
       && !this.page.elems.editing)
         $app.dragging.start(event)
+    },
+
+
+
+    onClick(event) {
+      if (this.elem.linkedPageId == null
+      || event.altKey || this.selected)
+        return
+
+      $app.pages.navigate(this.elem.linkedPageId)
     },
 
 
@@ -208,7 +224,7 @@ export default {
 }
 
 .quill-editor /deep/ .ql-editor > * {
-  cursor: auto !important;
+  cursor: inherit !important;
 }
 
 .quill-editor /deep/ .ql-tooltip {

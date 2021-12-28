@@ -51,6 +51,14 @@ elems.isSelected = (elem) => {
 
 
 
+elems.selectExclusive = (elem) => {
+  $app.selection.clear()
+
+  $app.elems.addToSelection(elem)
+}
+
+
+
 elems.delete = (elemId) => {
   const index = $app.elems.getIndexById(elemId)
 

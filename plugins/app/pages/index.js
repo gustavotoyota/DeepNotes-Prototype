@@ -42,8 +42,8 @@ pages.create = (name) => {
 
 
   $state.project.pages.list.push(page)
-  $state.project.pages.path.push(page.id)
-  $state.project.pages.recent.push(page.id)
+  
+  $app.pages.navigate(page.id)
 
 
 
@@ -54,4 +54,11 @@ pages.create = (name) => {
 
 pages.getById = (pageId) => {
   return $state.project.pages.list.find((page) => page.id == pageId)
+}
+
+
+
+pages.navigate = (pageId) => {
+  $state.project.pages.path.push(pageId)
+  $state.project.pages.recent.push(pageId)
 }
