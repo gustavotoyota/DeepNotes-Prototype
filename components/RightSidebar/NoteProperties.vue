@@ -98,7 +98,7 @@
       style="display: flex">
         <v-checkbox hide-details label="Collapsible"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        v-model="elem.collapsible">
+        v-model="collapsible">
         </v-checkbox>
 
         <Gap width="16px" style="flex: none"/>
@@ -106,7 +106,7 @@
         <v-checkbox hide-details label="Collapsed"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :disabled="!elem.collapsible"
-        v-model="elem.collapsed">
+        v-model="collapsed">
         </v-checkbox>
       </div>
         
@@ -127,8 +127,7 @@
             { text: 'Custom', value: 'custom' },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          :value="!isNaN(elem[sizeProp].x) ? 'custom' : elem[sizeProp].x"
-          @change="onWidthChange">
+          v-model="width">
           </v-select>
         </div>
 
@@ -149,8 +148,7 @@
             { text: 'Custom', value: 'custom' },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          :value="!isNaN(elem[sizeProp].y) ? 'custom' : elem[sizeProp].y"
-          @change="onHeightChange">
+          v-model="height">
           </v-select>
         </div>
       </div>
@@ -225,46 +223,69 @@ export default {
       return recentPages
     },
 
-  },
 
 
 
-  methods: {
+    collapsible: {
+      get() {
+        return this.elem.collapsible
+      },
+      set(value) {
+        this.elem.collapsible = value
 
-    onWidthChange(value) {
-      if (value === 'custom') {
-        const clientRect = $app.elems.getClientRect(this.elem)
-
-        this.elem[this.sizeProp].x = $app.sizes.screenToWorld1D(clientRect.width)
-      } else
-        this.elem[this.sizeProp].x = value
+        if (!value)
+          this.elem.collapsed = false
+      },
     },
-    onHeightChange(value) {
-      if (value === 'custom') {
-        const clientRect = $app.elems.getClientRect(this.elem)
+    collapsed: {
+      get() {
+        return this.elem.collapsed
+      },
+      set(value) {
+        if (value) {
+          const clientRect = $app.elems.getClientRect(this.elem)
 
-        this.elem[this.sizeProp].y = $app.sizes.screenToWorld1D(clientRect.height)
-      } else
-        this.elem[this.sizeProp].y = value
-    },
+          this.elem.expandedWidth = $app.sizes.screenToWorld1D(clientRect.width)
+        }
 
-  },
-
-
-
-  watch: {
-
-    'elem.collapsible'(value) {
-      if (value != null && !value)
-        this.elem.collapsed = false
+        this.elem.collapsed = value
+      },
     },
 
-    'elem.collapsed'(value) {
-      if (value != null && value) {
-        const clientRect = $app.elems.getClientRect(this.elem)
 
-        this.elem.expandedWidth = $app.sizes.screenToWorld1D(clientRect.width)
-      }
+
+
+    width: {
+      get() {
+        if (!isNaN(this.elem[this.sizeProp].x))
+          return 'custom'
+        else
+          return this.elem[this.sizeProp].x
+      },
+      set(value) {
+        if (value === 'custom') {
+          const clientRect = $app.elems.getClientRect(this.elem)
+
+          this.elem[this.sizeProp].x = $app.sizes.screenToWorld1D(clientRect.width)
+        } else
+          this.elem[this.sizeProp].x = value
+      },
+    },
+    height: {
+      get() {
+        if (!isNaN(this.elem[this.sizeProp].y))
+          return 'custom'
+        else
+          return this.elem[this.sizeProp].y
+      },
+      set(value) {
+        if (value === 'custom') {
+          const clientRect = $app.elems.getClientRect(this.elem)
+
+          this.elem[this.sizeProp].y = $app.sizes.screenToWorld1D(clientRect.height)
+        } else
+          this.elem[this.sizeProp].y = value
+      },
     },
 
   },
