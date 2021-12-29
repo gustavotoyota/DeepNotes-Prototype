@@ -70,14 +70,14 @@ pages.bumpRecent = () => {
 
 pages.changeDepth = (pageDepth) => {
   $state.project.pages.depth = Math.max(0, pageDepth)
+  
+  $app.selection.clear()
 
   $app.pages.bumpRecent()
 }
 
 
 pages.navigate = (pageId) => {
-  $app.selection.clear()
-
   $state.project.pages.path.splice($state.project.pages.depth + 1)
   $state.project.pages.path.push(pageId)
   

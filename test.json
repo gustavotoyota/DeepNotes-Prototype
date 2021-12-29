@@ -146,10 +146,8 @@
             }
           ],
           "nextId": 5,
-          "selected": {
-            "4": true
-          },
-          "activeId": 4,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
@@ -167,39 +165,6 @@
         "modifiedAt": "2021-12-29T00:48:39.958Z",
         "elems": {
           "list": [
-            {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -12,
-                "y": -64.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>History</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
             {
               "id": 2,
               "type": "note",
@@ -267,6 +232,40 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 6
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -13,
+                "y": -63.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>History</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 8
             }
           ],
           "nextId": 3,
@@ -308,16 +307,116 @@
         "createdAt": "2021-12-29T01:01:16.741Z",
         "modifiedAt": "2021-12-29T01:01:16.741Z",
         "elems": {
-          "list": [],
-          "nextId": 0,
+          "list": [
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -103,
+                "y": -139.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Ideias</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -102.796875,
+                "y": -68.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Automatizar preenchimento de NFs manuais</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -101.703125,
+                "y": -3.5
+              },
+              "size": {
+                "x": 219.40625,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Automatizar fechamento de nota da Prudentina ou do Pichula</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 91.375,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 4,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": 0,
-            "y": 0
+            "x": -97,
+            "y": -45
           },
           "zoom": 1
         }
@@ -636,25 +735,621 @@
           },
           "zoom": 1
         }
+      },
+      {
+        "id": 8,
+        "name": "History\n",
+        "createdAt": "2021-12-29T01:41:47.939Z",
+        "modifiedAt": "2021-12-29T01:41:47.939Z",
+        "elems": {
+          "list": [
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -35.14202514648435,
+                "y": 67.40626464843749
+              },
+              "size": {
+                "x": 221.96405029296875,
+                "y": 194.8990478515625
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h2>Early Modern Era</h2>",
+                "<p>A.D. 1450-A.D. 1750</p><p><br></p><p>Resurgence of the values and philosophies from the Classical era.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -282.70999999999987,
+                "y": -27.828125
+              },
+              "size": {
+                "x": 229.5,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>The Middle Ages</h2>",
+                "<p>A.D. 476 -A.D. 1450</p><p><br></p><p>Also known as the Medieval or Post-Classical era.</p><p><br></p><p>Historians refer to the early part of this period as the Dark Ages due to the loss of recorded history after the fall of the Roman Empire in A.D. 476.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": 194.328125
+              },
+              "expandedWidth": 229.5,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 4,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 220.14935668945333,
+                "y": -29.109378662109393
+              },
+              "size": {
+                "x": 232.83905029296875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Modern Era</h2>",
+                "<p>A.D. 1750-Present</p><p><br></p><p>The influences of both the Renaissance and the Enlightenment led to a technological boom in the Modern era, also known as the <strong>Late Modern era</strong>.</p><p><br></p><p>The world of politics was rocked by wars, revolution and the end of the monarchy in many countries. The Modern era is truly a cumulation of millions of years of human development.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": 195.76937866210938
+              },
+              "expandedWidth": 232.828125,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 9
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -165.625,
+                "y": -150.4270300292969
+              },
+              "size": {
+                "x": 223.25,
+                "y": 190.97406005859375
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h2>Prehistory</h2>",
+                "<p>to 600 B.C.</p><p><br></p><p>Period on Earth in which there was human activity, but little to no records of human history.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 87.34375,
+                "y": -248
+              },
+              "size": {
+                "x": 222.21780468749995,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Classical Era</h2>",
+                "<p>600 B.C.-A.D. 476</p><p><br></p><p>It marked the beginning of a philosophical period in world history as well as the first recorded sources of human history.</p><p><br></p><p>Politically, the Classical era saw the rise – and fall – of most world empires.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": 191.5
+              },
+              "expandedWidth": 222.203125,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 10
+            }
+          ],
+          "nextId": 5,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": -24.99999999999997,
+            "y": -3.440000000000019
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 9,
+        "name": "Modern Era\n",
+        "createdAt": "2021-12-29T01:56:32.843Z",
+        "modifiedAt": "2021-12-29T01:56:32.843Z",
+        "elems": {
+          "list": [
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -143.109375,
+                "y": 168.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Second Industrial Revolution</h2><p>(A.D. 1869 to A.D. 1914 )</p>",
+                "<p>Often referred to as the <strong>Technological Revolution</strong>; period in which the light bulb, the telephone, the airplane, and the Model T automobile were invented.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 9,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 168.890625,
+                "y": -87.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Great Depression</h2><p>(A.D. 1929 to A.D. 1939)</p>",
+                "<p>Extended period of worldwide economic hardship that started with the stock market crash in 1929.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 8,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 169.890625,
+                "y": -4.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>World War II</h2><p>(A.D. 1939 to A.D. 1945)</p>",
+                "<p>Wartime period that began with Germany’s invasion of Poland and ends with the surrender of Japan, the last standing Axis power.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 11,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 169.890625,
+                "y": 82.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Contemporary Period</h2><p>(A.D. 1945 to current)</p>",
+                "<p>Also known as the Information Age; the period in which technological advances define social, economic and political life.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -143.57885091145835,
+                "y": -169.50000366210932
+              },
+              "size": {
+                "x": 294.31103515625,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>First Industrial Revolution</h2><p>(A.D. 1760 to A.D. 1840)</p>",
+                "<p>Beginning of the modern era that saw several technological innovations, including the invention of the cotton gin, the increase of city factories and mills and the completion of the Erie Canal.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 294.296875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -143.23510091145835,
+                "y": -82.50000366210932
+              },
+              "size": {
+                "x": 291.62353515625,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Revolutionary Period</h2><p>(A.D. 1764 to A.D. 1848)</p>",
+                "<p>Period of revolutions around the world, including the American Revolution, French Revolution, Spanish-American Wars for Independence, Italian Revolutions, Greek War of Independence, and the Spring of Nations.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 291.609375,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 5,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -141.94994466145835,
+                "y": 85.49999633789068
+              },
+              "size": {
+                "x": 289.05322265625,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Victorian Era</h2><p>(A.D. 1837 to A.D. 1901)</p>",
+                "<p>Reign of Queen Victoria I that saw increased urbanization, the American Civil War and the end of African slavery.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 289.046875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -142.41088216145835,
+                "y": 0.031246337890678433
+              },
+              "size": {
+                "x": 289.97509765625,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Age of Imperialism</h2><p>(A.D. 1800 to A.D. 1914)</p>",
+                "<p>Century of time in which France, Britain, Spain, the Netherlands, and the United States colonized in other nations around the world.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 289.96875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 7,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 169.890625,
+                "y": -170.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>World War I</h2><p>(A.D. 1914 to A.D. 1918)</p>",
+                "<p>Worldwide conflict centered in Europe; also known as the Great War.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 12,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 10.576666666666632,
+            "y": 42.66000000000005
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 10,
+        "name": "Classical Era\n",
+        "createdAt": "2021-12-29T02:13:25.872Z",
+        "modifiedAt": "2021-12-29T02:13:25.872Z",
+        "elems": {
+          "list": [
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -251,
+                "y": -109.5
+              },
+              "size": {
+                "x": 177,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<h2>Ancient Greece</h2><p>(600 B.C. to A.D. 600)</p>",
+                "<p>Foundation of democracy, philosophy, mathematics, drama, and poetry.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 177,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -253,
+                "y": -22.5
+              },
+              "size": {
+                "x": 177,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<h2>Ancient Rome</h2><p>(753 B.C. to A.D. 476)</p>",
+                "<p>Political power that developed the legal system, irrigation, architecture, city roads, and Christianity.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 177,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 2,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
       }
     ],
-    "nextId": 8,
+    "nextId": 11,
     "path": [
       0,
       1,
-      6,
-      7
+      8,
+      9
     ],
-    "depth": 0,
+    "depth": 3,
     "recent": [
       2,
-      3,
       4,
       5,
-      7,
-      1,
       6,
-      0
+      7,
+      3,
+      0,
+      1,
+      10,
+      8,
+      9
     ]
   }
 }
