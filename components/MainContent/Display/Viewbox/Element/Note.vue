@@ -152,6 +152,9 @@ export default {
 
 
     onEditorPointerDown(event, editorIdx) {
+      if (!event.target.className.toString().startsWith(`editor-${editorIdx}`))
+        return
+
       if (event.button === 0 && this.editing
       && !event.target.isContentEditable) {
         this.$refs[`editor-${editorIdx}`].quill.focus()

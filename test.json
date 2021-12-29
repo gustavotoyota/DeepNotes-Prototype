@@ -177,52 +177,17 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 3
-            },
-            {
-              "id": 7,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -304.2,
-                "y": -213.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>asdsf dgfdsg&nbsp;</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
             }
           ],
           "nextId": 8,
-          "selected": {
-            "7": true
-          },
-          "activeId": 7,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -303.3666666666667,
-            "y": -203.5
+            "x": 0.6333333333333258,
+            "y": -60.5
           },
           "zoom": 1
         }
@@ -1288,40 +1253,6 @@
               "linkedPageId": 9
             },
             {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -165.625,
-                "y": -150.4270300292969
-              },
-              "size": {
-                "x": 223.25,
-                "y": 190.97406005859375
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h2>Prehistory</h2>",
-                "<p>to 600 B.C.</p><p><br></p><p>Period on Earth in which there was human activity, but little to no records of human history.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 17
-            },
-            {
               "id": 3,
               "type": "note",
               "parent": null,
@@ -1356,40 +1287,6 @@
               "linkedPageId": 19
             },
             {
-              "id": 1,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 87.34375,
-                "y": -248
-              },
-              "size": {
-                "x": 222.21780468749995,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>Classical Era</h2>",
-                "<p>600 B.C.-A.D. 476</p><p><br></p><p>It marked the beginning of a philosophical period in world history as well as the first recorded sources of human history.</p><p><br></p><p>Politically, the Classical era saw the rise – and fall – of most world empires.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": 191.5
-              },
-              "expandedWidth": 222.203125,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 10
-            },
-            {
               "id": 2,
               "type": "note",
               "parent": null,
@@ -1422,6 +1319,74 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 18
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -164.625,
+                "y": -150.4270300292969
+              },
+              "size": {
+                "x": 223.25,
+                "y": 190.97406005859375
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h2>Prehistory</h2>",
+                "<p>to 600 B.C.</p><p><br></p><p>Period on Earth in which there was human activity, but little to no records of human history.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 17
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 87.34375,
+                "y": -248
+              },
+              "size": {
+                "x": 222.21780468749995,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Classical Era</h2>",
+                "<p>600 B.C.-A.D. 476</p><p><br></p><p>It marked the beginning of a philosophical period in world history as well as the first recorded sources of human history.</p><p><br></p><p>Politically, the Classical era saw the rise – and fall – of most world empires.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": 191.5
+              },
+              "expandedWidth": 222.203125,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 10
             }
           ],
           "nextId": 5,
@@ -1431,8 +1396,8 @@
         },
         "camera": {
           "pos": {
-            "x": -31.99999999999997,
-            "y": -4.440000000000019
+            "x": -16.99999999999997,
+            "y": -14.440000000000019
           },
           "zoom": 1
         }
@@ -1908,7 +1873,7 @@
               "linkedPageId": 33
             }
           ],
-          "nextId": 5,
+          "nextId": 6,
           "selected": {},
           "activeId": null,
           "editing": false
@@ -2068,7 +2033,7 @@
         "modifiedAt": "2021-12-29T02:27:54.552Z",
         "elems": {
           "list": [],
-          "nextId": 0,
+          "nextId": 2,
           "selected": {},
           "activeId": null,
           "editing": false
@@ -2677,39 +2642,6 @@
               "readOnly": false
             },
             {
-              "id": 6,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 22.211111111110995,
-                "y": -34.249999999999986
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Fix quill tooltip position when scaled</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 16,
               "type": "note",
               "parent": null,
@@ -2942,39 +2874,6 @@
               "readOnly": false
             },
             {
-              "id": 10,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -271.12333333333356,
-                "y": -35.2557777777777
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Add more options to quill toolbar</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 1,
               "type": "note",
               "parent": null,
@@ -3072,17 +2971,86 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 10,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -557.1233333333336,
+                "y": 35.7442222222223
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Add more options to quill toolbar</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 22.211111111110995,
+                "y": -34.249999999999986
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Fix quill tooltip positioning</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 43
             }
           ],
           "nextId": 24,
-          "selected": {},
-          "activeId": null,
+          "selected": {
+            "6": true
+          },
+          "activeId": 6,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -405.0063987654324,
-            "y": 54.08469259259251
+            "x": -168.00639876543238,
+            "y": 125.08469259259252
           },
           "zoom": 1
         }
@@ -3627,16 +3595,170 @@
           },
           "zoom": 1
         }
+      },
+      {
+        "id": 43,
+        "name": "Fix quill tooltip positioning",
+        "createdAt": "2021-12-29T20:41:19.786Z",
+        "modifiedAt": "2021-12-29T20:41:19.786Z",
+        "elems": {
+          "list": [
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -210,
+                "y": -48.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>tooltip.js</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 93,
+                "y": -49.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>base.js</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -212,
+                "y": 17.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Where tooltip is added to DOM</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 4,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -214.3093780517578,
+                "y": 100.29688720703125
+              },
+              "size": {
+                "x": 253.8187561035156,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>position() uses&nbsp;getBoundingClientRect to position the tooltip</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 5,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": -26.4,
+            "y": 22.799999999999997
+          },
+          "zoom": 1
+        }
       }
     ],
-    "nextId": 43,
+    "nextId": 44,
     "path": [
       0,
-      4
+      4,
+      35,
+      43
     ],
-    "depth": 1,
+    "depth": 3,
     "recent": [
-      17,
       19,
       21,
       22,
@@ -3656,14 +3778,11 @@
       31,
       7,
       20,
-      18,
       2,
       13,
       9,
-      10,
       30,
       5,
-      8,
       29,
       34,
       6,
@@ -3674,11 +3793,16 @@
       42,
       39,
       36,
-      35,
       3,
       1,
+      17,
+      18,
+      10,
+      8,
       0,
-      4
+      4,
+      35,
+      43
     ]
   }
 }
