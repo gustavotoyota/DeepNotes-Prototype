@@ -58,8 +58,14 @@ resizing.update = (event) => {
 
   const sizeProp = elem.collapsed ? 'collapsedSize' : 'size'
 
-  if (newClientRect.size.x !== clientRect.width)
-    elem[sizeProp].x = newWorldRect.size.x
+  if (newClientRect.size.x !== clientRect.width) {
+    if (elem[sizeProp].x === 'expanded') {
+      elem.size.x = newWorldRect.size.x
+      elem.expandedWidth = newWorldRect.size.x
+    } else
+      elem[sizeProp].x = newWorldRect.size.x
+  }
+
   if (newClientRect.size.y !== clientRect.height)
     elem[sizeProp].y = newWorldRect.size.y
 
