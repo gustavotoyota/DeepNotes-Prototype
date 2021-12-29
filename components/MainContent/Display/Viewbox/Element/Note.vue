@@ -75,6 +75,33 @@ export default {
       placeholder: '',
 
       modules: {
+        toolbar: [
+          [
+            'bold',
+            'italic',
+            'underline',
+            'strike',
+            { 'header': 1 },
+            { 'header': 2 },
+            { align: '' },
+            { align: 'center' },
+            { align: 'right' },
+            { align: 'justify' },
+          ],
+          [
+            { 'indent': '-1' },
+            { 'indent': '+1' },
+            { 'script': 'sub' },
+            { 'script': 'super' },
+            'blockquote',
+            'code-block',
+            'link',
+            'image',
+            'formula',
+            'clean',
+          ],
+        ],
+        
         imageDrop: true,
         imageResize: {
           modules: ['DisplaySize', 'Resize'],
@@ -257,9 +284,18 @@ export default {
 }
 
 .quill-editor /deep/ .ql-tooltip {
+  z-index: 9999;
+
+  border-radius: 12px;
+}
+
+.quill-editor /deep/ .ql-formats {
   width: max-content;
 
-  z-index: 9999;
+  margin: 8px !important;
+}
+.quill-editor /deep/ .ql-formats:nth-child(1) {
+  margin-bottom: 0 !important;
 }
 
 .quill-editor /deep/ ul {
