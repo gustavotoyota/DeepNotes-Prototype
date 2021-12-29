@@ -78,6 +78,13 @@ pages.changeDepth = (pageDepth) => {
 
 
 pages.navigate = (pageId) => {
+  const pageDepth = $state.project.pages.path.indexOf(pageId)
+
+  if (pageDepth >= 0) {
+    $app.pages.changeDepth(pageDepth)
+    return
+  }
+
   $state.project.pages.path.splice($state.project.pages.depth + 1)
   $state.project.pages.path.push(pageId)
   
