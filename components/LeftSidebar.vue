@@ -43,8 +43,8 @@ export default {
 
   methods: {
 
-    onPageClick(idx) {
-      $state.project.pages.depth = idx
+    onPageClick(pageDepth) {
+      $app.pages.changeDepth(pageDepth)
     },
 
   },

@@ -57,7 +57,9 @@ pages.getById = (pageId) => {
 }
 
 
-pages.bumpRecent = (pageId) => {
+pages.bumpRecent = () => {
+  const pageId = $getters.currentPage.id
+
   const pageIdx = $state.project.pages.recent.indexOf(pageId)
   if (pageIdx >= 0)
     $delete($state.project.pages.recent, pageIdx)
@@ -66,17 +68,23 @@ pages.bumpRecent = (pageId) => {
 }
 
 
+pages.changeDepth = (pageDepth) => {
+  $state.project.pages.depth = Math.max(0, pageDepth)
+
+  $app.pages.bumpRecent()
+}
+
+
 pages.navigate = (pageId) => {
   $app.selection.clear()
 
   $state.project.pages.path.splice($state.project.pages.depth + 1)
   $state.project.pages.path.push(pageId)
-  $state.project.pages.depth++
-
-  $app.pages.bumpRecent(pageId)
+  
+  $app.pages.changeDepth($state.project.pages.depth + 1)
 }
 
 
 pages.back = () => {
-  $state.project.pages.depth--
+  $app.pages.changeDepth($state.project.pages.depth - 1)
 }
