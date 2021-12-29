@@ -38,6 +38,11 @@ elems.getClientRect = (elem) => {
 }
 
 
+elems.getEditorNode = (elem, editorIdx) => {
+  return document.getElementById(`elem-${elem.id}-editor-${editorIdx}`)
+}
+
+
 
 elems.addToSelection = (elem) => {
   $set($getters.currentPage.elems.selected, elem.id, true)

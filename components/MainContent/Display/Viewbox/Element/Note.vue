@@ -14,10 +14,11 @@
     @pointerdown="onPointerDown"
     @click="onClick">
 
-      <div class="content-0"
-      @pointerdown="onContentPointerDown($event, 0)"
-      @dblclick="onContentDoubleClick($event, 0)">
-        <quill-editor ref="content0"
+      <div class="editor-0"
+      @pointerdown="onEditorPointerDown($event, 0)"
+      @dblclick="onEditorDoubleClick($event, 0)">
+        <quill-editor ref="editor-0"
+        :id="`elem-${elem.id}-editor-0`"
         v-model="elem.content[0]"
         :options="editorOptions"
         :disabled="!editing || elem.readOnly"
@@ -25,13 +26,14 @@
       </div>
 
       <div v-show="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')"
-      class="content-1-outer">
+      class="editor-1-outer">
         <div class="rule"></div>
 
-        <div class="content-1-inner"
-        @pointerdown="onContentPointerDown($event, 1)"
-        @dblclick="onContentDoubleClick($event, 1)">
-          <quill-editor ref="content1"
+        <div class="editor-1-inner"
+        @pointerdown="onEditorPointerDown($event, 1)"
+        @dblclick="onEditorDoubleClick($event, 1)">
+          <quill-editor ref="editor-1"
+          :id="`elem-${elem.id}-editor-1`"
           v-model="elem.content[1]"
           :options="editorOptions"
           :disabled="!editing || elem.readOnly"
@@ -122,16 +124,16 @@ export default {
 
 
 
-    onContentPointerDown(event, idx) {
+    onEditorPointerDown(event, editorIdx) {
       if (event.button === 0 && this.editing
       && !event.target.isContentEditable) {
-        this.$refs[`content${idx}`].quill.focus()
+        this.$refs[`editor-${editorIdx}`].quill.focus()
         event.preventDefault()
       }
     },
-    onContentDoubleClick(event, idx) {
+    onEditorDoubleClick(event, editorIdx) {
       if (event.button === 0)
-        $app.editing.start(this.elem, idx)
+        $app.editing.start(this.elem, editorIdx)
     },
 
   },
@@ -193,7 +195,7 @@ export default {
   display: flex; flex-direction: column;
 }
 
-.content-0 {
+.editor-0 {
   flex: none;
   padding: 11px;
   max-height: 100%;
@@ -206,12 +208,12 @@ export default {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.content-1-outer {
+.editor-1-outer {
   flex: 1;
   height: 0;
   white-space: inherit;
 }
-.content-1-inner {
+.editor-1-inner {
   padding: 11px;
   height: 100%;
   white-space: inherit;

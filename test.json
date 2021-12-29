@@ -4,8 +4,8 @@
       {
         "id": 0,
         "name": "Main Page",
-        "createdAt": "2021-12-28T12:31:45.359Z",
-        "modifiedAt": "2021-12-28T12:31:45.359Z",
+        "createdAt": "2021-12-29T00:44:20.714Z",
+        "modifiedAt": "2021-12-29T00:44:20.714Z",
         "elems": {
           "list": [
             {
@@ -13,68 +13,215 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -91.75000000000007,
-                "y": -1.5277777777777337
+                "x": -123,
+                "y": -57.5
               },
               "size": {
-                "x": null,
-                "y": null
+                "x": "auto",
+                "y": "auto"
               },
               "anchor": {
                 "x": 0.5,
                 "y": 0.5
               },
-              "title": "",
-              "content": "<h2>Projects</h2>",
-              "hasTitle": false,
+              "content": [
+                "<h1>Studies</h1>",
+                "<p>Knowledge</p>"
+              ],
+              "hasBody": true,
               "collapsible": false,
               "collapsed": false,
               "collapsedSize": {
-                "x": null,
-                "y": null
+                "x": "expanded",
+                "y": "auto"
               },
+              "expandedWidth": 0,
               "movable": true,
               "resizable": true,
-              "autoWidth": true,
-              "autoHeight": true,
               "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "linkedPageId": 1
             },
             {
               "id": 2,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 3.3333333333333353,
-                "y": -100.41666666666667
+                "x": 163,
+                "y": -62.5
               },
               "size": {
-                "x": null,
-                "y": null
+                "x": "auto",
+                "y": "auto"
               },
               "anchor": {
                 "x": 0.5,
                 "y": 0.5
               },
-              "title": "",
-              "content": "<h2>Knowledge</h2>",
-              "hasTitle": false,
+              "content": [
+                "<h1>Oficina</h1>",
+                ""
+              ],
+              "hasBody": false,
               "collapsible": false,
               "collapsed": false,
               "collapsedSize": {
-                "x": null,
-                "y": null
+                "x": "expanded",
+                "y": "auto"
               },
+              "expandedWidth": 0,
               "movable": true,
               "resizable": true,
-              "autoWidth": true,
-              "autoHeight": true,
               "wrapText": true,
               "readOnly": false,
-              "linkedPageId": 1
+              "linkedPageId": 3
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 23,
+                "y": 73.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Random</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 2
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 20,
+                "y": -190.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Projects</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 4
             }
           ],
-          "nextId": 3,
+          "nextId": 4,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 46,
+            "y": -53
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 1,
+        "name": "Studies",
+        "createdAt": "2021-12-29T00:48:39.958Z",
+        "modifiedAt": "2021-12-29T00:48:39.958Z",
+        "elems": {
+          "list": [
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -93,
+                "y": -110.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>History</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 1,
+          "selected": {
+            "0": true
+          },
+          "activeId": 0,
+          "editing": true
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 2,
+        "name": "Random\n",
+        "createdAt": "2021-12-29T01:01:12.823Z",
+        "modifiedAt": "2021-12-29T01:01:12.823Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
           "selected": {},
           "activeId": null,
           "editing": false
@@ -88,60 +235,47 @@
         }
       },
       {
-        "id": 1,
-        "name": "Knowledge",
-        "createdAt": "2021-12-28T12:34:28.205Z",
-        "modifiedAt": "2021-12-28T12:34:28.205Z",
+        "id": 3,
+        "name": "Oficina\n",
+        "createdAt": "2021-12-29T01:01:16.741Z",
+        "modifiedAt": "2021-12-29T01:01:16.741Z",
         "elems": {
-          "list": [
-            {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -2,
-                "y": -91.5
-              },
-              "size": {
-                "x": null,
-                "y": null
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "title": "",
-              "content": "<h2>Languages</h2>",
-              "hasTitle": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": null,
-                "y": null
-              },
-              "movable": true,
-              "resizable": true,
-              "autoWidth": true,
-              "autoHeight": true,
-              "wrapText": true,
-              "readOnly": false
-            }
-          ],
-          "nextId": 1,
+          "list": [],
+          "nextId": 0,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -5,
-            "y": -90
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 4,
+        "name": "Projects\n",
+        "createdAt": "2021-12-29T01:01:19.189Z",
+        "modifiedAt": "2021-12-29T01:01:19.189Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
           },
           "zoom": 1
         }
       }
     ],
-    "nextId": 2,
+    "nextId": 5,
     "path": [
       0,
       1
@@ -149,6 +283,9 @@
     "depth": 1,
     "recent": [
       0,
+      2,
+      3,
+      4,
       1
     ]
   }
