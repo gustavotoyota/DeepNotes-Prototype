@@ -266,9 +266,42 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 8
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -13,
+                "y": 172.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Cooking</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
-          "nextId": 3,
+          "nextId": 4,
           "selected": {},
           "activeId": null,
           "editing": false
@@ -308,39 +341,6 @@
         "modifiedAt": "2021-12-29T01:01:16.741Z",
         "elems": {
           "list": [
-            {
-              "id": 3,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -103,
-                "y": -139.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>Ideias</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
             {
               "id": 1,
               "type": "note",
@@ -406,11 +406,46 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -102,
+                "y": -139.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Ideias</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 4,
-          "selected": {},
-          "activeId": null,
+          "selected": {
+            "3": true
+          },
+          "activeId": 3,
           "editing": false
         },
         "camera": {
@@ -469,171 +504,6 @@
         "elems": {
           "list": [
             {
-              "id": 4,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -121,
-                "y": -147.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>Portuguese</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -16,
-                "y": -39.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>Chinese</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 6,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 73,
-                "y": 71.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>French</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 3,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -107,
-                "y": 78.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>English</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 5,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 67,
-                "y": -148.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>Spanish</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 0,
               "type": "note",
               "parent": null,
@@ -668,6 +538,142 @@
               "linkedPageId": 7
             },
             {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -108,
+                "y": 72.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>English</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 11
+            },
+            {
+              "id": 4,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -121,
+                "y": -147.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Portuguese</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 12
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -16,
+                "y": -39.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Chinese</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 13
+            },
+            {
+              "id": 5,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 67,
+                "y": -148.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Spanish</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 14
+            },
+            {
               "id": 1,
               "type": "note",
               "parent": null,
@@ -698,7 +704,42 @@
               "movable": true,
               "resizable": true,
               "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "linkedPageId": 15
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 73,
+                "y": 71.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>French</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 16
             }
           ],
           "nextId": 7,
@@ -722,10 +763,8 @@
         "elems": {
           "list": [],
           "nextId": 1,
-          "selected": {
-            "0": true
-          },
-          "activeId": 0,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
@@ -738,77 +777,11 @@
       },
       {
         "id": 8,
-        "name": "History\n",
+        "name": "History",
         "createdAt": "2021-12-29T01:41:47.939Z",
         "modifiedAt": "2021-12-29T01:41:47.939Z",
         "elems": {
           "list": [
-            {
-              "id": 3,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -35.14202514648435,
-                "y": 67.40626464843749
-              },
-              "size": {
-                "x": 221.96405029296875,
-                "y": 194.8990478515625
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h2>Early Modern Era</h2>",
-                "<p>A.D. 1450-A.D. 1750</p><p><br></p><p>Resurgence of the values and philosophies from the Classical era.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -282.70999999999987,
-                "y": -27.828125
-              },
-              "size": {
-                "x": 229.5,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>The Middle Ages</h2>",
-                "<p>A.D. 476 -A.D. 1450</p><p><br></p><p>Also known as the Medieval or Post-Classical era.</p><p><br></p><p>Historians refer to the early part of this period as the Dark Ages due to the loss of recorded history after the fall of the Roman Empire in A.D. 476.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": 194.328125
-              },
-              "expandedWidth": 229.5,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
             {
               "id": 4,
               "type": "note",
@@ -874,7 +847,42 @@
               "movable": true,
               "resizable": true,
               "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "linkedPageId": 17
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -35.14202514648435,
+                "y": 67.40626464843749
+              },
+              "size": {
+                "x": 221.96405029296875,
+                "y": 194.8990478515625
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h2>Early Modern Era</h2>",
+                "<p>A.D. 1450-A.D. 1750</p><p><br></p><p>Resurgence of the values and philosophies from the Classical era.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 19
             },
             {
               "id": 1,
@@ -909,6 +917,40 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 10
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -281.70999999999987,
+                "y": -27.828125
+              },
+              "size": {
+                "x": 229.5,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>The Middle Ages</h2>",
+                "<p>A.D. 476 -A.D. 1450</p><p><br></p><p>Also known as the Medieval or Post-Classical era.</p><p><br></p><p>Historians refer to the early part of this period as the Dark Ages due to the loss of recorded history after the fall of the Roman Empire in A.D. 476.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": 194.328125
+              },
+              "expandedWidth": 229.5,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 18
             }
           ],
           "nextId": 5,
@@ -918,8 +960,8 @@
         },
         "camera": {
           "pos": {
-            "x": -24.99999999999997,
-            "y": -3.440000000000019
+            "x": -31.99999999999997,
+            "y": -4.440000000000019
           },
           "zoom": 1
         }
@@ -931,171 +973,6 @@
         "modifiedAt": "2021-12-29T01:56:32.843Z",
         "elems": {
           "list": [
-            {
-              "id": 6,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -143.109375,
-                "y": 168.5
-              },
-              "size": {
-                "x": 296.21875,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>Second Industrial Revolution</h2><p>(A.D. 1869 to A.D. 1914 )</p>",
-                "<p>Often referred to as the <strong>Technological Revolution</strong>; period in which the light bulb, the telephone, the airplane, and the Model T automobile were invented.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 296.21875,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 9,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 168.890625,
-                "y": -87.5
-              },
-              "size": {
-                "x": 296.21875,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>Great Depression</h2><p>(A.D. 1929 to A.D. 1939)</p>",
-                "<p>Extended period of worldwide economic hardship that started with the stock market crash in 1929.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 296.21875,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 8,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 169.890625,
-                "y": -4.5
-              },
-              "size": {
-                "x": 296.21875,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>World War II</h2><p>(A.D. 1939 to A.D. 1945)</p>",
-                "<p>Wartime period that began with Germany’s invasion of Poland and ends with the surrender of Japan, the last standing Axis power.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 296.21875,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 11,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 169.890625,
-                "y": 82.5
-              },
-              "size": {
-                "x": 296.21875,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>Contemporary Period</h2><p>(A.D. 1945 to current)</p>",
-                "<p>Also known as the Information Age; the period in which technological advances define social, economic and political life.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 296.21875,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -143.57885091145835,
-                "y": -169.50000366210932
-              },
-              "size": {
-                "x": 294.31103515625,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>First Industrial Revolution</h2><p>(A.D. 1760 to A.D. 1840)</p>",
-                "<p>Beginning of the modern era that saw several technological innovations, including the invention of the cotton gin, the increase of city factories and mills and the completion of the Erie Canal.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 294.296875,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
             {
               "id": 1,
               "type": "note",
@@ -1127,40 +1004,8 @@
               "movable": true,
               "resizable": true,
               "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 5,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -141.94994466145835,
-                "y": 85.49999633789068
-              },
-              "size": {
-                "x": 289.05322265625,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "content": [
-                "<h2>Victorian Era</h2><p>(A.D. 1837 to A.D. 1901)</p>",
-                "<p>Reign of Queen Victoria I that saw increased urbanization, the American Civil War and the end of African slavery.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 289.046875,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "linkedPageId": 21
             },
             {
               "id": 2,
@@ -1193,7 +1038,76 @@
               "movable": true,
               "resizable": true,
               "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "linkedPageId": 22
+            },
+            {
+              "id": 5,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -141.94994466145835,
+                "y": 86.49999633789068
+              },
+              "size": {
+                "x": 289.05322265625,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Victorian Era</h2><p>(A.D. 1837 to A.D. 1901)</p>",
+                "<p>Reign of Queen Victoria I that saw increased urbanization, the American Civil War and the end of African slavery.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 289.046875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 23
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -142.109375,
+                "y": 168.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Second Industrial Revolution</h2><p>(A.D. 1869 to A.D. 1914 )</p>",
+                "<p>Often referred to as the <strong>Technological Revolution</strong>; period in which the light bulb, the telephone, the airplane, and the Model T automobile were invented.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 24
             },
             {
               "id": 7,
@@ -1226,7 +1140,144 @@
               "movable": true,
               "resizable": true,
               "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "linkedPageId": 25
+            },
+            {
+              "id": 9,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 168.890625,
+                "y": -87.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Great Depression</h2><p>(A.D. 1929 to A.D. 1939)</p>",
+                "<p>Extended period of worldwide economic hardship that started with the stock market crash in 1929.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 26
+            },
+            {
+              "id": 8,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 169.890625,
+                "y": -4.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>World War II</h2><p>(A.D. 1939 to A.D. 1945)</p>",
+                "<p>Wartime period that began with Germany’s invasion of Poland and ends with the surrender of Japan, the last standing Axis power.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 27
+            },
+            {
+              "id": 11,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 169.890625,
+                "y": 83.5
+              },
+              "size": {
+                "x": 296.21875,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>Contemporary Period</h2><p>(A.D. 1945 to current)</p>",
+                "<p>Also known as the Information Age; the period in which technological advances define social, economic and political life.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 296.21875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 28
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -143.57885091145835,
+                "y": -169.50000366210932
+              },
+              "size": {
+                "x": 294.31103515625,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "content": [
+                "<h2>First Industrial Revolution</h2><p>(A.D. 1760 to A.D. 1840)</p>",
+                "<p>Beginning of the modern era that saw several technological innovations, including the invention of the cotton gin, the increase of city factories and mills and the completion of the Erie Canal.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 294.296875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 20
             }
           ],
           "nextId": 12,
@@ -1328,28 +1379,407 @@
           },
           "zoom": 1
         }
+      },
+      {
+        "id": 11,
+        "name": "English",
+        "createdAt": "2021-12-29T02:27:25.542Z",
+        "modifiedAt": "2021-12-29T02:27:25.542Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 12,
+        "name": "Portuguese",
+        "createdAt": "2021-12-29T02:27:29.086Z",
+        "modifiedAt": "2021-12-29T02:27:29.086Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 13,
+        "name": "Chinese",
+        "createdAt": "2021-12-29T02:27:32.016Z",
+        "modifiedAt": "2021-12-29T02:27:32.016Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 14,
+        "name": "Spanish",
+        "createdAt": "2021-12-29T02:27:34.705Z",
+        "modifiedAt": "2021-12-29T02:27:34.705Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 15,
+        "name": "Korean",
+        "createdAt": "2021-12-29T02:27:36.968Z",
+        "modifiedAt": "2021-12-29T02:27:36.968Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 16,
+        "name": "French",
+        "createdAt": "2021-12-29T02:27:39.083Z",
+        "modifiedAt": "2021-12-29T02:27:39.083Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 17,
+        "name": "Prehistory",
+        "createdAt": "2021-12-29T02:27:51.514Z",
+        "modifiedAt": "2021-12-29T02:27:51.514Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 18,
+        "name": "The Middle Ages",
+        "createdAt": "2021-12-29T02:27:54.552Z",
+        "modifiedAt": "2021-12-29T02:27:54.552Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 19,
+        "name": "Early Modern Era",
+        "createdAt": "2021-12-29T02:27:57.414Z",
+        "modifiedAt": "2021-12-29T02:27:57.414Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 20,
+        "name": "First Industrial Revolution",
+        "createdAt": "2021-12-29T02:29:29.726Z",
+        "modifiedAt": "2021-12-29T02:29:29.726Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 21,
+        "name": "Revolutionary Period",
+        "createdAt": "2021-12-29T02:29:32.492Z",
+        "modifiedAt": "2021-12-29T02:29:32.492Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 22,
+        "name": "Age of Imperialism",
+        "createdAt": "2021-12-29T02:29:35.473Z",
+        "modifiedAt": "2021-12-29T02:29:35.473Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 23,
+        "name": "Victorian Era",
+        "createdAt": "2021-12-29T02:29:37.853Z",
+        "modifiedAt": "2021-12-29T02:29:37.853Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 24,
+        "name": "Second Industrial Revolution",
+        "createdAt": "2021-12-29T02:29:40.800Z",
+        "modifiedAt": "2021-12-29T02:29:40.800Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 25,
+        "name": "World War I",
+        "createdAt": "2021-12-29T02:29:43.660Z",
+        "modifiedAt": "2021-12-29T02:29:43.660Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 26,
+        "name": "Great Depression",
+        "createdAt": "2021-12-29T02:29:46.156Z",
+        "modifiedAt": "2021-12-29T02:29:46.156Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 27,
+        "name": "World War II",
+        "createdAt": "2021-12-29T02:29:48.805Z",
+        "modifiedAt": "2021-12-29T02:29:48.805Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      },
+      {
+        "id": 28,
+        "name": "Contemporary Period",
+        "createdAt": "2021-12-29T02:29:51.917Z",
+        "modifiedAt": "2021-12-29T02:29:51.917Z",
+        "elems": {
+          "list": [],
+          "nextId": 0,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
       }
     ],
-    "nextId": 11,
+    "nextId": 29,
     "path": [
       0,
       1,
       8,
-      9
+      9,
+      27
     ],
-    "depth": 3,
+    "depth": 0,
     "recent": [
+      7,
+      5,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      6,
+      17,
+      19,
+      10,
+      18,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      28,
+      20,
       2,
       4,
-      5,
-      6,
-      7,
       3,
-      0,
-      1,
-      10,
+      9,
       8,
-      9
+      27,
+      1,
+      0
     ]
   }
 }
