@@ -27,8 +27,8 @@ selection.duplicate = () => {
     newElem.pos.y += 8
     page.elems.list.push(newElem)
 
-    $app.elems.removeFromSelection(elem)
-    $app.elems.addToSelection(newElem)
+    $app.elems.removeFromSelection(elem.id)
+    $app.elems.addToSelection(newElem.id)
 
     if (elem.id == page.elems.activeId)
       page.elems.activeId = newElem.id

@@ -49,16 +49,16 @@ boxSelection.finish = (event) => {
   }
 
   for (const elem of $getters.currentPage.elems.list) {
-    const clientRect = $app.elems.getClientRect(elem)
+    const clientRect = $app.elems.getClientRect(elem.id)
 
     if (clientRect.left < topLeft.x || clientRect.top < topLeft.y
     || clientRect.right > bottomRight.x || clientRect.bottom > bottomRight.y)
       continue
 
-    if ($app.elems.isSelected(elem))
-      $app.elems.removeFromSelection(elem)
+    if ($app.elems.isSelected(elem.id))
+      $app.elems.removeFromSelection(elem.id)
     else
-      $app.elems.addToSelection(elem)
+      $app.elems.addToSelection(elem.id)
   }
 
   $state.boxSelection.active = false

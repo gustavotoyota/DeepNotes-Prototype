@@ -12,8 +12,7 @@ editing.start = (elem, editorIdx) => {
   if (page.elems.editing)
     return
 
-  $app.selection.clear()
-  $app.elems.addToSelection(elem)
+  $app.elems.selectExclusive(elem.id)
 
   page.elems.activeId = elem.id
   page.elems.editing = true

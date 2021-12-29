@@ -14,7 +14,7 @@ clickSelection.perform = (elem, event) => {
     
   const page = $getters.currentPage
 
-  if (!event.ctrlKey && !$app.elems.isSelected(elem))
+  if (!event.ctrlKey && !$app.elems.isSelected(elem.id))
     $app.selection.clear()
   else
     page.elems.activeId = null
@@ -22,7 +22,7 @@ clickSelection.perform = (elem, event) => {
 
 
 
-  if (event.ctrlKey && $app.elems.isSelected(elem)) {
+  if (event.ctrlKey && $app.elems.isSelected(elem.id)) {
     $delete(page.elems.selected, elem.id)
 
     page.elems.activeId = null

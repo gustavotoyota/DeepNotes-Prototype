@@ -91,7 +91,7 @@ export default {
         return
 
       setTimeout(() => {
-        const editor0Node = $app.elems.getEditorNode(this.elem, 0)
+        const editor0Node = $app.elems.getEditorNode(this.elem.id, 0)
 
         this.name = editor0Node.__vue__.quill.getText().split('\n')[0]
         this.$refs.name.focus()

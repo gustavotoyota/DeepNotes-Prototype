@@ -133,7 +133,7 @@ export default {
 
       $app.clickSelection.perform(this.elem, event)
 
-      if ($app.elems.isSelected(this.elem)
+      if ($app.elems.isSelected(this.elem.id)
       && this.elem.movable
       && !this.page.elems.editing)
         $app.dragging.start(event)
@@ -179,7 +179,7 @@ export default {
 
 
     selected() {
-      return $app.elems.isSelected(this.elem)
+      return $app.elems.isSelected(this.elem.id)
     },
     active() {
       return this.page.elems.activeId == this.elem.id

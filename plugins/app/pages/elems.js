@@ -30,36 +30,36 @@ elems.getIndexById = (id) => {
 
 
 
-elems.getNode = (elem) => {
-  return document.getElementById(`elem-${elem.id}`)
+elems.getNode = (elemId) => {
+  return document.getElementById(`elem-${elemId}`)
 }
-elems.getClientRect = (elem) => {
-  return $app.elems.getNode(elem).getBoundingClientRect()
-}
-
-
-elems.getEditorNode = (elem, editorIdx) => {
-  return document.getElementById(`elem-${elem.id}-editor-${editorIdx}`)
+elems.getClientRect = (elemId) => {
+  return $app.elems.getNode(elemId).getBoundingClientRect()
 }
 
 
-
-elems.addToSelection = (elem) => {
-  $set($getters.currentPage.elems.selected, elem.id, true)
-}
-elems.removeFromSelection = (elem) => {
-  $delete($getters.currentPage.elems.selected, elem.id)
-}
-elems.isSelected = (elem) => {
-  return elem.id in $getters.currentPage.elems.selected
+elems.getEditorNode = (elemId, editorIdx) => {
+  return document.getElementById(`elem-${elemId}-editor-${editorIdx}`)
 }
 
 
 
-elems.selectExclusive = (elem) => {
+elems.addToSelection = (elemId) => {
+  $set($getters.currentPage.elems.selected, elemId, true)
+}
+elems.removeFromSelection = (elemId) => {
+  $delete($getters.currentPage.elems.selected, elemId)
+}
+elems.isSelected = (elemId) => {
+  return elemId in $getters.currentPage.elems.selected
+}
+
+
+
+elems.selectExclusive = (elemId) => {
   $app.selection.clear()
 
-  $app.elems.addToSelection(elem)
+  $app.elems.addToSelection(elemId)
 }
 
 

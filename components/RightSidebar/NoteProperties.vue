@@ -243,7 +243,7 @@ export default {
       },
       set(value) {
         if (value) {
-          const clientRect = $app.elems.getClientRect(this.elem)
+          const clientRect = $app.elems.getClientRect(this.elem.id)
 
           this.elem.expandedWidth = $app.sizes.screenToWorld1D(clientRect.width)
         }
@@ -264,7 +264,7 @@ export default {
       },
       set(value) {
         if (value === 'custom') {
-          const clientRect = $app.elems.getClientRect(this.elem)
+          const clientRect = $app.elems.getClientRect(this.elem.id)
 
           this.elem[this.sizeProp].x = $app.sizes.screenToWorld1D(clientRect.width)
         } else
@@ -280,7 +280,7 @@ export default {
       },
       set(value) {
         if (value === 'custom') {
-          const clientRect = $app.elems.getClientRect(this.elem)
+          const clientRect = $app.elems.getClientRect(this.elem.id)
 
           this.elem[this.sizeProp].y = $app.sizes.screenToWorld1D(clientRect.height)
         } else
