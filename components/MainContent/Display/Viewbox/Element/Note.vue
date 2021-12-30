@@ -3,48 +3,38 @@
   <div class="anchor"
   :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
-    <div :style="`position: absolute; ` +
-    `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); `">
+    <div class="wrapper"
+    :style="`transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); `">
 
       <v-sheet class="note"
-
-      :id="`elem-${elem.id}`" rounded elevation="6"
-
-      :color="active ? `grey darken-1` :
-        (selected ? `grey darken-2` : `grey darken-3`)"
-
+      :id="`elem-${elem.id}`"
+      :color="color" rounded elevation="6"
       :style="`width: ${width}; height: ${height}; ` +
-      `cursor: ${elem.linkedPageId == null || selected ? 'auto' : 'pointer' }; ` +
+      `cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }; ` +
       `white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
-
-      style="border-radius: 7px !important;
-      min-width: 23px; min-height: 40px;
-      display: flex; flex-direction: column;
-      overflow: hidden"
-
       @pointerdown="onPointerDown"
       @click="onClick">
 
-        <div class="editor-0"
+        <div class="editor-0-div"
         :style="`flex: ${ elem.hasBody ? 'none' : 1 }`"
         @pointerdown="onEditorPointerDown($event, 0)"
         @dblclick="onEditorDoubleClick($event, 0)">
           <quill-editor ref="editor-0"
-          :id="`elem-${elem.id}-editor-0`"
+          :id="`note-${elem.id}-editor-0`"
           v-model="elem.content[0]"
           :options="editorOptions"
           :disabled="!editing || elem.readOnly"/>
         </div>
 
-        <div v-if="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')"
-        class="editor-1-outer">
+        <div class="editor-1-outer-div"
+        v-if="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')">
           <v-divider/>
 
-          <div class="editor-1-inner"
+          <div class="editor-1-inner-div"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
             <quill-editor ref="editor-1"
-            :id="`elem-${elem.id}-editor-1`"
+            :id="`note-${elem.id}-editor-1`"
             v-model="elem.content[1]"
             :options="editorOptions"
             :disabled="!editing || elem.readOnly"/>
@@ -192,6 +182,17 @@ export default {
 
 
 
+    color() {
+      if (this.active)
+        return `grey darken-1`
+      else if (this.selected)
+        return `grey darken-2`
+      else
+        return `grey darken-3`
+    },
+
+
+
     sizeProp() {
       return $app.elems.getSizeProp(this.elem)
     },
@@ -220,21 +221,34 @@ export default {
   position: absolute; width: 0; height: 0;
 }
 
-.note {
+.wrapper {
+  position: absolute;
 }
 
-.editor-0 {
+.note {
+  border-radius: 7px !important;
+
+  min-width: 23px;
+  min-height: 40px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.editor-0-div {
   padding: 11px;
   max-height: 100%;
   white-space: inherit;
 }
 
-.editor-1-outer {
+.editor-1-outer-div {
   flex: 1;
   height: 0;
   white-space: inherit;
 }
-.editor-1-inner {
+.editor-1-inner-div {
   padding: 11px;
   height: 100%;
   white-space: inherit;

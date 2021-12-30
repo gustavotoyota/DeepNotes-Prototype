@@ -30,3 +30,9 @@ notes.create = (pos) => {
 
   return note
 }
+
+
+
+notes.getEditorNode = (elemId, editorIdx) => {
+  return document.getElementById(`note-${elemId}-editor-${editorIdx}`)
+}

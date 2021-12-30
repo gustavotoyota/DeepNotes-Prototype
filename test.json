@@ -3107,18 +3107,16 @@
             }
           ],
           "nextId": 32,
-          "selected": {
-            "7": true
-          },
-          "activeId": 7,
-          "editing": true
+          "selected": {},
+          "activeId": null,
+          "editing": false
         },
         "camera": {
           "pos": {
-            "x": -272.01989036351125,
-            "y": 138.44929118655676
+            "x": -259.5032076895483,
+            "y": 63.349195142778534
           },
-          "zoom": 1.2
+          "zoom": 2.48832
         }
       },
       {

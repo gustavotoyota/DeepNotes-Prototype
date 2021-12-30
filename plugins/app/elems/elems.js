@@ -38,11 +38,6 @@ elems.getClientRect = (elemId) => {
 }
 
 
-elems.getEditorNode = (elemId, editorIdx) => {
-  return document.getElementById(`elem-${elemId}-editor-${editorIdx}`)
-}
-
-
 
 elems.activate = (elemId) => {
   $getters.currentPage.elems.activeId = elemId
