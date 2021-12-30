@@ -2674,39 +2674,6 @@
               "readOnly": false
             },
             {
-              "id": 1,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -250.01555555555564,
-                "y": -128.0657777777778
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>To do next</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 5,
               "type": "note",
               "parent": null,
@@ -3139,39 +3106,6 @@
               "readOnly": false
             },
             {
-              "id": 35,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -353.3786919680404,
-                "y": 328.762194757288
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement Ctrl + A node selection</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 32,
               "type": "note",
               "parent": null,
@@ -3237,21 +3171,85 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 35,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -353.3786919680404,
+                "y": 328.762194757288
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement Ctrl + A node selection</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -250.01555555555564,
+                "y": -128.0657777777778
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>To do next</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 36,
-          "selected": {
-            "23": true
-          },
-          "activeId": 23,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -245.75778484629302,
-            "y": 120.26562982684587
+            "x": -245.75782952357596,
+            "y": 120.26561470215285
           },
-          "zoom": 0.6791277860146822
+          "zoom": 0.6791268362749624
         }
       },
       {

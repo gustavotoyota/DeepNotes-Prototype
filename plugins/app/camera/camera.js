@@ -55,10 +55,9 @@ camera.fitToScreen = () => {
 
   const displayRect = $app.display.getClientRect()
 
-  page.camera.zoom = Math.min(page.camera.zoom,
+  page.camera.zoom = Math.min(
     (Math.min(100, displayRect.width / 4) - displayRect.width / 2) /
-    (worldTopLeft.x - page.camera.pos.x))
-  page.camera.zoom = Math.min(page.camera.zoom,
+    (worldTopLeft.x - page.camera.pos.x),
     (Math.min(50, displayRect.height / 4) - displayRect.height / 2) /
     (worldTopLeft.y - page.camera.pos.y))
 
