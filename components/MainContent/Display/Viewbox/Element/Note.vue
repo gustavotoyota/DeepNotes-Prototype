@@ -15,6 +15,7 @@
     @click="onClick">
 
       <div class="editor-0"
+      :style="`flex: ${ elem.hasBody ? 'none' : 1 }`"
       @pointerdown="onEditorPointerDown($event, 0)"
       @dblclick="onEditorDoubleClick($event, 0)">
         <quill-editor ref="editor-0"
@@ -214,7 +215,6 @@ export default {
 }
 
 .editor-0 {
-  flex: none;
   padding: 11px;
   max-height: 100%;
   white-space: inherit;
