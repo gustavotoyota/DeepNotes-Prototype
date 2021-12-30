@@ -2441,40 +2441,6 @@
               "readOnly": false
             },
             {
-              "id": 7,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -61.1877075798127,
-                "y": -5.918899479618796
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix invisible note sticking out</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 39
-            },
-            {
               "id": 16,
               "type": "note",
               "parent": null,
@@ -3077,12 +3043,12 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -355.60936790257375,
-                "y": 229.60937419436925
+                "x": -656.8093679025743,
+                "y": 190.00937419436926
               },
               "size": {
                 "x": "auto",
-                "y": 101.43991699218748
+                "y": "auto"
               },
               "anchor": {
                 "x": 0,
@@ -3104,19 +3070,55 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 7,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -353.9877075798127,
+                "y": 232.14776718704783
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix invisible note sticking out</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 39
             }
           ],
           "nextId": 32,
-          "selected": {},
-          "activeId": null,
-          "editing": false
+          "selected": {
+            "7": true
+          },
+          "activeId": 7,
+          "editing": true
         },
         "camera": {
           "pos": {
             "x": -272.01989036351125,
             "y": 138.44929118655676
           },
-          "zoom": 0.8333333333333334
+          "zoom": 1.2
         }
       },
       {
