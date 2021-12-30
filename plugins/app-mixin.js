@@ -61,6 +61,10 @@ export default async function ({ app }) {
 
 
       onKeyDown(event) {
+        if (event.target.isContentEditable
+        && event.code === 'Escape')
+          $app.editing.stop()
+
         if (event.target.nodeName === 'INPUT'
         || event.target.nodeName === 'TEXTAREA'
         || event.target.isContentEditable)
@@ -75,7 +79,7 @@ export default async function ({ app }) {
         }
 
         if (event.code === 'F2')
-          $app.editing.start($getters.activeElem)
+          $app.editing.start($getters.activeElem, 0)
 
         if (event.code === 'Backspace')
           $app.pages.back()

@@ -2379,7 +2379,7 @@
               "parent": null,
               "pos": {
                 "x": -59.596080246913296,
-                "y": 154.58009259259245
+                "y": 104.18009259259244
               },
               "size": {
                 "x": "auto",
@@ -2408,45 +2408,12 @@
               "linkedPageId": 38
             },
             {
-              "id": 11,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -60.59608024691331,
-                "y": 100.41342592592571
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Make it compatible with touchscreen</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 16,
               "type": "note",
               "parent": null,
               "pos": {
                 "x": -59.59608024691331,
-                "y": 209.41342592592582
+                "y": 159.01342592592593
               },
               "size": {
                 "x": "auto",
@@ -2479,7 +2446,7 @@
               "parent": null,
               "pos": {
                 "x": -60.262746913579996,
-                "y": 47.274537037036836
+                "y": -3.1254629629631685
               },
               "size": {
                 "x": "auto",
@@ -2506,40 +2473,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 40
-            },
-            {
-              "id": 8,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -356.31,
-                "y": 55.185350694444566
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement arrows</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 37
             },
             {
               "id": 21,
@@ -2675,40 +2608,6 @@
               "readOnly": false
             },
             {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -358.91555555555556,
-                "y": -1.16464930555554
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement Collapse UI</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 36
-            },
-            {
               "id": 24,
               "type": "note",
               "parent": null,
@@ -2769,72 +2668,6 @@
                 "y": "auto"
               },
               "expandedWidth": 226.9531127929686,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 14,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -355.24333333333357,
-                "y": 111.35088888888919
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Exit note editing when pressing Esc</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -359.19333333333344,
-                "y": -60.96022222222218
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement default note properties</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 215.671875,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2912,7 +2745,7 @@
               "parent": null,
               "pos": {
                 "x": -59.21873476455292,
-                "y": 373.40624919436925
+                "y": 323.00624919436933
               },
               "size": {
                 "x": "auto",
@@ -2945,7 +2778,7 @@
               "parent": null,
               "pos": {
                 "x": -60.85959876543188,
-                "y": 315.5475370370372
+                "y": 265.1475370370373
               },
               "size": {
                 "x": "auto",
@@ -2978,7 +2811,7 @@
               "parent": null,
               "pos": {
                 "x": -59.59608024691332,
-                "y": 262.41342592592594
+                "y": 212.01342592592601
               },
               "size": {
                 "x": "auto",
@@ -2991,39 +2824,6 @@
               "content": [
                 "<p>Create account management</p>",
                 ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 23,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -357.0999987654322,
-                "y": 170.93815925925924
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement fit-to-screen button</p>",
-                "<p>sdfsdf</p>"
               ],
               "hasBody": false,
               "collapsible": false,
@@ -3076,8 +2876,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -353.9877075798127,
-                "y": 232.14776718704783
+                "x": -655.1877075798129,
+                "y": 246.54776718704773
               },
               "size": {
                 "x": "auto",
@@ -3104,49 +2904,28 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 39
-            }
-          ],
-          "nextId": 32,
-          "selected": {},
-          "activeId": null,
-          "editing": false
-        },
-        "camera": {
-          "pos": {
-            "x": -259.5032076895483,
-            "y": 63.349195142778534
-          },
-          "zoom": 2.48832
-        }
-      },
-      {
-        "id": 36,
-        "name": "Implement Collapse UI",
-        "createdAt": "2021-12-29T17:49:14.654Z",
-        "modifiedAt": "2021-12-29T17:49:14.654Z",
-        "elems": {
-          "list": [
+            },
             {
-              "id": 0,
+              "id": 11,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 65.52170732286241,
-                "y": -77.48437563578288
+                "x": -60.59608024691331,
+                "y": 50.01342592592569
               },
               "size": {
-                "x": 161.01214090983072,
+                "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
-                "<h2>Other option</h2>",
-                "<p>Show on the right side of the note, outside of it</p>"
+                "<p>Make it compatible with touchscreen</p>",
+                ""
               ],
-              "hasBody": true,
+              "hasBody": false,
               "collapsible": false,
               "collapsed": false,
               "collapsedSize": {
@@ -3159,6 +2938,234 @@
               "wrapText": true,
               "readOnly": false
             },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -354.11555555555566,
+                "y": 140.43535069444465
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement collapsible UI</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 36
+            },
+            {
+              "id": 32,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -354.3099999999999,
+                "y": -5.214649305555561
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Make shift work like control</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 37
+            },
+            {
+              "id": 8,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -353.9100000000001,
+                "y": 195.58535069444474
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement arrows</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 37
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -355.59333333333376,
+                "y": 84.2397777777777
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement default note properties</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 215.671875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 14,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.9873333333342,
+                "y": 302.77488888888917
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Exit note editing when pressing Esc</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 23,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -354.69999876543216,
+                "y": -58.261840740740794
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement fit-to-screen button</p>",
+                "<p>sdfsdf</p>"
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            }
+          ],
+          "nextId": 33,
+          "selected": {
+            "0": true,
+            "2": true,
+            "8": true,
+            "23": true,
+            "32": true
+          },
+          "activeId": 23,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": -247.71920768954845,
+            "y": 122.23719514277863
+          },
+          "zoom": 0.8333333333333334
+        }
+      },
+      {
+        "id": 36,
+        "name": "Implement Collapse UI",
+        "createdAt": "2021-12-29T17:49:14.654Z",
+        "modifiedAt": "2021-12-29T17:49:14.654Z",
+        "elems": {
+          "list": [
             {
               "id": 1,
               "type": "note",
@@ -3211,6 +3218,39 @@
               "content": [
                 "<h2>Another option</h2>",
                 "<p>Transparent overlay</p>"
+              ],
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 65.52170732286241,
+                "y": -77.48437563578288
+              },
+              "size": {
+                "x": 161.01214090983072,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h2>Other option</h2>",
+                "<p>Show on the right side of the note, outside of it</p>"
               ],
               "hasBody": true,
               "collapsible": false,
@@ -3852,7 +3892,7 @@
       0,
       4,
       35,
-      37
+      36
     ],
     "depth": 2,
     "recent": [
@@ -3885,7 +3925,6 @@
       9,
       20,
       43,
-      36,
       31,
       10,
       8,
@@ -3894,11 +3933,12 @@
       1,
       6,
       7,
-      0,
       41,
       42,
       37,
+      0,
       4,
+      36,
       35
     ]
   }

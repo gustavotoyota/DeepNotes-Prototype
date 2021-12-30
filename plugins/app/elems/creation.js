@@ -8,5 +8,5 @@ creation.perform = (clientPos) => {
 
   const elem = $app.notes.create(worldPos)
 
-  $app.editing.start(elem)
+  $app.editing.start(elem, 0)
 }

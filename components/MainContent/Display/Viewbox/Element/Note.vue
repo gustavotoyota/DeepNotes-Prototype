@@ -71,8 +71,6 @@ export default {
   created() {
     this.editorOptions = {
       theme: 'bubble',
-      
-      bounds: '#display',
 
       placeholder: '',
 
@@ -116,6 +114,9 @@ export default {
   methods: {
 
     onPointerDown(event) {
+      if (event.target.style.opacity === '0.8')
+        return
+
       if (this.elem.id != this.page.elems.activeId)
         $app.editing.stop()
 
