@@ -83,3 +83,9 @@ elems.bringToTop = (elem) => {
 
   $getters.currentPage.elems.list.push(elem)
 }
+
+
+
+elems.getSizeProp = (elem) => {
+  return elem.collapsed ? 'collapsedSize' : 'size'
+}

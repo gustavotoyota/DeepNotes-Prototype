@@ -179,7 +179,7 @@ export default {
 
 
     sizeProp() {
-      return this.elem.collapsed ? 'collapsedSize' : 'size'
+      return $app.elems.getSizeProp(this.elem)
     },
     width() {
       if (this.elem[this.sizeProp].x === 'auto')

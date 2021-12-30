@@ -1217,72 +1217,72 @@
         "elems": {
           "list": [
             {
-              "id": 4,
+              "id": 1,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 220.14935668945333,
-                "y": -29.109378662109393
+                "x": 87.34375,
+                "y": -248
               },
               "size": {
-                "x": 232.83905029296875,
+                "x": 222.21780468749995,
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
+                "x": 0,
                 "y": 0
               },
               "content": [
-                "<h2>Modern Era</h2>",
-                "<p>A.D. 1750-Present</p><p><br></p><p>The influences of both the Renaissance and the Enlightenment led to a technological boom in the Modern era, also known as the <strong>Late Modern era</strong>.</p><p><br></p><p>The world of politics was rocked by wars, revolution and the end of the monarchy in many countries. The Modern era is truly a cumulation of millions of years of human development.</p>"
+                "<h2 style=\"text-align: center;\">Classical Era</h2>",
+                "<p>600 B.C.-A.D. 476</p><p><br></p><p>It marked the beginning of a philosophical period in world history as well as the first recorded sources of human history.</p><p><br></p><p>Politically, the Classical era saw the rise – and fall – of most world empires.</p>"
               ],
               "hasBody": true,
               "collapsible": true,
               "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
-                "y": 195.76937866210938
+                "y": 191.5
               },
-              "expandedWidth": 232.828125,
+              "expandedWidth": 222.20305664062496,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "linkedPageId": 9
+              "linkedPageId": 10
             },
             {
-              "id": 3,
+              "id": 0,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -35.14202514648435,
-                "y": 67.40626464843749
+                "x": -168.21874999999997,
+                "y": -245.21875366210938
               },
               "size": {
-                "x": 221.96405029296875,
-                "y": 194.8990478515625
+                "x": 223.25,
+                "y": 188.17875366210936
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
-                "<h2>Early Modern Era</h2>",
-                "<p>A.D. 1450-A.D. 1750</p><p><br></p><p>Resurgence of the values and philosophies from the Classical era.</p>"
+                "<h2 style=\"text-align: center;\">Prehistory</h2>",
+                "<p>to 600 B.C.</p><p><br></p><p>Period on Earth in which there was human activity, but little to no records of human history.</p>"
               ],
               "hasBody": true,
               "collapsible": false,
               "collapsed": false,
               "collapsedSize": {
                 "x": "expanded",
-                "y": "auto"
+                "y": 188.17875366210936
               },
-              "expandedWidth": 0,
+              "expandedWidth": 223.24995117187498,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "linkedPageId": 19
+              "linkedPageId": 17
             },
             {
               "id": 2,
@@ -1297,11 +1297,11 @@
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
+                "x": 0,
                 "y": 0
               },
               "content": [
-                "<h2>The Middle Ages</h2>",
+                "<h2 style=\"text-align: center;\">The Middle Ages</h2>",
                 "<p>A.D. 476 -A.D. 1450</p><p><br></p><p>Also known as the Medieval or Post-Classical era.</p><p><br></p><p>Historians refer to the early part of this period as the Dark Ages due to the loss of recorded history after the fall of the Roman Empire in A.D. 476.</p>"
               ],
               "hasBody": true,
@@ -1311,7 +1311,7 @@
                 "x": "expanded",
                 "y": 194.328125
               },
-              "expandedWidth": 229.5,
+              "expandedWidth": 229.49995605468746,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -1319,24 +1319,24 @@
               "linkedPageId": 18
             },
             {
-              "id": 0,
+              "id": 3,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -164.625,
-                "y": -150.4270300292969
+                "x": -23.140625,
+                "y": -28.546884765625016
               },
               "size": {
-                "x": 223.25,
-                "y": 190.97406005859375
+                "x": 221.96405029296875,
+                "y": 193.506884765625
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
-                "<h2>Prehistory</h2>",
-                "<p>to 600 B.C.</p><p><br></p><p>Period on Earth in which there was human activity, but little to no records of human history.</p>"
+                "<h2 style=\"text-align: center;\">Early Modern Era</h2>",
+                "<p>A.D. 1450-A.D. 1750</p><p><br></p><p>Resurgence of the values and philosophies from the Classical era.</p>"
               ],
               "hasBody": true,
               "collapsible": false,
@@ -1345,46 +1345,46 @@
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 221.953125,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "linkedPageId": 17
+              "linkedPageId": 19
             },
             {
-              "id": 1,
+              "id": 4,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 87.34375,
-                "y": -248
+                "x": 220.14935668945333,
+                "y": -29.109378662109393
               },
               "size": {
-                "x": 222.21780468749995,
+                "x": 232.83905029296875,
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
+                "x": 0,
                 "y": 0
               },
               "content": [
-                "<h2>Classical Era</h2>",
-                "<p>600 B.C.-A.D. 476</p><p><br></p><p>It marked the beginning of a philosophical period in world history as well as the first recorded sources of human history.</p><p><br></p><p>Politically, the Classical era saw the rise – and fall – of most world empires.</p>"
+                "<h2 style=\"text-align: center;\">Modern Era</h2>",
+                "<p>A.D. 1750-Present</p><p><br></p><p>The influences of both the Renaissance and the Enlightenment led to a technological boom in the Modern era, also known as the <strong>Late Modern era</strong>.</p><p><br></p><p>The world of politics was rocked by wars, revolution and the end of the monarchy in many countries. The Modern era is truly a cumulation of millions of years of human development.</p>"
               ],
               "hasBody": true,
               "collapsible": true,
               "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
-                "y": 191.5
+                "y": 195.76937866210938
               },
-              "expandedWidth": 222.203125,
+              "expandedWidth": 232.82806640624997,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "linkedPageId": 10
+              "linkedPageId": 9
             }
           ],
           "nextId": 5,
@@ -1394,10 +1394,10 @@
         },
         "camera": {
           "pos": {
-            "x": -16.99999999999997,
-            "y": -14.440000000000019
+            "x": 74.49999999999994,
+            "y": 1.3266666666666633
           },
-          "zoom": 1
+          "zoom": 0.8333333333333334
         }
       },
       {
@@ -1751,7 +1751,7 @@
                 "y": 0
               },
               "content": [
-                "<h2>Ancient Greece</h2><p>(600 B.C. to A.D. 600)</p>",
+                "<h2 style=\"text-align: center;\">Ancient Greece</h2><p style=\"text-align: center;\">(600 B.C. to A.D. 600)</p>",
                 "<p>Foundation of democracy, philosophy, mathematics, drama, and poetry.</p>"
               ],
               "hasBody": true,
@@ -1785,7 +1785,7 @@
                 "y": 0
               },
               "content": [
-                "<h2>Ancient Rome</h2><p>(753 B.C. to A.D. 476)</p>",
+                "<h2 style=\"text-align: center;\">Ancient Rome</h2><p style=\"text-align: center;\">(753 B.C. to A.D. 476)</p>",
                 "<p>Political power that developed the legal system, irrigation, architecture, city roads, and Christianity.</p>"
               ],
               "hasBody": true,
@@ -1801,40 +1801,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 31
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -252.66666666666663,
-                "y": -19.666666666666643
-              },
-              "size": {
-                "x": 223,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<h2>Persian Empire</h2><p>(550 B.C. to 330 B.C.)</p>",
-                "<p>Middle Eastern empire that practiced Zoroastrianism before Islam and fell to Alexander the Great in 330 B.C.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 223,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 32
             },
             {
               "id": 4,
@@ -1853,7 +1819,7 @@
                 "y": 0
               },
               "content": [
-                "<h2>Byzantine Empire</h2><p>(A.D. 285 to A.D. 1453)</p>",
+                "<h2 style=\"text-align: center;\">Byzantine Empire</h2><p style=\"text-align: center;\">(A.D. 285 to A.D. 1453)</p>",
                 "<p>Mediterranean culture that incorporated practices and beliefs from ancient Greece and Rome; the only major power not to fall until after the Renaissance</p>"
               ],
               "hasBody": true,
@@ -1869,9 +1835,43 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 33
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -252.66666666666663,
+                "y": -19.666666666666643
+              },
+              "size": {
+                "x": 223,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<h2 style=\"text-align: center;\">Persian Empire</h2><p style=\"text-align: center;\">(550 B.C. to 330 B.C.)</p>",
+                "<p>Middle Eastern empire that practiced Zoroastrianism before Islam and fell to Alexander the Great in 330 B.C.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 223,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 32
             }
           ],
-          "nextId": 6,
+          "nextId": 7,
           "selected": {},
           "activeId": null,
           "editing": false
@@ -2292,9 +2292,11 @@
         "elems": {
           "list": [],
           "nextId": 0,
-          "selected": {},
-          "activeId": null,
-          "editing": false
+          "selected": {
+            "1": true
+          },
+          "activeId": 1,
+          "editing": true
         },
         "camera": {
           "pos": {
@@ -2376,16 +2378,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 25.123919753086696,
-                "y": 179.78009259259238
+                "x": -55.276080246913295,
+                "y": 154.58009259259245
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Add note color property</p>",
@@ -2410,16 +2412,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 24.123919753086682,
-                "y": 125.61342592592575
+                "x": -56.27608024691331,
+                "y": 100.41342592592571
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Make it compatible with touchscreen</p>",
@@ -2443,16 +2445,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 23.53229242018729,
-                "y": 19.281100520381205
+                "x": -56.8677075798127,
+                "y": -5.918899479618796
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Fix invisible note sticking out</p>",
@@ -2477,16 +2479,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 25.123919753086682,
-                "y": 291.61342592592575
+                "x": -55.27608024691331,
+                "y": 266.41342592592594
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Create account management</p>",
@@ -2510,16 +2512,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 26.8604012345681,
-                "y": 343.74753703703703
+                "x": -53.53959876543189,
+                "y": 318.5475370370372
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Allow to share stuff</p>",
@@ -2543,16 +2545,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 25.123919753086682,
-                "y": 234.61342592592575
+                "x": -55.27608024691331,
+                "y": 209.41342592592582
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Make it sync with the server</p>",
@@ -2576,16 +2578,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 28.123919753086682,
-                "y": 397.61342592592575
+                "x": -52.27608024691331,
+                "y": 372.41342592592594
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Allow offline editing</p>",
@@ -2609,16 +2611,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 24.457253086419996,
-                "y": 72.47453703703687
+                "x": -55.942746913579995,
+                "y": 47.274537037036836
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Implement containers</p>",
@@ -2639,59 +2641,26 @@
               "linkedPageId": 40
             },
             {
-              "id": 24,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 26.618554080933222,
-                "y": -32.19937548010978
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Fix image resize box</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 8,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -275.38999999999993,
-                "y": 126.14535069444457
+                "x": -373.59,
+                "y": 53.74535069444457
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Implement arrows</p>",
                 ""
               ],
-              "hasBody": false,
+              "hasBody": null,
               "collapsible": false,
               "collapsed": false,
               "collapsedSize": {
@@ -2704,139 +2673,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 37
-            },
-            {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -273.19555555555553,
-                "y": 73.39535069444446
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Implement Collapse UI</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 36
-            },
-            {
-              "id": 14,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -276.72333333333347,
-                "y": 184.71088888888914
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Exit note editing when pressing Esc</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -275.4733333333334,
-                "y": 17.599777777777817
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Implement default note properties</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 3,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -273.47333333333336,
-                "y": -36.65022222222219
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Implement property change in batch</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
             },
             {
               "id": 1,
@@ -2905,53 +2741,20 @@
               "readOnly": false
             },
             {
-              "id": 22,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -555.6713619693711,
-                "y": -32.85312383807147
-              },
-              "size": {
-                "x": 226.96352640787762,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Implemented backwards navigation without repetition</p>",
-                "<p>29/12/2021 - 14:18\t</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 226.9531127929686,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 10,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -557.1233333333336,
-                "y": 35.7442222222223
+                "x": -659.1233333333344,
+                "y": 16.54422222222229
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Add more options to quill toolbar</p>",
@@ -2969,40 +2772,6 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
-            },
-            {
-              "id": 6,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -561.788888888889,
-                "y": 92.75000000000001
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Fix quill tooltip positioning</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 43
             },
             {
               "id": 5,
@@ -3038,23 +2807,23 @@
               "readOnly": false
             },
             {
-              "id": 23,
+              "id": 24,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -276.1799987654321,
-                "y": 243.89815925925922
+                "x": -53.78144591906677,
+                "y": -57.399375480109796
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
-                "<p>Implement fit-to-screen button</p>",
+                "<p>Fix image resize box</p>",
                 ""
               ],
               "hasBody": false,
@@ -3069,19 +2838,252 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 22,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -662.471361969372,
+                "y": -58.053123838071464
+              },
+              "size": {
+                "x": 226.96352640787762,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implemented backwards navigation without repetition</p>",
+                "<p>29/12/2021 - 14:18\t</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 226.9531127929686,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.5781112293965,
+                "y": 74.49729118655678
+              },
+              "size": {
+                "x": "auto",
+                "y": 39.99957275390625
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix quill tooltip positioning</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 43
+            },
+            {
+              "id": 23,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -374.37999876543216,
+                "y": 171.49815925925924
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement fit-to-screen button</p>",
+                ""
+              ],
+              "hasBody": null,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 14,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -372.52333333333354,
+                "y": 109.91088888888919
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Exit note editing when pressing Esc</p>",
+                ""
+              ],
+              "hasBody": null,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.6733333333334,
+                "y": 130.54977777777782
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement property change in batch</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 229.40625,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -376.19555555555553,
+                "y": -2.60464930555554
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement Collapse UI</p>",
+                ""
+              ],
+              "hasBody": null,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 36
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -376.4733333333334,
+                "y": -62.40022222222218
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement default note properties</p>",
+                ""
+              ],
+              "hasBody": null,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 215.671875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
-          "nextId": 27,
+          "nextId": 28,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -234.12255703017786,
-            "y": 108.69729118655678
+            "x": -259.5225570301779,
+            "y": 104.89729118655677
           },
-          "zoom": 1
+          "zoom": 0.8333333333333334
         }
       },
       {
@@ -3816,8 +3818,7 @@
     "path": [
       0,
       4,
-      35,
-      36
+      35
     ],
     "depth": 2,
     "recent": [
@@ -3837,7 +3838,6 @@
       26,
       32,
       33,
-      31,
       7,
       2,
       13,
@@ -3846,10 +3846,7 @@
       29,
       34,
       6,
-      17,
       18,
-      10,
-      43,
       38,
       40,
       37,
@@ -3859,11 +3856,15 @@
       41,
       9,
       20,
+      43,
+      36,
+      31,
+      10,
       8,
+      17,
       1,
       0,
       4,
-      36,
       35
     ]
   }
