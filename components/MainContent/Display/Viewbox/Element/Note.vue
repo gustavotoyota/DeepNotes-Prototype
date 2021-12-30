@@ -24,7 +24,7 @@
         :disabled="!editing || elem.readOnly"/>
       </div>
 
-      <div v-show="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')"
+      <div v-if="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')"
       class="editor-1-outer">
         <div class="rule"></div>
 
