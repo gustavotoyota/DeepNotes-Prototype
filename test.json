@@ -179,15 +179,15 @@
               "linkedPageId": 3
             }
           ],
-          "nextId": 8,
+          "nextId": 9,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": 0.6333333333333258,
-            "y": -60.5
+            "x": 58.59999999999999,
+            "y": -32.83333333333337
           },
           "zoom": 1
         }
@@ -2709,39 +2709,6 @@
               "linkedPageId": 40
             },
             {
-              "id": 21,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -555.688888888889,
-                "y": -126.97777777777776
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>Done</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 5,
               "type": "note",
               "parent": null,
@@ -2759,39 +2726,6 @@
               },
               "content": [
                 "<h1>To do later</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 1,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -272.0955555555556,
-                "y": -129.5057777777778
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>To do next</h1>",
                 ""
               ],
               "hasBody": false,
@@ -2874,73 +2808,6 @@
               "readOnly": false
             },
             {
-              "id": 6,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 22.211111111110995,
-                "y": -34.249999999999986
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Fix quill tooltip positioning</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 43
-            },
-            {
-              "id": 3,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -277.47333333333336,
-                "y": -34.65022222222219
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Implement property change in batch</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 14,
               "type": "note",
               "parent": null,
@@ -3007,6 +2874,39 @@
               "readOnly": false
             },
             {
+              "id": 21,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -555.688888888889,
+                "y": -126.97777777777776
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Done</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
               "id": 22,
               "type": "note",
               "parent": null,
@@ -3038,19 +2938,154 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -561.788888888889,
+                "y": 92.75000000000001
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Fix quill tooltip positioning</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 43
+            },
+            {
+              "id": 24,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 26.618554080933222,
+                "y": -32.19937548010978
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Fix image resize box</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -272.0955555555556,
+                "y": -129.5057777777778
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>To do next</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -277.47333333333336,
+                "y": -34.65022222222219
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Implement property change in batch</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
-          "nextId": 24,
-          "selected": {},
-          "activeId": null,
-          "editing": false
+          "nextId": 25,
+          "selected": {
+            "3": true
+          },
+          "activeId": 3,
+          "editing": true
         },
         "camera": {
           "pos": {
-            "x": -605.9616311042525,
-            "y": -20.61659770233203
+            "x": -266.8814459190667,
+            "y": 90.46729118655688
           },
-          "zoom": 1.2
+          "zoom": 1
         }
       },
       {
@@ -3826,13 +3861,13 @@
       18,
       10,
       8,
-      0,
-      4,
       43,
       37,
       40,
       38,
+      0,
       39,
+      4,
       35
     ]
   }

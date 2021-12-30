@@ -311,6 +311,7 @@ export default {
 .ql-tooltip {
   z-index: 9999;
 
+  background-color: #303030 !important;
   border-radius: 12px !important;
 }
 
