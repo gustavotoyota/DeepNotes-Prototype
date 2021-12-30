@@ -63,9 +63,9 @@ coords.worldToDisplay = (worldPos) => {
 
 
 
-coords.clientToWorld = (displayPos) => {
-  return $app.coords.displayToWorld($app.coords.clientToDisplay(displayPos))
+coords.clientToWorld = (clientPos) => {
+  return $app.coords.displayToWorld($app.coords.clientToDisplay(clientPos))
 }
-coords.worldToClient = (displayPos) => {
-  return $app.coords.worldToDisplay($app.coords.displayToClient(displayPos))
+coords.worldToClient = (worldPos) => {
+  return $app.coords.displayToClient($app.coords.worldToDisplay(worldPos))
 }

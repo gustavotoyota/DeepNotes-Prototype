@@ -3,6 +3,8 @@ globalThis.$app = {}
 
 
 
+$app.configs = require('./configs')
+
 $app.project = require('./project')
 
 $app.storage = require('./storage/storage')

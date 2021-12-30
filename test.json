@@ -698,15 +698,15 @@
               "linkedPageId": 42
             }
           ],
-          "nextId": 3,
+          "nextId": 4,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": 0,
-            "y": 0
+            "x": -12.246083589396036,
+            "y": 10.000001400607701
           },
           "zoom": 1
         }
@@ -2943,8 +2943,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -354.11555555555566,
-                "y": 140.43535069444465
+                "x": -353.9420637054275,
+                "y": 161.80170928880406
               },
               "size": {
                 "x": "auto",
@@ -2973,46 +2973,12 @@
               "linkedPageId": 36
             },
             {
-              "id": 32,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -354.3099999999999,
-                "y": -5.214649305555561
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Make shift work like control</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 37
-            },
-            {
               "id": 8,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -353.9100000000001,
-                "y": 195.58535069444474
+                "x": -353.7365081498719,
+                "y": 216.95170928880412
               },
               "size": {
                 "x": "auto",
@@ -3039,39 +3005,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 37
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -355.59333333333376,
-                "y": 84.2397777777777
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement default note properties</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 215.671875,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
             },
             {
               "id": 14,
@@ -3107,12 +3040,178 @@
               "readOnly": false
             },
             {
+              "id": 33,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -351.54571583942027,
+                "y": -3.8964462628620664
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Use arrow keys to move elements</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -355.4198414832056,
+                "y": 105.60613637213703
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement default note properties</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 215.671875,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 34,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -352.94571583942013,
+                "y": 272.4035537371379
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement element resize in batch</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 35,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -353.3786919680404,
+                "y": 328.762194757288
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement Ctrl + A node selection</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 32,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -353.1365081498717,
+                "y": -56.8482907111963
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Make shift work like control</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 37
+            },
+            {
               "id": 23,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -354.69999876543216,
-                "y": -58.261840740740794
+                "x": -658.6343879486348,
+                "y": 359.50125790489767
               },
               "size": {
                 "x": "auto",
@@ -3140,23 +3239,19 @@
               "readOnly": false
             }
           ],
-          "nextId": 33,
+          "nextId": 36,
           "selected": {
-            "0": true,
-            "2": true,
-            "8": true,
-            "23": true,
-            "32": true
+            "23": true
           },
           "activeId": 23,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -247.71920768954845,
-            "y": 122.23719514277863
+            "x": -245.75778484629302,
+            "y": 120.26562982684587
           },
-          "zoom": 0.8333333333333334
+          "zoom": 0.6791277860146822
         }
       },
       {
@@ -3936,9 +4031,9 @@
       41,
       42,
       37,
+      36,
       0,
       4,
-      36,
       35
     ]
   }
