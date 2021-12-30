@@ -3237,19 +3237,52 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 36,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.8699914496367,
+                "y": 416.295245587288
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement edit on keypress</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
-          "nextId": 36,
+          "nextId": 39,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -245.75782952357596,
-            "y": 120.26561470215285
+            "x": -245.7578139206271,
+            "y": 148.65624114688362
           },
-          "zoom": 0.6791268362749624
+          "zoom": 0.6791278462994885
         }
       },
       {
@@ -4029,9 +4062,9 @@
       41,
       42,
       37,
-      36,
-      0,
       4,
+      0,
+      36,
       35
     ]
   }

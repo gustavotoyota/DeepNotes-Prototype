@@ -31,6 +31,7 @@ export default async function ({ app }) {
       document.addEventListener('pointerup', this.onPointerUp)
       
       document.addEventListener('keydown', this.onKeyDown)
+      document.addEventListener('keypress', this.onKeyPress)
     },
 
     beforeDestroy() {
@@ -78,11 +79,20 @@ export default async function ({ app }) {
           event.preventDefault()
         }
 
-        if (event.code === 'F2')
+        if (event.code === 'F2' && $getters.activeElem)
           $app.editing.start($getters.activeElem, 0)
 
         if (event.code === 'Backspace')
           $app.pages.back()
+      },
+      onKeyPress(event) {
+        if (event.target.nodeName === 'INPUT'
+        || event.target.nodeName === 'TEXTAREA'
+        || event.target.isContentEditable)
+          return
+          
+        if ($getters.activeElem)
+          $app.editing.start($getters.activeElem, 0)
       },
 
     },
