@@ -74,6 +74,9 @@ export default async function ({ app }) {
         if (event.code === 'Delete')
           $app.deleting.perform(event)
 
+        if (event.code === 'KeyA' && event.ctrlKey)
+          $app.elems.selectAll()
+
         if (event.code === 'KeyD' && event.ctrlKey) {
           $app.selection.clone()
           event.preventDefault()

@@ -84,3 +84,10 @@ elems.bringToTop = (elem) => {
 elems.getSizeProp = (elem) => {
   return elem.collapsed ? 'collapsedSize' : 'size'
 }
+
+
+
+elems.selectAll = () => {
+  for (const elem of $getters.currentPage.elems.list)
+    $app.elems.addToSelection(elem.id)
+}
