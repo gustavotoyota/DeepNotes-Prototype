@@ -11,7 +11,7 @@ storage.googleDrive = require('./google-drive')
 
 storage.reset = function (type) {
   $set($state, 'storage', {
-    type: type,
+    type: type ?? null,
 
     modified: false,
     timeout: false,

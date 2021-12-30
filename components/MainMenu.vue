@@ -37,12 +37,14 @@ export default {
       }
 
       try {
-        $app.storage.reset('local')
+        $app.storage.reset()
 
         $state.storage.local.fileHandle = (await showOpenFilePicker({
           types: [{ accept: { 'application/json': [] } }],
         }))[0]
         $state.storage.local.file = await $state.storage.local.fileHandle.getFile()
+
+        $state.storage.type = 'local'
 
         $app.storage.loadProject()
       } catch (err) {
