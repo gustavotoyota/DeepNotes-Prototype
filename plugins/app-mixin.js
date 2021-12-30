@@ -70,7 +70,7 @@ export default async function ({ app }) {
           $app.deleting.perform(event)
 
         if (event.code === 'KeyD' && event.ctrlKey) {
-          $app.selection.duplicate()
+          $app.selection.clone()
           event.preventDefault()
         }
 

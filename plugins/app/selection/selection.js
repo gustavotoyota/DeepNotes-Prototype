@@ -15,12 +15,27 @@ selection.clear = () => {
 
 
 
-selection.duplicate = () => {
-  const page = $getters.currentPage
+selection.getElemIds = () => {
+  return Object.keys($getters.currentPage.elems.selected)
+}
+selection.getElems = () => {
+  const elems = []
 
-  for (const elemId of Object.keys(page.elems.selected)) {
+  for (const elemId of $app.selection.getElemIds()) {
     const elem = $app.elems.getById(elemId)
 
+    elems.push(elem)
+  }
+
+  return elems
+}
+
+
+
+selection.clone = () => {
+  const page = $getters.currentPage
+
+  for (const elem of $app.selection.getElems()) {
     const newElem = $utils.deepCopy(elem)
     newElem.id = page.elems.nextId++
     newElem.pos.x += 8

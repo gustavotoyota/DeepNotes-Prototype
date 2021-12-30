@@ -7,28 +7,28 @@ $app.project = require('./project')
 
 $app.storage = require('./storage/storage')
 
-$app.display = require('./display')
-$app.coords = require('./coords')
-$app.sizes = require('./sizes')
-
 $app.pages = require('./pages/pages')
-$app.elems = require('./pages/elems')
-$app.notes = require('./pages/notes')
+
+$app.display = require('./utils/display')
+$app.coords = require('./utils/coords')
+$app.sizes = require('./utils/sizes')
 
 $app.camera = require('./camera/camera')
 $app.zooming = require('./camera/zooming')
 $app.panning = require('./camera/panning')
 
+$app.selection = require('./selection/selection')
+$app.clickSelection = require('./selection/click-selection')
+$app.boxSelection = require('./selection/box-selection')
+
+$app.elems = require('./elems/elems')
+$app.notes = require('./elems/notes')
 $app.popup = require('./elems/popup')
 $app.creation = require('./elems/creation')
 $app.editing = require('./elems/editing')
 $app.dragging = require('./elems/dragging')
 $app.deleting = require('./elems/deleting')
 $app.resizing = require('./elems/resizing')
-
-$app.selection = require('./selection/selection')
-$app.clickSelection = require('./selection/click-selection')
-$app.boxSelection = require('./selection/box-selection')
 
 
 

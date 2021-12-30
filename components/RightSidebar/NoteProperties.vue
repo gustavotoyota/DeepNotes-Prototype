@@ -198,6 +198,9 @@ export default {
 
   computed: {
 
+    page() {
+      return $getters.currentPage
+    },
     elem() {
       return $getters.activeElem
     },
@@ -225,6 +228,17 @@ export default {
 
 
 
+
+
+    // Properties
+    
+    linkedPageId: {
+      get() { return this.elem.linkedPageId },
+      set(value) {
+        for (const elem of $app.selection.getElems())
+          elem.linkedPageId = value
+      },
+    },
 
     collapsible: {
       get() {

@@ -2676,8 +2676,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -274.38999999999993,
-                "y": 128.14535069444457
+                "x": -275.38999999999993,
+                "y": 126.14535069444457
               },
               "size": {
                 "x": "auto",
@@ -2710,8 +2710,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -272.19555555555553,
-                "y": 75.39535069444446
+                "x": -273.19555555555553,
+                "y": 73.39535069444446
               },
               "size": {
                 "x": "auto",
@@ -2740,45 +2740,12 @@
               "linkedPageId": 36
             },
             {
-              "id": 23,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -275.1799987654321,
-                "y": 245.89815925925922
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Implement fit-to-screen button</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 14,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -275.72333333333347,
-                "y": 186.71088888888914
+                "x": -276.72333333333347,
+                "y": 184.71088888888914
               },
               "size": {
                 "x": "auto",
@@ -2810,8 +2777,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -274.4733333333334,
-                "y": 19.599777777777817
+                "x": -275.4733333333334,
+                "y": 17.599777777777817
               },
               "size": {
                 "x": "auto",
@@ -2843,8 +2810,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -272.47333333333336,
-                "y": -34.65022222222219
+                "x": -273.47333333333336,
+                "y": -36.65022222222219
               },
               "size": {
                 "x": "auto",
@@ -3069,18 +3036,44 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 23,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -276.1799987654321,
+                "y": 243.89815925925922
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Implement fit-to-screen button</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 27,
-          "selected": {
-            "0": true,
-            "2": true,
-            "3": true,
-            "8": true,
-            "14": true,
-            "23": true
-          },
-          "activeId": 3,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
