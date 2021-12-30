@@ -61,7 +61,7 @@ boxSelection.finish = (event) => {
     || clientRect.right > bottomRight.x || clientRect.bottom > bottomRight.y)
       continue
 
-    if ($app.elems.isSelected(elem.id))
+    if ($app.elems.isSelected(elem.id) && !event.shiftKey)
       $app.elems.removeFromSelection(elem.id)
     else
       $app.elems.addToSelection(elem.id)

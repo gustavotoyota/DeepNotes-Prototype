@@ -14,7 +14,7 @@ export default {
     onPointerDown(event) {
       $app.editing.stop()
 
-      if (event.button === 0 && !event.ctrlKey)
+      if (event.button === 0 && !event.ctrlKey && !event.shiftKey)
         $app.selection.clear()
 
       $app.boxSelection.start(event)

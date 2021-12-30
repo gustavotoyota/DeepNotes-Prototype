@@ -14,7 +14,7 @@ clickSelection.perform = (elem, event) => {
     
   const page = $getters.currentPage
 
-  if (!event.ctrlKey && !$app.elems.isSelected(elem.id))
+  if (!event.ctrlKey && !event.shiftKey && !$app.elems.isSelected(elem.id))
     $app.selection.clear()
   else
     page.elems.activeId = null
