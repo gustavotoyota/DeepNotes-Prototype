@@ -36,8 +36,12 @@ boxSelection.finish = (event) => {
   if (!$state.boxSelection.active || event.button !== 0)
     return
 
+
+
   const startPos = $app.coords.displayToClient($state.boxSelection.startPos)
   const endPos = $app.coords.displayToClient($state.boxSelection.endPos)
+
+
 
   const topLeft = {
     x: Math.min(startPos.x, endPos.x),
@@ -47,6 +51,8 @@ boxSelection.finish = (event) => {
     x: Math.max(startPos.x, endPos.x),
     y: Math.max(startPos.y, endPos.y),
   }
+  
+
 
   for (const elem of $getters.currentPage.elems.list) {
     const clientRect = $app.elems.getClientRect(elem.id)
@@ -60,6 +66,29 @@ boxSelection.finish = (event) => {
     else
       $app.elems.addToSelection(elem.id)
   }
+
+
+
+  // Activate highest selected element
+
+  const page = $getters.currentPage
+  
+  let lastElem = null
+
+  for (let i = page.elems.list.length - 1; i >= 0; --i) {
+    const elem = page.elems.list[i]
+
+    if (!$app.elems.isSelected(elem.id))
+      continue
+
+    lastElem = elem
+    break
+  }
+
+  if (lastElem)
+    $app.elems.activate(lastElem.id)
+
+
 
   $state.boxSelection.active = false
 }

@@ -44,6 +44,12 @@ elems.getEditorNode = (elemId, editorIdx) => {
 
 
 
+elems.activate = (elemId) => {
+  $getters.currentPage.elems.activeId = elemId
+}
+
+
+
 elems.addToSelection = (elemId) => {
   $set($getters.currentPage.elems.selected, elemId, true)
 }
