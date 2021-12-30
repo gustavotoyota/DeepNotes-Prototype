@@ -30,14 +30,6 @@ export default {
 
   },
 
-  watch: {
-
-    '$getters.currentPage.camera.zoom'() {
-      $app.tooltips.fix()
-    },
-
-  },
-
 }
 </script>
 

@@ -2841,39 +2841,6 @@
               "readOnly": false
             },
             {
-              "id": 22,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -555.6713619693711,
-                "y": -32.85312383807147
-              },
-              "size": {
-                "x": 226.96352640787762,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<p>Implemented backwards navigation without repetition</p>",
-                "<p>29/12/2021 - 14:18\t</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 226.9531127929686,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 10,
               "type": "note",
               "parent": null,
@@ -3038,6 +3005,39 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 22,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -555.6713619693711,
+                "y": -32.85312383807147
+              },
+              "size": {
+                "x": 226.96352640787762,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<p>Implemented backwards navigation without repetition</p>",
+                "<p>29/12/2021 - 14:18\t</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 226.9531127929686,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 24,
@@ -3047,8 +3047,8 @@
         },
         "camera": {
           "pos": {
-            "x": -323.72639876543235,
-            "y": 57.684692592592526
+            "x": -605.9616311042525,
+            "y": -20.61659770233203
           },
           "zoom": 1.2
         }

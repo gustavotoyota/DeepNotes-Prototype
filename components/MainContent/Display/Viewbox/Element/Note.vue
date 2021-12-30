@@ -21,8 +21,7 @@
         :id="`elem-${elem.id}-editor-0`"
         v-model="elem.content[0]"
         :options="editorOptions"
-        :disabled="!editing || elem.readOnly"
-        @ready="onEditorReady"/>
+        :disabled="!editing || elem.readOnly"/>
       </div>
 
       <div v-show="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')"
@@ -36,8 +35,7 @@
           :id="`elem-${elem.id}-editor-1`"
           v-model="elem.content[1]"
           :options="editorOptions"
-          :disabled="!editing || elem.readOnly"
-          @ready="onEditorReady"/>
+          :disabled="!editing || elem.readOnly"/>
         </div>
       </div>
 
@@ -112,16 +110,6 @@ export default {
 
 
   methods: {
-
-    onEditorReady(quill) {
-      quill.on('selection-change', () => {
-        $app.tooltips.fix()
-      })
-    },
-
-
-
-
 
     onPointerDown(event) {
       if (this.elem.id != this.page.elems.activeId)
@@ -286,17 +274,6 @@ export default {
   cursor: inherit !important;
 }
 
-.quill-editor /deep/ .ql-tooltip {
-  z-index: 9999;
-
-  border-radius: 12px;
-}
-
-.quill-editor /deep/ .ql-formats {
-  width: max-content;
-
-  margin: 8px !important;
-}
 .quill-editor /deep/ .ql-formats:nth-child(1) {
   margin-bottom: 0 !important;
 }
@@ -327,5 +304,26 @@ export default {
 }
 .quill-editor /deep/ a::after {
   display: none;
+}
+</style>
+
+<style>
+.ql-tooltip {
+  z-index: 9999;
+
+  border-radius: 12px !important;
+}
+
+.ql-toolbar {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.ql-formats {
+  margin: 8px !important;
+}
+.ql-formats:not(:first-child) {
+  margin-top: 0 !important;
 }
 </style>
