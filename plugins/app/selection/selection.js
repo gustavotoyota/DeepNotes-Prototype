@@ -49,3 +49,12 @@ selection.clone = () => {
       page.elems.activeId = newElem.id
   }
 }
+
+
+
+selection.shift = (shiftX, shiftY) => {
+  for (const elem of $app.selection.getElems()) {
+    elem.pos.x += shiftX
+    elem.pos.y += shiftY
+  }
+}

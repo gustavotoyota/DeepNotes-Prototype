@@ -87,6 +87,15 @@ export default async function ({ app }) {
 
         if (event.code === 'Backspace')
           $app.pages.back()
+
+        if (event.code === 'ArrowLeft')
+          $app.selection.shift(-1, 0)
+        if (event.code === 'ArrowRight')
+          $app.selection.shift(1, 0)
+        if (event.code === 'ArrowUp')
+          $app.selection.shift(0, -1)
+        if (event.code === 'ArrowDown')
+          $app.selection.shift(0, 1)
       },
       onKeyPress(event) {
         if (event.target.nodeName === 'INPUT'
