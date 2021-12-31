@@ -18,8 +18,8 @@ editing.start = (elem, editorIdx) => {
   page.elems.editing = true
 
   $nextTick(() => {
-    const quillEditor = $app.notes.getEditorNode(elem.id, editorIdx)
-    const quill = quillEditor.__vue__.quill
+    const editor = $app.notes.getEditorNode(elem.id, editorIdx)
+    const quill = editor.__vue__.quill
 
     quill.focus()
     quill.setSelection(0, 0)
@@ -39,10 +39,10 @@ editing.stop = () => {
   if (!elem)
     return
 
-  const quillEditors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)
+  const editors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)
 
-  for (const quillEditor of quillEditors)
-    quillEditor.__vue__.quill.theme.tooltip.hide()
+  for (const editor of editors)
+    editor.__vue__.quill.theme.tooltip.hide()
 
   page.elems.editing = false
 }
