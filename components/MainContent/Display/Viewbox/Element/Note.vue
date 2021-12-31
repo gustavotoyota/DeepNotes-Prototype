@@ -3,10 +3,13 @@
   <div class="anchor"
   :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
-    <div class="wrapper"
+    <div style="position: absolute"
     :style="`transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); `">
 
-      <v-sheet class="note"
+      <v-sheet style="border-radius: 7px !important;
+      min-width: 23px; min-height: 40px;
+      display: flex; flex-direction: column;
+      overflow: hidden"
       :id="`elem-${elem.id}`"
       :color="color" rounded elevation="6"
       :style="`width: ${width}; height: ${height}; ` +
@@ -15,22 +18,38 @@
       @pointerdown="onPointerDown"
       @click="onClick">
 
-        <div class="editor-0-div"
+        <div style="max-height: 100%;
+        white-space: inherit; display: flex"
         :style="`flex: ${ elem.hasBody ? 'none' : 1 }`"
         @pointerdown="onEditorPointerDown($event, 0)"
         @dblclick="onEditorDoubleClick($event, 0)">
           <quill-editor ref="editor-0"
+          :style="`flex: 1; padding: 11px; 
+          padding-right: ${ elem.collapsible ? 0 : `11px`}`"
           :id="`note-${elem.id}-editor-0`"
           v-model="elem.content[0]"
           :options="editorOptions"
           :disabled="!editing || elem.readOnly"/>
+
+          <div v-if="elem.collapsible"
+          style="flex: none">
+            <v-btn plain tile
+            style="min-width: 0; width: 30px; height: 100%"
+            @pointerdown.stop="" @dblclick.stop=""
+            @click="$app.notes.toggleCollapsed(elem)">
+              <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
+              <v-icon v-if="!elem.collapsed">mdi-chevron-up</v-icon>
+            </v-btn>
+          </div>
         </div>
 
-        <div class="editor-1-outer-div"
+        <div style="flex: 1;
+        height: 0; white-space: inherit"
         v-if="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')">
           <v-divider/>
 
-          <div class="editor-1-inner-div"
+          <div style="padding: 11px;
+          height: 100%; white-space: inherit;"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
             <quill-editor ref="editor-1"
@@ -220,39 +239,6 @@ export default {
 <style scoped>
 .anchor {
   position: absolute; width: 0; height: 0;
-}
-
-.wrapper {
-  position: absolute;
-}
-
-.note {
-  border-radius: 7px !important;
-
-  min-width: 23px;
-  min-height: 40px;
-
-  display: flex;
-  flex-direction: column;
-
-  overflow: hidden;
-}
-
-.editor-0-div {
-  padding: 11px;
-  max-height: 100%;
-  white-space: inherit;
-}
-
-.editor-1-outer-div {
-  flex: 1;
-  height: 0;
-  white-space: inherit;
-}
-.editor-1-inner-div {
-  padding: 11px;
-  height: 100%;
-  white-space: inherit;
 }
 
 .handlers {

@@ -2906,40 +2906,6 @@
               "readOnly": false
             },
             {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -360.1338613478635,
-                "y": -1.111866205535968
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement collapsible UI</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 36
-            },
-            {
               "id": 8,
               "type": "note",
               "parent": null,
@@ -3270,6 +3236,40 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -360.1338613478635,
+                "y": -1.111866205535968
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement collapsible UI</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 36
             }
           ],
           "nextId": 39,
@@ -3279,10 +3279,10 @@
         },
         "camera": {
           "pos": {
-            "x": -245.75780865692673,
-            "y": 234.5312772357247
+            "x": -240.02466269170804,
+            "y": 4.667956192739129
           },
-          "zoom": 0.6460159441557927
+          "zoom": 1.1163155515012098
         }
       },
       {
@@ -4018,7 +4018,7 @@
       0,
       4,
       35,
-      37
+      36
     ],
     "depth": 2,
     "recent": [
@@ -4062,9 +4062,9 @@
       41,
       42,
       4,
-      36,
       37,
       0,
+      36,
       35
     ]
   }
