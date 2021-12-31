@@ -2393,14 +2393,14 @@
                 "<p>Add note color property</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 178.14067154816823,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2427,14 +2427,14 @@
                 "<p>Make it sync with the server</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 203.39068936319032,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2460,14 +2460,14 @@
                 "<p>Implement containers</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 167.28125464932012,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2527,14 +2527,14 @@
                 "<p>Add more options to quill toolbar</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 229.45315387018434,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2560,14 +2560,14 @@
                 "<p>Fix quill tooltip positioning</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 191.140668933728,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2594,14 +2594,14 @@
                 "<p>Implement property change in batch</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 229.40625,
+              "expandedWidth": 250.4063082464136,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2627,14 +2627,14 @@
                 "<p>Fix image resize box</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 162.21871178906034,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2667,7 +2667,7 @@
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 226.9531127929686,
+              "expandedWidth": 226.9531739955923,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2726,14 +2726,14 @@
                 "<p>Allow offline editing</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 154.2968463539287,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2759,14 +2759,14 @@
                 "<p>Allow to share stuff</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 152.60936985890916,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2792,14 +2792,14 @@
                 "<p>Create account management</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 210.65633913363686,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2825,14 +2825,14 @@
                 "<p>Fix title height</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 123.20313054221273,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2858,14 +2858,14 @@
                 "<p>Fix invisible note sticking out</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 207.75007922545825,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2892,14 +2892,14 @@
                 "<p>Make it compatible with touchscreen</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 252.54688873312523,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2925,14 +2925,14 @@
                 "<p>Implement arrows</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 146.31251118292255,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2959,14 +2959,14 @@
                 "<p>Exit note editing when pressing Esc</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 248.23432282896286,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -2992,14 +2992,14 @@
                 "<p>Implement element resize in batch</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 240.98431883628524,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3025,14 +3025,14 @@
                 "<p>Implement fit-to-screen button</p>",
                 "<p>sdfsdf</p>"
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 215.70306615332592,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3091,14 +3091,14 @@
                 "<p>Implement edit on keypress</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 201.96873758943764,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3124,14 +3124,14 @@
                 "<p>Implement shift selection</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 186.0781827610688,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3158,14 +3158,14 @@
                 "<p>Implement Ctrl + A element selection</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 254.37495047766265,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3191,47 +3191,14 @@
                 "<p>Use arrow keys to move elements</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -361.6116391256416,
-                "y": -57.307439122203036
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement default note properties</p>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 215.671875,
+              "expandedWidth": 238.79685770386743,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3257,19 +3224,52 @@
                 "<p>Implement collapsible UI</p>",
                 ""
               ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 0,
+              "expandedWidth": 184.6250197392125,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 36
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -361.6116391256416,
+                "y": -57.307439122203036
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement default note properties</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 236.67191354699128,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 39,
@@ -3279,10 +3279,10 @@
         },
         "camera": {
           "pos": {
-            "x": -240.02466269170804,
-            "y": 4.667956192739129
+            "x": -235.25778933073093,
+            "y": 234.5312663006165
           },
-          "zoom": 1.1163155515012098
+          "zoom": 0.6460159233550069
         }
       },
       {
@@ -3392,10 +3392,10 @@
               "readOnly": false
             }
           ],
-          "nextId": 3,
+          "nextId": 4,
           "selected": {},
           "activeId": null,
-          "editing": false
+          "editing": true
         },
         "camera": {
           "pos": {
