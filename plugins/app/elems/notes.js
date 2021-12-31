@@ -40,6 +40,8 @@ notes.getEditorNode = (elemId, editorIdx) => {
 
 
 notes.expand = (elem) => {
+  $app.elems.bringToTop(elem)
+
   elem.collapsed = false
 }
 notes.collapse = (elem) => {
