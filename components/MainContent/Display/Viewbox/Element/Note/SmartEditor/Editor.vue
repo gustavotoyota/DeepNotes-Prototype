@@ -1,8 +1,9 @@
 <template>
 
-  <quill-editor
+  <quill-editor ref="editor"
   v-on="$listeners" v-bind="$attrs"
   :options="editorOptions"
+  v-model="model"
   @ready="onEditorReady"/>
 
 </template>
@@ -11,7 +12,7 @@
 export default {
 
   props: {
-    options: { type: Object },
+    value: { type: String },
   },
 
 
@@ -68,13 +69,22 @@ export default {
 
     onEditorReady(quill) {
       this.quill = quill
+
+      this.$emit('ready', quill)
+    },
+
+  },
+
+
+
+  computed: {
+
+    model: {
+      get() { return this.value },
+      set(value) { this.$emit('input', value) },
     },
 
   },
 
 }
 </script>
-
-<style>
-
-</style>

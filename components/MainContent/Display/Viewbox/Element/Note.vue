@@ -23,12 +23,16 @@
         :style="`flex: ${ elem.hasBody ? 'none' : 1 }`"
         @pointerdown="onEditorPointerDown($event, 0)"
         @dblclick="onEditorDoubleClick($event, 0)">
-          <Editor ref="editor-0"
-          :style="`flex: 1; padding: 11px; 
-          padding-right: ${ elem.collapsible ? 0 : `11px`}`"
-          :id="`note-${elem.id}-editor-0`"
-          v-model="elem.content[0]"
-          :disabled="!editing || elem.readOnly"/>
+
+          <div style="flex: 1"
+          :style="`padding: 11px;
+          width: ${ elem[sizeProp].x === 'auto' ? 'auto' : 0 };
+          padding-right: ${ elem.collapsible ? 0 : `11px`}`">
+            <SmartEditor ref="editor-0"
+            :id="`note-${elem.id}-editor-0`"
+            v-model="elem.content[0]"
+            :disabled="!editing || elem.readOnly"/>
+          </div>
 
           <div v-if="elem.collapsible"
           style="flex: none">
@@ -40,6 +44,7 @@
               <v-icon v-if="!elem.collapsed">mdi-chevron-up</v-icon>
             </v-btn>
           </div>
+
         </div>
 
         <div style="flex: 1;
@@ -51,7 +56,7 @@
           height: 100%; white-space: inherit;"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
-            <Editor ref="editor-1"
+            <SmartEditor ref="editor-1"
             :id="`note-${elem.id}-editor-1`"
             v-model="elem.content[1]"
             :disabled="!editing || elem.readOnly"/>
@@ -206,86 +211,5 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
-}
-
-.quill-editor {
-  min-width: 1px;
-
-  white-space: inherit;
-  
-  height: 100%;
-}
-
-.quill-editor /deep/ .ql-container {
-  white-space: inherit;
-}
-
-.quill-editor /deep/ .ql-editor {
-  padding: 0 !important;
-
-  min-width: 100%;
-  max-width: 100%;
-
-  width: max-content;
-  
-  white-space: inherit !important;
-}
-
-.quill-editor /deep/ .ql-editor > * {
-  cursor: inherit !important;
-}
-
-.quill-editor /deep/ .ql-formats:nth-child(1) {
-  margin-bottom: 0 !important;
-}
-
-.quill-editor /deep/ ul {
-  padding-left: 0 !important;
-}
-
-.quill-editor /deep/ li {
-  padding-left: 1em !important;
-}
-.quill-editor /deep/ .ql-indent-1 {
-  padding-left: 2em !important;
-}
-.quill-editor /deep/ .ql-indent-2 {
-  padding-left: 3em !important;
-}
-.quill-editor /deep/ .ql-indent-3 {
-  padding-left: 4em !important;
-}
-
-
-
-/* Remove link before */
-
-.quill-editor /deep/ a::before {
-  display: none;
-}
-.quill-editor /deep/ a::after {
-  display: none;
-}
-</style>
-
-<style>
-.ql-tooltip {
-  z-index: 9999;
-
-  background-color: #303030 !important;
-  border-radius: 12px !important;
-}
-
-.ql-toolbar {
-  display: flex;
-
-  flex-direction: column;
-}
-
-.ql-formats {
-  margin: 8px !important;
-}
-.ql-formats:not(:first-child) {
-  margin-top: 0 !important;
 }
 </style>
