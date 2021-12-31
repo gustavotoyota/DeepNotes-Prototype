@@ -23,12 +23,11 @@
         :style="`flex: ${ elem.hasBody ? 'none' : 1 }`"
         @pointerdown="onEditorPointerDown($event, 0)"
         @dblclick="onEditorDoubleClick($event, 0)">
-          <quill-editor ref="editor-0"
+          <Editor ref="editor-0"
           :style="`flex: 1; padding: 11px; 
           padding-right: ${ elem.collapsible ? 0 : `11px`}`"
           :id="`note-${elem.id}-editor-0`"
           v-model="elem.content[0]"
-          :options="editorOptions"
           :disabled="!editing || elem.readOnly"/>
 
           <div v-if="elem.collapsible"
@@ -52,10 +51,9 @@
           height: 100%; white-space: inherit;"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
-            <quill-editor ref="editor-1"
+            <Editor ref="editor-1"
             :id="`note-${elem.id}-editor-1`"
             v-model="elem.content[1]"
-            :options="editorOptions"
             :disabled="!editing || elem.readOnly"/>
           </div>
         </div>
@@ -87,47 +85,6 @@ export default {
     elem: { type: Object },
   },
 
-  created() {
-    this.editorOptions = {
-      theme: 'bubble',
-
-      placeholder: '',
-
-      modules: {
-        toolbar: [
-          [
-            'bold',
-            'italic',
-            'underline',
-            'strike',
-            { 'header': 1 },
-            { 'header': 2 },
-            { align: '' },
-            { align: 'center' },
-            { align: 'right' },
-            { align: 'justify' },
-          ],
-          [
-            { 'indent': '-1' },
-            { 'indent': '+1' },
-            { 'script': 'sub' },
-            { 'script': 'super' },
-            'blockquote',
-            'code-block',
-            'link',
-            'image',
-            'formula',
-            'clean',
-          ],
-        ],
-        
-        imageDrop: true,
-        imageResize: {
-          modules: ['DisplaySize', 'Resize'],
-        },
-      },
-    }
-  },
 
 
   methods: {
