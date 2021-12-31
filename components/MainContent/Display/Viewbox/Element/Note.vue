@@ -36,7 +36,7 @@
             <v-btn plain tile
             style="min-width: 0; width: 30px; height: 100%"
             @pointerdown.stop="" @dblclick.stop=""
-            @click="$app.notes.toggleCollapsed(elem)">
+            @click.stop="$app.notes.toggleCollapsed(elem)">
               <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
               <v-icon v-if="!elem.collapsed">mdi-chevron-up</v-icon>
             </v-btn>
