@@ -261,18 +261,8 @@ export default {
     collapsed: {
       get() { return this.elem.collapsed },
       set(value) {
-        for (const elem of $app.selection.getElems()) {
-          if (!elem.collapsible)
-            continue
-
-          if (value) {
-            const clientRect = $app.elems.getClientRect(elem.id)
-
-            elem.expandedWidth = $app.sizes.screenToWorld1D(clientRect.width)
-          }
-
-          elem.collapsed = value
-        }
+        for (const elem of $app.selection.getElems())
+          $app.notes.setCollapsed(elem, value)
       },
     },
    

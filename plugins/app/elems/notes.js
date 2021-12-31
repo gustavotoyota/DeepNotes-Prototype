@@ -36,3 +36,30 @@ notes.create = (pos) => {
 notes.getEditorNode = (elemId, editorIdx) => {
   return document.getElementById(`note-${elemId}-editor-${editorIdx}`)
 }
+
+
+
+notes.expand = (elem) => {
+  elem.collapsed = false
+}
+notes.collapse = (elem) => {
+  if (!elem.collapsible)
+    return
+
+  const clientRect = $app.elems.getClientRect(elem.id)
+  elem.expandedWidth = $app.sizes.screenToWorld1D(clientRect.width)
+
+  elem.collapsed = true
+}
+notes.setCollapsed = (elem, collapsed) => {
+  if (collapsed)
+    $app.notes.collapse(elem)
+  else
+    $app.notes.expand(elem)
+}
+notes.toggleCollapsed = (elem) => {
+  if (elem.collapsed)
+    $app.notes.expand(elem)
+  else
+    $app.notes.collapse(elem)
+}
