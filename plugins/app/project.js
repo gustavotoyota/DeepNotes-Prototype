@@ -16,5 +16,7 @@ project.reset = () => {
     },
   })
 
+  $app.defaultProps.init()
+
   $app.pages.create('Main Page')
 }

@@ -268,39 +268,6 @@
               "linkedPageId": 5
             },
             {
-              "id": 4,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 145,
-                "y": 160.5
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>AI</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 1,
               "type": "note",
               "parent": null,
@@ -1217,6 +1184,74 @@
         "elems": {
           "list": [
             {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -23.140625000000057,
+                "y": -28.546880696614583
+              },
+              "size": {
+                "x": 221.96405029296875,
+                "y": 193.506884765625
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<h2 style=\"text-align: center;\">Early Modern Era</h2>",
+                "<p>A.D. 1450-A.D. 1750</p><p><br></p><p>Resurgence of the values and philosophies from the Classical era.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": 193.67354736328122
+              },
+              "expandedWidth": 221.953125,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 19
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 87.34375,
+                "y": -248
+              },
+              "size": {
+                "x": 222.21780468749995,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<h2 style=\"text-align: center;\">Classical Era</h2>",
+                "<p>600 B.C.-A.D. 476</p><p><br></p><p>It marked the beginning of a philosophical period in world history as well as the first recorded sources of human history.</p><p><br></p><p>Politically, the Classical era saw the rise – and fall – of most world empires.</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": 191.5
+              },
+              "expandedWidth": 222.20310058593748,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 10
+            },
+            {
               "id": 2,
               "type": "note",
               "parent": null,
@@ -1277,46 +1312,12 @@
                 "x": "expanded",
                 "y": 195.76937866210938
               },
-              "expandedWidth": 232.828125,
+              "expandedWidth": 232.8281559000588,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 9
-            },
-            {
-              "id": 1,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": 87.34375,
-                "y": -248
-              },
-              "size": {
-                "x": 222.21780468749995,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<h2 style=\"text-align: center;\">Classical Era</h2>",
-                "<p>600 B.C.-A.D. 476</p><p><br></p><p>It marked the beginning of a philosophical period in world history as well as the first recorded sources of human history.</p><p><br></p><p>Politically, the Classical era saw the rise – and fall – of most world empires.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": 191.5
-              },
-              "expandedWidth": 222.20310058593748,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 10
             },
             {
               "id": 0,
@@ -1345,46 +1346,12 @@
                 "x": "expanded",
                 "y": 188.17875366210936
               },
-              "expandedWidth": 223.2500244140625,
+              "expandedWidth": 223.25000778525117,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 17
-            },
-            {
-              "id": 3,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -23.140625000000057,
-                "y": -28.546880696614583
-              },
-              "size": {
-                "x": 221.96405029296875,
-                "y": 193.506884765625
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<h2 style=\"text-align: center;\">Early Modern Era</h2>",
-                "<p>A.D. 1450-A.D. 1750</p><p><br></p><p>Resurgence of the values and philosophies from the Classical era.</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": 193.67354736328122
-              },
-              "expandedWidth": 221.953125,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 19
             }
           ],
           "nextId": 5,
@@ -1394,10 +1361,10 @@
         },
         "camera": {
           "pos": {
-            "x": 74.49999999999994,
-            "y": 1.3266666666666633
+            "x": 85.63281249999994,
+            "y": -40.67188152745703
           },
-          "zoom": 0.8333333333333334
+          "zoom": 0.7704119611220996
         }
       },
       {
@@ -2374,39 +2341,6 @@
         "elems": {
           "list": [
             {
-              "id": 21,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -555.688888888889,
-                "y": -129.97777777777776
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>Done</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 5,
               "type": "note",
               "parent": null,
@@ -2424,39 +2358,6 @@
               },
               "content": [
                 "<h1>To do later</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 1,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -250.01555555555564,
-                "y": -128.0657777777778
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>To do next</h1>",
                 ""
               ],
               "hasBody": false,
@@ -2939,39 +2840,6 @@
               "linkedPageId": 38
             },
             {
-              "id": 16,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -59.59608024691331,
-                "y": 159.01342592592593
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Make it sync with the server</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 203.3906630375108,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 17,
               "type": "note",
               "parent": null,
@@ -3032,39 +2900,6 @@
                 "y": "auto"
               },
               "expandedWidth": 152.60947141203044,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 19,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -59.21873476455292,
-                "y": 323.00624919436933
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Allow offline editing</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 154.29695239115625,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3402,39 +3237,6 @@
               "readOnly": false
             },
             {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -58.56676064039579,
-                "y": 377.0778685701045
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement default note properties</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 236.67188836694277,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 8,
               "type": "note",
               "parent": null,
@@ -3467,73 +3269,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 37
-            },
-            {
-              "id": 9,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -361.10357511003593,
-                "y": -2.0601952274428226
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement containers</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 167.28124610872788,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 40
-            },
-            {
-              "id": 55,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -103.06770520662685,
-                "y": 963.9357780830496
-              },
-              "size": {
-                "x": 210.11371612548828,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Height: 0 is indeed required</p>",
-                "<p>For when the element is collapsed with a title bigger than its body</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 210.1093412580444,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
             },
             {
               "id": 14,
@@ -3637,6 +3372,205 @@
               "linkedPageId": 45
             },
             {
+              "id": 9,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -361.10357511003593,
+                "y": -2.0601952274428226
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement containers</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 167.28124610872788,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 40
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -250.01555555555564,
+                "y": -128.0657777777778
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>To do next</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 16,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -59.59608024691331,
+                "y": 159.01342592592593
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Make it sync with the server</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 203.3906630375108,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.9143371857298,
+                "y": 759.7036996025003
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement default note properties</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 236.67192766866856,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 55,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -103.06770520662685,
+                "y": 963.9357780830496
+              },
+              "size": {
+                "x": 210.11371612548828,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Height: 0 is indeed required</p>",
+                "<p>For when the element is collapsed with a title bigger than its body</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 210.109375,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 19,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -59.21873476455292,
+                "y": 323.00624919436933
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Allow offline editing</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 154.29695239115625,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
               "id": 22,
               "type": "note",
               "parent": null,
@@ -3663,7 +3597,106 @@
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 231.8124826098847,
+              "expandedWidth": 231.8125124270472,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 21,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -555.688888888889,
+                "y": -129.97777777777776
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>Done</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 67,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -59.36317920899738,
+                "y": 379.4145825277025
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement clipboard</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 69,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -58.5583341818626,
+                "y": 488.49369002122893
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fixed collapse button when there's no body</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 292.6406140922437,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3696,24 +3729,24 @@
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 210.1093407247134,
+              "expandedWidth": 210.109375,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false
             }
           ],
-          "nextId": 60,
+          "nextId": 70,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -228.33684698129272,
-            "y": 56.71392607067133
+            "x": -214.18749921086604,
+            "y": 537.3593959487341
           },
-          "zoom": 1.0906334223739713
+          "zoom": 0.3652509248482898
         }
       },
       {
@@ -4670,15 +4703,15 @@
               "readOnly": false
             }
           ],
-          "nextId": 1,
+          "nextId": 2,
           "selected": {},
-          "activeId": null,
+          "activeId": 1,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -41,
-            "y": -64.5
+            "x": -46,
+            "y": 79.5
           },
           "zoom": 1
         }
@@ -4688,8 +4721,7 @@
     "path": [
       0,
       4,
-      35,
-      40
+      35
     ],
     "depth": 2,
     "recent": [
@@ -4715,11 +4747,9 @@
       34,
       18,
       39,
-      9,
       20,
       31,
       10,
-      17,
       29,
       6,
       7,
@@ -4727,18 +4757,48 @@
       36,
       41,
       19,
-      8,
-      1,
       43,
       38,
-      3,
       37,
-      4,
-      0,
       44,
-      45,
       40,
+      45,
+      3,
+      17,
+      9,
+      8,
+      1,
+      0,
+      4,
       35
     ]
+  },
+  "defaultProps": {
+    "note": {
+      "type": "note",
+      "parent": null,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "hasBody": false,
+      "collapsible": false,
+      "collapsed": false,
+      "collapsedSize": {
+        "x": "expanded",
+        "y": "auto"
+      },
+      "size": {
+        "x": "auto",
+        "y": "auto"
+      },
+      "expandedWidth": 44.0000407603571,
+      "movable": true,
+      "resizable": true,
+      "wrapText": true,
+      "readOnly": false
+    },
+    "container": {},
+    "arrow": {}
   }
 }
