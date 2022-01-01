@@ -2440,39 +2440,6 @@
               "readOnly": false
             },
             {
-              "id": 1,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -250.01555555555564,
-                "y": -128.0657777777778
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>To do next</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 41,
               "type": "note",
               "parent": null,
@@ -2939,39 +2906,6 @@
               "linkedPageId": 38
             },
             {
-              "id": 16,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -59.59608024691331,
-                "y": 159.01342592592593
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Make it sync with the server</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 203.3906630375108,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 17,
               "type": "note",
               "parent": null,
@@ -3402,39 +3336,6 @@
               "readOnly": false
             },
             {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -58.56676064039579,
-                "y": 377.0778685701045
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement default note properties</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 236.67188836694277,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 8,
               "type": "note",
               "parent": null,
@@ -3467,40 +3368,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 37
-            },
-            {
-              "id": 9,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -361.10357511003593,
-                "y": -2.0601952274428226
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement containers</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 167.28124610872788,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 40
             },
             {
               "id": 55,
@@ -3701,19 +3568,152 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -360.226322185712,
+                "y": 54.32964466751683
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement default note properties</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 236.67192766866856,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 9,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -361.10357511003593,
+                "y": -2.0601952274428226
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement containers</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 167.28124610872788,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 40
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -250.01555555555564,
+                "y": -128.0657777777778
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>To do next</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 16,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -59.59608024691331,
+                "y": 159.01342592592593
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Make it sync with the server</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 203.3906630375108,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
-          "nextId": 60,
+          "nextId": 67,
           "selected": {},
-          "activeId": null,
+          "activeId": 65,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -228.33684698129272,
-            "y": 56.71392607067133
+            "x": -230.99218105994794,
+            "y": 537.3593485216854
           },
-          "zoom": 1.0906334223739713
+          "zoom": 0.3652509364961739
         }
       },
       {
@@ -4670,15 +4670,15 @@
               "readOnly": false
             }
           ],
-          "nextId": 1,
+          "nextId": 2,
           "selected": {},
-          "activeId": null,
+          "activeId": 1,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -41,
-            "y": -64.5
+            "x": -46,
+            "y": 79.5
           },
           "zoom": 1
         }
@@ -4689,7 +4689,7 @@
       0,
       4,
       35,
-      40
+      45
     ],
     "depth": 2,
     "recent": [
@@ -4736,9 +4736,37 @@
       4,
       0,
       44,
-      45,
       40,
+      45,
       35
     ]
+  },
+  "defaultProps": {
+    "note": {
+      "type": "note",
+      "parent": null,
+      "anchor": {
+        "x": 0,
+        "y": 0
+      },
+      "hasBody": false,
+      "collapsible": false,
+      "collapsed": false,
+      "collapsedSize": {
+        "x": "expanded",
+        "y": "auto"
+      },
+      "size": {
+        "x": "auto",
+        "y": "auto"
+      },
+      "expandedWidth": 44.0000407603571,
+      "movable": true,
+      "resizable": true,
+      "wrapText": true,
+      "readOnly": false
+    },
+    "container": {},
+    "arrow": {}
   }
 }

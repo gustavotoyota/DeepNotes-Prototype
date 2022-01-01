@@ -15,3 +15,33 @@ $utils.shallowCopy = (obj) => {
 
   return obj
 }
+
+
+
+
+$utils.merge = (target, ...objs) => {
+  for (const obj of objs) {
+    for (const [key, value] of Object.entries(obj)) {
+      if (value != null && value.constructor === Object)
+        target[key] = $utils.merge(target[key] ?? {}, value)
+      else
+        target[key] = value
+    }
+  }
+
+  return target
+}
+$utils.merged = (...objs) => {
+  const result = {}
+  
+  for (const obj of objs) {
+    for (const [key, value] of Object.entries(obj)) {
+      if (value != null && value.constructor === Object)
+        result[key] = $utils.merged(result[key] ?? {}, value)
+      else
+        result[key] = value
+    }
+  }
+  
+  return result
+}

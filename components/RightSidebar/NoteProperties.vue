@@ -37,7 +37,22 @@
         <NewPageDialog :elem="elem"/>
       </div>
 
-      <v-divider class="mt-6"/>
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5 mt-4"
+      style="display: flex; flex-direction: column">
+        <v-btn @click="$app.defaultProps.set()">
+          Set default props
+        </v-btn>
+
+        <Gap height="14px"/>
+
+        <v-btn @click="$app.defaultProps.copy($app.selection.getElems())">
+          Copy default props
+        </v-btn>
+      </div>
+
+      <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
       style="display: flex">

@@ -29,6 +29,7 @@ $app.dragging = require('./elems/dragging')
 $app.deleting = require('./elems/deleting')
 $app.resizing = require('./elems/resizing')
 $app.collapsing = require('./elems/collapsing')
+$app.defaultProps = require('./elems/default-props')
 
 $app.notes = require('./notes/notes')
 $app.editing = require('./notes/editing')

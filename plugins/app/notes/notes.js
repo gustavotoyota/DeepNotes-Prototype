@@ -10,16 +10,18 @@ notes.create = (clientPos) => {
 
   $assign(note, {
     pos: $utils.shallowCopy(worldPos),
-    size: { x: 'auto', y: 'auto' },
-    anchor: { x: 0.5, y: 0.5 },
-
+    
     content: ['', ''],
+
+    anchor: { x: 0.5, y: 0.5 },
 
     hasBody: false,
 
     collapsible: false,
     collapsed: false,
     collapsedSize: { x: 'expanded', y: 'auto' },
+
+    size: { x: 'auto', y: 'auto' },
 
     expandedWidth: 0,
 
@@ -29,6 +31,8 @@ notes.create = (clientPos) => {
     wrapText: true,
     readOnly: false,
   })
+
+  $app.defaultProps.copy([note])
 
   $app.editing.start(note, 0)
 
