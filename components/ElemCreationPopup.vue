@@ -6,7 +6,7 @@
 
     <v-list dense>
       
-      <v-list-item @click="$app.creation.perform($state.popup.pos)">
+      <v-list-item @click="$app.notes.create($state.popup.pos)">
         <v-list-item-title>Note</v-list-item-title>
       </v-list-item>
 

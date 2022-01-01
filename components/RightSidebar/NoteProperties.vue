@@ -262,7 +262,7 @@ export default {
       get() { return this.elem.collapsed },
       set(value) {
         for (const elem of $app.selection.getElems())
-          $app.notes.setCollapsed(elem, value)
+          $app.collapsing.setCollapsed(elem, value)
       },
     },
    

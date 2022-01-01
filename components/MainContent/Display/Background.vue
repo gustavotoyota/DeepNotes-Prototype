@@ -21,7 +21,9 @@ export default {
     },
 
     onDoubleClick(event) {
-      $app.creation.perform($app.coords.getClientPos(event))
+      const clientPos = $app.coords.getClientPos(event)
+
+      $app.notes.create(clientPos)
     },
 
   },

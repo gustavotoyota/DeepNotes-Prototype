@@ -15,6 +15,21 @@ selection.clear = () => {
 
 
 
+selection.addElem = (elemId) => {
+  $set($getters.currentPage.elems.selected, elemId, true)
+}
+selection.removeElem = (elemId) => {
+  $delete($getters.currentPage.elems.selected, elemId)
+}
+
+
+
+selection.hasElem = (elemId) => {
+  return elemId in $getters.currentPage.elems.selected
+}
+
+
+
 selection.getElemIds = () => {
   return Object.keys($getters.currentPage.elems.selected)
 }
@@ -37,15 +52,22 @@ selection.clone = () => {
 
   for (const elem of $app.selection.getElems()) {
     const newElem = $utils.deepCopy(elem)
+
     newElem.id = page.elems.nextId++
+
     newElem.pos.x += 8
     newElem.pos.y += 8
+
     page.elems.list.push(newElem)
 
-    $app.elems.removeFromSelection(elem.id)
-    $app.elems.addToSelection(newElem.id)
 
-    if (elem.id == page.elems.activeId)
+
+    $app.selection.removeElem(elem.id)
+    $app.selection.addElem(newElem.id)
+
+
+
+    if ($app.elems.isActive(elem.id))
       page.elems.activeId = newElem.id
   }
 }

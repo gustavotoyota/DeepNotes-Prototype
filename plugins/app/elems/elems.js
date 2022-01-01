@@ -42,17 +42,8 @@ elems.getClientRect = (elemId) => {
 elems.activate = (elemId) => {
   $getters.currentPage.elems.activeId = elemId
 }
-
-
-
-elems.addToSelection = (elemId) => {
-  $set($getters.currentPage.elems.selected, elemId, true)
-}
-elems.removeFromSelection = (elemId) => {
-  $delete($getters.currentPage.elems.selected, elemId)
-}
-elems.isSelected = (elemId) => {
-  return elemId in $getters.currentPage.elems.selected
+elems.isActive = (elemId) => {
+  return elemId == $getters.currentPage.elems.activeId
 }
 
 
@@ -60,7 +51,7 @@ elems.isSelected = (elemId) => {
 elems.selectExclusive = (elemId) => {
   $app.selection.clear()
 
-  $app.elems.addToSelection(elemId)
+  $app.selection.addElem(elemId)
 }
 
 
@@ -91,5 +82,5 @@ elems.getSizeProp = (elem) => {
 
 elems.selectAll = () => {
   for (const elem of $getters.currentPage.elems.list)
-    $app.elems.addToSelection(elem.id)
+    $app.selection.addElem(elem.id)
 }

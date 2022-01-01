@@ -44,7 +44,7 @@
             }"
             @click="(event) => {
               if (event.button === 0) {
-                $app.notes.toggleCollapsed(elem)
+                $app.collapsing.toggleCollapsed(elem)
                 event.stopPropagation()
               }
             }"
@@ -107,7 +107,7 @@ export default {
       if (event.target.style.opacity === '0.8')
         return
 
-      if (this.elem.id != this.page.elems.activeId)
+      if (!$app.elems.isActive(this.elem.id))
         $app.editing.stop()
 
       if (this.elem.linkedPageId != null
@@ -116,7 +116,7 @@ export default {
 
       $app.clickSelection.perform(this.elem, event)
 
-      if ($app.elems.isSelected(this.elem.id)
+      if ($app.selection.hasElem(this.elem.id)
       && this.elem.movable
       && !this.page.elems.editing)
         $app.dragging.start(event)
@@ -162,10 +162,10 @@ export default {
 
 
     selected() {
-      return $app.elems.isSelected(this.elem.id)
+      return $app.selection.hasElem(this.elem.id)
     },
     active() {
-      return this.page.elems.activeId == this.elem.id
+      return $app.elems.isActive(this.elem.id)
     },
     editing() {
       return this.active && this.page.elems.editing

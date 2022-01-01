@@ -2737,39 +2737,6 @@
               "readOnly": false
             },
             {
-              "id": 55,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -103.06770520662685,
-                "y": 963.9357780830496
-              },
-              "size": {
-                "x": 210.11371612548828,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Height: 0 is indeed required</p>",
-                "<p>For when the element is collapsed with a title bigger than its body</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 210.10942508300815,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 0,
               "type": "note",
               "parent": null,
@@ -2932,39 +2899,6 @@
                 "y": "auto"
               },
               "expandedWidth": 252.54698395944598,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 14,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -658.9873333333342,
-                "y": 302.77488888888917
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Exit note editing when pressing Esc</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 248.2344449525118,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3636,40 +3570,6 @@
               "linkedPageId": 40
             },
             {
-              "id": 58,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -372.0683776280489,
-                "y": -1.247990898480567
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix collapsed width: Expanded</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 218.6093560718087,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 45
-            },
-            {
               "id": 56,
               "type": "note",
               "parent": null,
@@ -3701,19 +3601,121 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 55,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -103.06770520662685,
+                "y": 963.9357780830496
+              },
+              "size": {
+                "x": 210.11371612548828,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Height: 0 is indeed required</p>",
+                "<p>For when the element is collapsed with a title bigger than its body</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 210.1093412580444,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 14,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.9873333333342,
+                "y": 302.77488888888917
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Exit note editing when pressing Esc</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 248.23434542518035,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 58,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -372.0683776280489,
+                "y": -1.247990898480567
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix collapsed width: Expanded</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 218.60938046996364,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 45
             }
           ],
-          "nextId": 59,
-          "selected": {},
-          "activeId": null,
+          "nextId": 60,
+          "selected": {
+            "59": true
+          },
+          "activeId": 59,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -251.37499083174617,
-            "y": 18.671871645948954
+            "x": -175.31814898081558,
+            "y": 179.98906582264908
           },
-          "zoom": 1
+          "zoom": 0.7573843132273957
         }
       },
       {
@@ -4451,20 +4453,86 @@
         "elems": {
           "list": [
             {
-              "id": 0,
+              "id": 1,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -33,
-                "y": -137.5
+                "x": -31,
+                "y": -81.5
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>If the collapsed ones have width: expanded</p>",
+                "<p>Force the expanded version to be also custom</p>"
+              ],
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -32,
+                "y": 18.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>If the collapsed ones don't have width: expanded</p>",
+                "<p>Change only their collapsedSize to custom</p>"
+              ],
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -31,
+                "y": -134.5
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Force them all to be custom</p>",
@@ -4484,26 +4552,26 @@
               "readOnly": false
             },
             {
-              "id": 1,
+              "id": 4,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -32,
-                "y": -52.5
+                "x": 12,
+                "y": -210.5
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
-                "<p>If the collapsed ones have width: expanded</p>",
-                "<p>Force the expanded version to be custom</p>"
+                "<h2>Visual feedback rule</h2>",
+                ""
               ],
-              "hasBody": true,
+              "hasBody": false,
               "collapsible": false,
               "collapsed": false,
               "collapsedSize": {
@@ -4517,15 +4585,15 @@
               "readOnly": false
             }
           ],
-          "nextId": 3,
+          "nextId": 5,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -32,
-            "y": -84.63671875
+            "x": 120,
+            "y": -39.63671875
           },
           "zoom": 1
         }
@@ -4590,7 +4658,7 @@
       0,
       4,
       35,
-      45
+      44
     ],
     "depth": 2,
     "recent": [
@@ -4634,11 +4702,11 @@
       38,
       3,
       37,
-      0,
-      4,
-      44,
       40,
       45,
+      4,
+      0,
+      44,
       35
     ]
   }

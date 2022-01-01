@@ -24,13 +24,14 @@ $app.clickSelection = require('./selection/click-selection')
 $app.boxSelection = require('./selection/box-selection')
 
 $app.elems = require('./elems/elems')
-$app.notes = require('./elems/notes')
 $app.popup = require('./elems/popup')
-$app.creation = require('./elems/creation')
-$app.editing = require('./elems/editing')
 $app.dragging = require('./elems/dragging')
 $app.deleting = require('./elems/deleting')
 $app.resizing = require('./elems/resizing')
+$app.collapsing = require('./elems/collapsing')
+
+$app.notes = require('./notes/notes')
+$app.editing = require('./notes/editing')
 
 
 
