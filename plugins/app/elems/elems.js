@@ -65,17 +65,19 @@ elems.selectExclusive = (elemId) => {
 
 
 
-elems.delete = (elemId) => {
+elems.removeFromList = (elemId) => {
   const index = $app.elems.getIndexById(elemId)
-
   $delete($getters.currentPage.elems.list, index)
+}
+elems.delete = (elemId) => {
+  $app.selection.removeElem(elemId)
+  $app.elems.removeFromList(elemId)
 }
 
 
 
 elems.bringToTop = (elem) => {
-  $app.elems.delete(elem.id)
-
+  $app.elems.removeFromList(elem.id)
   $getters.currentPage.elems.list.push(elem)
 }
 
