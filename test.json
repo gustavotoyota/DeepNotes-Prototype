@@ -3471,39 +3471,6 @@
               "readOnly": false
             },
             {
-              "id": 22,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -662.4687502426666,
-                "y": -58.03125427474754
-              },
-              "size": {
-                "x": 231.81698565773416,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implemented backwards navigation without repetition</p>",
-                "<p>29/12/2021 - 14:18\t</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 231.8125124270472,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 21,
               "type": "note",
               "parent": null,
@@ -3603,40 +3570,6 @@
               "readOnly": false
             },
             {
-              "id": 58,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -361.37122985520375,
-                "y": -55.49781174648126
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix collapsed width: Expanded</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 218.60935545656207,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 45
-            },
-            {
               "id": 24,
               "type": "note",
               "parent": null,
@@ -3734,6 +3667,73 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 58,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -361.37122985520375,
+                "y": -55.49781174648126
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix collapsed width: Expanded</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 218.6093408103976,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 45
+            },
+            {
+              "id": 22,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -662.4687502426666,
+                "y": -58.03125427474754
+              },
+              "size": {
+                "x": 231.81698565773416,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implemented backwards navigation without repetition</p>",
+                "<p>29/12/2021 - 14:18\t</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 231.81247562527844,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 70,
@@ -3743,10 +3743,10 @@
         },
         "camera": {
           "pos": {
-            "x": -221.9375014886548,
-            "y": 537.3593651993392
+            "x": -219.29683423229397,
+            "y": 228.40129620512374
           },
-          "zoom": 0.36525093061846886
+          "zoom": 0.7573843297304569
         }
       },
       {

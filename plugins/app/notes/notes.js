@@ -23,7 +23,7 @@ notes.create = (clientPos) => {
 
     size: { x: 'auto', y: 'auto' },
 
-    expandedWidth: 0,
+    expandedHeight: 0,
 
     movable: true,
     resizable: true,
