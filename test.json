@@ -3700,7 +3700,8 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "linkedPageId": 45
+              "linkedPageId": 45,
+              "expandedHeight": 41.45312899272186
             },
             {
               "id": 22,
@@ -3733,7 +3734,8 @@
               "movable": true,
               "resizable": true,
               "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "expandedHeight": 41.45312899272186
             }
           ],
           "nextId": 70,
@@ -4683,7 +4685,7 @@
               },
               "anchor": {
                 "x": 0.5,
-                "y": 0.5
+                "y": 0
               },
               "content": [
                 "<h2>Solution</h2>",
@@ -4691,7 +4693,7 @@
               ],
               "hasBody": true,
               "collapsible": true,
-              "collapsed": false,
+              "collapsed": true,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
@@ -4700,12 +4702,13 @@
               "movable": true,
               "resizable": true,
               "wrapText": true,
-              "readOnly": false
+              "readOnly": false,
+              "expandedHeight": 59.90625
             }
           ],
           "nextId": 2,
           "selected": {},
-          "activeId": 1,
+          "activeId": null,
           "editing": false
         },
         "camera": {
@@ -4721,7 +4724,8 @@
     "path": [
       0,
       4,
-      35
+      35,
+      45
     ],
     "depth": 2,
     "recent": [
@@ -4760,7 +4764,6 @@
       37,
       44,
       40,
-      45,
       3,
       17,
       9,
@@ -4770,6 +4773,7 @@
       1,
       0,
       4,
+      45,
       35
     ]
   },

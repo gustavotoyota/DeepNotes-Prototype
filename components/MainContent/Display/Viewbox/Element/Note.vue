@@ -38,7 +38,8 @@
           style="flex: none">
             <v-btn plain tile
             style="min-width: 0; width: 32px; height: 100%"
-            :style="`max-height: ${ !elem.hasBody ? '40px' : 'none' }`"
+            :style="`max-height: ${ elem.hasBody ? 'none' : '40px' };
+            border-bottom-left-radius: ${ elem.hasBody ? 0 : '4px' }`"
             @pointerdown="(event) => {
               if (event.button === 0)
                 event.stopPropagation()
