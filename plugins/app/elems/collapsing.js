@@ -12,8 +12,9 @@ collapsing.collapse = (elem) => {
   if (!elem.collapsible)
     return
 
-  const clientRect = $app.elems.getClientRect(elem.id)
-  elem.expandedWidth = $app.sizes.screenToWorld1D(clientRect.width)
+  const bodyElem = document.getElementById(`note-${elem.id}-body`)
+  const clientRect = bodyElem.getBoundingClientRect()
+  elem.expandedHeight = $app.sizes.screenToWorld1D(clientRect.height)
 
   elem.collapsed = true
 }

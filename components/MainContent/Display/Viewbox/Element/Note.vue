@@ -26,7 +26,7 @@
 
           <div style="flex: 1"
           :style="`padding: 11px;
-          width: ${ elem[sizeProp].x === 'auto' ? 'auto' : 0 };
+          width: ${ (elem[sizeProp].x === 'auto' || (elem[sizeProp].x === 'expanded' && elem.size.x === 'auto')) ? 'auto' : 0 };
           padding-right: ${ elem.collapsible ? 0 : `11px`}`">
             <SmartEditor ref="editor-0"
             :id="`note-${elem.id}-editor-0`"
@@ -37,7 +37,8 @@
           <div v-if="elem.collapsible"
           style="flex: none">
             <v-btn plain tile
-            style="min-width: 0; width: 30px; height: 100%"
+            style="min-width: 0; width: 32px; height: 100%"
+            :style="`max-height: ${ !elem.hasBody ? '40px' : 'none' }`"
             @pointerdown="(event) => {
               if (event.button === 0)
                 event.stopPropagation()
@@ -56,13 +57,15 @@
 
         </div>
 
-        <div style="flex: 1;
+        <div v-if="elem.hasBody"
+        style="flex: 1;
         height: 0; white-space: inherit"
-        v-if="elem.hasBody && (!elem.collapsed || elem.collapsedSize.y !== 'auto')">
+        :style="`max-height: ${ visibleBody ? 'none' : 0 }`">
           <v-divider/>
 
-          <div style="padding: 11px;
-          height: 100%; white-space: inherit;"
+          <div :id="`note-${elem.id}-body`"
+          style="padding: 11px; white-space: inherit;"
+          :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
             <SmartEditor ref="editor-1"
@@ -188,10 +191,16 @@ export default {
       return $app.elems.getSizeProp(this.elem)
     },
     width() {
+      let expandedWidth
+      if (this.elem.size.x === 'auto')
+        expandedWidth = 'auto'
+      else
+        expandedWidth = `${this.elem.size.x}px`
+
       if (this.elem[this.sizeProp].x === 'auto')
         return 'auto'
       else if (this.elem[this.sizeProp].x === 'expanded')
-        return `${this.elem.expandedWidth}px`
+        return expandedWidth
       else
         return `${this.elem[this.sizeProp].x}px`
     },
@@ -200,6 +209,13 @@ export default {
         return 'auto'
       else
         return `${this.elem[this.sizeProp].y}px`
+    },
+
+
+
+    visibleBody() {
+      return this.elem.hasBody &&
+        (!this.elem.collapsed || this.elem.collapsedSize.y !== 'auto')
     },
 
   },
