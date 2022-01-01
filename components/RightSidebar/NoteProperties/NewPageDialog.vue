@@ -93,7 +93,7 @@ export default {
       setTimeout(() => {
         const editor0Node = $app.notes.getEditorNode(this.elem.id, 0)
 
-        this.name = editor0Node.__vue__.quill.getText().split('\n')[0]
+        this.name = editor0Node.innerText.split('\n')[0]
         this.$refs.name.focus()
       })
     }

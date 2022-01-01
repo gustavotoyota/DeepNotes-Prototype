@@ -30,7 +30,7 @@ dragging.update = (event) => {
 
   const page = $getters.currentPage
 
-  for (const elemId of Object.keys(page.elems.selected)) {
+  for (const elemId of $app.selection.getElemIds()) {
     const elem = $app.elems.getById(elemId)
 
     if (elem.pos) {

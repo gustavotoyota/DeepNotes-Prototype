@@ -23,11 +23,11 @@ clickSelection.perform = (elem, event) => {
 
 
   if (event.ctrlKey && $app.elems.isSelected(elem.id)) {
-    $delete(page.elems.selected, elem.id)
+    $app.elems.removeFromSelection(elem.id)
 
     page.elems.activeId = null
   } else {
-    $set(page.elems.selected, elem.id, true)
+    $app.elems.addToSelection(elem.id)
 
     page.elems.activeId = elem.id
 

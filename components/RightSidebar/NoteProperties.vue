@@ -27,7 +27,7 @@
         background-color="#181818" clearable
         :items="recentPages" item-text="text" item-value="value"
         :menu-props="{ top: false, offsetY: true }"
-        :input-value="elem.linkedPageId"
+        :value="elem.linkedPageId"
         @change="onPropChange((elem, value) => {
           elem.linkedPageId = value }, $event)"/>
 
