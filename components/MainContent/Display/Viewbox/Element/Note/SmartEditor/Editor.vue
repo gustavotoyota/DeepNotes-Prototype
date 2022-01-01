@@ -80,7 +80,12 @@ export default {
   computed: {
 
     model: {
-      get() { return this.value },
+      get() {
+        if (this.quill)
+          return this.value
+        else
+          return this.value.replaceAll('&nbsp; ', '&nbsp;&nbsp;')
+      },
       set(value) { this.$emit('input', value) },
     },
 

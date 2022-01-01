@@ -1,7 +1,7 @@
 <template>
 
   <div v-if="disabled"
-  v-html="value.replaceAll('&nbsp; ', '&nbsp;')"
+  v-html="value"
   class="quill-editor ql-bubble ql-container ql-editor facade"/>
 
   <Editor v-else
