@@ -37,7 +37,8 @@
           <div v-if="elem.collapsible"
           style="flex: none">
             <v-btn plain tile
-            style="min-width: 0; width: 30px; height: 100%"
+            style="min-width: 0; width: 32px; height: 100%"
+            :style="`max-height: ${ !elem.hasBody ? '40px' : 'none' }`"
             @pointerdown="(event) => {
               if (event.button === 0)
                 event.stopPropagation()

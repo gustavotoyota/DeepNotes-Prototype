@@ -179,7 +179,7 @@
               "linkedPageId": 3
             }
           ],
-          "nextId": 9,
+          "nextId": 10,
           "selected": {},
           "activeId": null,
           "editing": false
@@ -343,8 +343,8 @@
         },
         "camera": {
           "pos": {
-            "x": -8,
-            "y": 81
+            "x": -19.80078125,
+            "y": 53.5
           },
           "zoom": 1
         }
@@ -1150,8 +1150,8 @@
         },
         "camera": {
           "pos": {
-            "x": 0,
-            "y": 0
+            "x": -29.23828125,
+            "y": -38
           },
           "zoom": 1
         }
@@ -2939,39 +2939,6 @@
               "readOnly": false
             },
             {
-              "id": 24,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -60.50144591906677,
-                "y": -57.399375480109796
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix image resize box</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 162.218808191387,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 31,
               "type": "note",
               "parent": null,
@@ -3338,40 +3305,6 @@
               "linkedPageId": 44
             },
             {
-              "id": 58,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -361.37122985520375,
-                "y": -55.49781174648126
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix collapsed width: Expanded</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 218.60938046996364,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 45
-            },
-            {
               "id": 9,
               "type": "note",
               "parent": null,
@@ -3404,39 +3337,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 40
-            },
-            {
-              "id": 1,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -250.01555555555564,
-                "y": -128.0657777777778
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0.5,
-                "y": 0.5
-              },
-              "content": [
-                "<h1>To do next</h1>",
-                ""
-              ],
-              "hasBody": false,
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
             },
             {
               "id": 16,
@@ -3670,39 +3570,6 @@
               "readOnly": false
             },
             {
-              "id": 69,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -58.5583341818626,
-                "y": 488.49369002122893
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fixed collapse button when there's no body</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 292.6406140922437,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 56,
               "type": "note",
               "parent": null,
@@ -3734,6 +3601,139 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 58,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -361.37122985520375,
+                "y": -55.49781174648126
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix collapsed width: Expanded</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 218.60935545656207,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 45
+            },
+            {
+              "id": 24,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -60.50003030430045,
+                "y": -57.35938036265267
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix image resize box</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 162.21881871238725,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -249.06747713743914,
+                "y": -129.66793088997773
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "content": [
+                "<h1>To do next</h1>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 172.53123911981746,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 69,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -58.5583341818626,
+                "y": 488.49369002122893
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fixed collapse button when without body</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 277.1562325038714,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 70,
@@ -3743,10 +3743,10 @@
         },
         "camera": {
           "pos": {
-            "x": -214.18749921086604,
-            "y": 537.3593959487341
+            "x": -221.9375014886548,
+            "y": 537.3593651993392
           },
-          "zoom": 0.3652509248482898
+          "zoom": 0.36525093061846886
         }
       },
       {
@@ -4751,11 +4751,9 @@
       31,
       10,
       29,
-      6,
       7,
       42,
       36,
-      41,
       19,
       43,
       38,
@@ -4767,6 +4765,8 @@
       17,
       9,
       8,
+      41,
+      6,
       1,
       0,
       4,
