@@ -3402,39 +3402,6 @@
               "readOnly": false
             },
             {
-              "id": 22,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -662.4687502426666,
-                "y": -58.03125427474754
-              },
-              "size": {
-                "x": 231.81698565773416,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implemented backwards navigation without repetition</p>",
-                "<p>29/12/2021 - 14:18\t</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 231.81249843556986,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 2,
               "type": "note",
               "parent": null,
@@ -3502,46 +3469,12 @@
               "linkedPageId": 37
             },
             {
-              "id": 34,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -371.6849669587299,
-                "y": -55.29991075347505
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement element resize in batch</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 240.98438403638826,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 44
-            },
-            {
               "id": 9,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -371.8007228828811,
-                "y": 52.18962562055788
+                "x": -361.10357511003593,
+                "y": -2.0601952274428226
               },
               "size": {
                 "x": "auto",
@@ -3568,39 +3501,6 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 40
-            },
-            {
-              "id": 56,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -104.23437187329348,
-                "y": 1106.102444749716
-              },
-              "size": {
-                "x": 210.11371612548828,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<h2>Solution</h2>",
-                "<p>Freeze the scrollbar before collapse somehow</p><p>And use Height: 0</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 210.10935835578096,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
             },
             {
               "id": 55,
@@ -3669,12 +3569,46 @@
               "readOnly": false
             },
             {
+              "id": 34,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -657.8903031069541,
+                "y": 702.3566049432069
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement element resize in batch</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 240.98438403638826,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 44
+            },
+            {
               "id": 58,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -372.0683776280489,
-                "y": -1.247990898480567
+                "x": -361.37122985520375,
+                "y": -55.49781174648126
               },
               "size": {
                 "x": "auto",
@@ -3701,21 +3635,85 @@
               "wrapText": true,
               "readOnly": false,
               "linkedPageId": 45
+            },
+            {
+              "id": 22,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -662.4687502426666,
+                "y": -58.03125427474754
+              },
+              "size": {
+                "x": 231.81698565773416,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implemented backwards navigation without repetition</p>",
+                "<p>29/12/2021 - 14:18\t</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 231.8124826098847,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 56,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -104.23437187329348,
+                "y": 1106.102444749716
+              },
+              "size": {
+                "x": 210.11371612548828,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<h2>Solution</h2>",
+                "<p>Freeze the scrollbar before collapse somehow</p><p>And use Height: 0</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 210.1093407247134,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
             }
           ],
           "nextId": 60,
-          "selected": {
-            "59": true
-          },
-          "activeId": 59,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -175.31814898081558,
-            "y": 179.98906582264908
+            "x": -228.33684698129272,
+            "y": 56.71392607067133
           },
-          "zoom": 0.7573843132273957
+          "zoom": 1.0906334223739713
         }
       },
       {
@@ -4078,8 +4076,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -141,
-                "y": -121.5
+                "x": -144,
+                "y": -176.5
               },
               "size": {
                 "x": "auto",
@@ -4140,23 +4138,23 @@
               "readOnly": false
             },
             {
-              "id": 2,
+              "id": 3,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 25,
-                "y": -118.5
+                "x": -92,
+                "y": -0.5
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
-                "<p>Notes organized in a vertical list</p>",
+                "<p>Similar to Google Keep</p>",
                 ""
               ],
               "hasBody": false,
@@ -4177,16 +4175,16 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 28,
-                "y": -29.5
+                "x": -92,
+                "y": -50.5
               },
               "size": {
                 "x": "auto",
                 "y": "auto"
               },
               "anchor": {
-                "x": 0.5,
-                "y": 0.5
+                "x": 0,
+                "y": 0
               },
               "content": [
                 "<p>Notes organized in a vertical grid</p>",
@@ -4206,12 +4204,12 @@
               "readOnly": false
             },
             {
-              "id": 3,
+              "id": 2,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -77,
-                "y": 27.5
+                "x": -92,
+                "y": -197.5
               },
               "size": {
                 "x": "auto",
@@ -4219,10 +4217,43 @@
               },
               "anchor": {
                 "x": 0,
-                "y": 0.5
+                "y": 0
               },
               "content": [
-                "<p>Similar to Google Keep</p>",
+                "<p>Notes organized in a vertical list</p>",
+                ""
+              ],
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 11,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -91.73611111111113,
+                "y": -146.9212962962963
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>This is the primary container type</p>",
                 ""
               ],
               "hasBody": false,
@@ -4239,15 +4270,15 @@
               "readOnly": false
             }
           ],
-          "nextId": 10,
+          "nextId": 12,
           "selected": {},
           "activeId": null,
-          "editing": true
+          "editing": false
         },
         "camera": {
           "pos": {
-            "x": -20,
-            "y": -56
+            "x": -21.691417552806712,
+            "y": -78.77343227245188
           },
           "zoom": 1
         }
@@ -4461,7 +4492,7 @@
                 "y": -81.5
               },
               "size": {
-                "x": "auto",
+                "x": 308,
                 "y": "auto"
               },
               "anchor": {
@@ -4494,7 +4525,7 @@
                 "y": 18.5
               },
               "size": {
-                "x": "auto",
+                "x": 308,
                 "y": "auto"
               },
               "anchor": {
@@ -4527,7 +4558,7 @@
                 "y": -134.5
               },
               "size": {
-                "x": "auto",
+                "x": 308,
                 "y": "auto"
               },
               "anchor": {
@@ -4556,8 +4587,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": 12,
-                "y": -210.5
+                "x": 16,
+                "y": -209.5
               },
               "size": {
                 "x": "auto",
@@ -4592,8 +4623,8 @@
         },
         "camera": {
           "pos": {
-            "x": 120,
-            "y": -39.63671875
+            "x": 122.5,
+            "y": -54.546875
           },
           "zoom": 1
         }
@@ -4658,7 +4689,7 @@
       0,
       4,
       35,
-      44
+      40
     ],
     "depth": 2,
     "recent": [
@@ -4702,11 +4733,11 @@
       38,
       3,
       37,
-      40,
-      45,
       4,
       0,
       44,
+      45,
+      40,
       35
     ]
   }
