@@ -1,8 +1,14 @@
 <template>
 
   <div v-if="disabled"
-  v-html="value"
-  class="quill-editor ql-bubble ql-container ql-editor facade"/>
+  class="quill-editor">
+    <div class="ql-container ql-bubble">
+      <div class="ql-editor facade"
+      v-html="value">
+        
+      </div>
+    </div>
+  </div>
 
   <Editor v-else
   ref="editor"
@@ -61,22 +67,61 @@ export default {
   height: 100%;
 }
 
+.quill-editor /deep/ .ql-container {
+  white-space: inherit;
+}
+
+.quill-editor /deep/ .ql-editor {
+  padding: 0 !important;
+
+  min-width: 100%;
+  max-width: 100%;
+
+  width: max-content;
+  
+  white-space: inherit !important;
+}
+
+.quill-editor /deep/ .ql-editor * {
+  cursor: inherit !important;
+  
+  white-space: inherit !important;
+}
+
+
+
+
+/* Code blocks */
+
+.quill-editor /deep/ pre.ql-syntax {
+  min-width: 100%;
+  width: min-content;
+}
+.quill-editor /deep/ pre.ql-syntax:empty {
+  display: none;
+}
+
+
+
+
+/* Lists */
+
 .quill-editor /deep/ ul {
   padding-left: 0 !important;
 }
-
 .quill-editor /deep/ li {
   padding-left: 1em !important;
 }
-.quill-editor /deep/ .ql-indent-1 {
+.quill-editor /deep/ li.ql-indent-1 {
   padding-left: 2em !important;
 }
-.quill-editor /deep/ .ql-indent-2 {
+.quill-editor /deep/ li.ql-indent-2 {
   padding-left: 3em !important;
 }
-.quill-editor /deep/ .ql-indent-3 {
+.quill-editor /deep/ li.ql-indent-3 {
   padding-left: 4em !important;
 }
+
 
 
 
@@ -93,25 +138,6 @@ export default {
 
 
 <style>
-.ql-container {
-  white-space: inherit;
-}
-
-.ql-editor {
-  padding: 0 !important;
-
-  min-width: 100%;
-  max-width: 100%;
-
-  width: max-content;
-  
-  white-space: inherit !important;
-}
-
-.ql-editor * {
-  cursor: inherit !important;
-}
-
 .ql-tooltip {
   z-index: 9999;
 

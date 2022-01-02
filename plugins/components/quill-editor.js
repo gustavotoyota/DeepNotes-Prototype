@@ -42,22 +42,22 @@ Quill.register(SizeStyle, true);
 
 
 
-const BubbleTheme = Quill.import('themes/bubble');
+// const BubbleTheme = Quill.import('themes/bubble');
 
-class ExtendBubbleTheme extends BubbleTheme {
-  constructor(quill, options) {
-    super(quill, options);
+// class ExtendBubbleTheme extends BubbleTheme {
+//   constructor(quill, options) {
+//     super(quill, options);
 
-    quill.on('selection-change', range => {
-      if (range) {
-        quill.theme.tooltip.show();
-        quill.theme.tooltip.position(quill.getBounds(range));
-      }
-    });
-  }
-}
+//     quill.on('selection-change', range => {
+//       if (range) {
+//         quill.theme.tooltip.show();
+//         quill.theme.tooltip.position(quill.getBounds(range));
+//       }
+//     });
+//   }
+// }
 
-Quill.register('themes/bubble', ExtendBubbleTheme);
+// Quill.register('themes/bubble', ExtendBubbleTheme);
 
 
 
