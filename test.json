@@ -2374,141 +2374,6 @@
               "readOnly": false
             },
             {
-              "id": 0,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -659.4137524820203,
-                "y": 643.3243949738923
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement collapsible UI</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 184.62492829861532,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 36
-            },
-            {
-              "id": 3,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -656.6733333333334,
-                "y": 130.54977777777782
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement property change in batch</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 250.40624874349703,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 6,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -656.5781112293965,
-                "y": 74.49729118655678
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix quill tooltip positioning</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 191.14049738007367,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 43
-            },
-            {
-              "id": 7,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -657.7676231435489,
-                "y": 246.54776718704773
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix invisible note sticking out</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 207.7500414697534,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 39
-            },
-            {
               "id": 11,
               "type": "note",
               "parent": null,
@@ -2642,272 +2507,6 @@
               "readOnly": false
             },
             {
-              "id": 23,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -658.6343879486348,
-                "y": 359.50125790489767
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement fit-to-screen button</p>",
-                "<p>sdfsdf</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 215.70312355352314,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 31,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -656.8093679025743,
-                "y": 190.00937419436926
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix title height</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 123.20314399447896,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 32,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -658.7956474058577,
-                "y": 473.9285112118644
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement shift selection</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 186.07805444269619,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 37
-            },
-            {
-              "id": 33,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -659.3483787476941,
-                "y": 588.0391513903586
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Use arrow keys to move elements</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 238.79685273261953,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 35,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -659.1676632286935,
-                "y": 531.4846967803335
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement Ctrl + A element selection</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 254.37498321449715,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 36,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -658.8699914496367,
-                "y": 416.295245587288
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement edit on keypress</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 201.96876317696888,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 10,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -659.1233333333344,
-                "y": 16.54422222222229
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Add more options to quill toolbar</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 229.4531327196141,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 34,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -657.8903031069541,
-                "y": 702.3566049432069
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement element resize in batch</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 240.98438403638826,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 44
-            },
-            {
               "id": 16,
               "type": "note",
               "parent": null,
@@ -2935,39 +2534,6 @@
                 "y": "auto"
               },
               "expandedWidth": 203.3906630375108,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 2,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -656.9143371857298,
-                "y": 759.7036996025003
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement default note properties</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 236.67192766866856,
               "movable": true,
               "resizable": true,
               "wrapText": true,
@@ -3073,41 +2639,6 @@
               "readOnly": false
             },
             {
-              "id": 58,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -656.8916440996505,
-                "y": 815.8975926378614
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fix collapsed width: Expanded</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 218.6093408103976,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 45,
-              "expandedHeight": 41.45312899272186
-            },
-            {
               "id": 8,
               "type": "note",
               "parent": null,
@@ -3143,73 +2674,6 @@
               "expandedHeight": 41.45312137553109
             },
             {
-              "id": 69,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -656.3247818852922,
-                "y": 873.8699730541841
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Fixed collapse button when without body</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 277.1562325038714,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
-              "id": 22,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -662.4687502426666,
-                "y": -58.03125427474754
-              },
-              "size": {
-                "x": 231.81698565773416,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implemented backwards navigation without repetition</p>",
-                "<p>29/12/2021 - 14:18\t</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 231.81247562527844,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "expandedHeight": 41.45312648582316
-            },
-            {
               "id": 24,
               "type": "note",
               "parent": null,
@@ -3242,40 +2706,6 @@
               "wrapText": true,
               "readOnly": false,
               "expandedHeight": 41.45312148645041
-            },
-            {
-              "id": 14,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -658.9873333333342,
-                "y": 302.77488888888917
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Exit note editing when pressing Esc</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 248.23434542518035,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "expandedHeight": 41.4531263532917
             },
             {
               "id": 9,
@@ -3313,6 +2743,590 @@
               "expandedHeight": 41.453121178976446
             },
             {
+              "id": 74,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -333.33287579508556,
+                "y": -1.3830894172556056
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement shift-resizing</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.453121178976446
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -659.4137524820203,
+                "y": 643.3243949738923
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement collapsible UI</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 184.62492829861532,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 36,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.9143371857298,
+                "y": 759.7036996025003
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement default note properties</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 236.67192766866856,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.6733333333334,
+                "y": 130.54977777777782
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement property change in batch</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 250.40624874349703,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45305956288056
+            },
+            {
+              "id": 6,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.5781112293965,
+                "y": 74.49729118655678
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix quill tooltip positioning</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 191.14049738007367,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 43,
+              "expandedHeight": 41.45309726112007
+            },
+            {
+              "id": 7,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -657.7676231435489,
+                "y": 246.54776718704773
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix invisible note sticking out</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 207.7500414697534,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 39,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 10,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -659.1233333333344,
+                "y": 16.54422222222229
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Add more options to quill toolbar</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 229.4531327196141,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 14,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.9873333333342,
+                "y": 302.77488888888917
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Exit note editing when pressing Esc</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 248.23434542518035,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45305956288056
+            },
+            {
+              "id": 22,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -662.4687502426666,
+                "y": -58.03125427474754
+              },
+              "size": {
+                "x": 231.81698565773416,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implemented backwards navigation without repetition</p>",
+                "<p>29/12/2021 - 14:18\t</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 231.81247562527844,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 23,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.6343879486348,
+                "y": 359.50125790489767
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement fit-to-screen button</p>",
+                "<p>sdfsdf</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 215.70312355352314,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 31,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.8093679025743,
+                "y": 190.00937419436926
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix title height</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 123.20314399447896,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 32,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.7956474058577,
+                "y": 473.9285112118644
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement shift selection</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 186.07805444269619,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 37,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 33,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -659.3483787476941,
+                "y": 588.0391513903586
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Use arrow keys to move elements</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 238.79685273261953,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 34,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -657.8903031069541,
+                "y": 702.3566049432069
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement element resize in batch</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 240.98438403638826,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 44,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 35,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -659.1676632286935,
+                "y": 531.4846967803335
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement Ctrl + A element selection</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 254.37498321449715,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 36,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.8699914496367,
+                "y": 416.295245587288
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement edit on keypress</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 201.96876317696888,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45313495935959
+            },
+            {
+              "id": 58,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -656.8916440996505,
+                "y": 815.8975926378614
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix collapsed width: Expanded</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 218.6093408103976,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 45,
+              "expandedHeight": 41.45313495935959
+            },
+            {
               "id": 67,
               "type": "note",
               "parent": null,
@@ -3344,15 +3358,15 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "expandedHeight": 41.453121178976446
+              "expandedHeight": 41.45328575231763
             },
             {
-              "id": 74,
+              "id": 69,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -334.1602719983464,
-                "y": -3.8652780270397598
+                "x": -656.3247818852922,
+                "y": 873.8699730541841
               },
               "size": {
                 "x": "auto",
@@ -3363,7 +3377,7 @@
                 "y": 0
               },
               "content": [
-                "<p>Implement shift-resizing</p>",
+                "<p>Fixed collapse button when without body</p>",
                 ""
               ],
               "hasBody": true,
@@ -3373,12 +3387,12 @@
                 "x": "expanded",
                 "y": "auto"
               },
-              "expandedWidth": 160.06250734682436,
+              "expandedWidth": 277.1562325038714,
               "movable": true,
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "expandedHeight": 41.453121178976446
+              "expandedHeight": 41.45328575231763
             },
             {
               "id": 75,
@@ -3412,7 +3426,7 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "expandedHeight": 41.453121178976446
+              "expandedHeight": 41.45313495935959
             },
             {
               "id": 76,
@@ -3446,20 +3460,54 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "expandedHeight": 41.453121178976446
+              "expandedHeight": 41.45298416640154
+            },
+            {
+              "id": 79,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -653.9909805774396,
+                "y": 1117.7869943327894
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fixed indentation</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45298416640154
             }
           ],
-          "nextId": 79,
+          "nextId": 80,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -233.78124509174393,
-            "y": 469.34373084923766
+            "x": -235.25781044499521,
+            "y": 499.406242181156
           },
-          "zoom": 0.4047613167190109
+          "zoom": 0.38629195450325643
         }
       },
       {
@@ -4436,7 +4484,7 @@
       0,
       4,
       35,
-      45
+      43
     ],
     "depth": 2,
     "recent": [
@@ -4470,7 +4518,6 @@
       42,
       36,
       19,
-      43,
       38,
       37,
       44,
@@ -4485,6 +4532,7 @@
       45,
       0,
       4,
+      43,
       35
     ]
   },

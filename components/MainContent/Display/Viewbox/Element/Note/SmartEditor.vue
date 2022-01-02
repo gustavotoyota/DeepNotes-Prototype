@@ -121,11 +121,63 @@ export default {
 .quill-editor /deep/ li.ql-indent-3 {
   padding-left: 4em !important;
 }
+.quill-editor /deep/ li.ql-indent-4 {
+  padding-left: 5em !important;
+}
+.quill-editor /deep/ li.ql-indent-5 {
+  padding-left: 6em !important;
+}
+.quill-editor /deep/ li.ql-indent-6 {
+  padding-left: 7em !important;
+}
+.quill-editor /deep/ li.ql-indent-7 {
+  padding-left: 8em !important;
+}
+.quill-editor /deep/ li.ql-indent-8 {
+  padding-left: 9em !important;
+}
+.quill-editor /deep/ li.ql-indent-9 {
+  padding-left: 10em !important;
+}
 
 
 
 
-/* Remove link before */
+/* Indentation */
+
+.quill-editor /deep/ p.ql-indent-1 {
+  padding-left: 1em !important;
+}
+.quill-editor /deep/ p.ql-indent-2 {
+  padding-left: 2em !important;
+}
+.quill-editor /deep/ p.ql-indent-3 {
+  padding-left: 3em !important;
+}
+.quill-editor /deep/ p.ql-indent-4 {
+  padding-left: 4em !important;
+}
+.quill-editor /deep/ p.ql-indent-5 {
+  padding-left: 5em !important;
+}
+.quill-editor /deep/ p.ql-indent-6 {
+  padding-left: 6em !important;
+}
+.quill-editor /deep/ p.ql-indent-7 {
+  padding-left: 7em !important;
+}
+.quill-editor /deep/ p.ql-indent-8 {
+  padding-left: 8em !important;
+}
+.quill-editor /deep/ p.ql-indent-9 {
+  padding-left: 9em !important;
+}
+
+
+
+
+
+/* Anchor links */
 
 .quill-editor /deep/ a::before {
   display: none;
