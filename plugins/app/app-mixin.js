@@ -32,6 +32,8 @@ export default async function ({ app }) {
       
       document.addEventListener('keydown', this.onKeyDown)
       document.addEventListener('keypress', this.onKeyPress)
+      
+      document.addEventListener('paste', this.onPaste)
     },
 
     beforeDestroy() {
@@ -40,6 +42,9 @@ export default async function ({ app }) {
       document.removeEventListener('pointerup', this.onPointerUp)
       
       document.removeEventListener('keydown', this.onKeyDown)
+      document.removeEventListener('keypress', this.onKeyPress)
+      
+      document.removeEventListener('paste', this.onPaste)
     },
 
     methods: {
@@ -82,6 +87,12 @@ export default async function ({ app }) {
           event.preventDefault()
         }
 
+        if (event.code === 'KeyC' && event.ctrlKey)
+          $app.clipboard.copy()
+
+        if (event.code === 'KeyV' && event.ctrlKey && window.clipboardData)
+          $app.clipboard.paste()
+
         if (event.code === 'F2' && $getters.activeElem)
           $app.editing.start($getters.activeElem, 0)
 
@@ -105,6 +116,19 @@ export default async function ({ app }) {
           
         if ($getters.activeElem)
           $app.editing.start($getters.activeElem, 0)
+      },
+
+
+
+      onPaste(event) {
+        if (event.target.nodeName === 'INPUT'
+        || event.target.nodeName === 'TEXTAREA'
+        || event.target.isContentEditable)
+          return
+
+        const text = (event.clipboardData || window.clipboardData).getData('text')
+
+        $app.clipboard.paste(text)
       },
 
     },
