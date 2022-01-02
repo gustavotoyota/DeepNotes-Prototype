@@ -1,4 +1,5 @@
 globalThis.$app = {}
+export default (context, inject) => inject('app', $app)
 
 
 
@@ -9,11 +10,11 @@ $app.project = require('./project')
 
 $app.storage = require('./storage/storage')
 
-$app.pages = require('./pages/pages')
+$app.pages = require('./pages')
 
-$app.display = require('./utils/display')
-$app.coords = require('./utils/coords')
-$app.sizes = require('./utils/sizes')
+$app.display = require('./space/display')
+$app.coords = require('./space/coords')
+$app.sizes = require('./space/sizes')
 
 $app.camera = require('./camera/camera')
 $app.zooming = require('./camera/zooming')

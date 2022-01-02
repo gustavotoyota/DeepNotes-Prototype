@@ -1,4 +1,5 @@
 globalThis.$utils = {}
+export default (context, inject) => inject('utils', $utils)
 
 
 

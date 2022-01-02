@@ -9,8 +9,6 @@ if (!Vue.__global_mixin__) {
 
     computed: {
       
-      $app() { return $app },
-      
       $state: {
         get() { return $state },
         set(value) { $state = value },
