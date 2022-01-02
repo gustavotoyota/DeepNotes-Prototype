@@ -15,6 +15,7 @@ if (!Vue.__global_mixin__) {
       },
       
       $assign() { return $assign },
+      $merge() { return $merge },
       
       $getters() { return $getters },
       $commit() { return $commit },

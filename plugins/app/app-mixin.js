@@ -10,6 +10,18 @@ export default async function ({ app }) {
         for (const key of Object.keys(source))
           $set(target, key, source[key])
       }
+      globalThis.$merge = (target, ...sources) => {
+        for (const source of sources) {
+          for (const [key, value] of Object.entries(source)) {
+            if (value != null && value.constructor === Object)
+              $set(target, key, $merge(target[key] ?? {}, value))
+            else
+              $set(target, key, value)
+          }
+        }
+      
+        return target
+      }
 
       globalThis.$store = $nuxt.$store
       globalThis.$getters = $store.getters

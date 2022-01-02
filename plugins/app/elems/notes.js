@@ -8,7 +8,7 @@ notes.create = (clientPos) => {
   
   const worldPos = $app.coords.clientToWorld(clientPos)
 
-  $assign(note, {
+  $merge(note, {
     pos: $utils.shallowCopy(worldPos),
     
     content: ['', ''],
@@ -37,10 +37,4 @@ notes.create = (clientPos) => {
   $app.editing.start(note, 0)
 
   return note
-}
-
-
-
-notes.getEditorNode = (elemId, editorIdx) => {
-  return document.getElementById(`note-${elemId}-editor-${editorIdx}`)
 }

@@ -3,7 +3,7 @@ const panning = module.exports = {}
 
 
 
-panning.init = () => {
+panning.reset = () => {
   $set($state, 'panning', {
     active: false,
   })
@@ -40,5 +40,5 @@ panning.finish = (event) => {
   if (!$state.panning.active || event.button !== 1)
     return
 
-  $state.panning.active = false
+  $app.panning.reset()
 }

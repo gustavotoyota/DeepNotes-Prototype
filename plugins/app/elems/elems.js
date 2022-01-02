@@ -39,23 +39,6 @@ elems.getClientRect = (elemId) => {
 
 
 
-elems.activate = (elemId) => {
-  $getters.currentPage.elems.activeId = elemId
-}
-elems.isActive = (elemId) => {
-  return elemId == $getters.currentPage.elems.activeId
-}
-
-
-
-elems.selectExclusive = (elemId) => {
-  $app.selection.clear()
-
-  $app.selection.addElem(elemId)
-}
-
-
-
 elems.removeFromList = (elemId) => {
   const index = $app.elems.getIndexById(elemId)
   $delete($getters.currentPage.elems.list, index)
@@ -83,4 +66,10 @@ elems.getSizeProp = (elem) => {
 elems.selectAll = () => {
   for (const elem of $getters.currentPage.elems.list)
     $app.selection.addElem(elem.id)
+}
+
+
+
+elems.getEditorNode = (elemId, editorIdx) => {
+  return document.getElementById(`elem-${elemId}-editor-${editorIdx}`)
 }

@@ -82,14 +82,18 @@ clipboard.paste = async (text) => {
 
   $app.selection.clear()
 
+  const page = $getters.currentPage
+
   for (const clipboardElem of clipboardObj.elems) {
     const pastedElem = $app.elems.create(clipboardElem.type)
 
-    $assign(pastedElem, clipboardElem)
+    $merge(pastedElem, clipboardElem)
 
-    pastedElem.pos.x += $getters.currentPage.camera.pos.x
-    pastedElem.pos.y += $getters.currentPage.camera.pos.y
+    pastedElem.pos.x += page.camera.pos.x
+    pastedElem.pos.y += page.camera.pos.y
 
     $app.selection.addElem(pastedElem.id)
   }
+
+  $app.activeElem.set(page.elems.list.at(-1).id)
 }

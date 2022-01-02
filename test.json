@@ -2374,45 +2374,12 @@
               "readOnly": false
             },
             {
-              "id": 11,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -60.59608024691331,
-                "y": 50.01342592592569
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Make it compatible with touchscreen</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 252.54698395944598,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false
-            },
-            {
               "id": 15,
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -59.596080246913296,
-                "y": 104.18009259259244
+                "x": -58.720788962469484,
+                "y": 53.85084373707275
               },
               "size": {
                 "x": "auto",
@@ -2445,8 +2412,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -59.59608024691332,
-                "y": 212.01342592592601
+                "x": -58.720788962469506,
+                "y": 161.68417707040626
               },
               "size": {
                 "x": "auto",
@@ -2478,8 +2445,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -60.85959876543188,
-                "y": 265.1475370370373
+                "x": -59.98430748098808,
+                "y": 214.81828818151754
               },
               "size": {
                 "x": "auto",
@@ -2511,8 +2478,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -59.59608024691331,
-                "y": 159.01342592592593
+                "x": -58.7207889624695,
+                "y": 108.68417707040625
               },
               "size": {
                 "x": "auto",
@@ -2544,8 +2511,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -59.21873476455292,
-                "y": 323.00624919436933
+                "x": -58.34344348010911,
+                "y": 272.6770003388495
               },
               "size": {
                 "x": "auto",
@@ -2637,41 +2604,6 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
-            },
-            {
-              "id": 8,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -59.13478980243002,
-                "y": 433.860992278613
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement arrows</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 146.31248631534484,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 37,
-              "expandedHeight": 41.45312137553109
             },
             {
               "id": 24,
@@ -2984,40 +2916,6 @@
               "expandedHeight": 41.45305956288056
             },
             {
-              "id": 22,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -662.4687502426666,
-                "y": -58.03125427474754
-              },
-              "size": {
-                "x": 231.81698565773416,
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implemented backwards navigation without repetition</p>",
-                "<p>29/12/2021 - 14:18\t</p>"
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 231.81247562527844,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "expandedHeight": 41.45313495935959
-            },
-            {
               "id": 23,
               "type": "note",
               "parent": null,
@@ -3083,41 +2981,6 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false,
-              "expandedHeight": 41.45313495935959
-            },
-            {
-              "id": 32,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -658.7956474058577,
-                "y": 473.9285112118644
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement shift selection</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 186.07805444269619,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "linkedPageId": 37,
               "expandedHeight": 41.45313495935959
             },
             {
@@ -3463,40 +3326,6 @@
               "expandedHeight": 41.45298416640154
             },
             {
-              "id": 74,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -333.33287579508556,
-                "y": -1.3830894172556056
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement shift-resizing</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 160.06250734682436,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "expandedHeight": 41.453121178976446
-            },
-            {
               "id": 80,
               "type": "note",
               "parent": null,
@@ -3530,6 +3359,177 @@
               "readOnly": false,
               "expandedHeight": 41.453121178976446,
               "linkedPageId": 46
+            },
+            {
+              "id": 8,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -333.61246805531425,
+                "y": -0.8053824856193589
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement arrows</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 146.31248631534484,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 37,
+              "expandedHeight": 41.45312137553109
+            },
+            {
+              "id": 74,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -58.280548195991486,
+                "y": 329.23607447613074
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement shift-resizing</p>",
+                "<p>Not essential</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45312936025293
+            },
+            {
+              "id": 11,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -59.7207889624695,
+                "y": -0.31582292959401737
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Make it compatible with touchscreen</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 252.54698395944598,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 32,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -658.7956474058577,
+                "y": 473.9285112118644
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement shift selection</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 186.07805444269619,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "linkedPageId": 37,
+              "expandedHeight": 41.4531375958293
+            },
+            {
+              "id": 22,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -662.4687502426666,
+                "y": -58.03125427474754
+              },
+              "size": {
+                "x": 231.81698565773416,
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implemented backwards navigation without repetition</p>",
+                "<p>29/12/2021 - 14:18\t</p>"
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 231.81247562527844,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.45312605634551
             }
           ],
           "nextId": 81,
@@ -3539,10 +3539,10 @@
         },
         "camera": {
           "pos": {
-            "x": -235.2577970457993,
-            "y": 530.2187835457872
+            "x": -234.82030530841973,
+            "y": 530.2187879849229
           },
-          "zoom": 0.36903276831431014
+          "zoom": 0.36903276795506884
         }
       },
       {
@@ -4097,19 +4097,87 @@
               "resizable": true,
               "wrapText": true,
               "readOnly": false
+            },
+            {
+              "id": 13,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 334.6056503484277,
+                "y": -117.56818535887143
+              },
+              "content": [
+                "<p>Drop notes here</p>",
+                ""
+              ],
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedWidth": 44.0000407603571
+            },
+            {
+              "id": 12,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 357.2918682891454,
+                "y": -173.11335143100226
+              },
+              "content": [
+                "<p>children</p>",
+                ""
+              ],
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "hasBody": false,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedWidth": 44.0000407603571
             }
           ],
-          "nextId": 12,
+          "nextId": 14,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -21.691417552806712,
-            "y": -78.77343227245188
+            "x": 142.35545312449634,
+            "y": -78.77342692915275
           },
-          "zoom": 1
+          "zoom": 0.9204070849745427
         }
       },
       {
@@ -4672,9 +4740,9 @@
       0,
       4,
       35,
-      46
+      40
     ],
-    "depth": 2,
+    "depth": 3,
     "recent": [
       21,
       22,
@@ -4709,7 +4777,6 @@
       38,
       37,
       44,
-      40,
       3,
       17,
       9,
@@ -4719,10 +4786,11 @@
       1,
       45,
       0,
-      4,
       43,
       46,
-      35
+      4,
+      35,
+      40
     ]
   },
   "defaultProps": {

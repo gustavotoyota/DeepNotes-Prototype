@@ -17,19 +17,15 @@ clickSelection.perform = (elem, event) => {
   if (!event.ctrlKey && !event.shiftKey && !$app.selection.hasElem(elem.id))
     $app.selection.clear()
   else
-    page.elems.activeId = null
+    $app.activeElem.clear()
 
 
 
 
   if (event.ctrlKey && $app.selection.hasElem(elem.id)) {
     $app.selection.removeElem(elem.id)
-
-    page.elems.activeId = null
   } else {
-    $app.selection.addElem(elem.id)
-
-    page.elems.activeId = elem.id
+    $app.activeElem.set(elem.id)
 
     $app.elems.bringToTop(elem)
   }

@@ -3,7 +3,7 @@ const resizing = module.exports = {}
 
 
 
-resizing.init = () => {
+resizing.reset = () => {
   $set($state, 'resizing', {
     active: false,
   })
@@ -14,7 +14,7 @@ resizing.start = (event, elem, side) => {
   if (event.button !== 0)
     return
 
-  $app.elems.activate(elem.id)
+  $app.activeElem.set(elem.id)
 
   $state.resizing = {
     active: true,
@@ -82,5 +82,5 @@ resizing.finish = (event) => {
   if (!$state.resizing.active || event.button !== 0)
     return
 
-  $state.resizing.active = false
+  $app.resizing.reset()
 }

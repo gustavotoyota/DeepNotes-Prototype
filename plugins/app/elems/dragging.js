@@ -3,7 +3,7 @@ const dragging = module.exports = {}
 
 
 
-dragging.init = () => {
+dragging.reset = () => {
   $set($state, 'dragging', {
     active: false,
   })
@@ -45,5 +45,5 @@ dragging.finish = (event) => {
   if (!$state.dragging.active || event.button !== 0)
     return
 
-  $state.dragging.active = false
+  $app.dragging.reset()
 }

@@ -12,13 +12,12 @@ editing.start = (elem, editorIdx) => {
   if (page.elems.editing)
     return
 
-  $app.elems.selectExclusive(elem.id)
+  $app.activeElem.setExclusive(elem.id)
 
-  page.elems.activeId = elem.id
   page.elems.editing = true
 
   $nextTick(() => {
-    const editor = $app.notes.getEditorNode(elem.id, editorIdx)
+    const editor = $app.elems.getEditorNode(elem.id, editorIdx)
     const quill = editor.__vue__.quill
 
     quill.focus()

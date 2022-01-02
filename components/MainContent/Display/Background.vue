@@ -1,9 +1,11 @@
 <template>
+
   <div :style="`height: 100%;
   background-color: #1e1e1e;`"
   @pointerdown="onPointerDown"
   @dblclick="onDoubleClick">
   </div>
+
 </template>
 
 <script>
@@ -21,9 +23,11 @@ export default {
     },
 
     onDoubleClick(event) {
-      const clientPos = $app.coords.getClientPos(event)
+      $app.popup.show(event)
 
-      $app.notes.create(clientPos)
+      // const clientPos = $app.coords.getClientPos(event)
+
+      // $app.notes.create(clientPos)
     },
 
   },

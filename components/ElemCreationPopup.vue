@@ -10,7 +10,7 @@
         <v-list-item-title>Note</v-list-item-title>
       </v-list-item>
 
-      <v-list-item @click.prevent="">
+      <v-list-item @click="$app.containers.create($state.popup.pos)">
         <v-list-item-title>Container</v-list-item-title>
       </v-list-item>
 

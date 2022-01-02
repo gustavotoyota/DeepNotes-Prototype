@@ -12,7 +12,7 @@ collapsing.collapse = (elem) => {
   if (!elem.collapsible)
     return
 
-  const bodyElem = document.getElementById(`note-${elem.id}-body`)
+  const bodyElem = document.getElementById(`elem-${elem.id}-body`)
 
   if (bodyElem) {
     const clientRect = bodyElem.getBoundingClientRect()

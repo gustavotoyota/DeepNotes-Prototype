@@ -3,17 +3,17 @@
   <div class="anchor"
   :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
-    <div style="position: absolute"
-    :style="`transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); `">
+    <div :id="`elem-${elem.id}`"
+    style="position: absolute;
+    min-width: max-content; min-height: 40px"
+    :style="`width: ${width}; height: ${height};
+    transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%)`">
 
       <v-sheet style="border-radius: 7px !important;
-      min-width: 23px; min-height: 40px;
       display: flex; flex-direction: column;
-      overflow: hidden"
-      :id="`elem-${elem.id}`"
+      height: 100%; overflow: hidden"
       :color="color" rounded elevation="6"
-      :style="`width: ${width}; height: ${height}; ` +
-      `cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }; `"
+      :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }`"
       @pointerdown="onPointerDown"
       @click="onClick">
 
@@ -23,22 +23,23 @@
         @dblclick="onEditorDoubleClick($event, 0)">
 
           <div style="flex: 1"
-          :style="`padding: 11px;
+          :style="`padding: 10px;
           width: ${ (elem[sizeProp].x === 'auto' || (elem[sizeProp].x === 'expanded' && elem.size.x === 'auto')) ? 'auto' : 0 };
-          padding-right: ${ elem.collapsible ? 0 : `11px`}`">
+          padding-right: ${ elem.collapsible ? 0 : `10px`}`">
+          
             <SmartEditor ref="editor-0"
-            :id="`note-${elem.id}-editor-0`"
+            :id="`elem-${elem.id}-editor-0`"
             v-model="elem.content[0]"
             :disabled="!editing || elem.readOnly"
             :wrap="elem.wrapText"/>
+
           </div>
 
           <div v-if="elem.collapsible"
           style="flex: none">
             <v-btn plain tile
             style="min-width: 0; width: 32px; height: 100%"
-            :style="`max-height: ${ elem.hasBody ? 'none' : '40px' };
-            border-bottom-left-radius: ${ elem.hasBody ? 0 : '4px' }`"
+            :style="`max-height: ${ elem.hasBody ? 'none' : '40px' }`"
             @pointerdown="(event) => {
               if (event.button === 0)
                 event.stopPropagation()
@@ -57,22 +58,24 @@
 
         </div>
 
-        <div v-if="elem.hasBody && (!elem.collapsed || elem[sizeProp].x === 'expanded')"
+        <div v-if="elem.hasBody"
         style="flex: 1; height: 0"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }`">
+        
           <v-divider/>
 
-          <div :id="`note-${elem.id}-body`"
-          style="padding: 11px"
+          <div :id="`elem-${elem.id}-body`"
+          style="padding: 10px"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
             <SmartEditor ref="editor-1"
-            :id="`note-${elem.id}-editor-1`"
+            :id="`elem-${elem.id}-editor-1`"
             v-model="elem.content[1]"
             :disabled="!editing || elem.readOnly"
             :wrap="elem.wrapText"/>
           </div>
+
         </div>
 
       </v-sheet>
@@ -110,7 +113,7 @@ export default {
       if (event.target.style.opacity === '0.8')
         return
 
-      if (!$app.elems.isActive(this.elem.id))
+      if (!$app.activeElem.is(this.elem.id))
         $app.editing.stop()
 
       if (this.elem.linkedPageId != null
@@ -168,7 +171,7 @@ export default {
       return $app.selection.hasElem(this.elem.id)
     },
     active() {
-      return $app.elems.isActive(this.elem.id)
+      return $app.activeElem.is(this.elem.id)
     },
     editing() {
       return this.active && this.page.elems.editing
@@ -225,7 +228,10 @@ export default {
 
 <style scoped>
 .anchor {
-  position: absolute; width: 0; height: 0;
+  position: absolute;
+  
+  width: 0;
+  height: 0;
 }
 
 .handlers {

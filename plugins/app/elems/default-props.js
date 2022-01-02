@@ -19,11 +19,13 @@ defaultProps.set = () => {
 
   const defaultProps = $utils.deepCopy(elem)
 
-  if (elem.type === 'note') {
-    delete defaultProps.id
-    delete defaultProps.pos
+  delete defaultProps.id
+  delete defaultProps.pos
+
+  if (elem.type === 'note')
     delete defaultProps.content
-  }
+  else if (elem.type === 'container')
+    delete defaultProps.title
 
   $state.project.defaultProps[elem.type] = defaultProps
 }

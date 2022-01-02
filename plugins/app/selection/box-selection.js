@@ -3,7 +3,7 @@ const boxSelection = module.exports = {}
 
 
 
-boxSelection.init = () => {
+boxSelection.reset = () => {
   $set($state, 'boxSelection', {
     active: false,
   })
@@ -86,9 +86,9 @@ boxSelection.finish = (event) => {
   }
 
   if (lastElem)
-    $app.elems.activate(lastElem.id)
+    $app.activeElem.set(lastElem.id)
 
 
 
-  $state.boxSelection.active = false
+  $app.boxSelection.reset()
 }

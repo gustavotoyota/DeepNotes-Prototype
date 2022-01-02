@@ -20,12 +20,14 @@ $app.camera = require('./camera/camera')
 $app.zooming = require('./camera/zooming')
 $app.panning = require('./camera/panning')
 
+$app.activeElem = require('./selection/active-elem')
 $app.selection = require('./selection/selection')
 $app.clickSelection = require('./selection/click-selection')
 $app.boxSelection = require('./selection/box-selection')
 
 $app.elems = require('./elems/elems')
 $app.popup = require('./elems/popup')
+$app.editing = require('./elems/editing')
 $app.dragging = require('./elems/dragging')
 $app.deleting = require('./elems/deleting')
 $app.resizing = require('./elems/resizing')
@@ -33,18 +35,18 @@ $app.collapsing = require('./elems/collapsing')
 $app.defaultProps = require('./elems/default-props')
 $app.clipboard = require('./elems/clipboard')
 
-$app.notes = require('./notes/notes')
-$app.editing = require('./notes/editing')
+$app.notes = require('./elems/notes')
+$app.containers = require('./elems/containers')
 
 
 
 
 $app.init = () => {
-  $app.panning.init()
-  $app.dragging.init()
-  $app.boxSelection.init()
+  $app.panning.reset()
+  $app.dragging.reset()
+  $app.boxSelection.reset()
   $app.popup.init()
-  $app.resizing.init()
+  $app.resizing.reset()
   
   $app.storage.reset()
   $app.project.reset()

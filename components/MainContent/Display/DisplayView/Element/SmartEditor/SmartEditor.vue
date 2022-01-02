@@ -2,7 +2,7 @@
 
   <div v-if="disabled"
   class="quill-editor"
-  :class="{ nowrap: !wrap }">
+  :class="{ wrap: wrap, nowrap: !wrap }">
     <div class="ql-container ql-bubble">
       <div class="ql-editor facade"
       v-html="value">
@@ -14,7 +14,7 @@
   ref="editor"
   v-on="$listeners" v-bind="$attrs"
   :disabled="disabled"
-  :class="{ nowrap: !wrap }"
+  :class="{ wrap: wrap, nowrap: !wrap }"
   v-model="model"
   @ready="onEditorReady"/>
 
@@ -68,7 +68,7 @@ export default {
 }
 
 .quill-editor /deep/ .ql-editor {
-  padding: 0 !important;
+  padding: 0;
 
   min-width: 100%;
   max-width: 100%;
@@ -76,12 +76,15 @@ export default {
   width: max-content;
 }
 
-.quill-editor /deep/ .ql-editor * {
-  cursor: inherit !important;
+.quill-editor.wrap /deep/ .ql-editor {
+  white-space: normal;
+}
+.quill-editor.nowrap /deep/ .ql-editor {
+  white-space: nowrap;
 }
 
-.quill-editor.nowrap /deep/ .ql-editor * {
-  white-space: nowrap;
+.quill-editor /deep/ .ql-editor * {
+  cursor: inherit;
 }
 
 
@@ -92,12 +95,15 @@ export default {
 .quill-editor /deep/ pre.ql-syntax {
   min-width: 100%;
   width: fit-content;
+}
 
+.quill-editor.nowrap /deep/ pre.ql-syntax {
   white-space: pre-wrap;
 }
 .quill-editor.nowrap /deep/ pre.ql-syntax {
   white-space: pre;
 }
+
 .quill-editor /deep/ pre.ql-syntax:empty {
   display: none;
 }
