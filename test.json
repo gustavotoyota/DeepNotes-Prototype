@@ -3317,8 +3317,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -333.8239664511827,
-                "y": 0.6846239813550168
+                "x": -655.9304761909747,
+                "y": 934.4647930679453
               },
               "size": {
                 "x": "auto",
@@ -3351,8 +3351,8 @@
               "type": "note",
               "parent": null,
               "pos": {
-                "x": -333.45380543409107,
-                "y": 58.70245731375361
+                "x": -334.1602719983464,
+                "y": -3.8652780270397598
               },
               "size": {
                 "x": "auto",
@@ -3379,19 +3379,87 @@
               "wrapText": true,
               "readOnly": false,
               "expandedHeight": 41.453121178976446
+            },
+            {
+              "id": 75,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -334.49433871558284,
+                "y": 49.41233816809581
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix collapsed width: auto</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.453121178976446
+            },
+            {
+              "id": 76,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -334.33084921089454,
+                "y": 105.05334641737292
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix blockquote in smart editor</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.453121178976446
             }
           ],
-          "nextId": 75,
+          "nextId": 79,
           "selected": {},
-          "activeId": null,
+          "activeId": 78,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -235.2577997886691,
-            "y": 377.4453399078627
+            "x": -235.2577844668226,
+            "y": 407.74218562424846
           },
-          "zoom": 0.47404646394459854
+          "zoom": 0.44872377143077563
         }
       },
       {

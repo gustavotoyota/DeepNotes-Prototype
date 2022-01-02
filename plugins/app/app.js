@@ -31,6 +31,7 @@ $app.deleting = require('./elems/deleting')
 $app.resizing = require('./elems/resizing')
 $app.collapsing = require('./elems/collapsing')
 $app.defaultProps = require('./elems/default-props')
+$app.clipboard = require('./elems/clipboard')
 
 $app.notes = require('./notes/notes')
 $app.editing = require('./notes/editing')
