@@ -1,11 +1,11 @@
 <template>
 
   <div v-if="disabled"
-  class="quill-editor">
+  class="quill-editor"
+  :class="{ nowrap: !wrap }">
     <div class="ql-container ql-bubble">
       <div class="ql-editor facade"
       v-html="value">
-        
       </div>
     </div>
   </div>
@@ -14,6 +14,7 @@
   ref="editor"
   v-on="$listeners" v-bind="$attrs"
   :disabled="disabled"
+  :class="{ nowrap: !wrap }"
   v-model="model"
   @ready="onEditorReady"/>
 
@@ -25,6 +26,7 @@ export default {
   props: {
     value: { type: String },
     disabled: { type: Boolean },
+    wrap: { type: Boolean },
   },
 
 
@@ -61,14 +63,8 @@ export default {
 
 .quill-editor {
   min-width: 1px;
-
-  white-space: inherit;
   
   height: 100%;
-}
-
-.quill-editor /deep/ .ql-container {
-  white-space: inherit;
 }
 
 .quill-editor /deep/ .ql-editor {
@@ -78,14 +74,14 @@ export default {
   max-width: 100%;
 
   width: max-content;
-  
-  white-space: inherit !important;
 }
 
 .quill-editor /deep/ .ql-editor * {
   cursor: inherit !important;
-  
-  white-space: inherit !important;
+}
+
+.quill-editor.nowrap /deep/ .ql-editor * {
+  white-space: nowrap;
 }
 
 
@@ -95,7 +91,12 @@ export default {
 
 .quill-editor /deep/ pre.ql-syntax {
   min-width: 100%;
-  width: min-content;
+  width: fit-content;
+
+  white-space: pre-wrap;
+}
+.quill-editor.nowrap /deep/ pre.ql-syntax {
+  white-space: pre;
 }
 .quill-editor /deep/ pre.ql-syntax:empty {
   display: none;

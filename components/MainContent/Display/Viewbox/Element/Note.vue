@@ -13,13 +13,11 @@
       :id="`elem-${elem.id}`"
       :color="color" rounded elevation="6"
       :style="`width: ${width}; height: ${height}; ` +
-      `cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }; ` +
-      `white-space: ${elem.wrapText ? 'normal' : 'nowrap'}`"
+      `cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }; `"
       @pointerdown="onPointerDown"
       @click="onClick">
 
-        <div style="max-height: 100%;
-        white-space: inherit; display: flex"
+        <div style="max-height: 100%; display: flex"
         :style="`flex: ${ elem.hasBody ? 'none' : 1 }`"
         @pointerdown="onEditorPointerDown($event, 0)"
         @dblclick="onEditorDoubleClick($event, 0)">
@@ -31,7 +29,8 @@
             <SmartEditor ref="editor-0"
             :id="`note-${elem.id}-editor-0`"
             v-model="elem.content[0]"
-            :disabled="!editing || elem.readOnly"/>
+            :disabled="!editing || elem.readOnly"
+            :wrap="elem.wrapText"/>
           </div>
 
           <div v-if="elem.collapsible"
@@ -59,20 +58,20 @@
         </div>
 
         <div v-if="elem.hasBody && (!elem.collapsed || elem[sizeProp].x === 'expanded')"
-        style="flex: 1;
-        height: 0; white-space: inherit"
+        style="flex: 1; height: 0"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }`">
           <v-divider/>
 
           <div :id="`note-${elem.id}-body`"
-          style="padding: 11px; white-space: inherit;"
+          style="padding: 11px"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
             <SmartEditor ref="editor-1"
             :id="`note-${elem.id}-editor-1`"
             v-model="elem.content[1]"
-            :disabled="!editing || elem.readOnly"/>
+            :disabled="!editing || elem.readOnly"
+            :wrap="elem.wrapText"/>
           </div>
         </div>
 

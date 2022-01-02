@@ -2743,40 +2743,6 @@
               "expandedHeight": 41.453121178976446
             },
             {
-              "id": 74,
-              "type": "note",
-              "parent": null,
-              "pos": {
-                "x": -333.33287579508556,
-                "y": -1.3830894172556056
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "content": [
-                "<p>Implement shift-resizing</p>",
-                ""
-              ],
-              "hasBody": true,
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "expandedWidth": 160.06250734682436,
-              "movable": true,
-              "resizable": true,
-              "wrapText": true,
-              "readOnly": false,
-              "expandedHeight": 41.453121178976446
-            },
-            {
               "id": 0,
               "type": "note",
               "parent": null,
@@ -3495,19 +3461,88 @@
               "wrapText": true,
               "readOnly": false,
               "expandedHeight": 41.45298416640154
+            },
+            {
+              "id": 74,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -333.33287579508556,
+                "y": -1.3830894172556056
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Implement shift-resizing</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.453121178976446
+            },
+            {
+              "id": 80,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -654.0508470243449,
+                "y": 1179.4186606229507
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "content": [
+                "<p>Fix code blocks</p>",
+                ""
+              ],
+              "hasBody": true,
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "expandedWidth": 160.06250734682436,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false,
+              "expandedHeight": 41.453121178976446,
+              "linkedPageId": 46
             }
           ],
-          "nextId": 80,
+          "nextId": 81,
           "selected": {},
           "activeId": null,
           "editing": false
         },
         "camera": {
           "pos": {
-            "x": -235.25781044499521,
-            "y": 499.406242181156
+            "x": -235.2577970457993,
+            "y": 530.2187835457872
           },
-          "zoom": 0.38629195450325643
+          "zoom": 0.36903276831431014
         }
       },
       {
@@ -4477,14 +4512,167 @@
           },
           "zoom": 1
         }
+      },
+      {
+        "id": 46,
+        "name": "Fix code blocks",
+        "createdAt": "2022-01-02T16:50:02.008Z",
+        "modifiedAt": "2022-01-02T16:50:02.008Z",
+        "elems": {
+          "list": [
+            {
+              "id": 1,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 116.47480468749995,
+                "y": -57.14999999999998
+              },
+              "content": [
+                "<p>Auto + No-wrap</p>",
+                "<pre class=\"ql-syntax\" spellcheck=\"false\">sfad asdf asdf asdf asd\n</pre>"
+              ],
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": false,
+              "readOnly": false
+            },
+            {
+              "id": 0,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -117.95703125,
+                "y": -55.140625
+              },
+              "content": [
+                "<p>Auto + Wrap</p>",
+                "<pre class=\"ql-syntax\" spellcheck=\"false\">sfad asdf asdf asdf asd\n</pre>"
+              ],
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 2,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": -101.75227864583331,
+                "y": 86.64999999999998
+              },
+              "content": [
+                "<p>Custom + Wrap</p>",
+                "<pre class=\"ql-syntax\" spellcheck=\"false\">sfad asdf asdf sd sf sdf asd\n</pre>"
+              ],
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": 177.2109375,
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": true,
+              "readOnly": false
+            },
+            {
+              "id": 3,
+              "type": "note",
+              "parent": null,
+              "pos": {
+                "x": 101.90266927083333,
+                "y": 83.64999999999998
+              },
+              "content": [
+                "<p>Custom + No-wrap</p>",
+                "<pre class=\"ql-syntax\" spellcheck=\"false\">sfad asdf asdf sd sf sdf asd\n</pre>"
+              ],
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "hasBody": true,
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": 177.2109375,
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapText": false,
+              "readOnly": false
+            }
+          ],
+          "nextId": 4,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": -0.7421968383788737,
+            "y": 19.363283386230442
+          },
+          "zoom": 1
+        }
       }
     ],
-    "nextId": 46,
+    "nextId": 47,
     "path": [
       0,
       4,
       35,
-      43
+      46
     ],
     "depth": 2,
     "recent": [
@@ -4533,6 +4721,7 @@
       0,
       4,
       43,
+      46,
       35
     ]
   },
