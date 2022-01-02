@@ -58,7 +58,7 @@
 
         </div>
 
-        <div v-if="elem.hasBody"
+        <div v-if="elem.hasBody && (!elem.collapsed || elem[sizeProp].x === 'expanded')"
         style="flex: 1;
         height: 0; white-space: inherit"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }`">
