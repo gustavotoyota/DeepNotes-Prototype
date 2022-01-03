@@ -23,6 +23,9 @@ pages.create = (name) => {
     elems: {
       list: [],
       nextId: 0,
+
+      root: [],
+      arrows: [],
       
       selected: {},
       activeId: null,

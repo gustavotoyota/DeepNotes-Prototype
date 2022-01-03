@@ -7,7 +7,8 @@
     style="position: absolute;
     min-width: max-content; min-height: 40px"
     :style="`width: ${width}; height: ${height};
-    transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%)`">
+    transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` +
+    (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
 
       <v-sheet style="border-radius: 7px !important;
       display: flex; flex-direction: column;
@@ -175,6 +176,11 @@ export default {
     },
     editing() {
       return this.active && this.page.elems.editing
+    },
+    dragging() {
+      return $state.dragging.active
+        && $state.dragging.moved
+        && $app.selection.hasElem(this.elem.id)
     },
 
 

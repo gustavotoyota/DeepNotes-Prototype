@@ -41,7 +41,8 @@ editing.stop = () => {
   const editors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)
 
   for (const editor of editors)
-    editor.__vue__.quill.theme.tooltip.hide()
+    if (editor.__vue__.quill)
+      editor.__vue__.quill.theme.tooltip.hide()
 
   page.elems.editing = false
 }

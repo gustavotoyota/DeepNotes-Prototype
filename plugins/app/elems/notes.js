@@ -4,7 +4,7 @@ const notes = module.exports = {}
 
 
 notes.create = (clientPos) => {
-  const note = $app.elems.create('note')
+  const note = $app.elems.create({ type: 'note' })
   
   const worldPos = $app.coords.clientToWorld(clientPos)
 

@@ -3,18 +3,19 @@ const elems = module.exports = {}
 
 
 
-elems.create = (type, parent) => {
+elems.create = (base) => {
   const page = $getters.currentPage
 
-  const elem = {
+  let elem = $utils.deepCopy(base ?? {})
+
+  $merge(elem, {
     id: page.elems.nextId++,
 
-    type: type,
-
-    parent: parent ?? null,
-  }
+    parent: null,
+  })
 
   page.elems.list.push(elem)
+  page.elems.root.push(elem.id)
 
   return elem
 }
@@ -42,10 +43,6 @@ elems.getClientRect = (elemId) => {
 elems.removeFromList = (elemId) => {
   const index = $app.elems.getIndexById(elemId)
   $delete($getters.currentPage.elems.list, index)
-}
-elems.delete = (elemId) => {
-  $app.selection.removeElem(elemId)
-  $app.elems.removeFromList(elemId)
 }
 
 

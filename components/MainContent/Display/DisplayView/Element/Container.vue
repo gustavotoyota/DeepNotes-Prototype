@@ -66,14 +66,18 @@
           <div style="padding: 10px"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`">
 
-            <div style="padding: 8px;
+            <Element v-for="child of elem.children" :key="child.id" :elem="child"/>
+
+            <div v-if="elem.children.length === 0"
+            style="padding: 8px;
             height: 100%;
             font-size: 13px;
             background-color: #686868;
             border-radius: 4px;
             display: flex;
             align-items: center;
-            justify-content: center">
+            justify-content: center"
+            @pointerup="onDropZonePointerUp">
               Drop notes here
             </div>
 
@@ -142,6 +146,19 @@ export default {
     onEditorDoubleClick(event, editorIdx) {
       if (event.button === 0)
         $app.editing.start(this.elem, editorIdx)
+    },
+
+
+
+
+    onDropZonePointerUp(event) {
+      if ($state.dragging.active && event.button === 0
+      && !$app.selection.hasElem(this.elem.id)) {
+        for (const selectedElem of $app.selection.getElems()) {
+          this.elem.children.push(selectedElem)
+          selectedElem.parent = this.elem
+        }
+      }
     },
 
   },

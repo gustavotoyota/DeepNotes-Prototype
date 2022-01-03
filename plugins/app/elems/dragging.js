@@ -20,6 +20,7 @@ dragging.start = (event) => {
     active: true,
 
     currentPos: $utils.shallowCopy(clientPos),
+    moved: false,
   }
 }
 dragging.update = (event) => {
@@ -40,6 +41,7 @@ dragging.update = (event) => {
   }
 
   $state.dragging.currentPos = $utils.shallowCopy(clientPos)
+  $state.dragging.moved = true
 }
 dragging.finish = (event) => {
   if (!$state.dragging.active || event.button !== 0)

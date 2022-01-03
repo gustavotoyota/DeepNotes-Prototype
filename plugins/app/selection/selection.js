@@ -63,14 +63,10 @@ selection.clone = () => {
   const page = $getters.currentPage
 
   for (const elem of $app.selection.getElems()) {
-    const newElem = $utils.deepCopy(elem)
-
-    newElem.id = page.elems.nextId++
+    const newElem = $app.elems.create(elem)
 
     newElem.pos.x += 8
     newElem.pos.y += 8
-
-    page.elems.list.push(newElem)
 
 
 

@@ -85,7 +85,7 @@ clipboard.paste = async (text) => {
   const page = $getters.currentPage
 
   for (const clipboardElem of clipboardObj.elems) {
-    const pastedElem = $app.elems.create(clipboardElem.type)
+    const pastedElem = $app.elems.create({ type: clipboardElem.type })
 
     $merge(pastedElem, clipboardElem)
 

@@ -4,7 +4,7 @@ const containers = module.exports = {}
 
 
 containers.create = (clientPos) => {
-  const elem = $app.elems.create('container')
+  const elem = $app.elems.create({ type: 'container' })
   
   const worldPos = $app.coords.clientToWorld(clientPos)
 

@@ -89,7 +89,7 @@ export default async function ({ app }) {
           return
         
         if (event.code === 'Delete')
-          $app.deleting.perform(event)
+          $app.deleting.deleteSelection(event)
 
         if (event.code === 'KeyA' && event.ctrlKey)
           $app.elems.selectAll()
