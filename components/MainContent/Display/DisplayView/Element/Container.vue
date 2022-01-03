@@ -65,7 +65,8 @@
 
           <v-divider/>
 
-          <div style="padding: 10px"
+          <div :id="`elem-${elem.id}-body`"
+          style="padding: 10px"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`">
 
             <div v-if="elem.children.length === 0"
