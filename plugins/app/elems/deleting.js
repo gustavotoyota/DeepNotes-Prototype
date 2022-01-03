@@ -4,7 +4,7 @@ const deleting = module.exports = {}
 
 
 deleting.deleteElem = (elemId) => {
-  $app.selection.removeElem(elemId)
+  $app.selection.remove(elemId)
   $app.elems.removeFromList(elemId)
 }
 deleting.deleteSelection = (event) => {

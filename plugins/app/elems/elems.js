@@ -11,7 +11,7 @@ elems.create = (base) => {
   $merge(elem, {
     id: page.elems.nextId++,
 
-    parent: null,
+    parentId: null,
   })
 
   page.elems.list.push(elem)
@@ -44,9 +44,6 @@ elems.removeFromList = (elemId) => {
   const index = $app.elems.getIndexById(elemId)
   $delete($getters.currentPage.elems.list, index)
 }
-
-
-
 elems.bringToTop = (elem) => {
   $app.elems.removeFromList(elem.id)
   $getters.currentPage.elems.list.push(elem)
@@ -56,13 +53,6 @@ elems.bringToTop = (elem) => {
 
 elems.getSizeProp = (elem) => {
   return elem.collapsed ? 'collapsedSize' : 'size'
-}
-
-
-
-elems.selectAll = () => {
-  for (const elem of $getters.currentPage.elems.list)
-    $app.selection.addElem(elem.id)
 }
 
 

@@ -7,7 +7,8 @@
     style="position: absolute;
     min-width: 150px; min-height: 40px"
     :style="`width: ${width}; height: ${height};
-    transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%)`">
+    transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` +
+    (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
 
       <v-sheet style="border-radius: 7px !important;
       display: flex; flex-direction: column;
@@ -58,7 +59,8 @@
 
         </div>
 
-        <div style="flex: 1; height: 0"
+        <div v-if="!(elem.collapsed && elem.collapsedSize.x === 'auto')"
+        style="flex: 1; height: 0"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }`">
 
           <v-divider/>
@@ -66,7 +68,10 @@
           <div style="padding: 10px"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`">
 
-            <Element v-for="child of elem.children" :key="child.id" :elem="child"/>
+            <div style="height: 100%; overflow: auto">
+              <Element v-for="childId of elem.children" :key="childId"
+              :elem="$app.elems.getById(childId)" :parent-width="width"/>
+            </div>
 
             <div v-if="elem.children.length === 0"
             style="padding: 8px;
@@ -125,8 +130,8 @@ export default {
 
       $app.clickSelection.perform(this.elem, event)
 
-      if ($app.selection.hasElem(this.elem.id)
-      && this.elem.movable
+      if ($app.selection.has(this.elem.id)
+      && this.parentId == null
       && !this.page.elems.editing)
         $app.dragging.start(event)
     },
@@ -153,10 +158,10 @@ export default {
 
     onDropZonePointerUp(event) {
       if ($state.dragging.active && event.button === 0
-      && !$app.selection.hasElem(this.elem.id)) {
+      && !$app.selection.has(this.elem.id)) {
         for (const selectedElem of $app.selection.getElems()) {
-          this.elem.children.push(selectedElem)
-          selectedElem.parent = this.elem
+          this.elem.children.push(selectedElem.id)
+          selectedElem.parentId = this.elem.id
         }
       }
     },
@@ -174,13 +179,18 @@ export default {
 
 
     selected() {
-      return $app.selection.hasElem(this.elem.id)
+      return $app.selection.has(this.elem.id)
     },
     active() {
       return $app.activeElem.is(this.elem.id)
     },
     editing() {
       return this.active && this.page.elems.editing
+    },
+    dragging() {
+      return $state.dragging.active
+        && $state.dragging.moved
+        && $app.selection.has(this.elem.id)
     },
 
 

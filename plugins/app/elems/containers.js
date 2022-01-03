@@ -34,7 +34,7 @@ containers.create = (clientPos) => {
 
   $app.defaultProps.copy([elem])
 
-  $app.activeElem.setExclusive(elem.id)
+  $app.activeElem.setExclusive(elem)
 
   return elem
 }

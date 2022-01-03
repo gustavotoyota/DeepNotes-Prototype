@@ -1,8 +1,8 @@
 <template>
 
-  <Note v-if="this.elem.type === 'note'" :elem="elem"/>
-  <Container v-else-if="this.elem.type === 'container'" :elem="elem"/>
-  <Arrow v-else-if="this.elem.type === 'arrow'" :elem="elem"/>
+  <Note v-if="this.elem.type === 'note'" :elem="elem" :parent-width="parentWidth"/>
+  <Container v-else-if="this.elem.type === 'container'" :elem="elem" :parent-width="parentWidth"/>
+  <Arrow v-else-if="this.elem.type === 'arrow'" :elem="elem" :parent-width="parentWidth"/>
     
 </template>
 
@@ -11,6 +11,8 @@ export default {
 
   props: {
     elem: { type: Object },
+    
+    parentWidth: { },
   },
 
 }

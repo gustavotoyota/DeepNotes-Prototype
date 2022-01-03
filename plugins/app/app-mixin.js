@@ -92,7 +92,7 @@ export default async function ({ app }) {
           $app.deleting.deleteSelection(event)
 
         if (event.code === 'KeyA' && event.ctrlKey)
-          $app.elems.selectAll()
+          $app.selection.addAll()
 
         if (event.code === 'KeyD' && event.ctrlKey) {
           $app.selection.clone()

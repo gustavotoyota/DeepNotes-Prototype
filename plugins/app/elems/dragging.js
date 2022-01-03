@@ -34,6 +34,9 @@ dragging.update = (event) => {
   for (const elemId of $app.selection.getElemIds()) {
     const elem = $app.elems.getById(elemId)
 
+    if (!elem.movable)
+      continue
+
     if (elem.pos) {
       elem.pos.x += (clientPos.x - $state.dragging.currentPos.x) / page.camera.zoom
       elem.pos.y += (clientPos.y - $state.dragging.currentPos.y) / page.camera.zoom

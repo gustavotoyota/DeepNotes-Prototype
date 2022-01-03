@@ -9,15 +9,17 @@ activeElem.clear = () => {
 
 
 
-activeElem.set = (elemId) => {
-  $app.selection.addElem(elemId)
+activeElem.set = (elem) => {
+  $app.selection.add(elem.id)
   
-  $getters.currentPage.elems.activeId = elemId
+  $getters.currentPage.elems.activeId = elem.id
+  
+  $app.elems.bringToTop(elem)
 }
-activeElem.setExclusive = (elemId) => {
+activeElem.setExclusive = (elem) => {
   $app.selection.clear()
 
-  $app.activeElem.set(elemId)
+  $app.activeElem.set(elem)
 }
 
 

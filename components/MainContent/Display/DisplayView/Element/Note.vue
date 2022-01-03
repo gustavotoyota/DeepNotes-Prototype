@@ -1,13 +1,14 @@
 <template>
 
-  <div class="anchor"
+  <div :class="{ anchor: elem.parentId == null }"
   :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
     <div :id="`elem-${elem.id}`"
-    style="position: absolute;
-    min-width: max-content; min-height: 40px"
-    :style="`width: ${width}; height: ${height};
-    transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` +
+    style="min-height: 40px"
+    :style="`position: ${elem.parentId == null ? 'absolute' : 'static'};
+    min-width: ${elem.parentId == null ? 'max-content' : 0};
+    width: ${width}; height: ${height}; ` +
+    (elem.parentId == null ? `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` : '') +
     (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
 
       <v-sheet style="border-radius: 7px !important;
@@ -25,7 +26,7 @@
 
           <div style="flex: 1"
           :style="`padding: 10px;
-          width: ${ (elem[sizeProp].x === 'auto' || (elem[sizeProp].x === 'expanded' && elem.size.x === 'auto')) ? 'auto' : 0 };
+          width: ${titleWidth};
           padding-right: ${ elem.collapsible ? 0 : `10px`}`">
           
             <SmartEditor ref="editor-0"
@@ -59,7 +60,7 @@
 
         </div>
 
-        <div v-if="elem.hasBody"
+        <div v-if="elem.hasBody && !(elem.collapsed && elem.collapsedSize.x === 'auto')"
         style="flex: 1; height: 0"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }`">
         
@@ -81,7 +82,7 @@
 
       </v-sheet>
 
-      <div v-if="selected && elem.resizable"
+      <div v-if="selected && elem.resizable && elem.parentId == null"
       class="handlers">
         <Handle :elem="elem" side="nw"/>
         <Handle :elem="elem" side="n"/>
@@ -104,6 +105,8 @@ export default {
   
   props: {
     elem: { type: Object },
+
+    parentWidth: { },
   },
 
 
@@ -123,8 +126,8 @@ export default {
 
       $app.clickSelection.perform(this.elem, event)
 
-      if ($app.selection.hasElem(this.elem.id)
-      && this.elem.movable
+      if ($app.selection.has(this.elem.id)
+      && this.parentId == null
       && !this.page.elems.editing)
         $app.dragging.start(event)
     },
@@ -169,7 +172,7 @@ export default {
 
 
     selected() {
-      return $app.selection.hasElem(this.elem.id)
+      return $app.selection.has(this.elem.id)
     },
     active() {
       return $app.activeElem.is(this.elem.id)
@@ -180,7 +183,7 @@ export default {
     dragging() {
       return $state.dragging.active
         && $state.dragging.moved
-        && $app.selection.hasElem(this.elem.id)
+        && $app.selection.has(this.elem.id)
     },
 
 
@@ -200,6 +203,9 @@ export default {
       return $app.elems.getSizeProp(this.elem)
     },
     width() {
+      if (this.elem.parentId != null)
+        return 'auto'
+
       let expandedWidth
       if (this.elem.size.x === 'auto')
         expandedWidth = 'auto'
@@ -218,6 +224,23 @@ export default {
         return 'auto'
       else
         return `${this.elem[this.sizeProp].y}px`
+    },
+
+
+
+    titleWidth() {
+      if (this.elem.parentId != null) {
+        if (this.parentWidth === 'auto')
+          return 'auto'
+        else
+          return 0
+      }
+
+      if (this.elem[this.sizeProp].x === 'auto'
+      || this.elem[this.sizeProp].x === 'expanded' && this.elem.size.x === 'auto')
+        return 'auto'
+
+      return 0
     },
 
 

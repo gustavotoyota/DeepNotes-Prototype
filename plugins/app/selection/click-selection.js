@@ -12,9 +12,7 @@ clickSelection.perform = (elem, event) => {
 
     
     
-  const page = $getters.currentPage
-
-  if (!event.ctrlKey && !event.shiftKey && !$app.selection.hasElem(elem.id))
+  if (!event.ctrlKey && !event.shiftKey && !$app.selection.has(elem.id))
     $app.selection.clear()
   else
     $app.activeElem.clear()
@@ -22,11 +20,8 @@ clickSelection.perform = (elem, event) => {
 
 
 
-  if (event.ctrlKey && $app.selection.hasElem(elem.id)) {
-    $app.selection.removeElem(elem.id)
-  } else {
-    $app.activeElem.set(elem.id)
-
-    $app.elems.bringToTop(elem)
-  }
+  if (event.ctrlKey && $app.selection.has(elem.id))
+    $app.selection.remove(elem.id)
+  else
+    $app.activeElem.set(elem)
 }

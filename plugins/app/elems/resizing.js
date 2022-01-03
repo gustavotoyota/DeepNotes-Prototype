@@ -14,7 +14,7 @@ resizing.start = (event, elem, side) => {
   if (event.button !== 0)
     return
 
-  $app.activeElem.set(elem.id)
+  $app.activeElem.set(elem)
 
   $state.resizing = {
     active: true,

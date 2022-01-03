@@ -61,10 +61,10 @@ boxSelection.finish = (event) => {
     || clientRect.right > bottomRight.x || clientRect.bottom > bottomRight.y)
       continue
 
-    if ($app.selection.hasElem(elem.id) && !event.shiftKey)
-      $app.selection.removeElem(elem.id)
+    if ($app.selection.has(elem.id) && !event.shiftKey)
+      $app.selection.remove(elem.id)
     else
-      $app.selection.addElem(elem.id)
+      $app.selection.add(elem.id)
   }
 
 
@@ -78,7 +78,7 @@ boxSelection.finish = (event) => {
   for (let i = page.elems.list.length - 1; i >= 0; --i) {
     const elem = page.elems.list[i]
 
-    if (!$app.selection.hasElem(elem.id))
+    if (!$app.selection.has(elem.id))
       continue
 
     lastElem = elem
@@ -86,7 +86,7 @@ boxSelection.finish = (event) => {
   }
 
   if (lastElem)
-    $app.activeElem.set(lastElem.id)
+    $app.activeElem.set(lastElem)
 
 
 
