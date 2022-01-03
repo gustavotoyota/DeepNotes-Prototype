@@ -68,11 +68,6 @@
           <div style="padding: 10px"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`">
 
-            <div style="height: 100%; overflow: auto">
-              <Element v-for="childId of elem.children" :key="childId"
-              :elem="$app.elems.getById(childId)" :parent-width="width"/>
-            </div>
-
             <div v-if="elem.children.length === 0"
             style="padding: 8px;
             height: 100%;
@@ -86,23 +81,17 @@
               Drop notes here
             </div>
 
+            <div v-else
+            style="height: 100%; overflow: auto">
+              <Element v-for="childId of elem.children" :key="childId"
+              :elem="$app.elems.getById(childId)" :parent-width="width"/>
+            </div>
+
           </div>
 
         </div>
 
       </v-sheet>
-
-      <div v-if="selected && elem.resizable"
-      class="handlers">
-        <Handle :elem="elem" side="nw"/>
-        <Handle :elem="elem" side="n"/>
-        <Handle :elem="elem" side="ne"/>
-        <Handle :elem="elem" side="w"/>
-        <Handle :elem="elem" side="e"/>
-        <Handle :elem="elem" side="sw"/>
-        <Handle :elem="elem" side="s"/>
-        <Handle :elem="elem" side="se"/>
-      </div>
 
     </div>
 
@@ -131,7 +120,7 @@ export default {
       $app.clickSelection.perform(this.elem, event)
 
       if ($app.selection.has(this.elem.id)
-      && this.parentId == null
+      && this.elem.parentId == null
       && !this.page.elems.editing)
         $app.dragging.start(event)
     },

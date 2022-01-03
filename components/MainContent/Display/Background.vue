@@ -1,7 +1,8 @@
 <template>
 
-  <div :style="`height: 100%;
-  background-color: #1e1e1e;`"
+  <div style="position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-color: #1e1e1e"
   @pointerdown="onPointerDown"
   @dblclick="onDoubleClick">
   </div>

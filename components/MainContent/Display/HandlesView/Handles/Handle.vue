@@ -4,11 +4,10 @@
   background-color: #2196F3;
   pointer-events: auto;
   border-radius: 999px;
-  width: 10px; height: 10px;"
+  width: 10px; height: 10px;
+  transform: translate(-50%, -50%)"
   :style="`left: ${left}%; top: ${top}%;
-  cursor: ${side}-resize;
-  transform: translate(-50%, -50%) ` +
-  `scale(${1 / $getters.currentPage.camera.zoom})`"
+  cursor: ${side}-resize`"
   @pointerdown.stop="onPointerDown">
   </div>
   
