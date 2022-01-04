@@ -10,12 +10,14 @@ notes.create = (clientPos) => {
 
   $merge(note, {
     pos: $utils.shallowCopy(worldPos),
-    
-    content: ['', ''],
 
     anchor: { x: 0.5, y: 0.5 },
 
+    hasTitle: true,
     hasBody: false,
+    
+    title: '',
+    body: '',
 
     collapsible: false,
     collapsed: false,

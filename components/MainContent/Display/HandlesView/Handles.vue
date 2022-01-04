@@ -50,15 +50,8 @@ export default {
       
       this.elem.resizable
 
-      if (this.elem.type === 'note') {
-        this.elem.hasBody
-
-        this.elem.content[0]; this.elem.content[1]
-      } else if (this.elem.type === 'container') {
-        this.elem.hasTitle
-
-        this.elem.title
-      }
+      this.elem.hasTitle; this.elem.hasBody
+      this.elem.title; this.elem.body
 
       
 

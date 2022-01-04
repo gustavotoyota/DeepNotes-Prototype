@@ -11,10 +11,10 @@ containers.create = (clientPos) => {
   $merge(elem, {
     pos: $utils.shallowCopy(worldPos),
 
-    title: 'Untitled container',
-    children: [],
-
     hasTitle: true,
+    hasBody: true,
+
+    title: 'Untitled container',
 
     anchor: { x: 0.5, y: 0.5 },
 
@@ -31,6 +31,8 @@ containers.create = (clientPos) => {
 
     wrapText: true,
     readOnly: false,
+    
+    children: [],
   })
 
   $app.defaultProps.copy([elem])
