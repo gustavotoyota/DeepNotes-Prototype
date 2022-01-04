@@ -19,6 +19,7 @@ camera.fitToScreen = () => {
 
   if (elems.length === 0) {
     $getters.page.camera.pos = { x: 0, y: 0 }
+    $app.camera.resetZoom()
     return
   }
 
