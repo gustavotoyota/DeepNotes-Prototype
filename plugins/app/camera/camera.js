@@ -28,7 +28,7 @@ camera.fitToScreen = () => {
   const clientBottomRight = { x: -Infinity, y: -Infinity }
 
   for (const elem of elems) {
-    const clientRect = $app.elems.getClientRect(elem.id)
+    const clientRect = $app.elems.getClientRect(elem)
 
     clientTopLeft.x = Math.min(clientTopLeft.x, clientRect.left)
     clientTopLeft.y = Math.min(clientTopLeft.y, clientRect.top)

@@ -55,16 +55,16 @@ boxSelection.finish = (event) => {
 
 
   for (const elem of $getters.page.elems.blocks) {
-    const clientRect = $app.elems.getClientRect(elem.id)
+    const clientRect = $app.elems.getClientRect(elem)
 
     if (clientRect.left < topLeft.x || clientRect.top < topLeft.y
     || clientRect.right > bottomRight.x || clientRect.bottom > bottomRight.y)
       continue
 
-    if ($app.selection.has(elem.id) && !event.shiftKey)
-      $app.selection.remove(elem.id)
+    if ($app.selection.has(elem) && !event.shiftKey)
+      $app.selection.remove(elem)
     else
-      $app.selection.add(elem.id)
+      $app.selection.add(elem)
   }
 
 
@@ -76,7 +76,7 @@ boxSelection.finish = (event) => {
   for (let i = $getters.page.elems.blocks.length - 1; i >= 0; --i) {
     const elem = $getters.page.elems.blocks[i]
 
-    if (!$app.selection.has(elem.id))
+    if (!$app.selection.has(elem))
       continue
 
     lastElem = elem

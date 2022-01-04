@@ -28,21 +28,21 @@ elems.getIndexById = (id) => {
 
 
 
-elems.getNode = (elemId) => {
-  return document.getElementById(`elem-${elemId}`)
+elems.getNode = (elem) => {
+  return document.getElementById(`elem-${elem.id}`)
 }
-elems.getClientRect = (elemId) => {
-  return $app.elems.getNode(elemId).getBoundingClientRect()
+elems.getClientRect = (elem) => {
+  return $app.elems.getNode(elem).getBoundingClientRect()
 }
 
 
 
-elems.removeFromList = (elemId) => {
-  const index = $app.elems.getIndexById(elemId)
+elems.removeFromList = (elem) => {
+  const index = $app.elems.getIndexById(elem.id)
   $delete($getters.page.elems.blocks, index)
 }
 elems.bringToTop = (elem) => {
-  $app.elems.removeFromList(elem.id)
+  $app.elems.removeFromList(elem)
   $getters.page.elems.blocks.push(elem)
 }
 

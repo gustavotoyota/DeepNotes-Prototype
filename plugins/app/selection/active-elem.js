@@ -10,7 +10,7 @@ activeElem.clear = () => {
 
 
 activeElem.set = (elem) => {
-  $app.selection.add(elem.id)
+  $app.selection.add(elem)
   
   $getters.page.elems.activeId = elem.id
   
@@ -24,6 +24,6 @@ activeElem.setExclusive = (elem) => {
 
 
 
-activeElem.is = (elemId) => {
-  return elemId == $getters.page.elems.activeId
+activeElem.is = (elem) => {
+  return elem.id == $getters.page.elems.activeId
 }

@@ -115,12 +115,12 @@ export default {
       if (event.target.style.opacity === '0.8')
         return
 
-      if (!$app.activeElem.is(this.elem.id))
+      if (!$app.activeElem.is(this.elem))
         $app.editing.stop()
 
       $app.clickSelection.perform(this.elem, event)
 
-      if ($app.selection.has(this.elem.id)
+      if ($app.selection.has(this.elem)
       && this.elem.parentId == null
       && !$getters.page.elems.editing)
         $app.dragging.start(event)
@@ -148,7 +148,7 @@ export default {
 
     onDropZonePointerUp(event) {
       if ($state.dragging.active && event.button === 0
-      && !$app.selection.has(this.elem.id)) {
+      && !$app.selection.has(this.elem)) {
         for (const selectedElem of $app.selection.getElems()) {
           this.elem.children.push(selectedElem.id)
           selectedElem.parentId = this.elem.id
@@ -163,10 +163,10 @@ export default {
   computed: {
 
     selected() {
-      return $app.selection.has(this.elem.id)
+      return $app.selection.has(this.elem)
     },
     active() {
-      return $app.activeElem.is(this.elem.id)
+      return $app.activeElem.is(this.elem)
     },
     editing() {
       return this.active && $getters.page.elems.editing
@@ -174,7 +174,7 @@ export default {
     dragging() {
       return $state.dragging.active
         && $state.dragging.moved
-        && $app.selection.has(this.elem.id)
+        && $app.selection.has(this.elem)
     },
 
 

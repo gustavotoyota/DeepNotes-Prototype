@@ -88,7 +88,7 @@ clipboard.paste = async (text) => {
     pastedElem.pos.x += $getters.page.camera.pos.x
     pastedElem.pos.y += $getters.page.camera.pos.y
 
-    $app.selection.add(pastedElem.id)
+    $app.selection.add(pastedElem)
   }
 
   $app.activeElem.set($getters.page.elems.blocks.at(-1))

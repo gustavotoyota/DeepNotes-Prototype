@@ -11,20 +11,20 @@ selection.clear = () => {
 
 
 
-selection.add = (elemId) => {
-  $set($getters.page.elems.selected, elemId, true)
+selection.add = (elem) => {
+  $set($getters.page.elems.selected, elem.id, true)
 }
-selection.remove = (elemId) => {
-  if ($app.activeElem.is(elemId))
+selection.remove = (elem) => {
+  if ($app.activeElem.is(elem.id))
     $app.activeElem.clear()
 
-  $delete($getters.page.elems.selected, elemId)
+  $delete($getters.page.elems.selected, elem.id)
 }
 
 
 
-selection.has = (elemId) => {
-  return elemId in $getters.page.elems.selected
+selection.has = (elem) => {
+  return elem.id in $getters.page.elems.selected
 }
 
 
@@ -46,17 +46,17 @@ selection.getElems = () => {
 
 
 
-selection.set = (elemId) => {
+selection.set = (elem) => {
   $app.selection.clear()
 
-  $app.selection.add(elemId)
+  $app.selection.add(elem.id)
 }
 
 
 
 selection.addAll = () => {
   for (const elem of $getters.page.elems.blocks)
-    $app.selection.add(elem.id)
+    $app.selection.add(elem)
 }
 
 
@@ -70,12 +70,12 @@ selection.clone = () => {
 
 
 
-    $app.selection.add(newElem.id)
+    $app.selection.add(newElem)
     
-    if ($app.activeElem.is(elem.id))
+    if ($app.activeElem.is(elem))
       $app.activeElem.set(newElem)
 
-    $app.selection.remove(elem.id)
+    $app.selection.remove(elem)
   }
 }
 

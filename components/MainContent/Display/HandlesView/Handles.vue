@@ -60,7 +60,7 @@ export default {
 
       
 
-      const clientRect = $app.elems.getClientRect(this.elem.id)
+      const clientRect = $app.elems.getClientRect(this.elem)
 
       return {
         pos: $app.coords.clientToDisplay(clientRect),
