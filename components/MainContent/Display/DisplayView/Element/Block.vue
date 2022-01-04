@@ -4,7 +4,7 @@
   :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
     <div :id="`elem-${elem.id}`"
-    style="min-height: 40px"
+    style="min-width: 165px; min-height: 40px"
     :style="`position: ${elem.parentId == null ? 'absolute' : 'static'};
     min-width: ${elem.parentId == null ? 'max-content' : 0};
     width: ${width}; height: ${height}; ` +
@@ -16,19 +16,20 @@
       height: 100%; overflow: hidden"
       :color="color" rounded elevation="6"
       :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }`"
-      @pointerdown.stop="onPointerDown"
+      @pointerdown="onPointerDown"
       @click="onClick">
 
-        <div style="max-height: 100%; display: flex"
+        <div v-if="elem.hasTitle"
+        style="max-height: 100%; display: flex"
         :style="`flex: ${ elem.hasBody ? 'none' : 1 }`"
-        @pointerdown="onEditorPointerDown($event, 0)"
-        @dblclick="onEditorDoubleClick($event, 0)">
+        @pointerdown="onTitlePointerDown"
+        @dblclick="onTitleDoubleClick">
 
           <div style="flex: 1"
           :style="`padding: 10px;
           width: ${titleWidth};
           padding-right: ${ elem.collapsible ? 0 : `10px`}`">
-          
+
             <SmartEditor ref="editor-0"
             :id="`elem-${elem.id}-editor-0`"
             v-model="elem.title"
@@ -43,21 +44,13 @@
             <v-btn plain tile
             style="min-width: 0; width: 32px; height: 100%"
             :style="`max-height: ${ elem.hasBody ? 'none' : '40px' }`"
-            @pointerdown="(event) => {
-              if (event.button === 0)
-                event.stopPropagation()
-            }"
-            @click="(event) => {
-              if (event.button === 0) {
-                $app.collapsing.toggleCollapsed(elem)
-                event.stopPropagation()
-              }
-            }"
-            @dblclick.stop="">
+            @pointerdown="onCollapseButtonPointerDown"
+            @click="onCollapseButtonClick"
+            @dblclick.stop>
               <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
               <v-icon v-else>mdi-chevron-up</v-icon>
             </v-btn>
-            
+
           </div>
 
         </div>
@@ -66,20 +59,16 @@
         style="flex: 1; height: 0; min-width: 100%"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }; 
         width: ${titleWidth}`">
-        
+
           <v-divider/>
 
           <div :id="`elem-${elem.id}-body`"
           style="padding: 10px"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`"
-          @pointerdown="onEditorPointerDown($event, 1)"
-          @dblclick="onEditorDoubleClick($event, 1)">
+          @pointerdown="$emit('body-pointerdown', $event)"
+          @dblclick="$emit('body-dblclick', $event)">
 
-            <SmartEditor ref="editor-1"
-            :id="`elem-${elem.id}-editor-1`"
-            v-model="elem.body"
-            :disabled="!editing || elem.readOnly"
-            :wrap="elem.wrapText"/>
+            <slot/>
 
           </div>
 
@@ -137,19 +126,32 @@ export default {
 
 
 
-    onEditorPointerDown(event, editorIdx) {
-      if (!event.target.className.toString().startsWith(`editor-${editorIdx}`))
+    onTitlePointerDown(event) {
+      if (!event.target.className.toString().startsWith(`editor-0`))
         return
 
       if (event.button === 0 && this.editing
       && !event.target.isContentEditable) {
-        this.$refs[`editor-${editorIdx}`].quill.focus()
+        this.$refs[`editor-0`].quill.focus()
         event.preventDefault()
       }
     },
-    onEditorDoubleClick(event, editorIdx) {
+    onTitleDoubleClick(event) {
       if (event.button === 0)
-        $app.editing.start(this.elem, editorIdx)
+        $app.editing.start(this.elem, 0)
+    },
+
+
+
+    onCollapseButtonPointerDown(event) {
+      if (event.button === 0)
+        event.stopPropagation()
+    },
+    onCollapseButtonClick(event) {
+      if (event.button === 0) {
+        $app.collapsing.toggleCollapsed(this.elem)
+        event.stopPropagation()
+      }
     },
 
   },
