@@ -20,7 +20,7 @@
     style="height: 100%; overflow: auto">
 
       <Element v-for="child of elem.children" :key="child.id"
-      :elem="child" :root-width="titleWidth"/>
+      :elem="child" :root-width="contentWidth"/>
 
     </div>
 
@@ -73,7 +73,7 @@ export default {
     sizeProp() {
       return $app.elems.getSizeProp(this.elem)
     },
-    titleWidth() {
+    contentWidth() {
       if (this.elem.parentId != null) {
         if (this.rootWidth === 'auto')
           return 'auto'

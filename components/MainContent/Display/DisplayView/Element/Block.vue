@@ -27,7 +27,7 @@
 
           <div style="flex: 1"
           :style="`padding: 10px;
-          width: ${titleWidth};
+          width: ${contentWidth};
           padding-right: ${ elem.collapsible ? 0 : `10px`}`">
 
             <SmartEditor ref="editor-0"
@@ -58,7 +58,7 @@
         <div v-if="elem.hasBody && !(elem.collapsed && elem.collapsedSize.x === 'auto')"
         style="flex: 1; height: 0; min-width: 100%"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }; 
-        width: ${titleWidth}`">
+        width: ${contentWidth}`">
 
           <v-divider/>
 
@@ -217,7 +217,7 @@ export default {
 
 
 
-    titleWidth() {
+    contentWidth() {
       if (this.elem.parentId != null) {
         if (this.rootWidth === 'auto')
           return 'auto'
