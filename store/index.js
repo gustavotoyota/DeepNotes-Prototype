@@ -17,6 +17,6 @@ getters.currentPageId = () => {
 getters.page = () => {
   return $state.project.pages.list.find((page) => page.id == $getters.currentPageId)
 }
-getters.activeElem = () => {
+getters.elem = () => {
   return $app.elems.getById($getters.page.elems.activeId)
 }

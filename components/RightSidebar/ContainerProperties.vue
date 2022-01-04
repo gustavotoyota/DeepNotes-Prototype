@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="!!elem && elem.type === 'container'"
+  <div v-if="$getters.elem && $getters.elem.type === 'container'"
   style="height: 100%"
   class="d-flex flex-column">
 
@@ -27,14 +27,14 @@
         background-color="#181818" clearable
         :items="recentPages" item-text="text" item-value="value"
         :menu-props="{ top: false, offsetY: true }"
-        :value="elem.linkedPageId"
+        :value="$getters.elem.linkedPageId"
         @change="onPropChange((elem, value) => {
           elem.linkedPageId = value }, $event)"/>
 
         <Gap height="10px"/>
         
         
-        <NewPageDialog :elem="elem"/>
+        <NewPageDialog/>
       </div>
 
       <v-divider class="mt-4"/>
@@ -58,7 +58,7 @@
       style="display: flex">
         <v-checkbox hide-details label="Has title"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.hasTitle"
+        :input-value="$getters.elem.hasTitle"
         @change="onPropChange((elem, value) => {
           elem.hasTitle = value }, $event)"/>
       </div>
@@ -82,7 +82,7 @@
             { text: 'Right', value: 1 },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          :value="elem.anchor.x"
+          :value="$getters.elem.anchor.x"
           @change="onPropChange((elem, value) => {
             elem.anchor.x = value }, $event)"/>
         </div>
@@ -105,7 +105,7 @@
             { text: 'Bottom', value: 1 },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          :value="elem.anchor.y"
+          :value="$getters.elem.anchor.y"
           @change="onPropChange((elem, value) => {
             elem.anchor.y = value }, $event)"/>
         </div>
@@ -124,7 +124,7 @@
         
         <v-checkbox hide-details label="Collapsed"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :disabled="!elem.collapsible"
+        :disabled="!$getters.elem.collapsible"
         v-model="collapsed">
         </v-checkbox>
       </div>
@@ -142,7 +142,7 @@
           background-color="#181818"
           :items="[
             { text: 'Auto', value: 'auto' },
-            ...(elem.collapsed ? [{ text: 'Expanded', value: 'expanded' }] : []),
+            ...($getters.elem.collapsed ? [{ text: 'Expanded', value: 'expanded' }] : []),
             { text: 'Custom', value: 'custom' },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
@@ -178,7 +178,7 @@
       style="display: flex">
         <v-checkbox hide-details label="Movable"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.movable"
+        :input-value="$getters.elem.movable"
         @change="onPropChange((elem, value) => {
           elem.movable = value }, $event)"/>
 
@@ -186,7 +186,7 @@
         
         <v-checkbox hide-details label="Resizable"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.resizable"
+        :input-value="$getters.elem.resizable"
         @change="onPropChange((elem, value) => {
           elem.resizable = value }, $event)"/>
       </div>
@@ -197,7 +197,7 @@
       style="display: flex">
         <v-checkbox hide-details label="Read-only"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.readOnly"
+        :input-value="$getters.elem.readOnly"
         @change="onPropChange((elem, value) => {
           elem.readOnly = value }, $event)"/>
       </div>
@@ -222,12 +222,8 @@ export default {
 
   computed: {
 
-    elem() {
-      return $getters.activeElem
-    },
-
     sizeProp() {
-      return $app.elems.getSizeProp(this.elem)
+      return $app.elems.getSizeProp($getters.elem)
     },
 
     recentPages() {
@@ -254,7 +250,7 @@ export default {
     // Properties
 
     collapsible: {
-      get() { return this.elem.collapsible },
+      get() { return $getters.elem.collapsible },
       set(value) {
         for (const elem of $app.selection.getElems()) {
           elem.collapsible = value
@@ -263,7 +259,7 @@ export default {
       },
     },
     collapsed: {
-      get() { return this.elem.collapsed },
+      get() { return $getters.elem.collapsed },
       set(value) {
         for (const elem of $app.selection.getElems())
           $app.collapsing.setCollapsed(elem, value)
@@ -272,10 +268,10 @@ export default {
    
     width: {
       get() {
-        if (!isNaN(this.elem[this.sizeProp].x))
+        if (!isNaN($getters.elem[this.sizeProp].x))
           return 'custom'
         else
-          return this.elem[this.sizeProp].x
+          return $getters.elem[this.sizeProp].x
       },
       set(value) {
         for (const elem of $app.selection.getElems()) {
@@ -292,10 +288,10 @@ export default {
     },
     height: {
       get() {
-        if (!isNaN(this.elem[this.sizeProp].y))
+        if (!isNaN($getters.elem[this.sizeProp].y))
           return 'custom'
         else
-          return this.elem[this.sizeProp].y
+          return $getters.elem[this.sizeProp].y
       },
       set(value) {
         for (const elem of $app.selection.getElems()) {

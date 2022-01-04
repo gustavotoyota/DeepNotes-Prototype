@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="!elem"
+  <div v-if="!$getters.elem"
   style="height: 100%"
   class="d-flex flex-column">
 
@@ -34,14 +34,6 @@
 
 <script>
 export default {
-
-  computed: {
-
-    elem() {
-      return $getters.activeElem
-    },
-
-  },
 
 }
 </script>

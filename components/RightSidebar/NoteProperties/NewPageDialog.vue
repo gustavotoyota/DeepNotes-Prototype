@@ -54,13 +54,7 @@
 
 <script>
 export default {
-
-  props: {
-    elem: { type: Object },
-  },
-
-
-
+  
   data() {
     return {
       active: false,
@@ -77,7 +71,7 @@ export default {
       
       const page = $app.pages.create(this.name)
 
-      this.elem.linkedPageId = page.id
+      $getters.elem.linkedPageId = page.id
     },
 
   },
@@ -91,7 +85,7 @@ export default {
         return
 
       setTimeout(() => {
-        const editor0Node = $app.elems.getEditorNode(this.elem.id, 0)
+        const editor0Node = $app.elems.getEditorNode($getters.elem.id, 0)
 
         this.name = editor0Node.innerText.split('\n')[0]
         this.$refs.name.focus()

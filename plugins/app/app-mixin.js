@@ -105,8 +105,8 @@ export default async function ({ app }) {
         if (event.code === 'KeyV' && event.ctrlKey && window.clipboardData)
           $app.clipboard.paste()
 
-        if (event.code === 'F2' && $getters.activeElem)
-          $app.editing.start($getters.activeElem, 0)
+        if (event.code === 'F2' && $getters.elem)
+          $app.editing.start($getters.elem, 0)
 
         if (event.code === 'Backspace')
           $app.pages.back()
@@ -126,8 +126,8 @@ export default async function ({ app }) {
         || event.target.isContentEditable)
           return
           
-        if ($getters.activeElem)
-          $app.editing.start($getters.activeElem, 0)
+        if ($getters.elem)
+          $app.editing.start($getters.elem, 0)
       },
 
 

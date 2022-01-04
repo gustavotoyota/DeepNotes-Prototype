@@ -15,7 +15,7 @@ defaultProps.init = () => {
 
 
 defaultProps.set = () => {
-  const elem = $getters.activeElem
+  const elem = $getters.elem
 
   const defaultProps = $utils.deepCopy(elem)
 
