@@ -6,7 +6,7 @@ const elems = module.exports = {}
 elems.create = (base) => {
   let elem = $utils.deepCopy(base ?? {})
 
-  $merge(elem, {
+  $utils.merge(elem, {
     id: $getters.page.elems.nextId++,
 
     parentId: null,
