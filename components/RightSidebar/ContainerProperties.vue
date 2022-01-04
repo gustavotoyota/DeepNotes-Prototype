@@ -14,30 +14,6 @@
 
     
     <div style="flex: 1; overflow-y: auto" class="pb-4">
-      
-      <div class="mx-5 mt-5">
-        <div class="body-2 grey--text text--lighten-1"
-        style="margin-left: 1px">
-          Linked page:
-        </div>
-
-        <Gap height="2px"/>
-
-        <v-select dense outlined hide-details
-        background-color="#181818" clearable
-        :items="recentPages" item-text="text" item-value="value"
-        :menu-props="{ top: false, offsetY: true }"
-        :value="$getters.elem.linkedPageId"
-        @change="onPropChange((elem, value) => {
-          elem.linkedPageId = value }, $event)"/>
-
-        <Gap height="10px"/>
-        
-        
-        <NewPageDialog/>
-      </div>
-
-      <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
       style="display: flex; flex-direction: column">

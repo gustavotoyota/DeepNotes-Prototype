@@ -15,7 +15,7 @@
     
     <div style="flex: 1; overflow-y: auto" class="pb-4">
       
-      <div class="mx-5 mt-5">
+      <div class="mx-5 mt-4">
         <div class="body-2 grey--text text--lighten-1"
         style="margin-left: 1px">
           Linked page:
