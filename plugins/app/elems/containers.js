@@ -29,6 +29,7 @@ containers.create = (clientPos) => {
     movable: true,
     resizable: true,
 
+    wrapText: true,
     readOnly: false,
   })
 

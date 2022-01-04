@@ -171,6 +171,14 @@
         
       <div class="mx-5 mt-4"
       style="display: flex">
+        <v-checkbox hide-details label="Wrap text"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        :input-value="$getters.elem.wrapText"
+        @change="onPropChange((elem, value) => {
+          elem.wrapText = value }, $event)"/>
+
+        <Gap width="16px" style="flex: none"/>
+        
         <v-checkbox hide-details label="Read-only"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.readOnly"

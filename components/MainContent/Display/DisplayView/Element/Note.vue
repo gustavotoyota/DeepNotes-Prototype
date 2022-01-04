@@ -39,6 +39,7 @@
 
           <div v-if="elem.collapsible"
           style="flex: none">
+
             <v-btn plain tile
             style="min-width: 0; width: 32px; height: 100%"
             :style="`max-height: ${ elem.hasBody ? 'none' : '40px' }`"
@@ -56,13 +57,15 @@
               <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
               <v-icon v-else>mdi-chevron-up</v-icon>
             </v-btn>
+            
           </div>
 
         </div>
 
         <div v-if="elem.hasBody && !(elem.collapsed && elem.collapsedSize.x === 'auto')"
-        style="flex: 1; height: 0"
-        :style="`max-height: ${ visibleBody ? 'none' : 0 }`">
+        style="flex: 1; height: 0; min-width: 100%"
+        :style="`max-height: ${ visibleBody ? 'none' : 0 }; 
+        width: ${titleWidth}`">
         
           <v-divider/>
 
@@ -71,11 +74,13 @@
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`"
           @pointerdown="onEditorPointerDown($event, 1)"
           @dblclick="onEditorDoubleClick($event, 1)">
+
             <SmartEditor ref="editor-1"
             :id="`elem-${elem.id}-editor-1`"
             v-model="elem.content[1]"
             :disabled="!editing || elem.readOnly"
             :wrap="elem.wrapText"/>
+
           </div>
 
         </div>
