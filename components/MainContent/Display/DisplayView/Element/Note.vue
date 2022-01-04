@@ -16,7 +16,7 @@
       height: 100%; overflow: hidden"
       :color="color" rounded elevation="6"
       :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }`"
-      @pointerdown="onPointerDown"
+      @pointerdown.stop="onPointerDown"
       @click="onClick">
 
         <div style="max-height: 100%; display: flex"
