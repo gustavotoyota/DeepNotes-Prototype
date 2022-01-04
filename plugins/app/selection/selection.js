@@ -3,15 +3,21 @@ const selection = module.exports = {}
 
 
 
-selection.clear = () => {
+selection.clear = (regionId) => {
   $getters.page.elems.selected = {}
   
   $app.activeElem.clear()
+
+  if (regionId !== undefined)
+    $getters.page.elems.regionId = regionId
 }
 
 
 
 selection.add = (elem) => {
+  if (elem.parentId != $getters.page.elems.regionId)
+    $app.selection.clear(elem.parentId)
+
   $set($getters.page.elems.selected, elem.id, true)
 }
 selection.remove = (elem) => {
@@ -24,7 +30,8 @@ selection.remove = (elem) => {
 
 
 selection.has = (elem) => {
-  return elem.id in $getters.page.elems.selected
+  return elem.parentId == $getters.page.elems.regionId
+    && elem.id in $getters.page.elems.selected
 }
 
 
@@ -36,7 +43,7 @@ selection.getElems = () => {
   const elems = []
 
   for (const elemId of $app.selection.getElemIds()) {
-    const elem = $app.elems.getById(elemId)
+    const elem = $getters.region.find((item) => item.id == elemId)
 
     elems.push(elem)
   }
@@ -47,7 +54,7 @@ selection.getElems = () => {
 
 
 selection.set = (elem) => {
-  $app.selection.clear()
+  $app.selection.clear(elem.parentId)
 
   $app.selection.add(elem.id)
 }
@@ -55,7 +62,7 @@ selection.set = (elem) => {
 
 
 selection.addAll = () => {
-  for (const elem of $getters.page.elems.blocks)
+  for (const elem of $getters.region)
     $app.selection.add(elem)
 }
 

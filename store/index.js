@@ -17,6 +17,13 @@ getters.pageId = () => {
 getters.page = () => {
   return $state.project.pages.list.find((page) => page.id == $getters.pageId)
 }
+getters.region = () => {
+  if ($getters.page.elems.regionId == null)
+    return $getters.page.elems.blocks
+  else
+    return $app.elems.getById($getters.page.elems.regionId).children
+}
 getters.elem = () => {
-  return $app.elems.getById($getters.page.elems.activeId)
+  return $getters.region.find(
+    (item) => item.id == $getters.page.elems.activeId)
 }

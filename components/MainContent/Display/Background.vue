@@ -18,7 +18,7 @@ export default {
       $app.editing.stop()
 
       if (event.button === 0 && !event.ctrlKey && !event.shiftKey)
-        $app.selection.clear()
+        $app.selection.clear(null)
 
       $app.boxSelection.start(event)
     },

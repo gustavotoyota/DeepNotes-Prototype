@@ -13,7 +13,7 @@ clickSelection.perform = (elem, event) => {
     
     
   if (!event.ctrlKey && !event.shiftKey && !$app.selection.has(elem))
-    $app.selection.clear()
+    $app.selection.clear(elem.parentId)
   else
     $app.activeElem.clear()
 

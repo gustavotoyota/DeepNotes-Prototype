@@ -154,9 +154,9 @@ export default {
           this.elem.children.push(selectedElem)
           
           selectedElem.parentId = this.elem.id
-        }
 
-        $app.selection.clear()
+          $app.selection.add(selectedElem)
+        }
       }
     },
 
