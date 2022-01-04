@@ -113,3 +113,11 @@ $utils.readFromClipboard = async function () {
 
   return ''
 }
+
+
+
+
+$utils.removeFromArray = (array, item) => {
+  const index = array.indexOf(item)
+  return array.splice(index, 1)[0]
+}
