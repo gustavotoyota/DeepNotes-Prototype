@@ -11,11 +11,11 @@ export const state = () => ({})
 
 export const getters = {}
 
-getters.currentPageId = () => {
+getters.pageId = () => {
   return $state.project.pages.path[$state.project.pages.depth]
 }
 getters.page = () => {
-  return $state.project.pages.list.find((page) => page.id == $getters.currentPageId)
+  return $state.project.pages.list.find((page) => page.id == $getters.pageId)
 }
 getters.elem = () => {
   return $app.elems.getById($getters.page.elems.activeId)
