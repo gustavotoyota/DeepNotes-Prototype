@@ -12,7 +12,7 @@ camera.fitToScreen = () => {
   if ($app.selection.getElemIds().length > 0)
     elems = $app.selection.getElems()
   else
-    elems = $getters.page.elems.list
+    elems = $getters.page.elems.blocks
     
 
 

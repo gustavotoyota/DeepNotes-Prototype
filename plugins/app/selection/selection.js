@@ -55,7 +55,7 @@ selection.set = (elemId) => {
 
 
 selection.addAll = () => {
-  for (const elem of $getters.page.elems.list)
+  for (const elem of $getters.page.elems.blocks)
     $app.selection.add(elem.id)
 }
 

@@ -12,7 +12,7 @@ elems.create = (base) => {
     parentId: null,
   })
 
-  $getters.page.elems.list.push(elem)
+  $getters.page.elems.blocks.push(elem)
 
   return elem
 }
@@ -20,10 +20,10 @@ elems.create = (base) => {
 
 
 elems.getById = (id) => {
-  return $getters.page.elems.list.find((elem) => elem.id == id)
+  return $getters.page.elems.blocks.find((elem) => elem.id == id)
 }
 elems.getIndexById = (id) => {
-  return $getters.page.elems.list.findIndex((elem) => elem.id == id)
+  return $getters.page.elems.blocks.findIndex((elem) => elem.id == id)
 }
 
 
@@ -39,11 +39,11 @@ elems.getClientRect = (elemId) => {
 
 elems.removeFromList = (elemId) => {
   const index = $app.elems.getIndexById(elemId)
-  $delete($getters.page.elems.list, index)
+  $delete($getters.page.elems.blocks, index)
 }
 elems.bringToTop = (elem) => {
   $app.elems.removeFromList(elem.id)
-  $getters.page.elems.list.push(elem)
+  $getters.page.elems.blocks.push(elem)
 }
 
 

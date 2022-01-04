@@ -9,7 +9,7 @@
     `translate(${-$getters.page.camera.pos.x}px, ${-$getters.page.camera.pos.y}px)`">
       
       <Element
-      v-for="elem in $getters.page.elems.list" :key="elem.id"
+      v-for="elem in $getters.page.elems.blocks" :key="elem.id"
       :elem="elem"/>
 
     </div>

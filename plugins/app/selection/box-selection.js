@@ -54,7 +54,7 @@ boxSelection.finish = (event) => {
   
 
 
-  for (const elem of $getters.page.elems.list) {
+  for (const elem of $getters.page.elems.blocks) {
     const clientRect = $app.elems.getClientRect(elem.id)
 
     if (clientRect.left < topLeft.x || clientRect.top < topLeft.y
@@ -73,8 +73,8 @@ boxSelection.finish = (event) => {
   
   let lastElem = null
 
-  for (let i = $getters.page.elems.list.length - 1; i >= 0; --i) {
-    const elem = $getters.page.elems.list[i]
+  for (let i = $getters.page.elems.blocks.length - 1; i >= 0; --i) {
+    const elem = $getters.page.elems.blocks[i]
 
     if (!$app.selection.has(elem.id))
       continue

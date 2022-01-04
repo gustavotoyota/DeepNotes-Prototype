@@ -91,5 +91,5 @@ clipboard.paste = async (text) => {
     $app.selection.add(pastedElem.id)
   }
 
-  $app.activeElem.set($getters.page.elems.list.at(-1))
+  $app.activeElem.set($getters.page.elems.blocks.at(-1))
 }
