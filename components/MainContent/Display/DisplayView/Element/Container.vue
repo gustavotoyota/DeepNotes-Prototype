@@ -84,8 +84,8 @@
 
             <div v-else
             style="height: 100%; overflow: auto">
-              <Element v-for="childId of elem.children" :key="childId"
-              :elem="$app.elems.getById(childId)" :parent-width="width"/>
+              <Element v-for="child of elem.children" :key="child.id"
+              :elem="child" :parent-width="width"/>
             </div>
 
           </div>
@@ -150,9 +150,13 @@ export default {
       if ($state.dragging.active && event.button === 0
       && !$app.selection.has(this.elem)) {
         for (const selectedElem of $app.selection.getElems()) {
-          this.elem.children.push(selectedElem.id)
+          $utils.removeFromArray($getters.page.elems.blocks, selectedElem)
+          this.elem.children.push(selectedElem)
+          
           selectedElem.parentId = this.elem.id
         }
+
+        $app.selection.clear()
       }
     },
 
