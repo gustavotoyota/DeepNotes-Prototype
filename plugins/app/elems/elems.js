@@ -8,12 +8,23 @@ elems.create = (base) => {
 
   let elem = $utils.deepCopy(base)
 
-  elem.id = $getters.page.elems.nextId++
-  elem.parentId = null 
+  $app.elems.setup(elem)
 
   $getters.page.elems.blocks.push(elem)
 
   return elem
+}
+
+
+
+elems.setup = (elem, parentId) => {
+  elem.id = $getters.page.elems.nextId++
+
+  elem.parentId = parentId ?? null
+
+  if (elem.children)
+    for (const child of elem.children)
+      $app.elems.setup(child, elem.id)
 }
 
 
