@@ -13,7 +13,6 @@ elems.create = (base) => {
   })
 
   $getters.page.elems.list.push(elem)
-  $getters.page.elems.root.push(elem.id)
 
   return elem
 }
