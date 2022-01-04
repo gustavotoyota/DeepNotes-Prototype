@@ -61,7 +61,7 @@ pages.getById = (pageId) => {
 
 
 pages.bumpRecent = () => {
-  const pageId = $getters.currentPage.id
+  const pageId = $getters.page.id
 
   const pageIdx = $state.project.pages.recent.indexOf(pageId)
   if (pageIdx >= 0)

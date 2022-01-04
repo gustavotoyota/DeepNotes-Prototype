@@ -230,9 +230,6 @@ export default {
 
   computed: {
 
-    page() {
-      return $getters.currentPage
-    },
     elem() {
       return $getters.activeElem
     },
@@ -247,7 +244,7 @@ export default {
       for (let i = $state.project.pages.recent.length - 1; i >= 0; --i) {
         const recentPageId = $state.project.pages.recent[i]
 
-        if (recentPageId == $getters.currentPage.id)
+        if (recentPageId == $getters.page.id)
           continue
 
         const recentPage = $app.pages.getById(recentPageId)

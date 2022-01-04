@@ -4,12 +4,7 @@ const selection = module.exports = {}
 
 
 selection.clear = () => {
-  const page = $getters.currentPage
-
-  if (!page)
-    return
-
-  page.elems.selected = {}
+  $getters.page.elems.selected = {}
   
   $app.activeElem.clear()
 }
@@ -17,25 +12,25 @@ selection.clear = () => {
 
 
 selection.add = (elemId) => {
-  $set($getters.currentPage.elems.selected, elemId, true)
+  $set($getters.page.elems.selected, elemId, true)
 }
 selection.remove = (elemId) => {
   if ($app.activeElem.is(elemId))
     $app.activeElem.clear()
 
-  $delete($getters.currentPage.elems.selected, elemId)
+  $delete($getters.page.elems.selected, elemId)
 }
 
 
 
 selection.has = (elemId) => {
-  return elemId in $getters.currentPage.elems.selected
+  return elemId in $getters.page.elems.selected
 }
 
 
 
 selection.getElemIds = () => {
-  return Object.keys($getters.currentPage.elems.selected)
+  return Object.keys($getters.page.elems.selected)
 }
 selection.getElems = () => {
   const elems = []
@@ -60,7 +55,7 @@ selection.set = (elemId) => {
 
 
 selection.addAll = () => {
-  for (const elem of $getters.currentPage.elems.list)
+  for (const elem of $getters.page.elems.list)
     $app.selection.add(elem.id)
 }
 

@@ -116,7 +116,7 @@ export default {
 
       if ($app.selection.has(this.elem.id)
       && this.elem.parentId == null
-      && !this.page.elems.editing)
+      && !$getters.page.elems.editing)
         $app.dragging.start(event)
     },
 
@@ -153,12 +153,6 @@ export default {
 
   computed: {
 
-    page() {
-      return $getters.currentPage
-    },
-
-
-
     selected() {
       return $app.selection.has(this.elem.id)
     },
@@ -166,7 +160,7 @@ export default {
       return $app.activeElem.is(this.elem.id)
     },
     editing() {
-      return this.active && this.page.elems.editing
+      return this.active && $getters.page.elems.editing
     },
     dragging() {
       return $state.dragging.active

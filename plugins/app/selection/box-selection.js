@@ -54,7 +54,7 @@ boxSelection.finish = (event) => {
   
 
 
-  for (const elem of $getters.currentPage.elems.list) {
+  for (const elem of $getters.page.elems.list) {
     const clientRect = $app.elems.getClientRect(elem.id)
 
     if (clientRect.left < topLeft.x || clientRect.top < topLeft.y
@@ -70,13 +70,11 @@ boxSelection.finish = (event) => {
 
 
   // Activate highest selected element
-
-  const page = $getters.currentPage
   
   let lastElem = null
 
-  for (let i = page.elems.list.length - 1; i >= 0; --i) {
-    const elem = page.elems.list[i]
+  for (let i = $getters.page.elems.list.length - 1; i >= 0; --i) {
+    const elem = $getters.page.elems.list[i]
 
     if (!$app.selection.has(elem.id))
       continue

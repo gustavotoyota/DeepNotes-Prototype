@@ -4,25 +4,21 @@ const camera = module.exports = {}
 
 
 camera.resetZoom = () => {
-  $getters.currentPage.camera.zoom = 1
+  $getters.page.camera.zoom = 1
 }
 
 camera.fitToScreen = () => {
-  const page = $getters.currentPage
-
-
-
   let elems
   if ($app.selection.getElemIds().length > 0)
     elems = $app.selection.getElems()
   else
-    elems = page.elems.list
+    elems = $getters.page.elems.list
     
 
 
 
   if (elems.length === 0) {
-    page.camera.pos = { x: 0, y: 0 }
+    $getters.page.camera.pos = { x: 0, y: 0 }
     return
   }
 
@@ -48,18 +44,18 @@ camera.fitToScreen = () => {
 
 
 
-  page.camera.pos.x = (worldTopLeft.x + worldBottomRight.x) / 2
-  page.camera.pos.y = (worldTopLeft.y + worldBottomRight.y) / 2
+  $getters.page.camera.pos.x = (worldTopLeft.x + worldBottomRight.x) / 2
+  $getters.page.camera.pos.y = (worldTopLeft.y + worldBottomRight.y) / 2
 
 
 
   const displayRect = $app.display.getClientRect()
 
-  page.camera.zoom = Math.min(
+  $getters.page.camera.zoom = Math.min(
     (Math.min(100, displayRect.width / 4) - displayRect.width / 2) /
-    (worldTopLeft.x - page.camera.pos.x),
+    (worldTopLeft.x - $getters.page.camera.pos.x),
     (Math.min(50, displayRect.height / 4) - displayRect.height / 2) /
-    (worldTopLeft.y - page.camera.pos.y))
+    (worldTopLeft.y - $getters.page.camera.pos.y))
 
-  page.camera.zoom = Math.min(Math.max(page.camera.zoom, $app.configs.minZoom), 1)
+  $getters.page.camera.zoom = Math.min(Math.max($getters.page.camera.zoom, $app.configs.minZoom), 1)
 }

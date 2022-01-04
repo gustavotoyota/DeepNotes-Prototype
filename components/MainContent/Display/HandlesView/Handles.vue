@@ -35,9 +35,9 @@ export default {
     displayRect() {
       // Dependencies
 
-      $getters.currentPage.camera.pos.x
-      $getters.currentPage.camera.pos.y
-      $getters.currentPage.camera.zoom
+      $getters.page.camera.pos.x
+      $getters.page.camera.pos.y
+      $getters.page.camera.zoom
       
       this.elem.pos.x; this.elem.pos.y
       this.elem.size.x; this.elem.size.y

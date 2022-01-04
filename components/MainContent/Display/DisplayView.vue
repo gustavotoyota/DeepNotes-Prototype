@@ -5,11 +5,11 @@
 
     <!-- Viewbox -->
     <div :style="`width: 0; height: 0; position: relative;
-    transform: scale(${page.camera.zoom}) ` +
-    `translate(${-page.camera.pos.x}px, ${-page.camera.pos.y}px)`">
+    transform: scale(${$getters.page.camera.zoom}) ` +
+    `translate(${-$getters.page.camera.pos.x}px, ${-$getters.page.camera.pos.y}px)`">
       
       <Element
-      v-for="elem in page.elems.list" :key="elem.id"
+      v-for="elem in $getters.page.elems.list" :key="elem.id"
       :elem="elem"/>
 
     </div>
@@ -20,14 +20,6 @@
 
 <script>
 export default {
-
-  computed: {
-
-    page() {
-      return $getters.currentPage
-    },
-
-  },
 
 }
 </script>

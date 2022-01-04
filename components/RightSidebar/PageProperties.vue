@@ -22,7 +22,7 @@
         </div>
 
         <v-text-field dense solo hide-details style="clear: right"
-        class="mt-1 body-2" v-model="$getters.currentPage.name">
+        class="mt-1 body-2" v-model="$getters.page.name">
         </v-text-field>
       </div>
 

@@ -42,21 +42,17 @@ coords.displayToClient = (displayPos) => {
 coords.displayToWorld = (displayPos) => {
   const displayRect = $app.display.getClientRect()
 
-  const page = $getters.currentPage
-
   return {
-    x: page.camera.pos.x + (displayPos.x - displayRect.width / 2) / page.camera.zoom,
-    y: page.camera.pos.y + (displayPos.y - displayRect.height / 2) / page.camera.zoom,
+    x: $getters.page.camera.pos.x + (displayPos.x - displayRect.width / 2) / $getters.page.camera.zoom,
+    y: $getters.page.camera.pos.y + (displayPos.y - displayRect.height / 2) / $getters.page.camera.zoom,
   }
 }
 coords.worldToDisplay = (worldPos) => {
   const displayRect = $app.display.getClientRect()
 
-  const page = $getters.currentPage
-
   return {
-    x: displayRect.width / 2 + (worldPos.x - page.camera.pos.x) * page.camera.zoom,
-    y: displayRect.height / 2 + (worldPos.y - page.camera.pos.y) * page.camera.zoom,
+    x: displayRect.width / 2 + (worldPos.x - $getters.page.camera.pos.x) * $getters.page.camera.zoom,
+    y: displayRect.height / 2 + (worldPos.y - $getters.page.camera.pos.y) * $getters.page.camera.zoom,
   }
 }
 

@@ -7,14 +7,12 @@ editing.start = (elem, editorIdx) => {
   if (elem.readOnly)
     return
 
-  const page = $getters.currentPage
-
-  if (page.elems.editing)
+  if ($getters.page.elems.editing)
     return
 
   $app.activeElem.setExclusive(elem)
 
-  page.elems.editing = true
+  $getters.page.elems.editing = true
 
   $nextTick(() => {
     const editor = $app.elems.getEditorNode(elem.id, editorIdx)
@@ -29,12 +27,10 @@ editing.start = (elem, editorIdx) => {
 
 
 editing.stop = () => {
-  const page = $getters.currentPage
-
-  if (!page.elems.editing)
+  if (!$getters.page.elems.editing)
     return
 
-  const elem = $app.elems.getById(page.elems.activeId)
+  const elem = $app.elems.getById($getters.page.elems.activeId)
   if (!elem)
     return
 
@@ -44,5 +40,5 @@ editing.stop = () => {
     if (editor.__vue__.quill)
       editor.__vue__.quill.theme.tooltip.hide()
 
-  page.elems.editing = false
+  $getters.page.elems.editing = false
 }

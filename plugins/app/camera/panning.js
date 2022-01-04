@@ -28,10 +28,8 @@ panning.update = (event) => {
 
   const clientPos = $app.coords.getClientPos(event)
 
-  const page = $getters.currentPage
-
-  page.camera.pos.x -= (clientPos.x - $state.panning.currentPos.x) / page.camera.zoom
-  page.camera.pos.y -= (clientPos.y - $state.panning.currentPos.y) / page.camera.zoom
+  $getters.page.camera.pos.x -= (clientPos.x - $state.panning.currentPos.x) / $getters.page.camera.zoom
+  $getters.page.camera.pos.y -= (clientPos.y - $state.panning.currentPos.y) / $getters.page.camera.zoom
 
   $state.panning.currentPos = $utils.shallowCopy(clientPos)
 }
