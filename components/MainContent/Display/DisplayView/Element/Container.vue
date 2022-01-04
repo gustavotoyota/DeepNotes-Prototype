@@ -150,7 +150,7 @@ export default {
       if ($state.dragging.active && event.button === 0
       && !$app.selection.has(this.elem)) {
         for (const selectedElem of $app.selection.getElems()) {
-          $utils.removeFromArray($getters.page.elems.blocks, selectedElem)
+          $app.elems.removeFromRegion(selectedElem)
           this.elem.children.push(selectedElem)
           
           selectedElem.parentId = this.elem.id

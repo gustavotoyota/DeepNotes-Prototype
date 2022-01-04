@@ -5,7 +5,7 @@ const deleting = module.exports = {}
 
 deleting.deleteElem = (elem) => {
   $app.selection.remove(elem)
-  $app.elems.removeFromList(elem.id)
+  $app.elems.removeFromRegion(elem)
 }
 deleting.deleteSelection = (event) => {
   if (event.code !== 'Delete' && event.keyCode !== 46)

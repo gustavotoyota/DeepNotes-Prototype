@@ -4,13 +4,12 @@ const elems = module.exports = {}
 
 
 elems.create = (base) => {
-  let elem = $utils.deepCopy(base ?? {})
+  base = base ?? {}
 
-  $utils.merge(elem, {
-    id: $getters.page.elems.nextId++,
+  let elem = $utils.deepCopy(base)
 
-    parentId: null,
-  })
+  elem.id = $getters.page.elems.nextId++
+  elem.parentId = null 
 
   $getters.page.elems.blocks.push(elem)
 
@@ -19,11 +18,23 @@ elems.create = (base) => {
 
 
 
-elems.getById = (id) => {
-  return $getters.page.elems.blocks.find((elem) => elem.id == id)
-}
-elems.getIndexById = (id) => {
-  return $getters.page.elems.blocks.findIndex((elem) => elem.id == id)
+elems.getById = (elemId, region) => {
+  region = region ?? $getters.page.elems.blocks
+
+  let result = region.find((item) => item.id == elemId)
+  if (result)
+    return result
+
+  for (let elem of region) {
+    if (!elem.children)
+      continue
+
+    result = $app.elems.getById(elemId, elem.children)
+    if (result)
+      return result
+  }
+
+  return null
 }
 
 
@@ -37,12 +48,24 @@ elems.getClientRect = (elem) => {
 
 
 
-elems.removeFromList = (elem) => {
-  const index = $app.elems.getIndexById(elem.id)
-  $delete($getters.page.elems.blocks, index)
+elems.getRegion = (elem) => {
+  if (elem.parentId == null)
+    return $getters.page.elems.blocks
+  else
+    return $app.elems.getById(elem.parentId).children
 }
+elems.removeFromRegion = (elem) => {
+  $utils.removeFromArray($app.elems.getRegion(elem), elem)
+}
+
+
+
+
 elems.bringToTop = (elem) => {
-  $app.elems.removeFromList(elem)
+  if (elem.parentId != null)
+    return
+    
+  $app.elems.removeFromRegion(elem)
   $getters.page.elems.blocks.push(elem)
 }
 
