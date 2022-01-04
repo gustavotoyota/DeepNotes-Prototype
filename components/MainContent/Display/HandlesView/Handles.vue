@@ -43,6 +43,7 @@ export default {
       this.elem.size.x; this.elem.size.y
       this.elem.anchor.x; this.elem.anchor.y
       
+      this.elem.collapsible
       this.elem.collapsed
       
       this.elem.resizable
