@@ -4,10 +4,10 @@ const sizes = module.exports = {}
 
 
 sizes.screenToWorld1D = (screenSize) => {
-  return screenSize / $getters.currentPage.camera.zoom
+  return screenSize / $getters.page.camera.zoom
 }
 sizes.worldToScreen1D = (worldSize) => {
-  return worldSize * $getters.currentPage.camera.zoom
+  return worldSize * $getters.page.camera.zoom
 }
 
 

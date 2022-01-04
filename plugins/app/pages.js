@@ -21,12 +21,12 @@ pages.create = (name) => {
     // Elements
 
     elems: {
-      list: [],
       nextId: 0,
 
-      root: [],
+      blocks: [],
       arrows: [],
       
+      regionId: null,
       selected: {},
       activeId: null,
       editing: false,
@@ -61,7 +61,7 @@ pages.getById = (pageId) => {
 
 
 pages.bumpRecent = () => {
-  const pageId = $getters.currentPage.id
+  const pageId = $getters.page.id
 
   const pageIdx = $state.project.pages.recent.indexOf(pageId)
   if (pageIdx >= 0)
@@ -74,7 +74,7 @@ pages.bumpRecent = () => {
 pages.changeDepth = (pageDepth) => {
   $state.project.pages.depth = Math.max(0, pageDepth)
   
-  $app.selection.clear()
+  $app.selection.clear(null)
 
   $app.pages.bumpRecent()
 }

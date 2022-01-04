@@ -35,14 +35,17 @@ export default {
     displayRect() {
       // Dependencies
 
-      $getters.currentPage.camera.pos.x
-      $getters.currentPage.camera.pos.y
-      $getters.currentPage.camera.zoom
+      $getters.page.camera.pos.x
+      $getters.page.camera.pos.y
+      $getters.page.camera.zoom
+
+      this.elem.parentId
       
       this.elem.pos.x; this.elem.pos.y
       this.elem.size.x; this.elem.size.y
       this.elem.anchor.x; this.elem.anchor.y
       
+      this.elem.collapsible
       this.elem.collapsed
       
       this.elem.resizable
@@ -59,7 +62,7 @@ export default {
 
       
 
-      const clientRect = $app.elems.getClientRect(this.elem.id)
+      const clientRect = $app.elems.getClientRect(this.elem)
 
       return {
         pos: $app.coords.clientToDisplay(clientRect),

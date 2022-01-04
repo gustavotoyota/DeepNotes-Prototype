@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="!!elem && elem.type === 'container'"
+  <div v-if="$getters.elem && $getters.elem.type === 'container'"
   style="height: 100%"
   class="d-flex flex-column">
 
@@ -14,30 +14,6 @@
 
     
     <div style="flex: 1; overflow-y: auto" class="pb-4">
-      
-      <div class="mx-5 mt-5">
-        <div class="body-2 grey--text text--lighten-1"
-        style="margin-left: 1px">
-          Linked page:
-        </div>
-
-        <Gap height="2px"/>
-
-        <v-select dense outlined hide-details
-        background-color="#181818" clearable
-        :items="recentPages" item-text="text" item-value="value"
-        :menu-props="{ top: false, offsetY: true }"
-        :value="elem.linkedPageId"
-        @change="onPropChange((elem, value) => {
-          elem.linkedPageId = value }, $event)"/>
-
-        <Gap height="10px"/>
-        
-        
-        <NewPageDialog :elem="elem"/>
-      </div>
-
-      <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
       style="display: flex; flex-direction: column">
@@ -58,7 +34,7 @@
       style="display: flex">
         <v-checkbox hide-details label="Has title"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.hasTitle"
+        :input-value="$getters.elem.hasTitle"
         @change="onPropChange((elem, value) => {
           elem.hasTitle = value }, $event)"/>
       </div>
@@ -82,7 +58,7 @@
             { text: 'Right', value: 1 },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          :value="elem.anchor.x"
+          :value="$getters.elem.anchor.x"
           @change="onPropChange((elem, value) => {
             elem.anchor.x = value }, $event)"/>
         </div>
@@ -105,7 +81,7 @@
             { text: 'Bottom', value: 1 },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          :value="elem.anchor.y"
+          :value="$getters.elem.anchor.y"
           @change="onPropChange((elem, value) => {
             elem.anchor.y = value }, $event)"/>
         </div>
@@ -124,7 +100,7 @@
         
         <v-checkbox hide-details label="Collapsed"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :disabled="!elem.collapsible"
+        :disabled="!$getters.elem.collapsible"
         v-model="collapsed">
         </v-checkbox>
       </div>
@@ -142,7 +118,7 @@
           background-color="#181818"
           :items="[
             { text: 'Auto', value: 'auto' },
-            ...(elem.collapsed ? [{ text: 'Expanded', value: 'expanded' }] : []),
+            ...($getters.elem.collapsed ? [{ text: 'Expanded', value: 'expanded' }] : []),
             { text: 'Custom', value: 'custom' },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
@@ -178,7 +154,7 @@
       style="display: flex">
         <v-checkbox hide-details label="Movable"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.movable"
+        :input-value="$getters.elem.movable"
         @change="onPropChange((elem, value) => {
           elem.movable = value }, $event)"/>
 
@@ -186,7 +162,7 @@
         
         <v-checkbox hide-details label="Resizable"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.resizable"
+        :input-value="$getters.elem.resizable"
         @change="onPropChange((elem, value) => {
           elem.resizable = value }, $event)"/>
       </div>
@@ -197,7 +173,7 @@
       style="display: flex">
         <v-checkbox hide-details label="Read-only"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="elem.readOnly"
+        :input-value="$getters.elem.readOnly"
         @change="onPropChange((elem, value) => {
           elem.readOnly = value }, $event)"/>
       </div>
@@ -222,42 +198,15 @@ export default {
 
   computed: {
 
-    page() {
-      return $getters.currentPage
-    },
-    elem() {
-      return $getters.activeElem
-    },
-
     sizeProp() {
-      return $app.elems.getSizeProp(this.elem)
-    },
-
-    recentPages() {
-      const recentPages = []
-
-      for (let i = $state.project.pages.recent.length - 1; i >= 0; --i) {
-        const recentPageId = $state.project.pages.recent[i]
-
-        if (recentPageId == $getters.currentPage.id)
-          continue
-
-        const recentPage = $app.pages.getById(recentPageId)
-
-        recentPages.push({ text: recentPage.name, value: recentPageId })
-      }
-
-      return recentPages
+      return $app.elems.getSizeProp($getters.elem)
     },
 
 
 
-
-
-    // Properties
 
     collapsible: {
-      get() { return this.elem.collapsible },
+      get() { return $getters.elem.collapsible },
       set(value) {
         for (const elem of $app.selection.getElems()) {
           elem.collapsible = value
@@ -266,7 +215,7 @@ export default {
       },
     },
     collapsed: {
-      get() { return this.elem.collapsed },
+      get() { return $getters.elem.collapsed },
       set(value) {
         for (const elem of $app.selection.getElems())
           $app.collapsing.setCollapsed(elem, value)
@@ -275,17 +224,17 @@ export default {
    
     width: {
       get() {
-        if (!isNaN(this.elem[this.sizeProp].x))
+        if (!isNaN($getters.elem[this.sizeProp].x))
           return 'custom'
         else
-          return this.elem[this.sizeProp].x
+          return $getters.elem[this.sizeProp].x
       },
       set(value) {
         for (const elem of $app.selection.getElems()) {
           const sizeProp = $app.elems.getSizeProp(elem)
 
           if (value === 'custom') {
-            const clientRect = $app.elems.getClientRect(elem.id)
+            const clientRect = $app.elems.getClientRect(elem)
 
             elem[sizeProp].x = $app.sizes.screenToWorld1D(clientRect.width)
           } else
@@ -295,17 +244,17 @@ export default {
     },
     height: {
       get() {
-        if (!isNaN(this.elem[this.sizeProp].y))
+        if (!isNaN($getters.elem[this.sizeProp].y))
           return 'custom'
         else
-          return this.elem[this.sizeProp].y
+          return $getters.elem[this.sizeProp].y
       },
       set(value) {
         for (const elem of $app.selection.getElems()) {
           const sizeProp = $app.elems.getSizeProp(elem)
 
           if (value === 'custom') {
-            const clientRect = $app.elems.getClientRect(elem.id)
+            const clientRect = $app.elems.getClientRect(elem)
 
             elem[sizeProp].y = $app.sizes.screenToWorld1D(clientRect.height)
           } else

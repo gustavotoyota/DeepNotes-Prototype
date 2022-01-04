@@ -3,45 +3,47 @@ const selection = module.exports = {}
 
 
 
-selection.clear = () => {
-  const page = $getters.currentPage
-
-  if (!page)
-    return
-
-  page.elems.selected = {}
+selection.clear = (regionId) => {
+  $getters.page.elems.selected = {}
   
   $app.activeElem.clear()
+
+  if (regionId !== undefined)
+    $getters.page.elems.regionId = regionId
 }
 
 
 
-selection.add = (elemId) => {
-  $set($getters.currentPage.elems.selected, elemId, true)
+selection.add = (elem) => {
+  if (elem.parentId != $getters.page.elems.regionId)
+    $app.selection.clear(elem.parentId)
+
+  $set($getters.page.elems.selected, elem.id, true)
 }
-selection.remove = (elemId) => {
-  if ($app.activeElem.is(elemId))
+selection.remove = (elem) => {
+  if ($app.activeElem.is(elem.id))
     $app.activeElem.clear()
 
-  $delete($getters.currentPage.elems.selected, elemId)
+  $delete($getters.page.elems.selected, elem.id)
 }
 
 
 
-selection.has = (elemId) => {
-  return elemId in $getters.currentPage.elems.selected
+selection.has = (elem) => {
+  return elem.parentId == $getters.page.elems.regionId
+    && elem.id in $getters.page.elems.selected
 }
 
 
 
 selection.getElemIds = () => {
-  return Object.keys($getters.currentPage.elems.selected)
+  return Object.keys($getters.page.elems.selected)
 }
 selection.getElems = () => {
   const elems = []
 
   for (const elemId of $app.selection.getElemIds()) {
-    const elem = $app.elems.getById(elemId)
+    const elem = $getters.region.find((item) => item.id == elemId)
 
     elems.push(elem)
   }
@@ -51,17 +53,17 @@ selection.getElems = () => {
 
 
 
-selection.set = (elemId) => {
-  $app.selection.clear()
+selection.set = (elem) => {
+  $app.selection.clear(elem.parentId)
 
-  $app.selection.add(elemId)
+  $app.selection.add(elem.id)
 }
 
 
 
 selection.addAll = () => {
-  for (const elem of $getters.currentPage.elems.list)
-    $app.selection.add(elem.id)
+  for (const elem of $getters.region)
+    $app.selection.add(elem)
 }
 
 
@@ -75,12 +77,12 @@ selection.clone = () => {
 
 
 
-    $app.selection.add(newElem.id)
+    $app.selection.add(newElem)
     
-    if ($app.activeElem.is(elem.id))
+    if ($app.activeElem.is(elem))
       $app.activeElem.set(newElem)
 
-    $app.selection.remove(elem.id)
+    $app.selection.remove(elem)
   }
 }
 

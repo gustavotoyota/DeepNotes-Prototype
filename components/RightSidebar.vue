@@ -15,14 +15,6 @@
 <script>
 export default {
 
-  computed: {
-
-    elem() {
-      return $getters.activeElem
-    },
-
-  },
-
 }
 </script>
 

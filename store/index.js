@@ -11,12 +11,19 @@ export const state = () => ({})
 
 export const getters = {}
 
-getters.currentPageId = () => {
+getters.pageId = () => {
   return $state.project.pages.path[$state.project.pages.depth]
 }
-getters.currentPage = () => {
-  return $state.project.pages.list.find((page) => page.id == $getters.currentPageId)
+getters.page = () => {
+  return $state.project.pages.list.find((page) => page.id == $getters.pageId)
 }
-getters.activeElem = () => {
-  return $app.elems.getById($getters.currentPage.elems.activeId)
+getters.region = () => {
+  if ($getters.page.elems.regionId == null)
+    return $getters.page.elems.blocks
+  else
+    return $app.elems.getById($getters.page.elems.regionId).children
+}
+getters.elem = () => {
+  return $getters.region.find(
+    (item) => item.id == $getters.page.elems.activeId)
 }

@@ -4,49 +4,69 @@ const elems = module.exports = {}
 
 
 elems.create = (base) => {
-  const page = $getters.currentPage
+  base = base ?? {}
 
-  let elem = $utils.deepCopy(base ?? {})
+  let elem = $utils.deepCopy(base)
 
-  $merge(elem, {
-    id: page.elems.nextId++,
+  elem.id = $getters.page.elems.nextId++
+  elem.parentId = null 
 
-    parentId: null,
-  })
-
-  page.elems.list.push(elem)
-  page.elems.root.push(elem.id)
+  $getters.page.elems.blocks.push(elem)
 
   return elem
 }
 
 
 
-elems.getById = (id) => {
-  return $getters.currentPage.elems.list.find((elem) => elem.id == id)
+elems.getById = (elemId, region) => {
+  region = region ?? $getters.page.elems.blocks
+
+  let result = region.find((item) => item.id == elemId)
+  if (result)
+    return result
+
+  for (let elem of region) {
+    if (!elem.children)
+      continue
+
+    result = $app.elems.getById(elemId, elem.children)
+    if (result)
+      return result
+  }
+
+  return null
 }
-elems.getIndexById = (id) => {
-  return $getters.currentPage.elems.list.findIndex((elem) => elem.id == id)
+
+
+
+elems.getNode = (elem) => {
+  return document.getElementById(`elem-${elem.id}`)
+}
+elems.getClientRect = (elem) => {
+  return $app.elems.getNode(elem).getBoundingClientRect()
 }
 
 
 
-elems.getNode = (elemId) => {
-  return document.getElementById(`elem-${elemId}`)
+elems.getRegion = (elem) => {
+  if (elem.parentId == null)
+    return $getters.page.elems.blocks
+  else
+    return $app.elems.getById(elem.parentId).children
 }
-elems.getClientRect = (elemId) => {
-  return $app.elems.getNode(elemId).getBoundingClientRect()
+elems.removeFromRegion = (elem) => {
+  $utils.removeFromArray($app.elems.getRegion(elem), elem)
 }
 
 
 
-elems.removeFromList = (elemId) => {
-  const index = $app.elems.getIndexById(elemId)
-  $delete($getters.currentPage.elems.list, index)
-}
+
 elems.bringToTop = (elem) => {
-  $app.elems.removeFromList(elem.id)
-  $getters.currentPage.elems.list.push(elem)
+  if (elem.parentId != null)
+    return
+    
+  $app.elems.removeFromRegion(elem)
+  $getters.page.elems.blocks.push(elem)
 }
 
 

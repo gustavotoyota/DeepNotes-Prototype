@@ -4,15 +4,15 @@ const activeElem = module.exports = {}
 
 
 activeElem.clear = () => {
-  $getters.currentPage.elems.activeId = null
+  $getters.page.elems.activeId = null
 }
 
 
 
 activeElem.set = (elem) => {
-  $app.selection.add(elem.id)
+  $app.selection.add(elem)
   
-  $getters.currentPage.elems.activeId = elem.id
+  $getters.page.elems.activeId = elem.id
   
   $app.elems.bringToTop(elem)
 }
@@ -24,6 +24,6 @@ activeElem.setExclusive = (elem) => {
 
 
 
-activeElem.is = (elemId) => {
-  return elemId == $getters.currentPage.elems.activeId
+activeElem.is = (elem) => {
+  return elem.id == $getters.page.elems.activeId
 }

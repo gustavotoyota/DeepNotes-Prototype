@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="!elem"
+  <div v-if="!$getters.elem"
   style="height: 100%"
   class="d-flex flex-column">
 
@@ -16,13 +16,13 @@
     
     <div style="flex: 1; overflow-y: auto" class="pb-5">
       
-      <div class="mx-5 mt-5">
+      <div class="mx-5 mt-4">
         <div class="body-2 grey--text text--lighten-1">
           Name:
         </div>
 
         <v-text-field dense solo hide-details style="clear: right"
-        class="mt-1 body-2" v-model="$getters.currentPage.name">
+        class="mt-1 body-2" v-model="$getters.page.name">
         </v-text-field>
       </div>
 
@@ -34,14 +34,6 @@
 
 <script>
 export default {
-
-  computed: {
-
-    elem() {
-      return $getters.activeElem
-    },
-
-  },
 
 }
 </script>

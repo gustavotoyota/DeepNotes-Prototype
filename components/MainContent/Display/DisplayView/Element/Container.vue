@@ -84,8 +84,8 @@
 
             <div v-else
             style="height: 100%; overflow: auto">
-              <Element v-for="childId of elem.children" :key="childId"
-              :elem="$app.elems.getById(childId)" :parent-width="width"/>
+              <Element v-for="child of elem.children" :key="child.id"
+              :elem="child" :parent-width="width"/>
             </div>
 
           </div>
@@ -115,14 +115,14 @@ export default {
       if (event.target.style.opacity === '0.8')
         return
 
-      if (!$app.activeElem.is(this.elem.id))
+      if (!$app.activeElem.is(this.elem))
         $app.editing.stop()
 
       $app.clickSelection.perform(this.elem, event)
 
-      if ($app.selection.has(this.elem.id)
+      if ($app.selection.has(this.elem)
       && this.elem.parentId == null
-      && !this.page.elems.editing)
+      && !$getters.page.elems.editing)
         $app.dragging.start(event)
     },
 
@@ -148,10 +148,14 @@ export default {
 
     onDropZonePointerUp(event) {
       if ($state.dragging.active && event.button === 0
-      && !$app.selection.has(this.elem.id)) {
+      && !$app.selection.has(this.elem)) {
         for (const selectedElem of $app.selection.getElems()) {
-          this.elem.children.push(selectedElem.id)
+          $app.elems.removeFromRegion(selectedElem)
+          this.elem.children.push(selectedElem)
+          
           selectedElem.parentId = this.elem.id
+
+          $app.selection.add(selectedElem)
         }
       }
     },
@@ -162,25 +166,19 @@ export default {
 
   computed: {
 
-    page() {
-      return $getters.currentPage
-    },
-
-
-
     selected() {
-      return $app.selection.has(this.elem.id)
+      return $app.selection.has(this.elem)
     },
     active() {
-      return $app.activeElem.is(this.elem.id)
+      return $app.activeElem.is(this.elem)
     },
     editing() {
-      return this.active && this.page.elems.editing
+      return this.active && $getters.page.elems.editing
     },
     dragging() {
       return $state.dragging.active
         && $state.dragging.moved
-        && $app.selection.has(this.elem.id)
+        && $app.selection.has(this.elem)
     },
 
 

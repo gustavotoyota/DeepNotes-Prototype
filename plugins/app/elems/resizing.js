@@ -27,8 +27,8 @@ resizing.update = (event) => {
   if (!$state.resizing.active)
     return
 
-  const elem = $getters.activeElem
-  const clientRect = $app.elems.getClientRect(elem.id)
+  const elem = $getters.elem
+  const clientRect = $app.elems.getClientRect(elem)
 
   const newClientRect = {
     start: { x: clientRect.x, y: clientRect.y },

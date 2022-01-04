@@ -3,14 +3,14 @@ const deleting = module.exports = {}
 
 
 
-deleting.deleteElem = (elemId) => {
-  $app.selection.remove(elemId)
-  $app.elems.removeFromList(elemId)
+deleting.deleteElem = (elem) => {
+  $app.selection.remove(elem)
+  $app.elems.removeFromRegion(elem)
 }
 deleting.deleteSelection = (event) => {
   if (event.code !== 'Delete' && event.keyCode !== 46)
     return
 
-  for (const elemId of $app.selection.getElemIds())
-    $app.deleting.deleteElem(elemId)
+  for (const elem of $app.selection.getElems())
+    $app.deleting.deleteElem(elem)
 }
