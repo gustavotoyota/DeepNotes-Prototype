@@ -3,6 +3,11 @@ const dragging = module.exports = {}
 
 
 
+dragging.minDistance = 5
+
+
+
+
 dragging.reset = () => {
   $set($state, 'dragging', {
     active: false,
@@ -14,20 +19,38 @@ dragging.start = (event) => {
   if (event.button !== 0)
     return
 
-  const clientPos = $app.coords.getClientPos(event)
-
   $state.dragging = {
-    active: true,
+    down: true,
 
-    currentPos: $utils.shallowCopy(clientPos),
-    moved: false,
+    active: false,
+
+    startPos: $app.coords.getClientPos(event),
+    currentPos: $app.coords.getClientPos(event),
   }
 }
 dragging.update = (event) => {
-  if (!$state.dragging.active)
+  if (!$state.dragging.down)
     return
 
+
+
   const clientPos = $app.coords.getClientPos(event)
+
+
+
+  if (!$state.dragging.active) {
+    const dist = Math.sqrt(
+      Math.pow(clientPos.x - $state.dragging.startPos.x, 2) +
+      Math.pow(clientPos.y - $state.dragging.startPos.y, 2)
+    )
+
+    $state.dragging.active = dist >= $app.dragging.minDistance
+
+    if (!$state.dragging.active)
+      return
+  }
+
+
 
   for (const elemId of $app.selection.getElemIds()) {
     const elem = $app.elems.getById(elemId)
@@ -41,11 +64,12 @@ dragging.update = (event) => {
     }
   }
 
-  $state.dragging.currentPos = $utils.shallowCopy(clientPos)
-  $state.dragging.moved = true
+
+
+  $state.dragging.currentPos = clientPos
 }
 dragging.finish = (event) => {
-  if (!$state.dragging.active || event.button !== 0)
+  if (!$state.dragging.down || event.button !== 0)
     return
 
   $app.dragging.reset()

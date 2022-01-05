@@ -20,7 +20,8 @@
     <div v-else
     style="height: 100%; overflow: auto">
 
-      <Element v-for="child of elem.children" :key="child.id"
+      <Element v-for="(child, idx) of elem.children" :key="child.id"
+      :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
       :elem="child" :inherited-width="targetWidth"/>
 
     </div>

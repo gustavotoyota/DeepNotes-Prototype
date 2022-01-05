@@ -29,14 +29,14 @@ elems.setup = (elem, parentId) => {
 
 
 
-elems.getById = (elemId, region) => {
-  region = region ?? $getters.page.elems.blocks
+elems.getById = (elemId, regionArray) => {
+  regionArray = regionArray ?? $getters.page.elems.blocks
 
-  let result = region.find((item) => item.id == elemId)
+  let result = regionArray.find((item) => item.id == elemId)
   if (result)
     return result
 
-  for (let elem of region) {
+  for (let elem of regionArray) {
     if (!elem.children)
       continue
 

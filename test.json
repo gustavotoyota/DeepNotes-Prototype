@@ -66,26 +66,26 @@
         "createdAt": "2022-01-05T18:16:05.893Z",
         "modifiedAt": "2022-01-05T18:16:05.893Z",
         "elems": {
-          "nextId": 13,
+          "nextId": 33,
           "blocks": [
             {
               "anchor": {
                 "x": 0.5,
-                "y": 0.5
+                "y": 0
               },
-              "hasTitle": false,
+              "hasTitle": true,
               "hasBody": true,
-              "title": "",
-              "body": "<h2>Done</h2>",
-              "collapsible": false,
+              "title": "<h2>Next</h2>",
+              "body": "",
+              "collapsible": true,
               "collapsed": false,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
               "size": {
-                "x": "auto",
-                "y": "auto"
+                "x": 206.14312744140625,
+                "y": 308.12047476482053
               },
               "expandedHeight": 0,
               "movable": true,
@@ -93,65 +93,67 @@
               "wrapTitle": true,
               "wrapBody": true,
               "readOnly": false,
-              "type": "note",
+              "type": "container",
               "pos": {
-                "x": 229,
-                "y": -159.5
+                "x": -31.85940653454595,
+                "y": -119.66591118118784
               },
-              "id": 2,
+              "children": [
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement sibling drop</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -109.26561748923979,
+                    "y": -114.50000813408974
+                  },
+                  "id": 21,
+                  "parentId": 15
+                }
+              ],
+              "id": 15,
               "parentId": null
             },
             {
               "anchor": {
                 "x": 0.5,
-                "y": 0.5
-              },
-              "hasTitle": false,
-              "hasBody": true,
-              "title": "",
-              "body": "<h2>Later</h2>",
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "expandedHeight": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "note",
-              "pos": {
-                "x": -303,
-                "y": -154.5
-              },
-              "id": 0,
-              "parentId": null
-            },
-            {
-              "anchor": {
-                "x": 0,
                 "y": 0
               },
-              "hasTitle": false,
+              "hasTitle": true,
               "hasBody": true,
-              "title": "",
-              "body": "<p>Drag container children outside</p>",
-              "collapsible": false,
+              "title": "<h2>Done</h2>",
+              "body": "",
+              "collapsible": true,
               "collapsed": false,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
               "size": {
-                "x": "auto",
-                "y": "auto"
+                "x": 206.01031494140622,
+                "y": 308.12047476482053
               },
               "expandedHeight": 0,
               "movable": true,
@@ -159,111 +161,214 @@
               "wrapTitle": true,
               "wrapBody": true,
               "readOnly": false,
-              "type": "note",
+              "type": "container",
               "pos": {
-                "x": -373.777777777778,
-                "y": -98.63888888888886
+                "x": 203.05203998146328,
+                "y": -120.35937041843218
               },
-              "id": 4,
+              "children": [
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Collapsible body</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -112.22222222222209,
+                    "y": 39.888888888888886
+                  },
+                  "id": 5,
+                  "parentId": 16
+                },
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement functional sibling drop</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": 89.02603997542447,
+                    "y": -38.840752146653564
+                  },
+                  "id": 32,
+                  "parentId": 16
+                }
+              ],
+              "id": 16,
               "parentId": null
             },
             {
               "anchor": {
                 "x": 0.5,
-                "y": 0.5
-              },
-              "hasTitle": false,
-              "hasBody": true,
-              "title": "",
-              "body": "<h2>Next</h2>",
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "expandedHeight": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "note",
-              "pos": {
-                "x": 0.6944444444444446,
-                "y": -156.58333333333337
-              },
-              "id": 11,
-              "parentId": null
-            },
-            {
-              "anchor": {
-                "x": 0,
                 "y": 0
               },
-              "hasTitle": false,
+              "hasTitle": true,
               "hasBody": true,
-              "title": "",
-              "body": "<p>Collapsible body</p>",
-              "collapsible": false,
+              "title": "<h2>Later</h2>",
+              "body": "",
+              "collapsible": true,
               "collapsed": false,
               "collapsedSize": {
                 "x": "expanded",
                 "y": "auto"
               },
               "size": {
-                "x": "auto",
+                "x": 204.73065185546875,
                 "y": "auto"
               },
-              "expandedHeight": 0,
+              "expandedHeight": 221.74999041607862,
               "movable": true,
               "resizable": true,
               "wrapTitle": true,
               "wrapBody": true,
               "readOnly": false,
-              "type": "note",
+              "type": "container",
               "pos": {
-                "x": 169.7777777777779,
-                "y": -98.11111111111111
+                "x": -269.0624932341816,
+                "y": -122.07665932510845
               },
-              "id": 5,
-              "parentId": null
-            },
-            {
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "hasTitle": false,
-              "hasBody": true,
-              "title": "",
-              "body": "<p>Ability to add more children to containers</p>",
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "expandedHeight": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "note",
-              "pos": {
-                "x": -121.26561748923979,
-                "y": -100.50000813408975
-              },
-              "id": 12,
+              "children": [
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement dragging container children outside</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 56.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -412.9444444444446,
+                    "y": 39.69444444444447
+                  },
+                  "id": 4,
+                  "parentId": 14
+                },
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement element alignment tools</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": 26.047812128797155
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -361.4218685897033,
+                    "y": 1.546870344706015
+                  },
+                  "id": 27,
+                  "parentId": 14
+                },
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement element alignment while dragging</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -378.5971532401693,
+                    "y": 37.658996801634274
+                  },
+                  "id": 31,
+                  "parentId": 14
+                }
+              ],
+              "id": 14,
               "parentId": null
             }
           ],
@@ -275,10 +380,10 @@
         },
         "camera": {
           "pos": {
-            "x": 23.557197452166463,
-            "y": -55.208748368464754
+            "x": -24.880201209185007,
+            "y": 44.34034833039363
           },
-          "zoom": 1
+          "zoom": 0.9853295856378638
         }
       }
     ],

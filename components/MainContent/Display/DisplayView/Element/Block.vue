@@ -9,7 +9,7 @@
 
     <div :id="`elem-${elem.id}`"
     style="min-height: 40px"
-    :style="`position: ${elem.parentId == null ? 'absolute' : 'static'}; ` +
+    :style="`position: ${elem.parentId == null ? 'absolute' : 'relative'}; ` +
     (minWidth ? `min-width: ${minWidth}; ` : '') +
     `width: ${width}; height: ${height}; ` +
     (elem.parentId == null ? `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` : '') +
@@ -130,6 +130,24 @@
 
       </v-sheet>
 
+
+
+      <!-- Element drop helpers -->
+
+      <div v-if="elem.parentId != null && $state.dragging.active">
+
+        <div class="drop-zone"
+        style="top: 0%; bottom: 50%"
+        @pointerup="onDropZonePointerUp($event, 0)">
+        </div>
+
+        <div class="drop-zone"
+        style="top: 50%; bottom: 0%"
+        @pointerup="onDropZonePointerUp($event, 1)">
+        </div>
+
+      </div>
+
     </div>
 
   </div>
@@ -207,6 +225,28 @@ export default {
       if (event.button === 0) {
         $app.collapsing.toggleCollapsed(this.elem)
         event.stopPropagation()
+      }
+    },
+
+
+
+    // Drop zones
+
+    onDropZonePointerUp(event, offset) {
+      if (event.button !== 0)
+        return
+
+      const parentElem = $app.elems.getById(this.elem.parentId)
+      
+      const index = parentElem.children.findIndex(item => item.id == this.elem.id) + offset
+
+      for (const selectedElem of $app.selection.getElems()) {
+        $app.elems.removeFromRegion(selectedElem)
+        parentElem.children.splice(index, 0, selectedElem)
+          
+        selectedElem.parentId = parentElem.id
+
+        $app.selection.add(selectedElem)
       }
     },
 
@@ -315,5 +355,10 @@ export default {
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.drop-zone {
+  position: absolute;
+  left: 0; right: 0;
 }
 </style>

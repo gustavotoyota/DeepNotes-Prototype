@@ -43,7 +43,7 @@ selection.getElems = () => {
   const elems = []
 
   for (const elemId of $app.selection.getElemIds()) {
-    const elem = $getters.region.find((item) => item.id == elemId)
+    const elem = $getters.regionArray.find((item) => item.id == elemId)
 
     elems.push(elem)
   }
@@ -62,7 +62,7 @@ selection.set = (elem) => {
 
 
 selection.addAll = () => {
-  for (const elem of $getters.region)
+  for (const elem of $getters.regionArray)
     $app.selection.add(elem)
 }
 

@@ -30,7 +30,6 @@ $app.deleting = require('./elems/deleting')
 $app.defaultProps = require('./elems/default-props')
 $app.clipboard = require('./elems/clipboard')
 
-
 $app.blocks = require('./blocks/blocks')
 $app.notes = require('./blocks/notes')
 $app.containers = require('./blocks/containers')
