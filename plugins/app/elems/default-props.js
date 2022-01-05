@@ -28,6 +28,9 @@ defaultProps.set = () => {
   if (defaultProps.body != null)
     delete defaultProps.body
 
+  if (defaultProps.children != null)
+    delete defaultProps.children
+
   $state.project.defaultProps[$getters.elem.type] = defaultProps
 }
 
