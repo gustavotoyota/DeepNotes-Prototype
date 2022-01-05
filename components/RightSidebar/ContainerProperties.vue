@@ -42,7 +42,7 @@
       <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4" style="display: flex">
-        <div>
+        <div style="flex: 1">
           <div class="body-2 grey--text text--lighten-1"
           style="margin-left: 1px">
             X anchor:
@@ -65,7 +65,7 @@
 
         <Gap width="16px" style="flex: none"/>
 
-        <div>
+        <div style="flex: 1">
           <div class="body-2 grey--text text--lighten-1"
           style="margin-left: 1px">
             Y anchor:
