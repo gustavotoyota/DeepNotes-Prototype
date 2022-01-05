@@ -9,7 +9,7 @@
     :id="`elem-${elem.id}-editor-1`"
     v-model="elem.body"
     :disabled="!editing || elem.readOnly"
-    :wrap="elem.wrapText"/>
+    :wrap="elem.wrapBody"/>
 
   </Block>
   
