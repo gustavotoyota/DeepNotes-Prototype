@@ -13,8 +13,8 @@ notes.create = (clientPos) => {
 
     anchor: { x: 0.5, y: 0.5 },
 
-    hasTitle: true,
-    hasBody: false,
+    hasTitle: false,
+    hasBody: true,
     
     title: '',
     body: '',
