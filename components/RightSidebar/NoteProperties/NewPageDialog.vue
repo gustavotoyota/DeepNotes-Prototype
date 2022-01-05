@@ -89,9 +89,9 @@ export default {
       setTimeout(() => {
         let editorNode
         if ($getters.elem.hasTitle)
-          editorNode = $app.elems.getEditorNode($getters.elem.id, 0)
+          editorNode = $app.elems.getEditorNode($getters.elem, 0)
         else
-          editorNode = $app.elems.getEditorNode($getters.elem.id, 1)
+          editorNode = $app.elems.getEditorNode($getters.elem, 1)
 
         this.name = editorNode.innerText.split('\n')[0]
         this.$refs.name.focus()

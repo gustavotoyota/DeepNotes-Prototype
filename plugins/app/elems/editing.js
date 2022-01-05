@@ -22,7 +22,7 @@ editing.start = (elem, editorIdx) => {
         editorIdx = 1
     }
     
-    const editor = $app.elems.getEditorNode(elem.id, editorIdx)
+    const editor = $app.elems.getEditorNode(elem, editorIdx)
     const quill = editor.__vue__.quill
 
     quill.focus()

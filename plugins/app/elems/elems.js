@@ -88,6 +88,6 @@ elems.getSizeProp = (elem) => {
 
 
 
-elems.getEditorNode = (elemId, editorIdx) => {
-  return document.getElementById(`elem-${elemId}-editor-${editorIdx}`)
+elems.getEditorNode = (elem, editorIdx) => {
+  return document.getElementById(`elem-${elem.id}-editor-${editorIdx}`)
 }
