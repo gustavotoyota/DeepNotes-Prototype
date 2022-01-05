@@ -15,19 +15,20 @@ defaultProps.init = () => {
 
 
 defaultProps.set = () => {
-  const elem = $getters.elem
-
-  const defaultProps = $utils.deepCopy(elem)
+  const defaultProps = $utils.deepCopy($getters.elem)
 
   delete defaultProps.id
-  delete defaultProps.pos
+  delete defaultProps.type 
 
-  if (elem.type === 'note')
-    delete defaultProps.content
-  else if (elem.type === 'container')
+  if (defaultProps.pos != null)
+    delete defaultProps.pos
+
+  if (defaultProps.title != null)
     delete defaultProps.title
+  if (defaultProps.body != null)
+    delete defaultProps.body
 
-  $state.project.defaultProps[elem.type] = defaultProps
+  $state.project.defaultProps[$getters.elem.type] = defaultProps
 }
 
 
@@ -35,5 +36,5 @@ defaultProps.set = () => {
 
 defaultProps.copy = (targets) => {
   for (const elem of targets)
-    $utils.merge(elem, $state.project.defaultProps[elem.type])
+    $merge(elem, $state.project.defaultProps[elem.type])
 }
