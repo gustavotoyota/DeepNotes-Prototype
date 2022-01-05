@@ -30,40 +30,48 @@ export default {
 
 
 
-  computed: {
+  asyncComputed: {
     
-    displayRect() {
-      // Dependencies
+    displayRect: {
+      default: {
+        pos: { x: 0, y: 0 },
+        size: { x: 0, y: 0 },
+      },
+      async get() {
+        // Dependencies
 
-      $getters.page.camera.pos.x
-      $getters.page.camera.pos.y
-      $getters.page.camera.zoom
+        $getters.page.camera.pos.x
+        $getters.page.camera.pos.y
+        $getters.page.camera.zoom
 
-      this.elem.parentId
-      
-      this.elem.pos.x; this.elem.pos.y
+        this.elem.parentId
+        
+        this.elem.pos.x; this.elem.pos.y
 
-      this.elem.anchor.x; this.elem.anchor.y
+        this.elem.anchor.x; this.elem.anchor.y
 
-      this.elem.size.x; this.elem.size.y
-      this.elem.collapsedSize.x; this.elem.collapsedSize.y
-      
-      this.elem.collapsible
-      this.elem.collapsed
-      
-      this.elem.resizable
+        this.elem.size.x; this.elem.size.y
+        this.elem.collapsedSize.x; this.elem.collapsedSize.y
+        
+        this.elem.collapsible
+        this.elem.collapsed
+        
+        this.elem.resizable
 
-      this.elem.hasTitle; this.elem.hasBody
-      this.elem.title; this.elem.body
+        this.elem.hasTitle; this.elem.hasBody
+        this.elem.title; this.elem.body
 
-      
 
-      const clientRect = $app.elems.getClientRect(this.elem)
 
-      return {
-        pos: $app.coords.clientToDisplay(clientRect),
-        size: { x: clientRect.width, y: clientRect.height },
-      }
+        await this.$nextTick()
+
+        const clientRect = $app.elems.getClientRect(this.elem)
+
+        return {
+          pos: $app.coords.clientToDisplay(clientRect),
+          size: { x: clientRect.width, y: clientRect.height },
+        }
+      },
     },
 
   },
