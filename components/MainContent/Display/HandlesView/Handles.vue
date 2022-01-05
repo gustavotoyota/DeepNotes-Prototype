@@ -42,8 +42,11 @@ export default {
       this.elem.parentId
       
       this.elem.pos.x; this.elem.pos.y
-      this.elem.size.x; this.elem.size.y
+
       this.elem.anchor.x; this.elem.anchor.y
+
+      this.elem.size.x; this.elem.size.y
+      this.elem.collapsedSize.x; this.elem.collapsedSize.y
       
       this.elem.collapsible
       this.elem.collapsed
