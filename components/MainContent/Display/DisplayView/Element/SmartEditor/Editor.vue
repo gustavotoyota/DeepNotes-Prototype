@@ -24,6 +24,15 @@ export default {
       placeholder: '',
 
       modules: {
+        syntax: true,
+
+        keyboard: {
+          bindings: {
+            'indent code-block': null,
+            'outdent code-block': null,
+          },
+        },
+
         toolbar: [
           [
             'bold',

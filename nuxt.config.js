@@ -28,6 +28,7 @@ export default {
     { src: '~/plugins/app/global-mixin.js' },
     { src: '~/plugins/app/app-mixin.js' },
     
+    { src: '~/plugins/external/highlight.js', mode: 'client' },
     { src: '~/plugins/external/quill-editor.js', mode: 'client' },
     { src: '~/plugins/external/vue-async-computed.js' },
   ],

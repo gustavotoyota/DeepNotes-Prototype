@@ -142,39 +142,6 @@
               "hasTitle": false,
               "hasBody": true,
               "title": "",
-              "body": "<p>Ability to add more children to container</p>",
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": "auto"
-              },
-              "size": {
-                "x": "auto",
-                "y": "auto"
-              },
-              "expandedHeight": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "note",
-              "pos": {
-                "x": -373.2777777777782,
-                "y": -42.30555555555552
-              },
-              "id": 12,
-              "parentId": null
-            },
-            {
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "hasTitle": false,
-              "hasBody": true,
-              "title": "",
               "body": "<p>Drag container children outside</p>",
               "collapsible": false,
               "collapsed": false,
@@ -265,6 +232,39 @@
               },
               "id": 5,
               "parentId": null
+            },
+            {
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "hasTitle": false,
+              "hasBody": true,
+              "title": "",
+              "body": "<p>Ability to add more children to containers</p>",
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "note",
+              "pos": {
+                "x": -122.97466382018105,
+                "y": -100.51558205732228
+              },
+              "id": 12,
+              "parentId": null
             }
           ],
           "arrows": [],
@@ -275,10 +275,10 @@
         },
         "camera": {
           "pos": {
-            "x": -28.69531843397351,
-            "y": -116.64063135782877
+            "x": -44.29688093397351,
+            "y": -92.82031885782877
           },
-          "zoom": 1
+          "zoom": 0.858958550697145
         }
       }
     ],
