@@ -4,7 +4,7 @@
   :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
     <div :id="`elem-${elem.id}`"
-    style="min-width: 165px; min-height: 40px"
+    style="min-height: 40px"
     :style="`position: ${elem.parentId == null ? 'absolute' : 'static'};
     min-width: ${elem.parentId == null ? 'max-content' : 0};
     width: ${width}; height: ${height}; ` +
@@ -27,7 +27,7 @@
 
           <div style="flex: 1"
           :style="`padding: 10px;
-          width: ${contentWidth};
+          width: ${targetWidth};
           padding-right: ${ elem.collapsible ? 0 : `10px`}`">
 
             <SmartEditor ref="editor-0"
@@ -58,7 +58,7 @@
         <div v-if="elem.hasBody && !(elem.collapsed && elem.collapsedSize.x === 'auto')"
         style="flex: 1; height: 0; min-width: 100%"
         :style="`max-height: ${ visibleBody ? 'none' : 0 }; 
-        width: ${contentWidth}`">
+        width: ${targetWidth}`">
 
           <v-divider/>
 
@@ -88,7 +88,7 @@ export default {
   props: {
     elem: { type: Object },
 
-    rootWidth: { },
+    inheritedWidth: { },
   },
 
 
@@ -217,13 +217,9 @@ export default {
 
 
 
-    contentWidth() {
-      if (this.elem.parentId != null) {
-        if (this.rootWidth === 'auto')
-          return 'auto'
-        else
-          return 0
-      }
+    targetWidth() {
+      if (this.inheritedWidth != null)
+        return this.inheritedWidth
 
       if (this.elem[this.sizeProp].x === 'auto'
       || this.elem[this.sizeProp].x === 'expanded' && this.elem.size.x === 'auto')

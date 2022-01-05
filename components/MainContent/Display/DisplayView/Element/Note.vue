@@ -1,7 +1,7 @@
 <template>
 
   <Block :elem="elem"
-  :root-width="rootWidth"
+  :inherited-width="inheritedWidth"
   @body-pointerdown="onBodyPointerDown"
   @body-dblclick="onBodyDoubleClick">
 
@@ -21,7 +21,7 @@ export default {
   props: {
     elem: { type: Object },
 
-    rootWidth: { },
+    inheritedWidth: { },
   },
 
 

@@ -1,7 +1,7 @@
 <template>
 
-  <Block :elem="elem"
-  :root-width="rootWidth">
+  <Block refs="block" :elem="elem"
+  :inherited-width="inheritedWidth">
     
     <div v-if="elem.children.length === 0"
     style="padding: 8px;
@@ -20,7 +20,7 @@
     style="height: 100%; overflow: auto">
 
       <Element v-for="child of elem.children" :key="child.id"
-      :elem="child" :root-width="contentWidth"/>
+      :elem="child" :inherited-width="targetWidth"/>
 
     </div>
 
@@ -34,7 +34,7 @@ export default {
   props: {
     elem: { type: Object },
 
-    rootWidth: { },
+    inheritedWidth: { },
   },
 
 
@@ -42,7 +42,8 @@ export default {
   methods: {
 
     onDropZonePointerUp(event) {
-      if ($state.dragging.active && event.button === 0
+      if (event.button === 0
+      && $state.dragging.active
       && !$app.selection.has(this.elem)) {
         for (const selectedElem of $app.selection.getElems()) {
           $app.elems.removeFromRegion(selectedElem)
@@ -73,13 +74,9 @@ export default {
     sizeProp() {
       return $app.elems.getSizeProp(this.elem)
     },
-    contentWidth() {
-      if (this.elem.parentId != null) {
-        if (this.rootWidth === 'auto')
-          return 'auto'
-        else
-          return 0
-      }
+    targetWidth() {
+      if (this.inheritedWidth != null)
+        return this.inheritedWidth
 
       if (this.elem[this.sizeProp].x === 'auto'
       || this.elem[this.sizeProp].x === 'expanded' && this.elem.size.x === 'auto')
