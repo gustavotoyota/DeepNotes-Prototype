@@ -34,7 +34,7 @@
             :id="`elem-${elem.id}-editor-0`"
             v-model="elem.title"
             :disabled="!editing || elem.readOnly"
-            :wrap="elem.wrapText"/>
+            :wrap="elem.wrapTitle"/>
 
           </div>
 

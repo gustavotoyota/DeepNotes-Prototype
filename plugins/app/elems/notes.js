@@ -30,7 +30,9 @@ notes.create = (clientPos) => {
     movable: true,
     resizable: true,
 
-    wrapText: true,
+    wrapTitle: true,
+    wrapBody: true,
+    
     readOnly: false,
   })
 

@@ -29,7 +29,8 @@ containers.create = (clientPos) => {
     movable: true,
     resizable: true,
 
-    wrapText: true,
+    wrapTitle: true,
+
     readOnly: false,
     
     children: [],

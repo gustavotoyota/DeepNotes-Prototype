@@ -168,10 +168,7 @@
             { text: 'Custom', value: 'custom' },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          :value="$getters.elem.anchor.x"
-          @change="changeProp((elem, value) => {
-            elem.anchor.x = value
-          }, $event)">
+          v-model="width">
           </v-select>
         </div>
 
@@ -222,15 +219,27 @@
         
       <div class="mx-5 mt-4"
       style="display: flex">
-        <v-checkbox hide-details label="Wrap text"
+        <v-checkbox hide-details label="Wrap title"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="$getters.elem.wrapText"
+        :input-value="$getters.elem.wrapTitle"
         @change="changeProp((elem, value) => {
-          elem.wrapText = value
+          elem.wrapTitle = value
         }, $event)"/>
 
         <Gap width="16px" style="flex: none"/>
         
+        <v-checkbox hide-details label="Wrap body"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        :input-value="$getters.elem.wrapBody"
+        @change="changeProp((elem, value) => {
+          elem.wrapBody = value
+        }, $event)"/>
+      </div>
+
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5 mt-4"
+      style="display: flex">
         <v-checkbox hide-details label="Read-only"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.readOnly"

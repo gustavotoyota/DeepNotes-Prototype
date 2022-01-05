@@ -171,11 +171,11 @@
         
       <div class="mx-5 mt-4"
       style="display: flex">
-        <v-checkbox hide-details label="Wrap text"
+        <v-checkbox hide-details label="Wrap title"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="$getters.elem.wrapText"
+        :input-value="$getters.elem.wrapTitle"
         @change="onPropChange((elem, value) => {
-          elem.wrapText = value }, $event)"/>
+          elem.wrapTitle = value }, $event)"/>
 
         <Gap width="16px" style="flex: none"/>
         
