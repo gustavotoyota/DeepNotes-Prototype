@@ -37,7 +37,7 @@
 
           <!-- Title content -->
 
-          <div style="flex: 1"
+          <div style="flex: 1 /* Title content is horizontally flexible */"
           :style="`padding: 10px;
           width: ${targetWidth} /* Auto or 0 (custom) */;
           padding-right: ${elem.collapsible ? 0 : `10px`} /* Padding 0 when collapsible */`">
@@ -58,9 +58,9 @@
           style="flex: none /* Button is horizontally inflexible */">
 
             <v-btn plain tile
-            style="min-width: 0 /* Allows reducing button width */;
-            width: 32px /* Reduces button width to 32px */;
-            height: 100% /* Makes the button height the same as the title */"
+            style="min-width: 0 /* Allows reducing collapse button width */;
+            width: 32px /* Reduces collapse button width to 32px */;
+            height: 100% /* Makes the collapse button height the same as the title */"
             @pointerdown="onCollapseButtonPointerDown"
             @click="onCollapseButtonClick"
             @dblclick.stop>
@@ -84,20 +84,45 @@
 
         <div v-if="elem.hasBody && !(elem.collapsed && elem.collapsedSize.x === 'auto')"
         style="flex: 1 /* Body is vertically flexible */;
-        height: 0 /* Body wants the least height */"
-        :style="(elem[sizeProp].x === 'expanded' ? 'max-height: 0 /* Squash height if collapsed and width is set to expanded */' : '')">
+        height: 0 /* Body wants the least height */;
+        max-height: 100% /* Brings vertical scroll to body */;
+        display: flex /* Horizontal flex */"
+        :style="(elem.hasTitle && elem[sizeProp].x === 'expanded' ? 'max-height: 0 /* Squash height if collapsed and width is set to expanded */' : '')">
 
 
 
           <!-- Body content -->
 
           <div :id="`elem-${elem.id}-body`"
-          style="padding: 10px !important; /* '!important' is necessary because of padding bug */"
-          :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`"
+          style="flex: 1 /* Body content is horizontally flexible */;
+          padding: 10px !important; /* '!important' is necessary because of padding bug */"
+          :style="`height: ${elem.hasTitle && elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%'};
+          width: ${targetWidth} /* Auto or 0 (custom) */;
+          padding-right: ${!elem.hasTitle && elem.collapsible ? 0 : `10px`} /* Padding 0 when collapsible */`"
           @pointerdown="$emit('body-pointerdown', $event)"
           @dblclick="$emit('body-dblclick', $event)">
 
             <slot/>
+
+          </div>
+
+
+
+          <!-- Body collapse button -->
+
+          <div v-if="!elem.hasTitle && elem.collapsible"
+          style="flex: none /* Button is horizontally inflexible */">
+
+            <v-btn plain tile
+            style="min-width: 0 /* Allows reducing collapse button width */;
+            width: 32px /* Reduces collapse button width to 32px */;
+            height: 40px /* Makes collapse button fixed to 40px height */"
+            @pointerdown="onCollapseButtonPointerDown"
+            @click="onCollapseButtonClick"
+            @dblclick.stop>
+              <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
+              <v-icon v-else>mdi-chevron-up</v-icon>
+            </v-btn>
 
           </div>
 
