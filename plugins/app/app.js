@@ -26,18 +26,19 @@ $app.clickSelection = require('./selection/click-selection')
 $app.boxSelection = require('./selection/box-selection')
 
 $app.elems = require('./elems/elems')
-$app.popup = require('./elems/popup')
-$app.editing = require('./elems/editing')
-$app.dragging = require('./elems/dragging')
 $app.deleting = require('./elems/deleting')
-$app.resizing = require('./elems/resizing')
-$app.collapsing = require('./elems/collapsing')
 $app.defaultProps = require('./elems/default-props')
 $app.clipboard = require('./elems/clipboard')
+
 
 $app.blocks = require('./blocks/blocks')
 $app.notes = require('./blocks/notes')
 $app.containers = require('./blocks/containers')
+$app.popup = require('./blocks/popup')
+$app.editing = require('./blocks/editing')
+$app.dragging = require('./blocks/dragging')
+$app.resizing = require('./blocks/resizing')
+$app.collapsing = require('./blocks/collapsing')
 
 
 
