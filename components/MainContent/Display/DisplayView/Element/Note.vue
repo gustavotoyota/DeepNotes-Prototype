@@ -1,6 +1,7 @@
 <template>
 
   <Block :elem="elem"
+  min-width="22px"
   :inherited-width="inheritedWidth"
   @body-pointerdown="onBodyPointerDown"
   @body-dblclick="onBodyDoubleClick">
