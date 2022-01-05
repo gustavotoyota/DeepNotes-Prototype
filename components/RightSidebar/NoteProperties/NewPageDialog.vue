@@ -87,9 +87,13 @@ export default {
         return
 
       setTimeout(() => {
-        const editor0Node = $app.elems.getEditorNode($getters.elem.id, 0)
+        let editorNode
+        if ($getters.elem.hasTitle)
+          editorNode = $app.elems.getEditorNode($getters.elem.id, 0)
+        else
+          editorNode = $app.elems.getEditorNode($getters.elem.id, 1)
 
-        this.name = editor0Node.innerText.split('\n')[0]
+        this.name = editorNode.innerText.split('\n')[0]
         this.$refs.name.focus()
       })
     }
