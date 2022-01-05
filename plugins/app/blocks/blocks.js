@@ -1,16 +1,11 @@
-const notes = module.exports = {}
+const blocks = module.exports = {}
 
 
 
 
-notes.create = (clientPos) => {
-  const note = $app.elems.create({ type: 'note' })
-  
-  const worldPos = $app.coords.clientToWorld(clientPos)
-
-  $merge(note, {
-    pos: $utils.shallowCopy(worldPos),
-
+blocks.create = (overrides) => {
+  return $app.elems.create(
+    {
     anchor: { x: 0.5, y: 0.5 },
 
     hasTitle: false,
@@ -34,11 +29,7 @@ notes.create = (clientPos) => {
     wrapBody: true,
     
     readOnly: false,
+
+    ...overrides,
   })
-
-  $app.defaultProps.copy([note])
-
-  $app.editing.start(note)
-
-  return note
 }

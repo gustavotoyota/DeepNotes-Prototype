@@ -35,8 +35,9 @@ $app.collapsing = require('./elems/collapsing')
 $app.defaultProps = require('./elems/default-props')
 $app.clipboard = require('./elems/clipboard')
 
-$app.notes = require('./elems/notes')
-$app.containers = require('./elems/containers')
+$app.blocks = require('./blocks/blocks')
+$app.notes = require('./blocks/notes')
+$app.containers = require('./blocks/containers')
 
 
 
