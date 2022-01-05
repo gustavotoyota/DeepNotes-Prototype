@@ -106,7 +106,7 @@ export default async function ({ app }) {
           $app.clipboard.paste()
 
         if (event.code === 'F2' && $getters.elem)
-          $app.editing.start($getters.elem, 0)
+          $app.editing.start($getters.elem)
 
         if (event.code === 'Backspace')
           $app.pages.back()
@@ -127,7 +127,7 @@ export default async function ({ app }) {
           return
           
         if ($getters.elem)
-          $app.editing.start($getters.elem, 0)
+          $app.editing.start($getters.elem)
       },
 
 

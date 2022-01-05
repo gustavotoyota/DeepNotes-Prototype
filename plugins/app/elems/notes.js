@@ -38,7 +38,7 @@ notes.create = (clientPos) => {
 
   $app.defaultProps.copy([note])
 
-  $app.editing.start(note, 0)
+  $app.editing.start(note)
 
   return note
 }

@@ -15,6 +15,13 @@ editing.start = (elem, editorIdx) => {
   $getters.page.elems.editing = true
 
   $nextTick(() => {
+    if (editorIdx == null) {
+      if (elem.hasTitle || (elem.hasBody && elem.collapsed))
+        editorIdx = 0
+      else
+        editorIdx = 1
+    }
+    
     const editor = $app.elems.getEditorNode(elem.id, editorIdx)
     const quill = editor.__vue__.quill
 
