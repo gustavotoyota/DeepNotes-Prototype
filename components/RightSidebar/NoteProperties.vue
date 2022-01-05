@@ -28,8 +28,9 @@
         :items="recentPages" item-text="text" item-value="value"
         :menu-props="{ top: false, offsetY: true }"
         :value="$getters.elem.linkedPageId"
-        @change="onPropChange((elem, value) => {
-          elem.linkedPageId = value }, $event)"/>
+        @change="changeProp((elem, value) => {
+          elem.linkedPageId = value
+        }, $event)"/>
 
         <Gap height="10px"/>
         
@@ -56,11 +57,23 @@
         
       <div class="mx-5 mt-4"
       style="display: flex">
+        <v-checkbox hide-details label="Has title"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        :input-value="$getters.elem.hasTitle"
+        @change="changeProp((elem, value) => {
+          elem.hasTitle = value
+          elem.hasBody = elem.hasBody || (!elem.hasTitle && !elem.hasBody)
+        }, $event)"/>
+
+        <Gap width="16px" style="flex: none"/>
+
         <v-checkbox hide-details label="Has body"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.hasBody"
-        @change="onPropChange((elem, value) => {
-          elem.hasBody = value }, $event)"/>
+        @change="changeProp((elem, value) => {
+          elem.hasBody = value
+          elem.hasTitle = elem.hasTitle || (!elem.hasTitle && !elem.hasBody)
+        }, $event)"/>
       </div>
 
       <v-divider class="mt-4"/>
@@ -83,8 +96,9 @@
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
           :value="$getters.elem.anchor.x"
-          @change="onPropChange((elem, value) => {
-            elem.anchor.x = value }, $event)"/>
+          @change="changeProp((elem, value) => {
+            elem.anchor.x = value
+          }, $event)"/>
         </div>
 
         <Gap width="16px" style="flex: none"/>
@@ -106,8 +120,9 @@
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
           :value="$getters.elem.anchor.y"
-          @change="onPropChange((elem, value) => {
-            elem.anchor.y = value }, $event)"/>
+          @change="changeProp((elem, value) => {
+            elem.anchor.y = value
+          }, $event)"/>
         </div>
       </div>
 
@@ -117,7 +132,11 @@
       style="display: flex">
         <v-checkbox hide-details label="Collapsible"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        v-model="collapsible">
+        :input-value="$getters.elem.collapsible"
+        @change="changeProp((elem, value) => {
+          elem.collapsible = value
+          elem.collapsed = elem.collapsed && value
+        }, $event)">
         </v-checkbox>
 
         <Gap width="16px" style="flex: none"/>
@@ -125,7 +144,10 @@
         <v-checkbox hide-details label="Collapsed"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :disabled="!$getters.elem.collapsible"
-        v-model="collapsed">
+        :input-value="$getters.elem.collapsed"
+        @change="changeProp((elem, value) => {
+          $app.collapsing.setCollapsed(elem, value)
+        }, $event)">
         </v-checkbox>
       </div>
         
@@ -146,7 +168,10 @@
             { text: 'Custom', value: 'custom' },
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
-          v-model="width">
+          :value="$getters.elem.anchor.x"
+          @change="changeProp((elem, value) => {
+            elem.anchor.x = value
+          }, $event)">
           </v-select>
         </div>
 
@@ -179,16 +204,18 @@
         <v-checkbox hide-details label="Movable"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.movable"
-        @change="onPropChange((elem, value) => {
-          elem.movable = value }, $event)"/>
+        @change="changeProp((elem, value) => {
+          elem.movable = value
+        }, $event)"/>
 
         <Gap width="16px" style="flex: none"/>
         
         <v-checkbox hide-details label="Resizable"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.resizable"
-        @change="onPropChange((elem, value) => {
-          elem.resizable = value }, $event)"/>
+        @change="changeProp((elem, value) => {
+          elem.resizable = value
+        }, $event)"/>
       </div>
 
       <v-divider class="mt-4"/>
@@ -198,16 +225,18 @@
         <v-checkbox hide-details label="Wrap text"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.wrapText"
-        @change="onPropChange((elem, value) => {
-          elem.wrapText = value }, $event)"/>
+        @change="changeProp((elem, value) => {
+          elem.wrapText = value
+        }, $event)"/>
 
         <Gap width="16px" style="flex: none"/>
         
         <v-checkbox hide-details label="Read-only"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.readOnly"
-        @change="onPropChange((elem, value) => {
-          elem.readOnly = value }, $event)"/>
+        @change="changeProp((elem, value) => {
+          elem.readOnly = value
+        }, $event)"/>
       </div>
 
     </div>
@@ -220,7 +249,7 @@
 export default {
 
   methods: {
-    onPropChange(func, value) {
+    changeProp(func, value) {
       for (const elem of $app.selection.getElems())
         func(elem, value)
     },
@@ -256,23 +285,6 @@ export default {
 
 
     // Properties
-
-    collapsible: {
-      get() { return $getters.elem.collapsible },
-      set(value) {
-        for (const elem of $app.selection.getElems()) {
-          elem.collapsible = value
-          elem.collapsed = elem.collapsed && value
-        }
-      },
-    },
-    collapsed: {
-      get() { return $getters.elem.collapsed },
-      set(value) {
-        for (const elem of $app.selection.getElems())
-          $app.collapsing.setCollapsed(elem, value)
-      },
-    },
    
     width: {
       get() {

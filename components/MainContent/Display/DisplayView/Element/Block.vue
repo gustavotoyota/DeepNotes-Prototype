@@ -63,7 +63,7 @@
           <v-divider/>
 
           <div :id="`elem-${elem.id}-body`"
-          style="padding: 10px"
+          style="padding: 10px !important"
           :style="`height: ${ elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%' }`"
           @pointerdown="$emit('body-pointerdown', $event)"
           @dblclick="$emit('body-dblclick', $event)">
