@@ -1,6 +1,7 @@
 <template>
 
   <Block :elem="elem"
+  min-width="170px"
   :inherited-width="inheritedWidth">
     
     <div v-if="elem.children.length === 0"
