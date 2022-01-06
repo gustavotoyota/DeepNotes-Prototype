@@ -91,3 +91,11 @@ elems.getSizeProp = (elem) => {
 elems.getEditorNode = (elem, editorIdx) => {
   return document.getElementById(`elem-${elem.id}-editor-${editorIdx}`)
 }
+
+
+
+elems.isOnTop = (elem) => {
+  const region = elems.getRegion(elem)
+
+  return elem.id == region.at(-1).id
+}
