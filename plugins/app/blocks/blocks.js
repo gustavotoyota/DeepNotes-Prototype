@@ -5,6 +5,8 @@ const blocks = module.exports = {}
 
 blocks.create = (overrides) => {
   return $app.elems.create({
+    parentId: null,
+
     anchor: { x: 0.5, y: 0.5 },
 
     hasTitle: false,
