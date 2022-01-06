@@ -20,6 +20,9 @@ defaultProps.set = () => {
   delete defaultProps.id
   delete defaultProps.type 
 
+  if (defaultProps.parentId != null)
+    delete defaultProps.parentId
+
   if (defaultProps.pos != null)
     delete defaultProps.pos
 

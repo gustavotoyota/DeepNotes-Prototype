@@ -37,7 +37,7 @@ editing.stop = () => {
   if (!$getters.page.elems.editing)
     return
 
-  const elem = $app.elems.getById($getters.page.elems.activeId)
+  const elem = $app.elems.getById($getters.elemId)
   if (!elem)
     return
 

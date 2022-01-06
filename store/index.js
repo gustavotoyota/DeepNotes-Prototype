@@ -29,7 +29,10 @@ getters.regionArray = () => {
   else
     return $getters.regionElem.children
 }
+getters.elemId = () => {
+  return $getters.page.elems.activeId
+}
 getters.elem = () => {
   return $getters.regionArray.find(
-    (item) => item.id == $getters.page.elems.activeId)
+    (item) => item.id == $getters.elemId)
 }

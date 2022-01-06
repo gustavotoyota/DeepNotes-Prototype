@@ -4,9 +4,9 @@ const collapsing = module.exports = {}
 
 
 collapsing.expand = (elem) => {
-  $app.elems.bringToTop(elem)
-
   elem.collapsed = false
+  
+  $app.elems.bringToTop(elem)
 }
 collapsing.collapse = (elem) => {
   if (!elem.collapsible)
@@ -20,16 +20,29 @@ collapsing.collapse = (elem) => {
   }
 
   elem.collapsed = true
+  
+  $app.elems.bringToTop(elem)
 }
+
+
+
 collapsing.setCollapsed = (elem, collapsed) => {
+  if (collapsed === elem.collapsed)
+    return
+
   if (collapsed)
     $app.collapsing.collapse(elem)
   else
     $app.collapsing.expand(elem)
 }
+
+
+
 collapsing.toggleCollapsed = (elem) => {
-  if (elem.collapsed)
-    $app.collapsing.expand(elem)
-  else
-    $app.collapsing.collapse(elem)
+  const collapsed = elem.collapsed
+
+  for (const selectedElem of $app.selection.getElems())
+    $app.collapsing.setCollapsed(selectedElem, !collapsed)
+
+  $app.collapsing.setCollapsed(elem, !collapsed)
 }

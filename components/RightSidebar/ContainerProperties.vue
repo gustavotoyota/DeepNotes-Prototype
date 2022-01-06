@@ -35,7 +35,7 @@
         <v-checkbox hide-details label="Has title"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.hasTitle"
-        @change="onPropChange((elem, value) => {
+        @change="changeProp((elem, value) => {
           elem.hasTitle = value }, $event)"/>
       </div>
 
@@ -59,7 +59,7 @@
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
           :value="$getters.elem.anchor.x"
-          @change="onPropChange((elem, value) => {
+          @change="changeProp((elem, value) => {
             elem.anchor.x = value }, $event)"/>
         </div>
 
@@ -82,7 +82,7 @@
           ]" item-text="text" item-value="value"
           :menu-props="{ top: false, offsetY: true }"
           :value="$getters.elem.anchor.y"
-          @change="onPropChange((elem, value) => {
+          @change="changeProp((elem, value) => {
             elem.anchor.y = value }, $event)"/>
         </div>
       </div>
@@ -93,7 +93,11 @@
       style="display: flex">
         <v-checkbox hide-details label="Collapsible"
         style="flex: 1; margin-top: 0; padding-top: 0"
-        v-model="collapsible">
+        :input-value="$getters.elem.collapsible"
+        @change="changeProp((elem, value) => {
+          elem.collapsible = value
+          elem.collapsed = elem.collapsed && value
+        }, $event)">
         </v-checkbox>
 
         <Gap width="16px" style="flex: none"/>
@@ -101,7 +105,10 @@
         <v-checkbox hide-details label="Collapsed"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :disabled="!$getters.elem.collapsible"
-        v-model="collapsed">
+        :input-value="$getters.elem.collapsed"
+        @change="changeProp((elem, value) => {
+          $app.collapsing.setCollapsed(elem, value)
+        }, $event)">
         </v-checkbox>
       </div>
         
@@ -155,7 +162,7 @@
         <v-checkbox hide-details label="Movable"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.movable"
-        @change="onPropChange((elem, value) => {
+        @change="changeProp((elem, value) => {
           elem.movable = value }, $event)"/>
 
         <Gap width="16px" style="flex: none"/>
@@ -163,7 +170,7 @@
         <v-checkbox hide-details label="Resizable"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.resizable"
-        @change="onPropChange((elem, value) => {
+        @change="changeProp((elem, value) => {
           elem.resizable = value }, $event)"/>
       </div>
 
@@ -174,7 +181,7 @@
         <v-checkbox hide-details label="Wrap title"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.wrapTitle"
-        @change="onPropChange((elem, value) => {
+        @change="changeProp((elem, value) => {
           elem.wrapTitle = value }, $event)"/>
 
         <Gap width="16px" style="flex: none"/>
@@ -182,7 +189,7 @@
         <v-checkbox hide-details label="Read-only"
         style="flex: 1; margin-top: 0; padding-top: 0"
         :input-value="$getters.elem.readOnly"
-        @change="onPropChange((elem, value) => {
+        @change="changeProp((elem, value) => {
           elem.readOnly = value }, $event)"/>
       </div>
 
@@ -196,7 +203,7 @@
 export default {
 
   methods: {
-    onPropChange(func, value) {
+    changeProp(func, value) {
       for (const elem of $app.selection.getElems())
         func(elem, value)
     },
@@ -209,26 +216,8 @@ export default {
     sizeProp() {
       return $app.elems.getSizeProp($getters.elem)
     },
-
-
-
-
-    collapsible: {
-      get() { return $getters.elem.collapsible },
-      set(value) {
-        for (const elem of $app.selection.getElems()) {
-          elem.collapsible = value
-          elem.collapsed = elem.collapsed && value
-        }
-      },
-    },
-    collapsed: {
-      get() { return $getters.elem.collapsed },
-      set(value) {
-        for (const elem of $app.selection.getElems())
-          $app.collapsing.setCollapsed(elem, value)
-      },
-    },
+    
+    
    
     width: {
       get() {

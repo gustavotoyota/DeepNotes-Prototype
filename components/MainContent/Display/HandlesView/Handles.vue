@@ -30,47 +30,54 @@ export default {
 
 
 
-  asyncComputed: {
-    
-    displayRect: {
-      default: {
+  mounted() {
+    this.updateDisplayRect()
+  },
+
+
+
+  data() {
+    return {
+      displayRect: {
         pos: { x: 0, y: 0 },
         size: { x: 0, y: 0 },
       },
-      async get() {
-        // Dependencies
-
-        $getters.page.camera.pos.x
-        $getters.page.camera.pos.y
-        $getters.page.camera.zoom
-
-        this.elem.parentId
-        
-        this.elem.pos.x; this.elem.pos.y
-
-        this.elem.anchor.x; this.elem.anchor.y
-
-        this.elem.size.x; this.elem.size.y
-        this.elem.collapsedSize.x; this.elem.collapsedSize.y
-        
-        this.elem.collapsible
-        this.elem.collapsed
-        
-        this.elem.resizable
-
-        this.elem.hasTitle; this.elem.hasBody
-        this.elem.title; this.elem.body
+    }
+  },
 
 
 
-        await this.$nextTick()
-
+  methods: {
+    
+    updateDisplayRect() {
+      this.$nextTick(() => {
         const clientRect = $app.elems.getClientRect(this.elem)
 
-        return {
+        this.displayRect = {
           pos: $app.coords.clientToDisplay(clientRect),
           size: { x: clientRect.width, y: clientRect.height },
         }
+      })
+    },
+
+  },
+
+
+
+  watch: {
+
+    '$getters.page.camera': {
+      deep: true,
+
+      handler() {
+        this.updateDisplayRect()
+      },
+    },
+    elem: {
+      deep: true,
+
+      handler() {
+        this.updateDisplayRect()
       },
     },
 

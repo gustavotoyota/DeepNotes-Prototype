@@ -4,7 +4,7 @@
   min-width="22px"
   :inherited-width="inheritedWidth"
   @body-pointerdown="onBodyPointerDown"
-  @body-dblclick="onBodyDoubleClick">
+  @body-dblclick="$app.editing.start(elem, 1)">
 
     <SmartEditor ref="editor-1"
     :id="`elem-${elem.id}-editor-1`"
@@ -40,18 +40,13 @@ export default {
 
 
     onBodyPointerDown(event) {
-      if (!event.target.className.toString().startsWith(`editor-1`))
-        return
+      if (this.editing) {
+        event.stopPropagation()
 
-      if (event.button === 0 && this.editing
-      && !event.target.isContentEditable) {
-        this.$refs[`editor-1`].quill.focus()
-        event.preventDefault()
+        setTimeout(() => {
+          this.$refs[`editor-1`].quill.focus()
+        })
       }
-    },
-    onBodyDoubleClick(event) {
-      if (event.button === 0)
-        $app.editing.start(this.elem, 1)
     },
 
   },

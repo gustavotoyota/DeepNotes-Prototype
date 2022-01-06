@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center"
-    @pointerup="onDropZonePointerUp">
+    @pointerup.left="onDropZonePointerUp">
       Drop notes here
     </div>
 
@@ -44,8 +44,7 @@ export default {
   methods: {
 
     onDropZonePointerUp(event) {
-      if (event.button === 0
-      && $state.dragging.active
+      if ($state.dragging.active
       && !$app.selection.has(this.elem)) {
         for (const selectedElem of $app.selection.getElems()) {
           $app.elems.removeFromRegion(selectedElem)

@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%)"
   :style="`left: ${left}%; top: ${top}%;
   cursor: ${side}-resize`"
-  @pointerdown.stop="onPointerDown">
+  @pointerdown.left.stop="onPointerDown">
   </div>
   
 </template>

@@ -15,6 +15,32 @@
     (elem.parentId == null ? `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` : '') +
     (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
 
+      <!-- Element drop helpers -->
+
+      <div v-if="elem.parentId != null && $state.dragging.active">
+
+        <div class="drop-zone"
+        :class="{ 'active' : $state.dragging.dropRegionId == this.parentElem.id
+          && $state.dragging.dropIndex === index }"
+        style="top: -5px; bottom: 50%"
+        @mouseenter="onDropZoneMouseEnter($event, 0)"
+        @mouseleave="onDropZoneMouseLeave($event, 0)"
+        @pointerup.left.stop="onDropZonePointerUp($event, 0)">
+        </div>
+
+        <div class="drop-zone"
+        :class="{ 'active' : $state.dragging.dropRegionId == this.parentElem.id
+          && $state.dragging.dropIndex === index + 1 }"
+        style="top: 50%; bottom: 0%"
+        @mouseenter="onDropZoneMouseEnter($event, 1)"
+        @mouseleave="onDropZoneMouseLeave($event, 1)"
+        @pointerup.left.stop="onDropZonePointerUp($event, 1)">
+        </div>
+
+      </div>
+
+
+
       <!-- Background -->
 
       <v-sheet style="border-radius: 7px !important;
@@ -23,8 +49,8 @@
       overflow: hidden"
       :color="color" rounded elevation="6"
       :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }`"
-      @pointerdown="onPointerDown"
-      @click="onClick">
+      @pointerdown.left.stop="onPointerDown"
+      @click.left.stop="onClick">
 
         <!-- Title -->
 
@@ -32,8 +58,8 @@
         style="max-height: 100% /* Brings vertical scroll to title */;
         display: flex /* Horizontal flex */"
         :style="`flex: ${elem.hasBody ? 'none' : 1}`"
-        @pointerdown="onTitlePointerDown"
-        @dblclick="onTitleDoubleClick">
+        @pointerdown.left="onTitlePointerDown"
+        @dblclick.left="$app.editing.start(elem, 0)">
 
           <!-- Title content -->
 
@@ -61,9 +87,9 @@
             style="min-width: 0 /* Allows reducing collapse button width */;
             width: 32px /* Reduces collapse button width to 32px */;
             height: 100% /* Makes the collapse button height the same as the title */"
-            @pointerdown="onCollapseButtonPointerDown"
-            @click="onCollapseButtonClick"
-            @dblclick.stop>
+            @pointerdown.left.stop
+            @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
+            @dblclick.left.stop>
               <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
               <v-icon v-else>mdi-chevron-up</v-icon>
             </v-btn>
@@ -99,8 +125,8 @@
           :style="`height: ${elem.hasTitle && elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%'};
           width: ${targetWidth} /* Auto or 0 (custom) */;
           padding-right: ${!elem.hasTitle && elem.collapsible ? 0 : `10px`} /* Padding 0 when collapsible */`"
-          @pointerdown="$emit('body-pointerdown', $event)"
-          @dblclick="$emit('body-dblclick', $event)">
+          @pointerdown.left="$emit('body-pointerdown', $event)"
+          @dblclick.left="$emit('body-dblclick', $event)">
 
             <slot/>
 
@@ -117,9 +143,9 @@
             style="min-width: 0 /* Allows reducing collapse button width */;
             width: 32px /* Reduces collapse button width to 32px */;
             height: 40px /* Makes collapse button fixed to 40px height */"
-            @pointerdown="onCollapseButtonPointerDown"
-            @click="onCollapseButtonClick"
-            @dblclick.stop>
+            @pointerdown.left.stop
+            @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
+            @dblclick.left.stop>
               <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
               <v-icon v-else>mdi-chevron-up</v-icon>
             </v-btn>
@@ -129,24 +155,6 @@
         </div>
 
       </v-sheet>
-
-
-
-      <!-- Element drop helpers -->
-
-      <div v-if="elem.parentId != null && $state.dragging.active">
-
-        <div class="drop-zone"
-        style="top: 0%; bottom: 50%"
-        @pointerup="onDropZonePointerUp($event, 0)">
-        </div>
-
-        <div class="drop-zone"
-        style="top: 50%; bottom: 0%"
-        @pointerup="onDropZonePointerUp($event, 1)">
-        </div>
-
-      </div>
 
     </div>
 
@@ -167,93 +175,6 @@ export default {
 
 
 
-  methods: {
-
-    onPointerDown(event) {
-      if (event.target.style.opacity === '0.8')
-        return
-
-      if (!$app.activeElem.is(this.elem))
-        $app.editing.stop()
-
-      if (this.elem.linkedPageId != null
-      && !event.altKey && !this.selected)
-        return
-
-      $app.clickSelection.perform(this.elem, event)
-
-      if ($app.selection.has(this.elem)
-      && this.elem.parentId == null
-      && !$getters.page.elems.editing)
-        $app.dragging.start(event)
-    },
-
-
-
-    onClick(event) {
-      if (this.elem.linkedPageId == null
-      || event.altKey || this.selected)
-        return
-
-      $app.pages.navigate(this.elem.linkedPageId)
-    },
-
-
-
-    onTitlePointerDown(event) {
-      if (!event.target.className.toString().startsWith(`editor-0`))
-        return
-
-      if (event.button === 0 && this.editing
-      && !event.target.isContentEditable) {
-        this.$refs[`editor-0`].quill.focus()
-        event.preventDefault()
-      }
-    },
-    onTitleDoubleClick(event) {
-      if (event.button === 0)
-        $app.editing.start(this.elem, 0)
-    },
-
-
-
-    onCollapseButtonPointerDown(event) {
-      if (event.button === 0)
-        event.stopPropagation()
-    },
-    onCollapseButtonClick(event) {
-      if (event.button === 0) {
-        $app.collapsing.toggleCollapsed(this.elem)
-        event.stopPropagation()
-      }
-    },
-
-
-
-    // Drop zones
-
-    onDropZonePointerUp(event, offset) {
-      if (event.button !== 0)
-        return
-
-      const parentElem = $app.elems.getById(this.elem.parentId)
-      
-      const index = parentElem.children.findIndex(item => item.id == this.elem.id) + offset
-
-      for (const selectedElem of $app.selection.getElems()) {
-        $app.elems.removeFromRegion(selectedElem)
-        parentElem.children.splice(index, 0, selectedElem)
-          
-        selectedElem.parentId = parentElem.id
-
-        $app.selection.add(selectedElem)
-      }
-    },
-
-  },
-
-
-
   computed: {
 
     selected() {
@@ -267,7 +188,6 @@ export default {
     },
     dragging() {
       return $state.dragging.active
-        && $state.dragging.moved
         && $app.selection.has(this.elem)
     },
 
@@ -329,9 +249,95 @@ export default {
 
 
 
-    visibleBody() {
-      return this.elem.hasBody &&
-        (!this.elem.collapsed || this.elem.collapsedSize.y !== 'auto')
+    parentElem() {
+      return $app.elems.getById(this.elem.parentId)
+    },
+    index() {
+      if (!this.parentElem)
+        return null
+
+      return this.parentElem.children.findIndex(item => item === this.elem)
+    },
+
+  },
+
+
+
+  methods: {
+
+    onPointerDown(event) {
+      if (event.target.style.opacity === '0.8')
+        return
+
+      if (!$app.activeElem.is(this.elem))
+        $app.editing.stop()
+
+      if (this.elem.linkedPageId != null
+      && !event.altKey && !this.selected)
+        return
+
+      $app.clickSelection.perform(this.elem, event)
+
+      if ($app.selection.has(this.elem)
+      && this.elem.parentId == null
+      && !$getters.page.elems.editing)
+        $app.dragging.start(event)
+    },
+
+
+
+    onClick(event) {
+      if (this.elem.linkedPageId == null
+      || event.altKey || this.selected)
+        return
+
+      $app.pages.navigate(this.elem.linkedPageId)
+    },
+
+
+
+    onTitlePointerDown(event) {
+      if (this.editing) {
+        event.stopPropagation()
+
+        setTimeout(() => {
+          this.$refs[`editor-0`].quill.focus()
+        })
+      }
+    },
+
+
+
+    // Drop zones
+    
+    onDropZoneMouseEnter(event, offset) {
+      if (!$state.dragging.active)
+        return
+
+      $state.dragging.dropRegionId = this.parentElem.id
+      $state.dragging.dropIndex = this.index + offset
+    },
+    onDropZoneMouseLeave(event, offset) {
+      if (!$state.dragging.active)
+        return
+      
+      $state.dragging.dropRegionId = null
+      $state.dragging.dropIndex = null
+    },
+
+    onDropZonePointerUp(event, offset) {
+      const dropIndex = this.index + offset
+
+      for (const selectedElem of $app.selection.getElems()) {
+        $app.elems.removeFromRegion(selectedElem)
+        this.parentElem.children.splice(dropIndex, 0, selectedElem)
+          
+        selectedElem.parentId = this.parentElem.id
+
+        $app.selection.add(selectedElem)
+      }
+      
+      $app.dragging.finish(event)
     },
 
   },
@@ -357,8 +363,17 @@ export default {
   bottom: 0;
 }
 
+
 .drop-zone {
   position: absolute;
   left: 0; right: 0;
+
+  background-color: #42A5F5;
+  opacity: 0;
+
+  z-index: 9999;
+}
+.drop-zone.active {
+  opacity: 0.25;
 }
 </style>
