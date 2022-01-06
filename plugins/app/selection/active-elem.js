@@ -25,5 +25,5 @@ activeElem.setExclusive = (elem) => {
 
 
 activeElem.is = (elem) => {
-  return elem.id == $getters.page.elems.activeId
+  return elem.id == $getters.elemId
 }
