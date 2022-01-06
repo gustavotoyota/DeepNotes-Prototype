@@ -98,7 +98,7 @@
         "createdAt": "2022-01-05T18:16:05.893Z",
         "modifiedAt": "2022-01-05T18:16:05.893Z",
         "elems": {
-          "nextId": 43,
+          "nextId": 44,
           "blocks": [
             {
               "anchor": {
@@ -298,6 +298,39 @@
                 "y": -121.5563117205037
               },
               "children": [
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Deactivate handles while dragging</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": 112.76787507372812,
+                    "y": -72.98040576339841
+                  },
+                  "id": 37,
+                  "parentId": 16
+                },
                 {
                   "parentId": 16,
                   "anchor": {
@@ -499,39 +532,6 @@
               },
               "children": [
                 {
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": false,
-                  "hasBody": true,
-                  "title": "",
-                  "body": "<p>Deactivate handles while dragging</p>",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": "auto"
-                  },
-                  "size": {
-                    "x": "auto",
-                    "y": "auto"
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "note",
-                  "pos": {
-                    "x": -140.21738660294906,
-                    "y": -62.934109058200875
-                  },
-                  "id": 37,
-                  "parentId": 15
-                },
-                {
                   "parentId": 15,
                   "anchor": {
                     "x": 0,
@@ -610,10 +610,10 @@
         },
         "camera": {
           "pos": {
-            "x": -31.49220406081008,
-            "y": 33.195309228074365
+            "x": -31.49220409093209,
+            "y": 33.19531059876411
           },
-          "zoom": 0.8325251346140192
+          "zoom": 0.8325251085932293
         }
       },
       {
