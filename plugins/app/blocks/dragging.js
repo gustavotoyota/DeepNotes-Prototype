@@ -38,6 +38,7 @@ dragging.update = (event) => {
 
 
   const clientPos = $app.coords.getClientPos(event)
+  const worldPos = $app.coords.clientToWorld(clientPos)
 
 
 
@@ -48,16 +49,36 @@ dragging.update = (event) => {
     )
 
     $state.dragging.active = dist >= $app.dragging.minDistance
-
     if (!$state.dragging.active)
       return
+
+
+    
+    if ($getters.regionElem != null) {
+      for (const elem of $app.selection.getElems()) {
+        const clientRect = $app.elems.getClientRect(elem)
+        const rectWorldPos = $app.coords.clientToWorld(clientRect)
+        const worldHeight = $app.sizes.worldToScreen1D(clientRect.height)
+
+        elem.pos.y = rectWorldPos.y + worldHeight * elem.anchor.y
+      }
+
+      $app.selection.moveToRegion(null)
+
+      $nextTick(() => {
+        for (const elem of $app.selection.getElems()) {
+          const clientRect = $app.elems.getClientRect(elem)
+          const worldWidth = $app.sizes.worldToScreen1D(clientRect.width)
+
+          elem.pos.x = worldPos.x + worldWidth * (elem.anchor.x - 0.5)
+        }
+      })
+    }
   }
 
 
 
-  for (const elemId of $app.selection.getElemIds()) {
-    const elem = $app.elems.getById(elemId)
-
+  for (const elem of $app.selection.getElems()) {
     if (!elem.movable)
       continue
 

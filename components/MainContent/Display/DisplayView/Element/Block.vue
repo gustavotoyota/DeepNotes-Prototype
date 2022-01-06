@@ -279,7 +279,6 @@ export default {
       $app.clickSelection.perform(this.elem, event)
 
       if ($app.selection.has(this.elem)
-      && this.elem.parentId == null
       && !$getters.page.elems.editing)
         $app.dragging.start(event)
     },
@@ -328,14 +327,7 @@ export default {
     onDropZonePointerUp(event, offset) {
       const dropIndex = this.index + offset
 
-      for (const selectedElem of $app.selection.getElems()) {
-        $app.elems.removeFromRegion(selectedElem)
-        this.parentElem.children.splice(dropIndex, 0, selectedElem)
-          
-        selectedElem.parentId = this.parentElem.id
-
-        $app.selection.add(selectedElem)
-      }
+      $app.selection.moveToRegion(this.parentElem, dropIndex)
       
       $app.dragging.finish(event)
     },

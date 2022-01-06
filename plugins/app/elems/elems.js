@@ -71,6 +71,15 @@ elems.removeFromRegion = (elem) => {
 
 
 
+elems.extractRegion = (elem) => {
+  if (elem == null)
+    return $getters.page.elems.blocks
+  else
+    return elem.children
+}
+
+
+
 
 elems.bringToTop = (elem) => {
   if (elem.parentId != null)

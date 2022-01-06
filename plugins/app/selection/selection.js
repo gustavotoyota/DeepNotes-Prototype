@@ -94,3 +94,27 @@ selection.shift = (shiftX, shiftY) => {
     elem.pos.y += shiftY
   }
 }
+
+
+
+selection.moveToRegion = (regionElem, dropIndex) => {
+  const regionId = regionElem?.id ?? null
+
+  const region = $app.elems.extractRegion(regionElem)
+
+  dropIndex ??= region.length
+
+  const activeId = $getters.elemId
+
+  for (const elem of $app.selection.getElems()) {
+    $app.elems.removeFromRegion(elem)
+    region.splice(dropIndex, 0, elem)
+      
+    elem.parentId = regionId
+
+    $app.selection.add(elem)
+
+    if (elem.id == activeId)
+      $app.activeElem.set(elem)
+  }
+}
