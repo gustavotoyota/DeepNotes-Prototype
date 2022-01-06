@@ -7,7 +7,8 @@
   width: 10px; height: 10px;
   transform: translate(-50%, -50%)"
   :style="`left: ${left}%; top: ${top}%;
-  cursor: ${side}-resize`"
+  cursor: ${side}-resize; ` +
+  ($state.dragging.active ? `pointer-events: none; opacity: 0.7` : ``)"
   @pointerdown.left.stop="onPointerDown">
   </div>
   
