@@ -23,8 +23,8 @@
       overflow: hidden"
       :color="color" rounded elevation="6"
       :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }`"
-      @pointerdown="onPointerDown"
-      @click="onClick">
+      @pointerdown.left.stop="onPointerDown"
+      @click.left.stop="onClick">
 
         <!-- Title -->
 
@@ -32,8 +32,8 @@
         style="max-height: 100% /* Brings vertical scroll to title */;
         display: flex /* Horizontal flex */"
         :style="`flex: ${elem.hasBody ? 'none' : 1}`"
-        @pointerdown="onTitlePointerDown"
-        @dblclick="onTitleDoubleClick">
+        @pointerdown.left="onTitlePointerDown"
+        @dblclick.left="$app.editing.start(elem, 0)">
 
           <!-- Title content -->
 
@@ -61,9 +61,9 @@
             style="min-width: 0 /* Allows reducing collapse button width */;
             width: 32px /* Reduces collapse button width to 32px */;
             height: 100% /* Makes the collapse button height the same as the title */"
-            @pointerdown="onCollapseButtonPointerDown"
-            @click="onCollapseButtonClick"
-            @dblclick.stop>
+            @pointerdown.left.stop
+            @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
+            @dblclick.left.stop>
               <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
               <v-icon v-else>mdi-chevron-up</v-icon>
             </v-btn>
@@ -99,8 +99,8 @@
           :style="`height: ${elem.hasTitle && elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%'};
           width: ${targetWidth} /* Auto or 0 (custom) */;
           padding-right: ${!elem.hasTitle && elem.collapsible ? 0 : `10px`} /* Padding 0 when collapsible */`"
-          @pointerdown="$emit('body-pointerdown', $event)"
-          @dblclick="$emit('body-dblclick', $event)">
+          @pointerdown.left="$emit('body-pointerdown', $event)"
+          @dblclick.left="$emit('body-dblclick', $event)">
 
             <slot/>
 
@@ -117,9 +117,9 @@
             style="min-width: 0 /* Allows reducing collapse button width */;
             width: 32px /* Reduces collapse button width to 32px */;
             height: 40px /* Makes collapse button fixed to 40px height */"
-            @pointerdown="onCollapseButtonPointerDown"
-            @click="onCollapseButtonClick"
-            @dblclick.stop>
+            @pointerdown.left.stop
+            @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
+            @dblclick.left.stop>
               <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
               <v-icon v-else>mdi-chevron-up</v-icon>
             </v-btn>
@@ -138,12 +138,12 @@
 
         <div class="drop-zone"
         style="top: 0%; bottom: 50%"
-        @pointerup="onDropZonePointerUp($event, 0)">
+        @pointerup.left.stop="onDropZonePointerUp($event, 0)">
         </div>
 
         <div class="drop-zone"
         style="top: 50%; bottom: 0%"
-        @pointerup="onDropZonePointerUp($event, 1)">
+        @pointerup.left.stop="onDropZonePointerUp($event, 1)">
         </div>
 
       </div>
@@ -201,30 +201,12 @@ export default {
 
 
     onTitlePointerDown(event) {
-      if (!event.target.className.toString().startsWith(`editor-0`))
-        return
-
-      if (event.button === 0 && this.editing
-      && !event.target.isContentEditable) {
-        this.$refs[`editor-0`].quill.focus()
-        event.preventDefault()
-      }
-    },
-    onTitleDoubleClick(event) {
-      if (event.button === 0)
-        $app.editing.start(this.elem, 0)
-    },
-
-
-
-    onCollapseButtonPointerDown(event) {
-      if (event.button === 0)
+      if (this.editing) {
         event.stopPropagation()
-    },
-    onCollapseButtonClick(event) {
-      if (event.button === 0) {
-        $app.collapsing.toggleCollapsed(this.elem)
-        event.stopPropagation()
+
+        setTimeout(() => {
+          this.$refs[`editor-0`].quill.focus()
+        })
       }
     },
 
@@ -233,9 +215,6 @@ export default {
     // Drop zones
 
     onDropZonePointerUp(event, offset) {
-      if (event.button !== 0)
-        return
-
       const parentElem = $app.elems.getById(this.elem.parentId)
       
       const index = parentElem.children.findIndex(item => item.id == this.elem.id) + offset
