@@ -26,6 +26,9 @@ dragging.start = (event) => {
 
     startPos: $app.coords.getClientPos(event),
     currentPos: $app.coords.getClientPos(event),
+
+    dropRegionId: null,
+    dropIndex: null,
   }
 }
 dragging.update = (event) => {
