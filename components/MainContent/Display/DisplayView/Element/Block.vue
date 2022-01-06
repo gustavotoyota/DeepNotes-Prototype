@@ -266,6 +266,10 @@ export default {
   methods: {
 
     onPointerDown(event) {
+      if (event.offsetX > event.target.clientWidth
+      || event.offsetY > event.target.clientHeight) 
+        return
+
       if (event.target.style.opacity === '0.8')
         return
 
