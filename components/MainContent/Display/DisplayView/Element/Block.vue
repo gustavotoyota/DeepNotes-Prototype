@@ -267,7 +267,6 @@ export default {
     },
     dragging() {
       return $state.dragging.active
-        && $state.dragging.moved
         && $app.selection.has(this.elem)
     },
 
