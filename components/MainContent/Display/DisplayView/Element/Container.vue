@@ -18,11 +18,21 @@
     </div>
 
     <div v-else
-    style="height: 100%; overflow: auto">
+    style="height: 100%; overflow: auto;
+    display: flex; flex-direction: column">
 
       <Element v-for="(child, idx) of elem.children" :key="child.id"
       :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
       :elem="child" :inherited-width="targetWidth"/>
+    
+      <div v-if="$state.dragging.active"
+      class="drop-zone"
+      :class="{ 'active' : $state.dragging.dropRegionId == this.elem.id
+        && $state.dragging.dropIndex === this.elem.children.length }"
+      @mouseenter="onDropZoneMouseEnter"
+      @mouseleave="onDropZoneMouseLeave"
+      @pointerup.left="onDropZonePointerUp">
+      </div>
 
     </div>
 
@@ -42,18 +52,30 @@ export default {
 
 
   methods: {
+    
+    onDropZoneMouseEnter(event) {
+      if (!$state.dragging.active)
+        return
+
+      $state.dragging.dropRegionId = this.elem.id
+      $state.dragging.dropIndex = this.elem.children.length
+    },
+    onDropZoneMouseLeave(event) {
+      if (!$state.dragging.active)
+        return
+      
+      $state.dragging.dropRegionId = null
+      $state.dragging.dropIndex = null
+    },
 
     onDropZonePointerUp(event) {
       if ($state.dragging.active
       && !$app.selection.has(this.elem)) {
-        for (const selectedElem of $app.selection.getElems()) {
-          $app.elems.removeFromRegion(selectedElem)
-          this.elem.children.push(selectedElem)
-          
-          selectedElem.parentId = this.elem.id
+        event.stopPropagation()
 
-          $app.selection.add(selectedElem)
-        }
+        $app.selection.moveToRegion(this.elem)
+
+        $app.dragging.finish(event)
       }
     },
 
@@ -91,5 +113,14 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
+.drop-zone {
+  flex: 1;
+
+  background-color: #42A5F5;
+  opacity: 0;
+}
+.drop-zone.active {
+  opacity: 0.25;
+}
 </style>

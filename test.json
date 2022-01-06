@@ -7,7 +7,7 @@
         "createdAt": "2022-01-05T18:15:53.661Z",
         "modifiedAt": "2022-01-05T18:15:53.661Z",
         "elems": {
-          "nextId": 2,
+          "nextId": 3,
           "blocks": [
             {
               "anchor": {
@@ -42,14 +42,46 @@
               "id": 1,
               "parentId": null,
               "linkedPageId": 1
+            },
+            {
+              "parentId": null,
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
+              "title": "<h1>Random</h1>",
+              "body": "",
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": "auto"
+              },
+              "size": {
+                "x": "auto",
+                "y": "auto"
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "note",
+              "pos": {
+                "x": -101,
+                "y": -198.5
+              },
+              "id": 2,
+              "linkedPageId": 2
             }
           ],
           "arrows": [],
           "regionId": null,
-          "selected": {
-            "1": true
-          },
-          "activeId": 1,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
@@ -66,7 +98,7 @@
         "createdAt": "2022-01-05T18:16:05.893Z",
         "modifiedAt": "2022-01-05T18:16:05.893Z",
         "elems": {
-          "nextId": 33,
+          "nextId": 43,
           "blocks": [
             {
               "anchor": {
@@ -75,7 +107,7 @@
               },
               "hasTitle": true,
               "hasBody": true,
-              "title": "<h2>Next</h2>",
+              "title": "<h2>Later</h2>",
               "body": "",
               "collapsible": true,
               "collapsed": false,
@@ -84,10 +116,10 @@
                 "y": "auto"
               },
               "size": {
-                "x": 206.14312744140625,
-                "y": 308.12047476482053
+                "x": 204.73065185546875,
+                "y": 307.9798466283104
               },
-              "expandedHeight": 0,
+              "expandedHeight": 221.74999041607862,
               "movable": true,
               "resizable": true,
               "wrapTitle": true,
@@ -95,8 +127,8 @@
               "readOnly": false,
               "type": "container",
               "pos": {
-                "x": -31.85940653454595,
-                "y": -119.66591118118784
+                "x": -269.0624932341816,
+                "y": -122.06250514420654
               },
               "children": [
                 {
@@ -107,7 +139,7 @@
                   "hasTitle": false,
                   "hasBody": true,
                   "title": "",
-                  "body": "<p>Implement sibling drop</p>",
+                  "body": "<p>Implement element alignment while dragging</p>",
                   "collapsible": false,
                   "collapsed": false,
                   "collapsedSize": {
@@ -126,14 +158,113 @@
                   "readOnly": false,
                   "type": "note",
                   "pos": {
-                    "x": -109.26561748923979,
-                    "y": -114.50000813408974
+                    "x": -393.24860027390054,
+                    "y": -80.62810727264767
                   },
-                  "id": 21,
-                  "parentId": 15
+                  "id": 31,
+                  "parentId": 14
+                },
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement element alignment tools</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -350.6587367554063,
+                    "y": -35.97299832093976
+                  },
+                  "id": 27,
+                  "parentId": 14
+                },
+                {
+                  "parentId": 14,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Implement title-body swap button</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -354.5363571974314,
+                    "y": 19.84588786869512
+                  },
+                  "id": 40
+                },
+                {
+                  "parentId": 14,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Implement arrows</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -342.5404080701982,
+                    "y": 97.62201242049956
+                  },
+                  "id": 41
                 }
               ],
-              "id": 15,
+              "id": 14,
               "parentId": null
             },
             {
@@ -163,11 +294,12 @@
               "readOnly": false,
               "type": "container",
               "pos": {
-                "x": 203.05203998146328,
-                "y": -120.35937041843218
+                "x": 205.4459225856062,
+                "y": -121.5563117205037
               },
               "children": [
                 {
+                  "parentId": 16,
                   "anchor": {
                     "x": 0,
                     "y": 0
@@ -175,7 +307,7 @@
                   "hasTitle": false,
                   "hasBody": true,
                   "title": "",
-                  "body": "<p>Collapsible body</p>",
+                  "body": "<p>Add drop-zone at bottom of container</p>",
                   "collapsible": false,
                   "collapsed": false,
                   "collapsedSize": {
@@ -194,8 +326,106 @@
                   "readOnly": false,
                   "type": "note",
                   "pos": {
-                    "x": -112.22222222222209,
-                    "y": 39.888888888888886
+                    "x": 98.65473213043282,
+                    "y": -76.98428116205933
+                  },
+                  "id": 34
+                },
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement sibling drop</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": 119.10358186356565,
+                    "y": -83.67277379208228
+                  },
+                  "id": 21,
+                  "parentId": 16
+                },
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement dragging container children outside</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 56.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": 53.14480510881681,
+                    "y": -38.672776697194394
+                  },
+                  "id": 4,
+                  "parentId": 16
+                },
+                {
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Implement collapsible body</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": 122.0750787031531,
+                    "y": -79.92425423525943
                   },
                   "id": 5,
                   "parentId": 16
@@ -244,7 +474,7 @@
               },
               "hasTitle": true,
               "hasBody": true,
-              "title": "<h2>Later</h2>",
+              "title": "<h2>Next</h2>",
               "body": "",
               "collapsible": true,
               "collapsed": false,
@@ -253,10 +483,10 @@
                 "y": "auto"
               },
               "size": {
-                "x": 204.73065185546875,
-                "y": "auto"
+                "x": 206.14312744140625,
+                "y": 308.12047476482053
               },
-              "expandedHeight": 221.74999041607862,
+              "expandedHeight": 259.4218848956347,
               "movable": true,
               "resizable": true,
               "wrapTitle": true,
@@ -264,8 +494,8 @@
               "readOnly": false,
               "type": "container",
               "pos": {
-                "x": -269.0624932341816,
-                "y": -122.07665932510845
+                "x": -32.874295374357494,
+                "y": -119.66591118118784
               },
               "children": [
                 {
@@ -276,73 +506,7 @@
                   "hasTitle": false,
                   "hasBody": true,
                   "title": "",
-                  "body": "<p>Implement dragging container children outside</p>",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": "auto"
-                  },
-                  "size": {
-                    "x": "auto",
-                    "y": "auto"
-                  },
-                  "expandedHeight": 56.90625,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "note",
-                  "pos": {
-                    "x": -412.9444444444446,
-                    "y": 39.69444444444447
-                  },
-                  "id": 4,
-                  "parentId": 14
-                },
-                {
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": false,
-                  "hasBody": true,
-                  "title": "",
-                  "body": "<p>Implement element alignment tools</p>",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": "auto"
-                  },
-                  "size": {
-                    "x": "auto",
-                    "y": 26.047812128797155
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "note",
-                  "pos": {
-                    "x": -361.4218685897033,
-                    "y": 1.546870344706015
-                  },
-                  "id": 27,
-                  "parentId": 14
-                },
-                {
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": false,
-                  "hasBody": true,
-                  "title": "",
-                  "body": "<p>Implement element alignment while dragging</p>",
+                  "body": "<p>Deactivate handles while dragging</p>",
                   "collapsible": false,
                   "collapsed": false,
                   "collapsedSize": {
@@ -361,14 +525,80 @@
                   "readOnly": false,
                   "type": "note",
                   "pos": {
-                    "x": -378.5971532401693,
-                    "y": 37.658996801634274
+                    "x": -140.21738660294906,
+                    "y": -62.934109058200875
                   },
-                  "id": 31,
-                  "parentId": 14
+                  "id": 37,
+                  "parentId": 15
+                },
+                {
+                  "parentId": 15,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Fix resize finishing problem</p>",
+                  "body": "<p>Probably has something to do with the .stop modifier</p><p>Need to check every .stop modifier for possible problems</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 130.7187232252285,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -162.90508342355483,
+                    "y": -56.6410912308549
+                  },
+                  "id": 33
+                },
+                {
+                  "parentId": 15,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": false,
+                  "hasBody": true,
+                  "title": "",
+                  "body": "<p>Undo collapsing functionality modification</p>",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": "auto"
+                  },
+                  "size": {
+                    "x": "auto",
+                    "y": "auto"
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "note",
+                  "pos": {
+                    "x": -203.19524619524935,
+                    "y": 96.21991966769471
+                  },
+                  "id": 42
                 }
               ],
-              "id": 14,
+              "id": 15,
               "parentId": null
             }
           ],
@@ -380,32 +610,56 @@
         },
         "camera": {
           "pos": {
-            "x": -24.880201209185007,
-            "y": 44.34034833039363
+            "x": -31.49220406081008,
+            "y": 33.195309228074365
           },
-          "zoom": 0.9853295856378638
+          "zoom": 0.8325251346140192
+        }
+      },
+      {
+        "id": 2,
+        "name": "Random",
+        "createdAt": "2022-01-06T19:57:17.308Z",
+        "modifiedAt": "2022-01-06T19:57:17.308Z",
+        "elems": {
+          "nextId": 0,
+          "blocks": [],
+          "arrows": [],
+          "regionId": null,
+          "selected": {},
+          "activeId": null,
+          "editing": false
+        },
+        "camera": {
+          "pos": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
         }
       }
     ],
-    "nextId": 2,
+    "nextId": 3,
     "path": [
       0,
       1
     ],
     "depth": 1,
     "recent": [
+      2,
       0,
       1
     ]
   },
   "defaultProps": {
     "note": {
+      "parentId": null,
       "anchor": {
         "x": 0,
         "y": 0
       },
-      "hasTitle": false,
-      "hasBody": true,
+      "hasTitle": true,
+      "hasBody": false,
       "collapsible": false,
       "collapsed": false,
       "collapsedSize": {
@@ -421,8 +675,7 @@
       "resizable": true,
       "wrapTitle": true,
       "wrapBody": true,
-      "readOnly": false,
-      "parentId": null
+      "readOnly": false
     },
     "container": {},
     "arrow": {}
