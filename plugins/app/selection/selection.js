@@ -68,26 +68,6 @@ selection.addAll = () => {
 
 
 
-selection.clone = () => {
-  for (const elem of $app.selection.getElems()) {
-    const newElem = $app.elems.create(elem)
-
-    newElem.pos.x += 8
-    newElem.pos.y += 8
-
-
-
-    $app.selection.add(newElem)
-    
-    if ($app.activeElem.is(elem))
-      $app.activeElem.set(newElem)
-
-    $app.selection.remove(elem)
-  }
-}
-
-
-
 selection.shift = (shiftX, shiftY) => {
   for (const elem of $app.selection.getElems()) {
     elem.pos.x += shiftX
@@ -104,17 +84,17 @@ selection.moveToRegion = (regionElem, dropIndex) => {
 
   dropIndex ??= region.length
 
-  const activeId = $getters.elemId
+  const activeElemId = $getters.elemId
 
   for (const elem of $app.selection.getElems()) {
     $app.elems.removeFromRegion(elem)
     region.splice(dropIndex, 0, elem)
       
     elem.parentId = regionId
-
-    $app.selection.add(elem)
-
-    if (elem.id == activeId)
+    
+    if (elem.id == activeElemId)
       $app.activeElem.set(elem)
+    else
+      $app.selection.add(elem)
   }
 }

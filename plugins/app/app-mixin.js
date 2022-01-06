@@ -95,7 +95,7 @@ export default async function ({ app }) {
           $app.selection.addAll()
 
         if (event.code === 'KeyD' && event.ctrlKey) {
-          $app.selection.clone()
+          $app.cloning.perform()
           event.preventDefault()
         }
 

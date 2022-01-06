@@ -38,6 +38,7 @@ $app.editing = require('./blocks/editing')
 $app.dragging = require('./blocks/dragging')
 $app.resizing = require('./blocks/resizing')
 $app.collapsing = require('./blocks/collapsing')
+$app.cloning = require('./blocks/cloning')
 
 
 
