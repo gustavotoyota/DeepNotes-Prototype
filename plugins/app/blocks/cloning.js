@@ -4,54 +4,29 @@ const cloning = module.exports = {}
 
 
 cloning.perform = () => {
-  let centerX
-
-  const nonRoot = $getters.regionId != null
-
-  if (nonRoot) {
-    for (const elem of $app.selection.getElems()) {
-      const clientRect = $app.elems.getClientRect(elem)
-      const rectWorldPos = $app.coords.clientToWorld(clientRect)
-      const worldSize = $app.sizes.screenToWorld2D({
-        x: clientRect.width,
-        y: clientRect.height,
-      })
-
-      centerX = rectWorldPos.x + worldSize.x / 2
-      elem.pos.y = rectWorldPos.y + worldSize.y * elem.anchor.y
-    }
-  }
-
-
-
   const activeElemId = $getters.elemId
   
-  for (const elem of $app.selection.getElems()) {
-    const newElem = $app.elems.create(elem)
+  for (const selectedElem of $app.selection.getElems()) {
+    let newElem
     
-    newElem.pos.y += 8
+    if ($getters.regionId == null) {
+      newElem = $app.elems.create(selectedElem)
 
-    $app.selection.remove(elem)
+      newElem.pos.x += 8
+      newElem.pos.y += 8
+    } else {
+      newElem = $utils.deepCopy(selectedElem)
 
-    if (elem.id == activeElemId)
+      $app.elems.setup(newElem, $getters.regionId)
+
+      $getters.regionArray.push(newElem)
+    }
+
+    $app.selection.remove(selectedElem)
+
+    if (selectedElem.id == activeElemId)
       $app.activeElem.set(newElem)
     else
       $app.selection.add(newElem)
-  }
-
-
-
-  if (nonRoot) {
-    $nextTick(() => {
-      for (const elem of $app.selection.getElems()) {
-        const clientRect = $app.elems.getClientRect(elem)
-        const worldWidth = $app.sizes.screenToWorld1D(clientRect.width)
-
-        elem.pos.x = centerX + worldWidth * (elem.anchor.x - 0.5) + 8
-      }
-    })
-  } else {
-    for (const elem of $app.selection.getElems())
-      elem.pos.x += 8
   }
 }
