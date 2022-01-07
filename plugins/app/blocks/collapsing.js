@@ -39,10 +39,5 @@ collapsing.setCollapsed = (elem, collapsed) => {
 
 
 collapsing.toggleCollapsed = (elem) => {
-  const collapsed = elem.collapsed
-
-  for (const selectedElem of $app.selection.getElems())
-    $app.collapsing.setCollapsed(selectedElem, !collapsed)
-
-  $app.collapsing.setCollapsed(elem, !collapsed)
+  $app.collapsing.setCollapsed(elem, !elem.collapsed)
 }
