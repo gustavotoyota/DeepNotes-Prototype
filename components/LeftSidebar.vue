@@ -10,7 +10,7 @@
       <v-toolbar dense style="flex: none">
 
         <v-toolbar-title>
-          <span style="position: relative; top: 2px">Page Path</span>
+          <span style="position: relative; top: 2px">Path</span>
         </v-toolbar-title>
 
       </v-toolbar>
@@ -24,7 +24,7 @@
         :input-value="idx === $state.project.pages.depth">
 
           <v-list-item-title class="body-2"
-          style="word-break: break-all; white-space: normal">
+          style="word-break: break-all; white-space: normal; font-weight: bold">
             {{ $app.pages.getById(pageId).name }}
           </v-list-item-title>
 
