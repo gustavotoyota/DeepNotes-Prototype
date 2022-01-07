@@ -15,12 +15,14 @@ dragging.reset = () => {
 }
 
 
-dragging.start = (event) => {
+dragging.start = (event, sourceElem) => {
   if (event.button !== 0)
     return
 
   $state.dragging = {
     down: true,
+
+    sourceElem: sourceElem,
 
     active: false,
 
@@ -37,15 +39,15 @@ dragging.update = (event) => {
 
 
 
-  const clientPos = $app.coords.getClientPos(event)
-  const worldPos = $app.coords.clientToWorld(clientPos)
+  const clientMousePos = $app.coords.getClientPos(event)
+  const worldMousePos = $app.coords.clientToWorld(clientMousePos)
 
 
 
   if (!$state.dragging.active) {
     const dist = Math.sqrt(
-      Math.pow(clientPos.x - $state.dragging.startPos.x, 2) +
-      Math.pow(clientPos.y - $state.dragging.startPos.y, 2)
+      Math.pow(clientMousePos.x - $state.dragging.startPos.x, 2) +
+      Math.pow(clientMousePos.y - $state.dragging.startPos.y, 2)
     )
 
     $state.dragging.active = dist >= $app.dragging.minDistance
@@ -55,22 +57,28 @@ dragging.update = (event) => {
 
     
     if ($getters.regionId != null) {
-      for (const elem of $app.selection.getElems()) {
-        const clientRect = $app.elems.getClientRect(elem)
+      for (const selectedElem of $app.selection.getElems()) {
+        const clientRect = $app.elems.getClientRect(selectedElem)
         const rectWorldPos = $app.coords.clientToWorld(clientRect)
         const worldHeight = $app.sizes.screenToWorld1D(clientRect.height)
 
-        elem.pos.y = rectWorldPos.y + worldHeight * elem.anchor.y
+        selectedElem.pos.y = rectWorldPos.y + worldHeight * selectedElem.anchor.y
       }
 
       $app.selection.moveToRegion(null)
 
       $nextTick(() => {
-        for (const elem of $app.selection.getElems()) {
-          const clientRect = $app.elems.getClientRect(elem)
+        const sourceClientRect = $app.elems.getClientRect($state.dragging.sourceElem)
+
+        const offsetY = $app.sizes.screenToWorld1D(
+          clientMousePos.y - (sourceClientRect.y + sourceClientRect.height / 2))
+
+        for (const selectedElem of $app.selection.getElems()) {
+          const clientRect = $app.elems.getClientRect(selectedElem)
           const worldWidth = $app.sizes.screenToWorld1D(clientRect.width)
 
-          elem.pos.x = worldPos.x + worldWidth * (elem.anchor.x - 0.5)
+          selectedElem.pos.x = worldMousePos.x + worldWidth * (selectedElem.anchor.x - 0.5)
+          selectedElem.pos.y += offsetY
         }
       })
     }
@@ -78,19 +86,19 @@ dragging.update = (event) => {
 
 
 
-  for (const elem of $app.selection.getElems()) {
-    if (!elem.movable)
+  for (const selectedElem of $app.selection.getElems()) {
+    if (!selectedElem.movable)
       continue
 
-    if (elem.pos) {
-      elem.pos.x += (clientPos.x - $state.dragging.currentPos.x) / $getters.page.camera.zoom
-      elem.pos.y += (clientPos.y - $state.dragging.currentPos.y) / $getters.page.camera.zoom
+    if (selectedElem.pos) {
+      selectedElem.pos.x += (clientMousePos.x - $state.dragging.currentPos.x) / $getters.page.camera.zoom
+      selectedElem.pos.y += (clientMousePos.y - $state.dragging.currentPos.y) / $getters.page.camera.zoom
     }
   }
 
 
 
-  $state.dragging.currentPos = clientPos
+  $state.dragging.currentPos = clientMousePos
 }
 dragging.finish = (event) => {
   if (!$state.dragging.down || event.button !== 0)

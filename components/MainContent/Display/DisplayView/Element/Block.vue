@@ -284,7 +284,7 @@ export default {
 
       if ($app.selection.has(this.elem)
       && !$getters.page.elems.editing)
-        $app.dragging.start(event)
+        $app.dragging.start(event, this.elem)
     },
 
 
