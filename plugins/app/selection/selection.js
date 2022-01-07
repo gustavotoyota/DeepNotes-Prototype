@@ -21,6 +21,9 @@ selection.add = (elem) => {
   $set($getters.page.elems.selected, elem.id, true)
 }
 selection.remove = (elem) => {
+  if (elem.parentId != $getters.page.elems.regionId)
+    return
+
   if ($app.activeElem.is(elem.id))
     $app.activeElem.clear()
 

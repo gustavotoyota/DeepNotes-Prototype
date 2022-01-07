@@ -58,7 +58,7 @@ dragging.update = (event) => {
       for (const elem of $app.selection.getElems()) {
         const clientRect = $app.elems.getClientRect(elem)
         const rectWorldPos = $app.coords.clientToWorld(clientRect)
-        const worldHeight = $app.sizes.worldToScreen1D(clientRect.height)
+        const worldHeight = $app.sizes.screenToWorld1D(clientRect.height)
 
         elem.pos.y = rectWorldPos.y + worldHeight * elem.anchor.y
       }
@@ -68,7 +68,7 @@ dragging.update = (event) => {
       $nextTick(() => {
         for (const elem of $app.selection.getElems()) {
           const clientRect = $app.elems.getClientRect(elem)
-          const worldWidth = $app.sizes.worldToScreen1D(clientRect.width)
+          const worldWidth = $app.sizes.screenToWorld1D(clientRect.width)
 
           elem.pos.x = worldPos.x + worldWidth * (elem.anchor.x - 0.5)
         }
