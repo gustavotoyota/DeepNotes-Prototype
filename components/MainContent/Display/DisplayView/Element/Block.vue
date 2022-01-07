@@ -267,9 +267,17 @@ export default {
   methods: {
 
     onPointerDown(event) {
-      if (event.offsetX > event.target.clientWidth
-      || event.offsetY > event.target.clientHeight) 
+      // Stop selecting element on scrollbar click
+
+      if (event.target.scrollWidth > event.target.clientWidth
+      && event.offsetY > event.target.clientHeight) 
         return
+
+      if (event.target.scrollHeight > event.target.clientHeight
+      && event.offsetX > event.target.clientWidth)
+        return
+
+      
 
       if (event.target.style.opacity === '0.8')
         return
@@ -301,6 +309,8 @@ export default {
 
 
     onTitlePointerDown(event) {
+      console.log('test')
+
       if (this.editing) {
         event.stopPropagation()
 
