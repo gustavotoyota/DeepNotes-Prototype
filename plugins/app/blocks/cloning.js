@@ -29,4 +29,10 @@ cloning.perform = () => {
     else
       $app.selection.add(newElem)
   }
+
+  if ($getters.regionArray != null) {
+    $nextTick(() => {
+      $app.elems.scrollIntoView($getters.regionArray.at(-1))
+    })
+  }
 }

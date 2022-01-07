@@ -2,12 +2,13 @@
 
   <!-- Anchor -->
 
-  <div :class="{ anchor: elem.parentId == null }"
+  <div :id="`elem-${elem.id}-anchor`"
+  :class="{ anchor: elem.parentId == null }"
   :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
 
-    <!-- Controller -->
+    <!-- Frame -->
 
-    <div :id="`elem-${elem.id}`"
+    <div :id="`elem-${elem.id}-frame`"
     style="min-height: 40px"
     :style="`position: ${elem.parentId == null ? 'absolute' : 'relative'}; ` +
     (minWidth ? `min-width: ${minWidth}; ` : '') +

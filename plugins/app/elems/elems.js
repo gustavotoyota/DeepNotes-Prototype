@@ -50,11 +50,16 @@ elems.getById = (elemId, regionArray) => {
 
 
 
-elems.getNode = (elem) => {
-  return document.getElementById(`elem-${elem.id}`)
+elems.getNode = (elem, part) => {
+  if (part == null)
+    return document.getElementById(`elem-${elem.id}`)
+  else
+    return document.getElementById(`elem-${elem.id}-${part}`)
 }
 elems.getClientRect = (elem) => {
-  return $app.elems.getNode(elem).getBoundingClientRect()
+  const node = $app.elems.getNode(elem, 'frame')
+
+  return node.getBoundingClientRect()
 }
 
 
@@ -98,7 +103,7 @@ elems.getSizeProp = (elem) => {
 
 
 elems.getEditorNode = (elem, editorIdx) => {
-  return document.getElementById(`elem-${elem.id}-editor-${editorIdx}`)
+  return $app.elems.getNode(elem, `editor-${editorIdx}`)
 }
 
 
@@ -107,4 +112,23 @@ elems.isOnTop = (elem) => {
   const region = elems.getRegion(elem)
 
   return elem.id == region.at(-1).id
+}
+
+
+
+elems.scrollIntoView = (elem) => {
+  if (elem.parentId == null)
+    return
+
+  const parentElem = $app.elems.getById(elem.parentId)
+  const scrollBoxNode = $app.elems.getNode(parentElem, 'scrollbox')
+
+  if (scrollBoxNode.scrollHeight <= scrollBoxNode.clientHeight)
+    return
+
+  const node = $app.elems.getNode(elem, 'frame')
+  
+  node.scrollIntoView({
+    behavior: 'smooth',
+  })
 }

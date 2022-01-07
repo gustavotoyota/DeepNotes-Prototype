@@ -18,6 +18,7 @@
     </div>
 
     <div v-else
+    :id="`elem-${elem.id}-scrollbox`"
     style="height: 100%; overflow: auto;
     display: flex; flex-direction: column">
 

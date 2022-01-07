@@ -41,7 +41,7 @@ editing.stop = () => {
   if (!elem)
     return
 
-  const editors = document.querySelectorAll(`#elem-${elem.id} .quill-editor`)
+  const editors = document.querySelectorAll(`#elem-${elem.id}-frame .quill-editor`)
 
   for (const editor of editors)
     if (editor.__vue__.quill)
