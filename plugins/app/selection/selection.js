@@ -15,13 +15,13 @@ selection.clear = (regionId) => {
 
 
 selection.add = (elem) => {
-  if (elem.parentId != $getters.page.elems.regionId)
+  if (elem.parentId != $getters.regionId)
     $app.selection.clear(elem.parentId)
 
   $set($getters.page.elems.selected, elem.id, true)
 }
 selection.remove = (elem) => {
-  if (elem.parentId != $getters.page.elems.regionId)
+  if (elem.parentId != $getters.regionId)
     return
 
   if ($app.activeElem.is(elem.id))
@@ -33,7 +33,7 @@ selection.remove = (elem) => {
 
 
 selection.has = (elem) => {
-  return elem.parentId == $getters.page.elems.regionId
+  return elem.parentId == $getters.regionId
     && elem.id in $getters.page.elems.selected
 }
 

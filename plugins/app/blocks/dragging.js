@@ -54,7 +54,7 @@ dragging.update = (event) => {
 
 
     
-    if ($getters.regionElem != null) {
+    if ($getters.regionId != null) {
       for (const elem of $app.selection.getElems()) {
         const clientRect = $app.elems.getClientRect(elem)
         const rectWorldPos = $app.coords.clientToWorld(clientRect)

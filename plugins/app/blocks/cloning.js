@@ -6,7 +6,7 @@ const cloning = module.exports = {}
 cloning.perform = () => {
   let centerX
 
-  const nonRoot = $getters.regionElem != null
+  const nonRoot = $getters.regionId != null
 
   if (nonRoot) {
     for (const elem of $app.selection.getElems()) {

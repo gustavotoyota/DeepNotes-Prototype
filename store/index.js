@@ -11,24 +11,35 @@ export const state = () => ({})
 
 export const getters = {}
 
+
+
 getters.pageId = () => {
   return $state.project.pages.path[$state.project.pages.depth]
 }
 getters.page = () => {
   return $state.project.pages.list.find((page) => page.id == $getters.pageId)
 }
+
+
+
+getters.regionId = () => {
+  return $getters.page.elems.regionId
+}
 getters.regionElem = () => {
-  if ($getters.page.elems.regionId == null)
+  if ($getters.regionId == null)
     return null
   else
-    return $app.elems.getById($getters.page.elems.regionId)
+    return $app.elems.getById($getters.regionId)
 }
 getters.regionArray = () => {
-  if ($getters.regionElem == null)
+  if ($getters.regionId == null)
     return $getters.page.elems.blocks
   else
     return $getters.regionElem.children
 }
+
+
+
 getters.elemId = () => {
   return $getters.page.elems.activeId
 }
