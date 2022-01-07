@@ -56,24 +56,36 @@
       <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
-      style="display: flex">
-        <v-checkbox hide-details label="Has title"
-        style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="$getters.elem.hasTitle"
-        @change="changeProp((elem, value) => {
-          elem.hasTitle = value
-          elem.hasBody = elem.hasBody || (!elem.hasTitle && !elem.hasBody)
-        }, $event)"/>
+      style="display: flex; flex-direction: column">
+        <div style="display: flex">
+          <v-checkbox hide-details label="Has title"
+          style="flex: 1; margin-top: 0; padding-top: 0"
+          :input-value="$getters.elem.hasTitle"
+          @change="changeProp((elem, value) => {
+            elem.hasTitle = value
+            elem.hasBody = elem.hasBody || (!elem.hasTitle && !elem.hasBody)
+          }, $event)"/>
 
-        <Gap width="16px" style="flex: none"/>
+          <Gap width="16px" style="flex: none"/>
 
-        <v-checkbox hide-details label="Has body"
-        style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="$getters.elem.hasBody"
-        @change="changeProp((elem, value) => {
-          elem.hasBody = value
-          elem.hasTitle = elem.hasTitle || (!elem.hasTitle && !elem.hasBody)
-        }, $event)"/>
+          <v-checkbox hide-details label="Has body"
+          style="flex: 1; margin-top: 0; padding-top: 0"
+          :input-value="$getters.elem.hasBody"
+          @change="changeProp((elem, value) => {
+            elem.hasBody = value
+            elem.hasTitle = elem.hasTitle || (!elem.hasTitle && !elem.hasBody)
+          }, $event)"/>
+        </div>
+
+        <Gap height="12px"/>
+
+        <v-btn @click="changeProp((elem, value) => {
+          const aux = elem.title
+          elem.title = elem.body
+          elem.body = aux
+        }, $event)">
+          Swap title and body
+        </v-btn>
       </div>
 
       <v-divider class="mt-4"/>
