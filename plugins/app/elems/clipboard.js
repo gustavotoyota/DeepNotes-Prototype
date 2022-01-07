@@ -93,3 +93,11 @@ clipboard.paste = async (text) => {
 
   $app.activeElem.set($getters.page.elems.blocks.at(-1))
 }
+
+
+
+clipboard.cut = () => {
+  $app.clipboard.copy()
+
+  $app.deleting.deleteSelection()
+}

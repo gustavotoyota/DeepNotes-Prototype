@@ -102,6 +102,9 @@ export default async function ({ app }) {
         if (event.code === 'KeyC' && event.ctrlKey)
           $app.clipboard.copy()
 
+        if (event.code === 'KeyX' && event.ctrlKey)
+          $app.clipboard.cut()
+
         if (event.code === 'KeyV' && event.ctrlKey && window.clipboardData)
           $app.clipboard.paste()
 

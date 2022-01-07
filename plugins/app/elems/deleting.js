@@ -7,10 +7,7 @@ deleting.deleteElem = (elem) => {
   $app.selection.remove(elem)
   $app.elems.removeFromRegion(elem)
 }
-deleting.deleteSelection = (event) => {
-  if (event.code !== 'Delete' && event.keyCode !== 46)
-    return
-
+deleting.deleteSelection = () => {
   for (const elem of $app.selection.getElems())
     $app.deleting.deleteElem(elem)
 }
