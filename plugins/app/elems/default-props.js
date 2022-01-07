@@ -20,18 +20,18 @@ defaultProps.set = () => {
   delete defaultProps.id
   delete defaultProps.type 
 
-  if (defaultProps.parentId != null)
+  if (defaultProps.parentId !== undefined)
     delete defaultProps.parentId
 
-  if (defaultProps.pos != null)
+  if (defaultProps.pos !== undefined)
     delete defaultProps.pos
 
-  if (defaultProps.title != null)
+  if (defaultProps.title !== undefined)
     delete defaultProps.title
-  if (defaultProps.body != null)
+  if (defaultProps.body !== undefined)
     delete defaultProps.body
 
-  if (defaultProps.children != null)
+  if (defaultProps.children !== undefined)
     delete defaultProps.children
 
   $state.project.defaultProps[$getters.elem.type] = defaultProps
