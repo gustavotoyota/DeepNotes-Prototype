@@ -7,6 +7,8 @@ blocks.create = (overrides) => {
   return $app.elems.create({
     parentId: null,
 
+    linkedPageId: null,
+
     anchor: { x: 0.5, y: 0.5 },
 
     hasTitle: false,

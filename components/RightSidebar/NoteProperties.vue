@@ -25,7 +25,7 @@
 
         <v-select dense outlined hide-details
         background-color="#181818" clearable
-        :items="recentPages" item-text="text" item-value="value"
+        :items="$app.pages.getRecent()" item-text="text" item-value="value"
         :menu-props="{ top: false, offsetY: true }"
         :value="$getters.elem.linkedPageId"
         @change="changeProp($event, (elem, value) => {
