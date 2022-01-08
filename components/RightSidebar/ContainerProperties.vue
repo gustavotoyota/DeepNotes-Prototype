@@ -23,7 +23,7 @@
 
         <Gap height="14px"/>
 
-        <v-btn @click="$app.defaultProps.copy($app.selection.getElems())">
+        <v-btn @click="$app.defaultProps.copy($getters.elems)">
           Copy default properties
         </v-btn>
       </div>
@@ -204,7 +204,7 @@ export default {
 
   methods: {
     changeProp(value, func) {
-      for (const elem of $app.selection.getElems())
+      for (const elem of $getters.elems)
         func(elem, value)
     },
   },
@@ -227,7 +227,7 @@ export default {
           return $getters.elem[this.sizeProp].x
       },
       set(value) {
-        for (const elem of $app.selection.getElems()) {
+        for (const elem of $getters.elems) {
           const sizeProp = $app.elems.getSizeProp(elem)
 
           if (value === 'custom') {
@@ -247,7 +247,7 @@ export default {
           return $getters.elem[this.sizeProp].y
       },
       set(value) {
-        for (const elem of $app.selection.getElems()) {
+        for (const elem of $getters.elems) {
           const sizeProp = $app.elems.getSizeProp(elem)
 
           if (value === 'custom') {

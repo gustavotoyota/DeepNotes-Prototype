@@ -4,7 +4,7 @@ const clipboard = module.exports = {}
 
 
 clipboard.copy = () => {
-  const selectedElems = $app.selection.getElems()
+  const selectedElems = $getters.elems
   if (selectedElems.length === 0)
     return
 
@@ -33,7 +33,7 @@ clipboard.copy = () => {
 
   
 
-  for (const selectedElem of $app.selection.getElems()) {
+  for (const selectedElem of $getters.elems) {
     const clipboardElem = $utils.deepCopy(selectedElem)
 
     delete clipboardElem.id

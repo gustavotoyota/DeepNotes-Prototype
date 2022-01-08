@@ -39,13 +39,10 @@ selection.has = (elem) => {
 
 
 
-selection.getElemIds = () => {
-  return Object.keys($getters.page.elems.selected)
-}
 selection.getElems = () => {
   const objs = []
 
-  for (const elemId of $app.selection.getElemIds()) {
+  for (const elemId of Object.keys($getters.page.elems.selected)) {
     const obj = {}
     
     obj.idx = $getters.regionArray.findIndex((item) => item.id == elemId)
@@ -79,7 +76,7 @@ selection.addAll = () => {
 
 
 selection.shift = (shiftX, shiftY) => {
-  for (const elem of $app.selection.getElems()) {
+  for (const elem of $getters.elems) {
     elem.pos.x += shiftX
     elem.pos.y += shiftY
   }
@@ -96,7 +93,7 @@ selection.moveToRegion = (regionElem, dropIndex) => {
 
   const activeElemId = $getters.elemId
 
-  for (const elem of $app.selection.getElems()) {
+  for (const elem of $getters.elems) {
     $app.elems.removeFromRegion(elem)
     regionArray.splice(dropIndex++, 0, elem)
       

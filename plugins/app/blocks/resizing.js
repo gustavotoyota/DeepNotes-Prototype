@@ -58,7 +58,7 @@ resizing.update = (event) => {
     y: newWorldRect.end.y - newWorldRect.start.y,
   }
 
-  for (const elem of $app.selection.getElems()) {
+  for (const elem of $getters.elems) {
     const sizeProp = $app.elems.getSizeProp(elem)
 
     if (newClientRect.size.x !== clientRect.width) {

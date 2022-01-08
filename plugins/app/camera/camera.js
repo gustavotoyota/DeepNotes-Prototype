@@ -9,8 +9,8 @@ camera.resetZoom = () => {
 
 camera.fitToScreen = () => {
   let elems
-  if ($app.selection.getElemIds().length > 0)
-    elems = $app.selection.getElems()
+  if ($getters.elems.length > 0)
+    elems = $getters.elems
   else
     elems = $getters.page.elems.blocks
     

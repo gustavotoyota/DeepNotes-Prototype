@@ -8,6 +8,6 @@ deleting.deleteElem = (elem) => {
   $app.elems.removeFromRegion(elem)
 }
 deleting.deleteSelection = () => {
-  for (const elem of $app.selection.getElems())
+  for (const elem of $getters.elems)
     $app.deleting.deleteElem(elem)
 }

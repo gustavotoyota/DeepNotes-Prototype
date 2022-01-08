@@ -6,7 +6,7 @@ const cloning = module.exports = {}
 cloning.perform = () => {
   const activeElemId = $getters.elemId
 
-  const selectedElems = $app.selection.getElems()
+  const selectedElems = $getters.elems
 
   let destIdx
   if ($getters.regionId != null)

@@ -43,6 +43,12 @@ getters.regionArray = () => {
 
 
 
+getters.elems = () => {
+  return $app.selection.getElems()
+}
+
+
+
 getters.elemId = () => {
   return $getters.page.elems.activeId
 }

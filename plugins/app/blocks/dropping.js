@@ -9,7 +9,7 @@ dropping.perform = (event, regionElem, dropIndex) => {
   $app.dragging.finish(event)
 
   $nextTick(() => {
-    const lastSelectedElem = $app.selection.getElems().at(-1)
+    const lastSelectedElem = $getters.elems.at(-1)
     $app.elems.scrollIntoView(lastSelectedElem)
   })
 }
