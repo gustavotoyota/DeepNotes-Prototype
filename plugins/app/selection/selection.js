@@ -15,19 +15,33 @@ selection.clear = (regionId) => {
 
 
 selection.add = (elem) => {
+  if ($app.selection.has(elem))
+    return
+
   if (elem.parentId != $getters.regionId)
     $app.selection.clear(elem.parentId)
 
   $set($getters.page.elems.selected, elem.id, true)
+
+  if ($getters.elemId == null)
+    $app.activeElem.set(elem, false)
 }
 selection.remove = (elem) => {
+  if (!$app.selection.has(elem))
+    return
+
   if (elem.parentId != $getters.regionId)
     return
 
-  if ($app.activeElem.is(elem))
-    $app.activeElem.clear()
-
   $delete($getters.page.elems.selected, elem.id)
+
+  if (!$app.activeElem.is(elem))
+    return
+
+  if ($getters.elems.length === 0)
+    $app.activeElem.clear()
+  else
+    $app.activeElem.set($getters.elems.at(-1))
 }
 
 
@@ -93,5 +107,5 @@ selection.moveToRegion = (regionElem, dropIndex) => {
     $app.selection.add(elem)
   }
 
-  $app.activeElem.set(activeElem)
+  $app.activeElem.set(activeElem, false)
 }
