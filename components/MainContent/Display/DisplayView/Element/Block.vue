@@ -283,7 +283,7 @@ export default {
         $app.editing.stop()
 
       if (this.elem.linkedPageId != null
-      && !event.altKey && !this.selected)
+      && !event.ctrlKey && !event.shiftKey && !this.selected)
         return
 
       $app.clickSelection.perform(this.elem, event)
@@ -297,7 +297,7 @@ export default {
 
     onClick(event) {
       if (this.elem.linkedPageId == null
-      || event.altKey || this.selected)
+      || event.ctrlKey || event.shiftKey || this.selected)
         return
 
       $app.pages.navigate(this.elem.linkedPageId)

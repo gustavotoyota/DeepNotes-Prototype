@@ -29,16 +29,6 @@ export default {
 
   methods: {
 
-    onClick(event) {
-      if (this.elem.linkedPageId == null
-      || event.altKey || this.selected)
-        return
-
-      $app.pages.navigate(this.elem.linkedPageId)
-    },
-
-
-
     onBodyPointerDown(event) {
       if (this.editing) {
         event.stopPropagation()
