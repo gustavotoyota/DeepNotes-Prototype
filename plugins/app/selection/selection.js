@@ -98,7 +98,7 @@ selection.moveToRegion = (regionElem, dropIndex) => {
 
   for (const elem of $app.selection.getElems()) {
     $app.elems.removeFromRegion(elem)
-    region.splice(dropIndex, 0, elem)
+    region.splice(dropIndex++, 0, elem)
       
     elem.parentId = regionId
     
