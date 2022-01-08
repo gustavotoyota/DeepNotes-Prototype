@@ -30,6 +30,9 @@ elems.setup = (elem, parentId) => {
 
 
 elems.getById = (elemId, regionArray) => {
+  if (elemId == null)
+    return null
+
   regionArray = regionArray ?? $getters.page.elems.blocks
 
   let result = regionArray.find((item) => item.id == elemId)
@@ -64,19 +67,30 @@ elems.getClientRect = (elem) => {
 
 
 
-elems.getRegion = (elem) => {
+
+elems.getRegionElem = (elem) => {
+  return $app.elems.getById(elem.parentId)
+}
+elems.getRegionArray = (elem) => {
   if (elem.parentId == null)
     return $getters.page.elems.blocks
+  else if (elem.parentId == $getters.regionId)
+    return $getters.regionArray
   else
     return $app.elems.getById(elem.parentId).children
 }
+
+
+
 elems.removeFromRegion = (elem) => {
-  $utils.removeFromArray($app.elems.getRegion(elem), elem)
+  const regionArray = $app.elems.getRegionArray(elem)
+
+  $utils.removeFromArray(regionArray, elem)
 }
 
 
 
-elems.extractRegion = (elem) => {
+elems.getChildren = (elem) => {
   if (elem == null)
     return $getters.page.elems.blocks
   else
@@ -109,9 +123,9 @@ elems.getEditorNode = (elem, editorIdx) => {
 
 
 elems.isOnTop = (elem) => {
-  const region = elems.getRegion(elem)
+  const regionArray = elems.getRegionArray(elem)
 
-  return elem.id == region.at(-1).id
+  return elem === regionArray.at(-1)
 }
 
 
@@ -132,4 +146,12 @@ elems.scrollIntoView = (elem) => {
     behavior: 'smooth',
     block: 'nearest',
   })
+}
+
+
+
+elems.getIndex = (elem) => {
+  const regionArray = $app.elems.getRegionArray(elem)
+
+  return regionArray.findIndex(item => item === elem)
 }

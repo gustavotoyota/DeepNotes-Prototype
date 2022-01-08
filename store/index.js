@@ -26,10 +26,7 @@ getters.regionId = () => {
   return $getters.page.elems.regionId
 }
 getters.regionElem = () => {
-  if ($getters.regionId == null)
-    return null
-  else
-    return $app.elems.getById($getters.regionId)
+  return $app.elems.getById($getters.regionId)
 }
 getters.regionArray = () => {
   if ($getters.regionId == null)

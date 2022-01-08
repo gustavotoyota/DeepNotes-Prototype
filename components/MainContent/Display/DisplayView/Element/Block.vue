@@ -254,10 +254,7 @@ export default {
       return $app.elems.getById(this.elem.parentId)
     },
     index() {
-      if (!this.parentElem)
-        return null
-
-      return this.parentElem.children.findIndex(item => item === this.elem)
+      return $app.elems.getIndex(this.elem)
     },
 
   },
@@ -309,8 +306,6 @@ export default {
 
 
     onTitlePointerDown(event) {
-      console.log('test')
-
       if (this.editing) {
         event.stopPropagation()
 

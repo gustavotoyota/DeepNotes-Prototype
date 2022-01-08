@@ -90,15 +90,15 @@ selection.shift = (shiftX, shiftY) => {
 selection.moveToRegion = (regionElem, dropIndex) => {
   const regionId = regionElem?.id ?? null
 
-  const region = $app.elems.extractRegion(regionElem)
+  const regionArray = $app.elems.getChildren(regionElem)
 
-  dropIndex ??= region.length
+  dropIndex ??= regionArray.length
 
   const activeElemId = $getters.elemId
 
   for (const elem of $app.selection.getElems()) {
     $app.elems.removeFromRegion(elem)
-    region.splice(dropIndex++, 0, elem)
+    regionArray.splice(dropIndex++, 0, elem)
       
     elem.parentId = regionId
     
