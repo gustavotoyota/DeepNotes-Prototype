@@ -40,22 +40,13 @@ selection.has = (elem) => {
 
 
 selection.getElems = () => {
-  const objs = []
+  const selectedElems = []
 
-  for (const elemId of Object.keys($getters.page.elems.selected)) {
-    const obj = {}
-    
-    obj.idx = $getters.regionArray.findIndex((item) => item.id == elemId)
-    obj.elem = $getters.regionArray[obj.idx]
-
-    objs.push(obj)
-  }
-
-  objs.sort((a, b) => {
-    return a.idx - b.idx
-  })
+  for (const elem of $getters.regionArray)
+    if (elem.id in $getters.page.elems.selected)
+      selectedElems.push(elem)
   
-  return objs.map((item) => item.elem)
+  return selectedElems
 }
 
 
