@@ -43,15 +43,22 @@ selection.getElemIds = () => {
   return Object.keys($getters.page.elems.selected)
 }
 selection.getElems = () => {
-  const elems = []
+  const objs = []
 
   for (const elemId of $app.selection.getElemIds()) {
-    const elem = $getters.regionArray.find((item) => item.id == elemId)
+    const obj = {}
+    
+    obj.idx = $getters.regionArray.findIndex((item) => item.id == elemId)
+    obj.elem = $getters.regionArray[obj.idx]
 
-    elems.push(elem)
+    objs.push(obj)
   }
 
-  return elems
+  objs.sort((a, b) => {
+    return a.idx - b.idx
+  })
+  
+  return objs.map((item) => item.elem)
 }
 
 
