@@ -54,7 +54,7 @@ selection.getElems = () => {
 selection.set = (elem) => {
   $app.selection.clear(elem.parentId)
 
-  $app.selection.add(elem.id)
+  $app.selection.add(elem)
 }
 
 
@@ -82,17 +82,16 @@ selection.moveToRegion = (regionElem, dropIndex) => {
 
   dropIndex ??= regionArray.length
 
-  const activeElemId = $getters.elemId
+  const activeElem = $getters.elem
 
   for (const elem of $getters.elems) {
     $app.elems.removeFromRegion(elem)
     regionArray.splice(dropIndex++, 0, elem)
       
     elem.parentId = regionId
-    
-    if (elem.id == activeElemId)
-      $app.activeElem.set(elem)
-    else
-      $app.selection.add(elem)
+
+    $app.selection.add(elem)
   }
+
+  $app.activeElem.set(activeElem)
 }

@@ -4,7 +4,7 @@ const cloning = module.exports = {}
 
 
 cloning.perform = () => {
-  const activeElemId = $getters.elemId
+  let activeElem = $getters.elem
 
   const selectedElems = $getters.elems
 
@@ -28,13 +28,14 @@ cloning.perform = () => {
       $getters.regionArray.splice(destIdx++, 0, newElem)
     }
 
-    $app.selection.remove(selectedElem)
+    if (selectedElem === activeElem)
+      activeElem = newElem
 
-    if (selectedElem.id == activeElemId)
-      $app.activeElem.set(newElem)
-    else
-      $app.selection.add(newElem)
+    $app.selection.remove(selectedElem)
+    $app.selection.add(newElem)
   }
+
+  $app.activeElem.set(activeElem)
 
   if ($getters.regionId != null) {
     $nextTick(() => {
