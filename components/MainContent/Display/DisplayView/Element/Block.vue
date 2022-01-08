@@ -309,8 +309,6 @@ export default {
 
 
     onTitlePointerDown(event) {
-      console.log('test')
-
       if (this.editing) {
         event.stopPropagation()
 
