@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%)"
   :style="`left: ${left}%; top: ${top}%;
   cursor: ${side}-resize; ` +
-  ($state.dragging.active ? `pointer-events: none; opacity: 0.7` : ``)"
+  ($state.dragging.down ? `pointer-events: none; opacity: 0.7` : ``)"
   @pointerdown.left.stop="onPointerDown">
   </div>
   
