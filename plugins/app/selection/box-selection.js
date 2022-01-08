@@ -71,20 +71,8 @@ boxSelection.finish = (event) => {
 
   // Activate highest selected element
   
-  let lastElem = null
-
-  for (let i = $getters.page.elems.blocks.length - 1; i >= 0; --i) {
-    const elem = $getters.page.elems.blocks[i]
-
-    if (!$app.selection.has(elem))
-      continue
-
-    lastElem = elem
-    break
-  }
-
-  if (lastElem)
-    $app.activeElem.set(lastElem)
+  if ($getters.elems.length > 0)
+    $app.activeElem.set($getters.elems.at(-1))
 
 
 
