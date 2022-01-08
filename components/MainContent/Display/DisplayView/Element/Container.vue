@@ -6,15 +6,27 @@
     
     <div v-if="elem.children.length === 0"
     style="padding: 8px;
+    position: relative;
     height: 100%;
     font-size: 13px;
     background-color: #686868;
     border-radius: 4px;
     display: flex;
     align-items: center;
-    justify-content: center"
-    @pointerup.left="onDropZonePointerUp">
+    justify-content: center;
+    overflow: hidden">
       Drop notes here
+
+      <div v-if="$state.dragging.active"
+      style="position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      z-index: 1001"
+      class="drop-zone"
+      :class="{ 'active' : $state.dragging.dropRegionId == this.elem.id }"
+      @mouseenter="onDropZoneMouseEnter"
+      @mouseleave="onDropZoneMouseLeave"
+      @pointerup.left="onDropZonePointerUp">
+      </div>
     </div>
 
     <div v-else
@@ -28,6 +40,7 @@
     
       <div v-if="$state.dragging.active"
       class="drop-zone"
+      style="flex: 1"
       :class="{ 'active' : $state.dragging.dropRegionId == this.elem.id
         && $state.dragging.dropIndex === this.elem.children.length }"
       @mouseenter="onDropZoneMouseEnter"
@@ -114,8 +127,6 @@ export default {
 
 <style scope>
 .drop-zone {
-  flex: 1;
-
   background-color: #42A5F5;
   opacity: 0;
 }

@@ -371,7 +371,7 @@ export default {
   background-color: #42A5F5;
   opacity: 0;
 
-  z-index: 9999;
+  z-index: 1000;
 }
 .drop-zone.active {
   opacity: 0.25;
