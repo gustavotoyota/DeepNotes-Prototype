@@ -342,9 +342,7 @@ export default {
     onDropZonePointerUp(event, offset) {
       const dropIndex = this.index + offset
 
-      $app.selection.moveToRegion(this.parentElem, dropIndex)
-      
-      $app.dragging.finish(event)
+      $app.dropping.perform(event, this.parentElem, dropIndex)
     },
 
   },

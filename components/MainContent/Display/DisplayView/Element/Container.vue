@@ -74,9 +74,7 @@ export default {
       && !$app.selection.has(this.elem)) {
         event.stopPropagation()
 
-        $app.selection.moveToRegion(this.elem)
-
-        $app.dragging.finish(event)
+        $app.dropping.perform(event, this.elem)
       }
     },
 
