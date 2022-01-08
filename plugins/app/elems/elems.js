@@ -147,3 +147,11 @@ elems.scrollIntoView = (elem) => {
     block: 'nearest',
   })
 }
+
+
+
+elems.getIndex = (elem) => {
+  const regionArray = $app.elems.getRegionArray(elem)
+
+  return regionArray.findIndex(item => item === elem)
+}

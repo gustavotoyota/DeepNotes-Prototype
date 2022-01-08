@@ -10,8 +10,7 @@ cloning.perform = () => {
 
   let destIdx
   if ($getters.regionId != null)
-    destIdx = $getters.regionArray.findIndex(
-      (item) => item.id == selectedElems.at(-1).id) + 1
+    destIdx = $app.elems.getIndex(selectedElems.at(-1)) + 1
   
   for (const selectedElem of selectedElems) {
     let newElem
