@@ -62,7 +62,7 @@ export default {
       return $app.activeElem.is(this.elem)
     },
     editing() {
-      return this.active && $getters.page.elems.editing
+      return this.active && $getters.editing
     },
 
   },

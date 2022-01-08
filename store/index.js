@@ -22,6 +22,12 @@ getters.page = () => {
 
 
 
+getters.editing = () => {
+  return $getters.page.elems.editing
+}
+
+
+
 getters.regionId = () => {
   return $getters.page.elems.regionId
 }

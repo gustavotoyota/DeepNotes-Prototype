@@ -7,7 +7,7 @@ editing.start = (elem, editorIdx) => {
   if (elem.readOnly)
     return
 
-  if ($getters.page.elems.editing)
+  if ($getters.editing)
     return
 
   $app.activeElem.setExclusive(elem)
@@ -33,7 +33,7 @@ editing.start = (elem, editorIdx) => {
 
 
 editing.stop = () => {
-  if (!$getters.page.elems.editing)
+  if (!$getters.editing)
     return
 
   const elem = $app.elems.getById($getters.elemId)

@@ -185,7 +185,7 @@ export default {
       return $app.activeElem.is(this.elem)
     },
     editing() {
-      return this.active && $getters.page.elems.editing
+      return this.active && $getters.editing
     },
     dragging() {
       return $state.dragging.active
@@ -289,7 +289,7 @@ export default {
       $app.clickSelection.perform(this.elem, event)
 
       if ($app.selection.has(this.elem)
-      && !$getters.page.elems.editing)
+      && !$getters.editing)
         $app.dragging.start(event, this.elem)
     },
 
