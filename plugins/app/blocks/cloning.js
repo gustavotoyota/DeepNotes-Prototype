@@ -5,8 +5,15 @@ const cloning = module.exports = {}
 
 cloning.perform = () => {
   const activeElemId = $getters.elemId
+
+  const selectedElems = $app.selection.getElems()
+
+  let destIdx
+  if ($getters.regionId != null)
+    destIdx = $getters.regionArray.findIndex(
+      (item) => item.id == selectedElems.at(-1).id) + 1
   
-  for (const selectedElem of $app.selection.getElems()) {
+  for (const selectedElem of selectedElems) {
     let newElem
     
     if ($getters.regionId == null) {
@@ -19,7 +26,7 @@ cloning.perform = () => {
 
       $app.elems.setup(newElem, $getters.regionId)
 
-      $getters.regionArray.push(newElem)
+      $getters.regionArray.splice(destIdx++, 0, newElem)
     }
 
     $app.selection.remove(selectedElem)
@@ -30,9 +37,9 @@ cloning.perform = () => {
       $app.selection.add(newElem)
   }
 
-  if ($getters.regionArray != null) {
+  if ($getters.regionId != null) {
     $nextTick(() => {
-      $app.elems.scrollIntoView($getters.regionArray.at(-1))
+      $app.elems.scrollIntoView($getters.regionArray[destIdx - 1])
     })
   }
 }
