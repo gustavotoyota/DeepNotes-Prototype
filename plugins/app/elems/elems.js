@@ -130,5 +130,6 @@ elems.scrollIntoView = (elem) => {
   
   node.scrollIntoView({
     behavior: 'smooth',
+    block: 'nearest',
   })
 }
