@@ -24,7 +24,7 @@ selection.remove = (elem) => {
   if (elem.parentId != $getters.regionId)
     return
 
-  if ($app.activeElem.is(elem.id))
+  if ($app.activeElem.is(elem))
     $app.activeElem.clear()
 
   $delete($getters.page.elems.selected, elem.id)
