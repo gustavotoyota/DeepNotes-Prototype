@@ -90,15 +90,35 @@ selection.shift = (shiftX, shiftY) => {
 
 
 selection.moveToRegion = (regionElem, dropIndex) => {
+  // Sort elements by Y position
+
+  let elems = []
+
+  for (const elem of $getters.elems) {
+    const clientRect = $app.elems.getClientRect(elem)
+
+    elems.push({
+      elem: elem,
+      posY: clientRect.y + clientRect.height * elem.anchor.y,
+    })
+  }
+
+  elems.sort((a, b) => a.posY - b.posY)
+
+  elems = elems.map(item => item.elem)
+
+
+  
+
+  // Move elements to region
+  
   const regionId = regionElem?.id ?? null
-
   const regionArray = $app.elems.getChildren(regionElem)
-
   dropIndex ??= regionArray.length
 
   const activeElem = $getters.elem
 
-  for (const elem of $getters.elems) {
+  for (const elem of elems) {
     $app.elems.removeFromRegion(elem)
     regionArray.splice(dropIndex++, 0, elem)
       
