@@ -13,6 +13,9 @@ panning.start = (event) => {
   if (event.button !== 1)
     return
 
+  if ($getters.page.camera.lockPos)
+    return
+
   const clientPos = $app.coords.getClientPos(event)
 
   $state.panning = {

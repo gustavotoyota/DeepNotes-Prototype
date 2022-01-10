@@ -28,8 +28,13 @@
 
       <v-divider class="mt-4"/>
         
-      <div class="mx-5 mt-4"
-      style="display: flex">
+      <div class="mx-5 mt-4">
+        <v-checkbox hide-details label="Lock position"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        v-model="$getters.page.camera.lockPos"/>
+
+        <Gap height="10px"/>
+
         <v-checkbox hide-details label="Lock zoom"
         style="flex: 1; margin-top: 0; padding-top: 0"
         v-model="$getters.page.camera.lockZoom"/>
