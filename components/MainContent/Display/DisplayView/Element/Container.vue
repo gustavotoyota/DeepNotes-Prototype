@@ -38,8 +38,7 @@
       :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
       :elem="child" :inherited-width="targetWidth"/>
     
-      <div v-if="$state.dragging.active"
-      class="drop-zone"
+      <div class="container-drop-zone"
       style="flex: 1"
       :class="{ 'active' : $state.dragging.dropRegionId == this.elem.id
         && $state.dragging.dropIndex === this.elem.children.length }"
@@ -125,12 +124,12 @@ export default {
 }
 </script>
 
-<style scope>
-.drop-zone {
+<style scoped>
+.container-drop-zone {
   background-color: #42A5F5;
   opacity: 0;
 }
-.drop-zone.active {
+.container-drop-zone.active {
   opacity: 0.25;
 }
 </style>
