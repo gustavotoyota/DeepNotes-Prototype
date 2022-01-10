@@ -4,7 +4,7 @@
   :style="`height: 100%;
   overflow: hidden`"
   @wheel="onWheel"
-  @pointerdown.middle="onPointerDown">
+  @pointerdown.middle.prevent="onPointerDown">
 
     <Background/>
     <DisplayView/>
