@@ -114,6 +114,8 @@ pages.getRecent = () => {
 
     recentPages.push({ text: recentPage.name, value: recentPageId })
   }
+      
+  recentPages.push({ text: $getters.page.name, value: $getters.page.id })
 
   return recentPages
 }

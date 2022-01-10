@@ -284,24 +284,6 @@ export default {
       return $app.elems.getSizeProp($getters.elem)
     },
 
-    recentPages() {
-      const recentPages = []
-
-      for (let i = $state.project.pages.recent.length - 1; i >= 0; --i) {
-        const recentPageId = $state.project.pages.recent[i]
-
-        if (recentPageId == $getters.page.id)
-          continue
-
-        const recentPage = $app.pages.getById(recentPageId)
-
-        recentPages.push({ text: recentPage.name, value: recentPageId })
-      }
-
-      return recentPages
-    },
-
-
 
 
 
