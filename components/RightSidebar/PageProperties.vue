@@ -26,6 +26,15 @@
         </v-text-field>
       </div>
 
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5 mt-4"
+      style="display: flex">
+        <v-checkbox hide-details label="Lock zoom"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        v-model="$getters.page.camera.lockZoom"/>
+      </div>
+
     </div>
 
   </div>

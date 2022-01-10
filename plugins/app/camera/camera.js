@@ -4,6 +4,9 @@ const camera = module.exports = {}
 
 
 camera.resetZoom = () => {
+  if ($getters.page.camera.lockZoom)
+    return
+    
   $getters.page.camera.zoom = 1
 }
 
@@ -22,6 +25,7 @@ camera.fitToScreen = () => {
     $app.camera.resetZoom()
     return
   }
+  
 
 
 
@@ -40,15 +44,18 @@ camera.fitToScreen = () => {
 
 
 
+
   const worldTopLeft = $app.coords.clientToWorld(clientTopLeft)
   const worldBottomRight = $app.coords.clientToWorld(clientBottomRight)
-
-
 
   $getters.page.camera.pos.x = (worldTopLeft.x + worldBottomRight.x) / 2
   $getters.page.camera.pos.y = (worldTopLeft.y + worldBottomRight.y) / 2
 
 
+  
+
+  if ($getters.page.camera.lockZoom)
+    return
 
   const displayRect = $app.display.getClientRect()
 
