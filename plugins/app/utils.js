@@ -121,3 +121,15 @@ $utils.removeFromArray = (array, item) => {
   const index = array.indexOf(item)
   return array.splice(index, 1)[0]
 }
+
+
+
+
+$utils.hasVertScrollbar = (node) => {
+  return node.scrollHeight > node.clientHeight
+    && node.offsetWidth > node.clientWidth
+}
+$utils.hasHorizScrollbar = (node) => {
+  return node.scrollWidth > node.clientWidth
+    && node.offsetHeight > node.clientHeight
+}
