@@ -9,7 +9,7 @@
     <!-- Frame -->
 
     <div :id="`elem-${elem.id}-frame`"
-    style="min-height: 40px"
+    style="min-height: 38px"
     :style="`position: ${elem.parentId == null ? 'absolute' : 'relative'}; ` +
     (minWidth ? `min-width: ${minWidth}; ` : '') +
     `width: ${width}; height: ${height}; ` +
@@ -44,12 +44,15 @@
 
       <!-- Background -->
 
-      <v-sheet style="border-radius: 7px !important;
+      <div style="border-radius: 7px;
+      border: 1px solid #212121;
+      border-left-color: #757575;
+      border-top-color: #757575;
       height: 100%;
       display: flex; flex-direction: column;
       overflow: hidden"
-      :color="color" rounded elevation="6"
-      :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }`"
+      :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }; 
+      background-color: ${color}`"
       @pointerdown.left.stop="onPointerDown"
       @click.left.stop="onClick">
 
@@ -65,9 +68,9 @@
           <!-- Title content -->
 
           <div style="flex: 1 /* Title content is horizontally flexible */"
-          :style="`padding: 10px;
+          :style="`padding: 9px;
           width: ${targetWidth} /* Auto or 0 (custom) */;
-          padding-right: ${elem.collapsible ? 0 : `10px`} /* Padding 0 when collapsible */`">
+          padding-right: ${elem.collapsible ? 0 : `9px`} /* Padding 0 when collapsible */`">
 
             <SmartEditor ref="editor-0"
             :id="`elem-${elem.id}-editor-0`"
@@ -122,10 +125,10 @@
 
           <div :id="`elem-${elem.id}-body`"
           style="flex: 1 /* Body content is horizontally flexible */;
-          padding: 10px !important; /* '!important' is necessary because of padding bug */"
+          padding: 9px !important; /* '!important' is necessary because of padding bug */"
           :style="`height: ${elem.hasTitle && elem[sizeProp].x === 'expanded' ? `${elem.expandedHeight}px` : '100%'};
           width: ${targetWidth} /* Auto or 0 (custom) */;
-          padding-right: ${!elem.hasTitle && elem.collapsible ? 0 : `10px`} /* Padding 0 when collapsible */`"
+          padding-right: ${!elem.hasTitle && elem.collapsible ? 0 : `9px`} /* Padding 0 when collapsible */`"
           @pointerdown.left="$emit('body-pointerdown', $event)"
           @dblclick.left="$emit('body-dblclick', $event)">
 
@@ -155,7 +158,7 @@
 
         </div>
 
-      </v-sheet>
+      </div>
 
     </div>
 
@@ -196,11 +199,11 @@ export default {
 
     color() {
       if (this.active)
-        return `grey darken-1`
+        return `#757575`
       else if (this.selected)
-        return `grey darken-2`
+        return `#616161`
       else
-        return `grey darken-3`
+        return `#424242`
     },
 
 
