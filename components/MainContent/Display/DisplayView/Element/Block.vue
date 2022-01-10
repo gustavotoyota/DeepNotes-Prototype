@@ -283,7 +283,10 @@ export default {
         $app.editing.stop()
 
       if (this.elem.linkedPageId != null
-      && !event.ctrlKey && !event.shiftKey && !this.selected)
+      && !event.ctrlKey
+      && !event.altKey
+      && !event.shiftKey
+      && !this.selected)
         return
 
       $app.clickSelection.perform(this.elem, event)
