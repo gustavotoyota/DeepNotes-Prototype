@@ -91,6 +91,7 @@
             style="min-width: 0 /* Allows reducing collapse button width */;
             width: 32px /* Reduces collapse button width to 32px */;
             height: 100% /* Makes the collapse button height the same as the title */"
+            :ripple="false"
             @pointerdown.left.stop
             @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
             @dblclick.left.stop>
@@ -147,6 +148,7 @@
             style="min-width: 0 /* Allows reducing collapse button width */;
             width: 32px /* Reduces collapse button width to 32px */;
             height: 40px /* Makes collapse button fixed to 40px height */"
+            :ripple="false"
             @pointerdown.left.stop
             @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
             @dblclick.left.stop>
