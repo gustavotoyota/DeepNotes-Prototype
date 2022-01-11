@@ -114,7 +114,7 @@ selection.moveToRegion = (regionElem, dropIndex) => {
   
   const regionId = regionElem?.id ?? null
   const regionArray = $app.elems.getChildren(regionElem)
-  dropIndex ??= regionArray.length
+  dropIndex = dropIndex ?? regionArray.length
 
   const activeElem = $getters.elem
 

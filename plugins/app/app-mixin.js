@@ -1,5 +1,5 @@
 export default async function ({ app }) {
-	(app.mixins ??= []).push({
+	(app.mixins = app.mixins ?? []).push({
     beforeCreate() {
       globalThis.$nuxt = this
       
