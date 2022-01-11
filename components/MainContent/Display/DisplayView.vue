@@ -1,0 +1,29 @@
+<template>
+
+  <!-- Centralizer -->
+  <div style="position: absolute; left: 50%; top: 50%">
+
+    <!-- Viewbox -->
+    <div :style="`width: 0; height: 0; position: relative;
+    transform: scale(${$getters.page.camera.zoom}) ` +
+    `translate(${-$getters.page.camera.pos.x}px, ${-$getters.page.camera.pos.y}px)`">
+      
+      <Element
+      v-for="elem in $getters.page.elems.blocks" :key="elem.id"
+      :elem="elem"/>
+
+    </div>
+
+  </div>
+  
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+
+</style>
