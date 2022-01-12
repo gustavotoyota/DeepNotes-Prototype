@@ -23,8 +23,8 @@
       z-index: 1001"
       class="drop-zone"
       :class="{ 'active' : $state.dragging.dropRegionId == this.elem.id }"
-      @mouseenter="onDropZoneMouseEnter"
-      @mouseleave="onDropZoneMouseLeave"
+      @pointerenter="onDropZonePointerEnter"
+      @pointerleave="onDropZonePointerLeave"
       @pointerup.left="onDropZonePointerUp">
       </div>
     </div>
@@ -42,8 +42,8 @@
       style="flex: 1"
       :class="{ 'active' : $state.dragging.dropRegionId == this.elem.id
         && $state.dragging.dropIndex === this.elem.children.length }"
-      @mouseenter="onDropZoneMouseEnter"
-      @mouseleave="onDropZoneMouseLeave"
+      @pointerenter="onDropZonePointerEnter"
+      @pointerleave="onDropZonePointerLeave"
       @pointerup.left="onDropZonePointerUp">
       </div>
 
@@ -66,14 +66,14 @@ export default {
 
   methods: {
     
-    onDropZoneMouseEnter(event) {
+    onDropZonePointerEnter(event) {
       if (!$state.dragging.active)
         return
 
       $state.dragging.dropRegionId = this.elem.id
       $state.dragging.dropIndex = this.elem.children.length
     },
-    onDropZoneMouseLeave(event) {
+    onDropZonePointerLeave(event) {
       if (!$state.dragging.active)
         return
       

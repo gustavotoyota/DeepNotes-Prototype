@@ -35,5 +35,10 @@ export default {
 </script>
 
 <style scoped>
+</style>
 
+<style>
+#display * {
+  touch-action: none;
+}
 </style>

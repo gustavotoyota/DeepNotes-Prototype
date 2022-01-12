@@ -38,7 +38,7 @@ export default async function ({ app }) {
     },
 
     mounted() {
-      document.addEventListener('pointerdown', this.onPointerDown, true)
+      document.addEventListener('pointerdown', this.onPointerDownCapture, true)
       document.addEventListener('pointermove', this.onPointerMove)
       document.addEventListener('pointerup', this.onPointerUp)
       
@@ -49,7 +49,7 @@ export default async function ({ app }) {
     },
 
     beforeDestroy() {
-      document.removeEventListener('pointerdown', this.onPointerDown, true)
+      document.removeEventListener('pointerdown', this.onPointerDownCapture, true)
       document.removeEventListener('pointermove', this.onPointerMove)
       document.removeEventListener('pointerup', this.onPointerUp)
       
@@ -61,7 +61,9 @@ export default async function ({ app }) {
 
     methods: {
 
-      onPointerDown(event) {
+      
+      onPointerDownCapture(event) {
+        event.target.releasePointerCapture(event.pointerId)
       },
       onPointerMove(event) {
         $app.panning.update(event)
