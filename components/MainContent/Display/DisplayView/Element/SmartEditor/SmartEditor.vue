@@ -13,7 +13,6 @@
   <Editor v-else
   ref="editor"
   v-on="$listeners" v-bind="$attrs"
-  :disabled="disabled"
   :class="{ wrap: wrap, nowrap: !wrap }"
   v-model="model"
   @ready="onEditorReady"/>
