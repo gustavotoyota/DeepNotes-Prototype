@@ -27,7 +27,7 @@ export default {
   methods: {
 
     onPointerDown(event) {
-      $app.resizing.start(event, this.elem, this.side)
+      //$app.resizing.start(event, this.elem, this.side)
     },
 
   },

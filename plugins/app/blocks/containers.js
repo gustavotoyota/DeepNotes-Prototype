@@ -5,14 +5,14 @@ const containers = module.exports = {}
 
 containers.create = (clientPos) => {
   const elem = $app.blocks.create({
-    type: 'container',
+    type: 'note',
     
     pos: $app.coords.clientToWorld(clientPos),
     
     hasTitle: true,
     title: 'Untitled container',
 
-    children: [],
+    container: true,
   })
 
   $app.defaultProps.copy([elem])

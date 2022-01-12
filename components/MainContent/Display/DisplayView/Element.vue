@@ -1,8 +1,10 @@
 <template>
 
-  <Note v-if="elem.type === 'note'" :elem="elem" :inherited-width="inheritedWidth"/>
-  <Container v-else-if="elem.type === 'container'" :elem="elem" :inherited-width="inheritedWidth"/>
-  <Arrow v-else-if="elem.type === 'arrow'" :elem="elem" :inherited-width="inheritedWidth"/>
+  <Note v-if="elem.type === 'note'"
+  :elem="elem" :inherited-width="inheritedWidth"/>
+  
+  <Arrow v-else-if="elem.type === 'arrow'"
+  :elem="elem" :inherited-width="inheritedWidth"/>
     
 </template>
 

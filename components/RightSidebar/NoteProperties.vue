@@ -90,6 +90,18 @@
 
       <v-divider class="mt-4"/>
         
+      <div class="mx-5 mt-4"
+      style="display: flex">
+        <v-checkbox hide-details label="Container"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        :input-value="$getters.elem.container"
+        @change="changeProp($event, (elem, value) => {
+          elem.container = value
+        })"/>
+      </div>
+
+      <v-divider class="mt-4"/>
+        
       <div class="mx-5 mt-4" style="display: flex">
         <div style="flex: 1">
           <div class="body-2 grey--text text--lighten-1"

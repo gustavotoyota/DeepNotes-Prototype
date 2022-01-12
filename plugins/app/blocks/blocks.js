@@ -12,7 +12,7 @@ blocks.create = (overrides) => {
     anchor: { x: 0.5, y: 0.5 },
 
     hasTitle: false,
-    hasBody: true,
+    hasBody: false,
     
     title: '',
     body: '',
@@ -38,6 +38,9 @@ blocks.create = (overrides) => {
     wrapBody: true,
     
     readOnly: false,
+
+    container: false,
+    children: [],
 
     ...overrides,
   })

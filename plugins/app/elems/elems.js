@@ -116,8 +116,8 @@ elems.getSizeProp = (elem) => {
 
 
 
-elems.getEditorNode = (elem, editorIdx) => {
-  return $app.elems.getNode(elem, `editor-${editorIdx}`)
+elems.getEditorNode = (elem, section) => {
+  return $app.elems.getNode(elem, `editor-${section}`)
 }
 
 
@@ -154,4 +154,37 @@ elems.getIndex = (elem) => {
   const regionArray = $app.elems.getRegionArray(elem)
 
   return regionArray.findIndex(item => item === elem)
+}
+
+
+
+elems.getTopSection = (elem) => {
+  if (elem.hasTitle)
+    return 'title'
+  else if (elem.hasBody)
+    return 'body'
+  else if (elem.container)
+    return 'container'
+}
+elems.getBottomSection = (elem) => {
+  if (elem.collapsed)
+    return $app.elems.getTopSection(elem)
+  else if (elem.container)
+    return 'container'
+  else if (elem.hasBody)
+    return 'body'
+  else if (elem.hasTitle)
+    return 'title'
+}
+elems.getNumSections = (elem) => {
+  let numSections
+
+  if (elem.hasTitle)
+    ++numSections
+  if (elem.hasBody)
+    ++numSections
+  if (elem.container)
+    ++numSections
+
+  return numSections
 }
