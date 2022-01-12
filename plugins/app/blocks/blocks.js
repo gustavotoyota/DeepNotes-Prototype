@@ -20,8 +20,14 @@ blocks.create = (overrides) => {
     collapsible: false,
     collapsed: false,
 
-    expandedSize: { x: 'auto', y: 'auto' },
-    collapsedSize: { x: 'expanded', y: 'auto' },
+    expandedSize: {
+      x: 'auto',
+      y: 'auto',
+    },
+    collapsedSize: {
+      x: 'expanded',
+      y: 'auto',
+    },
 
     expandedHeight: 0,
 
