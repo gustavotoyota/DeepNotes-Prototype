@@ -24,8 +24,8 @@
         :class="{ 'active' : $state.dragging.dropRegionId == this.parentElem.id
           && $state.dragging.dropIndex === index }"
         style="top: -5px; bottom: 50%"
-        @mouseenter="onDropZoneMouseEnter($event, 0)"
-        @mouseleave="onDropZoneMouseLeave($event, 0)"
+        @pointerenter="onDropZonePointerEnter($event, 0)"
+        @pointerleave="onDropZonePointerLeave($event, 0)"
         @pointerup.left.stop="onDropZonePointerUp($event, 0)">
         </div>
 
@@ -33,8 +33,8 @@
         :class="{ 'active' : $state.dragging.dropRegionId == this.parentElem.id
           && $state.dragging.dropIndex === index + 1 }"
         style="top: 50%; bottom: 0%"
-        @mouseenter="onDropZoneMouseEnter($event, 1)"
-        @mouseleave="onDropZoneMouseLeave($event, 1)"
+        @pointerenter="onDropZonePointerEnter($event, 1)"
+        @pointerleave="onDropZonePointerLeave($event, 1)"
         @pointerup.left.stop="onDropZonePointerUp($event, 1)">
         </div>
 
@@ -218,10 +218,10 @@ export default {
         return 'auto'
 
       let expandedWidth
-      if (this.elem.size.x === 'auto')
+      if (this.elem.expandedSize.x === 'auto')
         expandedWidth = 'auto'
       else
-        expandedWidth = `${this.elem.size.x}px`
+        expandedWidth = `${this.elem.expandedSize.x}px`
 
       if (this.elem[this.sizeProp].x === 'auto')
         return 'auto'
@@ -247,7 +247,7 @@ export default {
         return this.inheritedWidth
 
       if (this.elem[this.sizeProp].x === 'auto'
-      || this.elem[this.sizeProp].x === 'expanded' && this.elem.size.x === 'auto')
+      || this.elem[this.sizeProp].x === 'expanded' && this.elem.expandedSize.x === 'auto')
         return 'auto'
 
       return 0
@@ -327,14 +327,14 @@ export default {
 
     // Drop zones
     
-    onDropZoneMouseEnter(event, offset) {
+    onDropZonePointerEnter(event, offset) {
       if (!$state.dragging.active)
         return
 
       $state.dragging.dropRegionId = this.parentElem.id
       $state.dragging.dropIndex = this.index + offset
     },
-    onDropZoneMouseLeave(event, offset) {
+    onDropZonePointerLeave(event, offset) {
       if (!$state.dragging.active)
         return
       

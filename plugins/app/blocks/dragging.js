@@ -60,27 +60,18 @@ dragging.update = (event) => {
       for (const selectedElem of $getters.elems) {
         const clientRect = $app.elems.getClientRect(selectedElem)
         const rectWorldPos = $app.coords.clientToWorld(clientRect)
-        const worldHeight = $app.sizes.screenToWorld1D(clientRect.height)
+        const worldRect = $app.sizes.screenToWorld2D({ x: clientRect.width, y: clientRect.height })
 
-        selectedElem.pos.y = rectWorldPos.y + worldHeight * selectedElem.anchor.y
+        selectedElem.pos.x = rectWorldPos.x + worldRect.x * selectedElem.anchor.x
+        selectedElem.pos.y = rectWorldPos.y + worldRect.y * selectedElem.anchor.y
+
+        if (selectedElem.collapsed && selectedElem.collapsedSize.x === 'expanded')
+          selectedElem.expandedSize.x = worldRect.x
+        else
+          selectedElem[$app.elems.getSizeProp(selectedElem)].x = worldRect.x
       }
 
       $app.selection.moveToRegion(null)
-
-      $nextTick(() => {
-        const sourceClientRect = $app.elems.getClientRect($state.dragging.sourceElem)
-
-        const offsetY = $app.sizes.screenToWorld1D(
-          clientMousePos.y - (sourceClientRect.y + sourceClientRect.height / 2))
-
-        for (const selectedElem of $getters.elems) {
-          const clientRect = $app.elems.getClientRect(selectedElem)
-          const worldWidth = $app.sizes.screenToWorld1D(clientRect.width)
-
-          selectedElem.pos.x = worldMousePos.x + worldWidth * (selectedElem.anchor.x - 0.5)
-          selectedElem.pos.y += offsetY
-        }
-      })
     }
   }
 

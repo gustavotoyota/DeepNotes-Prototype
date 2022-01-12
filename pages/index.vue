@@ -1,6 +1,7 @@
 <template>
 
-  <v-app dark v-if="!!$state && !!$state.project" spellcheck="false">
+  <v-app dark v-if="!!$state && !!$state.project"
+  spellcheck="false">
     
     <MainMenu/>
     <LeftSidebar/>
@@ -19,9 +20,13 @@ export default {
 </script>
 
 <style>
-* {
+*:not(input) {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
 
 
 html, body, #__nuxt, #__layout {

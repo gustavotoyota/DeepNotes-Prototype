@@ -111,7 +111,7 @@ elems.bringToTop = (elem) => {
 
 
 elems.getSizeProp = (elem) => {
-  return elem.collapsed ? 'collapsedSize' : 'size'
+  return elem.collapsed ? 'collapsedSize' : 'expandedSize'
 }
 
 

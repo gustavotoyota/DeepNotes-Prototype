@@ -6,7 +6,6 @@
         
     <PageProperties/>
     <NoteProperties/>
-    <ContainerProperties/>
 
   </v-navigation-drawer>
 
