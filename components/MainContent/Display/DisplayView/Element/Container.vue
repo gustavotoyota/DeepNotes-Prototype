@@ -113,7 +113,7 @@ export default {
         return this.inheritedWidth
 
       if (this.elem[this.sizeProp].x === 'auto'
-      || this.elem[this.sizeProp].x === 'expanded' && this.elem.size.x === 'auto')
+      || this.elem[this.sizeProp].x === 'expanded' && this.elem.expandedSize.x === 'auto')
         return 'auto'
 
       return 0

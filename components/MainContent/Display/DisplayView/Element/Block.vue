@@ -218,10 +218,10 @@ export default {
         return 'auto'
 
       let expandedWidth
-      if (this.elem.size.x === 'auto')
+      if (this.elem.expandedSize.x === 'auto')
         expandedWidth = 'auto'
       else
-        expandedWidth = `${this.elem.size.x}px`
+        expandedWidth = `${this.elem.expandedSize.x}px`
 
       if (this.elem[this.sizeProp].x === 'auto')
         return 'auto'
@@ -247,7 +247,7 @@ export default {
         return this.inheritedWidth
 
       if (this.elem[this.sizeProp].x === 'auto'
-      || this.elem[this.sizeProp].x === 'expanded' && this.elem.size.x === 'auto')
+      || this.elem[this.sizeProp].x === 'expanded' && this.elem.expandedSize.x === 'auto')
         return 'auto'
 
       return 0

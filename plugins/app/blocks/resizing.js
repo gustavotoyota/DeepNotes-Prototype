@@ -61,11 +61,11 @@ resizing.update = (event) => {
   for (const elem of $getters.elems) {
     const sizeProp = $app.elems.getSizeProp(elem)
 
-    if (newClientRect.size.x !== clientRect.width) {
+    if (newClientRect.expandedSize.x !== clientRect.width) {
       if (elem[sizeProp].x === 'expanded')
-        elem.size.x = newWorldRect.size.x
+        elem.expandedSize.x = newWorldRect.expandedSize.x
       else
-        elem[sizeProp].x = newWorldRect.size.x
+        elem[sizeProp].x = newWorldRect.expandedSize.x
     }
 
     if (newClientRect.size.y !== clientRect.height)
