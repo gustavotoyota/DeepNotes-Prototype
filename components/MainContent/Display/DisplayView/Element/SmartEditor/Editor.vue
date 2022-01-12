@@ -79,6 +79,8 @@ export default {
     onEditorReady(quill) {
       this.quill = quill
 
+      quill.history.clear()
+
       this.$emit('ready', quill)
     },
 
