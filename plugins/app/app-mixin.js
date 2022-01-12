@@ -82,8 +82,11 @@ export default async function ({ app }) {
 
       onKeyDown(event) {
         if (event.target.isContentEditable
-        && event.code === 'Escape')
-          $app.editing.stop()
+          && event.code === 'Escape')
+            $app.editing.stop()
+        
+        if (event.code === 'KeyD' && event.ctrlKey)
+          event.preventDefault()
 
         if (event.target.nodeName === 'INPUT'
         || event.target.nodeName === 'TEXTAREA'
@@ -96,10 +99,8 @@ export default async function ({ app }) {
         if (event.code === 'KeyA' && event.ctrlKey)
           $app.selection.addAll()
 
-        if (event.code === 'KeyD' && event.ctrlKey) {
+        if (event.code === 'KeyD' && event.ctrlKey)
           $app.cloning.perform()
-          event.preventDefault()
-        }
 
         if (event.code === 'KeyC' && event.ctrlKey)
           $app.clipboard.copy()
