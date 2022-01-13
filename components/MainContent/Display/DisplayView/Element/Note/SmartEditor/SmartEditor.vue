@@ -74,6 +74,11 @@ export default {
 
   width: max-content;
   height: max-content;
+
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .quill-editor.wrap /deep/ .ql-editor {
