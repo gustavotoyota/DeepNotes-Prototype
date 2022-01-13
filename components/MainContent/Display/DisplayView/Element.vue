@@ -1,10 +1,10 @@
 <template>
 
   <Note v-if="elem.type === 'note'"
-  :elem="elem" :inherited-width="inheritedWidth"/>
+  :elem="elem" :target-width="targetWidth"/>
   
   <Arrow v-else-if="elem.type === 'arrow'"
-  :elem="elem" :inherited-width="inheritedWidth"/>
+  :elem="elem"/>
     
 </template>
 
@@ -14,7 +14,7 @@ export default {
   props: {
     elem: { type: Object },
     
-    inheritedWidth: { },
+    targetWidth: { type: String },
   },
 
 }

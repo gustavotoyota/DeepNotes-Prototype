@@ -63,13 +63,13 @@ resizing.update = (event) => {
 
     if (newClientRect.size.x !== clientRect.width) {
       if (elem[sizeProp].x === 'expanded')
-        elem.expandedSize.x = newWorldRect.size.x
+        elem.expandedSize.x = `${newWorldRect.size.x}px`
       else
-        elem[sizeProp].x = newWorldRect.size.x
+        elem[sizeProp].x = `${newWorldRect.size.x}px`
     }
 
-    if (newClientRect.size.y !== clientRect.height)
-      elem[sizeProp].y = newWorldRect.size.y
+    // if (newClientRect.size.y !== clientRect.height)
+    //   elem[sizeProp].y = `${newWorldRect.size.y}px`
   }
 
   elem.pos = {

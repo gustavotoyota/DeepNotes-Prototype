@@ -10,7 +10,7 @@
 
     <div :id="`elem-${elem.id}-frame`"
     :style="`position: ${elem.parentId == null ? 'absolute' : 'relative'}; ` +
-    `width: auto; height: auto; ` +
+    `width: ${selfWidth}; height: auto; ` +
     (elem.parentId == null ? `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` : '') +
     (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
 
@@ -66,7 +66,7 @@
 
           <div style="flex: 1 /* Title content is horizontally flexible */;
           padding: 9px"
-          :style="`width: auto /* Auto or 0 (custom) */`">
+          :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
 
             <SmartEditor ref="title-editor"
             :id="`elem-${elem.id}-title-editor`"
@@ -106,7 +106,7 @@
 
           <div style="flex: 1 /* Body content is horizontally flexible */;
           padding: 9px"
-          :style="`width: auto /* Auto or 0 (custom) */`">
+          :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
 
             <SmartEditor ref="body-editor"
             :id="`elem-${elem.id}-body-editor`"
@@ -146,7 +146,7 @@
           style="flex: 1 /* Body content is horizontally flexible */;
           padding: 9px; overflow: auto;
           display: flex; flex-direction: column"
-          :style="`width: auto /* Auto or 0 (custom) */`">
+          :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
           
             <div v-if="elem.children.length === 0"
             style="padding: 8px;
@@ -174,8 +174,9 @@
             </div>
 
             <Element v-for="(child, idx) of elem.children" :key="child.id"
-            :style="`margin-top: ${idx === 0 ? 0: '8px'}`"
-            :elem="child"/>
+            :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
+            :elem="child"
+            :target-width="selfTargetWidth"/>
           
             <div class="container-drop-zone"
             style="flex: 1"
@@ -210,6 +211,8 @@ export default {
   
   props: {
     elem: { type: Object },
+
+    targetWidth: { type: String },
   },
 
 
@@ -267,6 +270,25 @@ export default {
     },
     index() {
       return $app.elems.getIndex(this.elem)
+    },
+
+
+
+
+    selfWidth() {
+      if (this.elem.parentId != null)
+        return 'auto'
+      else
+        return this.elem[this.sizeProp].x
+    },
+    selfTargetWidth() {
+      if (this.targetWidth != null)
+        return this.targetWidth
+
+      if (this.selfWidth === 'auto')
+        return 'auto'
+      else
+        return '0'
     },
 
   },

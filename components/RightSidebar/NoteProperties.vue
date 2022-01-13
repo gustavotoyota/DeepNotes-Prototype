@@ -304,7 +304,7 @@ export default {
    
     width: {
       get() {
-        if (!isNaN($getters.elem[this.sizeProp].x))
+        if ($getters.elem[this.sizeProp].x.endsWith('px'))
           return 'custom'
         else
           return $getters.elem[this.sizeProp].x
@@ -316,7 +316,7 @@ export default {
           if (value === 'custom') {
             const clientRect = $app.elems.getClientRect(elem)
 
-            elem[sizeProp].x = $app.sizes.screenToWorld1D(clientRect.width)
+            elem[sizeProp].x = `${$app.sizes.screenToWorld1D(clientRect.width)}px`
           } else
             elem[sizeProp].x = value
         }
@@ -324,7 +324,7 @@ export default {
     },
     height: {
       get() {
-        if (!isNaN($getters.elem[this.sizeProp].y))
+        if ($getters.elem[this.sizeProp].y.endsWith('px'))
           return 'custom'
         else
           return $getters.elem[this.sizeProp].y
@@ -336,7 +336,7 @@ export default {
           if (value === 'custom') {
             const clientRect = $app.elems.getClientRect(elem)
 
-            elem[sizeProp].y = $app.sizes.screenToWorld1D(clientRect.height)
+            elem[sizeProp].y = `${$app.sizes.screenToWorld1D(clientRect.height)}px`
           } else
             elem[sizeProp].y = value
         }
