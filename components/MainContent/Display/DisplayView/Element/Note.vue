@@ -10,6 +10,7 @@
 
     <div :id="`elem-${elem.id}-frame`"
     :style="`position: ${elem.parentId == null ? 'absolute' : 'relative'}; ` +
+    `min-width: ${minWidth}; ` +
     `width: ${selfWidth}; height: auto; ` +
     (elem.parentId == null ? `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` : '') +
     (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
@@ -36,6 +37,29 @@
         @pointerup.left.stop="onDropZonePointerUp($event, 1)">
         </div>
 
+      </div>
+
+
+
+
+      <!-- Handles -->
+
+      <div v-if="selected && elem.resizable"
+      style="position: absolute; pointer-events: none;
+      left: 0; right: 0; top: 0; bottom: 0">
+
+        <Handle :elem="elem" side="s"/>
+
+        <div v-if="elem.parentId == null">
+          <Handle :elem="elem" side="nw"/>
+          <Handle :elem="elem" side="n"/>
+          <Handle :elem="elem" side="ne"/>
+          <Handle :elem="elem" side="w"/>
+          <Handle :elem="elem" side="e"/>
+          <Handle :elem="elem" side="sw"/>
+          <Handle :elem="elem" side="se"/>
+        </div>
+        
       </div>
 
 
@@ -278,6 +302,19 @@ export default {
     },
     index() {
       return $app.elems.getIndex(this.elem)
+    },
+
+
+
+
+    minWidth() {
+      if (this.elem.container && this.elem.children.length === 0)
+        return '165px'
+
+      if (this.elem.container)
+        return '41px'
+
+      return '21px'
     },
 
 
