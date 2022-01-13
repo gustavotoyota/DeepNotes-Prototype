@@ -81,22 +81,7 @@
 
           <!-- Title collapse button -->
 
-          <div v-if="elem.collapsible && topSection === 'title'"
-          style="flex: none /* Button is horizontally inflexible */">
-
-            <v-btn plain tile
-            style="min-width: 0 /* Allows reducing collapse button width */;
-            width: 32px /* Reduces collapse button width to 32px */;
-            height: 100% /* Makes the collapse button height the same as the title */"
-            :ripple="false"
-            @pointerdown.left.stop
-            @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
-            @dblclick.left.stop>
-              <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
-              <v-icon v-else>mdi-chevron-up</v-icon>
-            </v-btn>
-
-          </div>
+          <CollapseButton :elem="elem" section="title"/>
 
         </div>
 
@@ -137,22 +122,7 @@
 
           <!-- Body collapse button -->
 
-          <div v-if="elem.collapsible && topSection === 'body'"
-          style="flex: none /* Button is horizontally inflexible */">
-
-            <v-btn plain tile
-            style="min-width: 0 /* Allows reducing collapse button width */;
-            width: 32px /* Reduces collapse button width to 32px */;
-            height: 100% /* Makes the collapse button height the same as the body */"
-            :ripple="false"
-            @pointerdown.left.stop
-            @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
-            @dblclick.left.stop>
-              <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
-              <v-icon v-else>mdi-chevron-up</v-icon>
-            </v-btn>
-
-          </div>
+          <CollapseButton :elem="elem" section="body"/>
 
         </div>
 
@@ -230,22 +200,7 @@
 
           <!-- Container collapse button -->
 
-          <div v-if="elem.collapsible && topSection === 'container'"
-          style="flex: none /* Button is horizontally inflexible */">
-
-            <v-btn plain tile
-            style="min-width: 0 /* Allows reducing collapse button width */;
-            width: 32px /* Reduces collapse button width to 32px */;
-            height: 100% /* Makes the collapse button height the same as the body */"
-            :ripple="false"
-            @pointerdown.left.stop
-            @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
-            @dblclick.left.stop>
-              <v-icon v-if="elem.collapsed">mdi-chevron-down</v-icon>
-              <v-icon v-else>mdi-chevron-up</v-icon>
-            </v-btn>
-
-          </div>
+          <CollapseButton :elem="elem" section="container"/>
 
         </div>
 
@@ -303,6 +258,12 @@ export default {
     },
     topSection() {
       return $app.elems.getTopSection(this.elem)
+    },
+    bottomSection() {
+      return $app.elems.getBottomSection(this.elem)
+    },
+    numSections() {
+      return $app.elems.getNumSections(this.elem)
     },
 
 

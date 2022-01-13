@@ -63,7 +63,7 @@
           :input-value="$getters.elem.hasTitle"
           @change="changeProp($event, (elem, value) => {
             elem.hasTitle = value
-            elem.hasBody = elem.hasBody || (!elem.hasTitle && !elem.hasBody)
+            elem.hasBody = elem.hasBody || $app.elems.getNumSections(elem) === 0
           })"/>
 
           <Gap width="16px" style="flex: none"/>
@@ -73,7 +73,7 @@
           :input-value="$getters.elem.hasBody"
           @change="changeProp($event, (elem, value) => {
             elem.hasBody = value
-            elem.hasTitle = elem.hasTitle || (!elem.hasTitle && !elem.hasBody)
+            elem.hasTitle = elem.hasTitle || $app.elems.getNumSections(elem) === 0
           })"/>
         </div>
 
@@ -97,6 +97,7 @@
         :input-value="$getters.elem.container"
         @change="changeProp($event, (elem, value) => {
           elem.container = value
+          elem.hasBody = elem.hasBody || $app.elems.getNumSections(elem) === 0
         })"/>
       </div>
 

@@ -177,7 +177,7 @@ elems.getBottomSection = (elem) => {
     return 'title'
 }
 elems.getNumSections = (elem) => {
-  let numSections
+  let numSections = 0
 
   if (elem.hasTitle)
     ++numSections
