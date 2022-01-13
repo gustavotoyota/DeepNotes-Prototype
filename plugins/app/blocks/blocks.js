@@ -22,11 +22,21 @@ blocks.create = (overrides) => {
 
     expandedSize: {
       x: 'auto',
-      y: 'auto',
+
+      y: {
+        title: 'auto',
+        body: 'auto',
+        container: 'auto',
+      },
     },
     collapsedSize: {
       x: 'expanded',
-      y: 'auto',
+      
+      y: {
+        title: 'auto',
+        body: 'auto',
+        container: 'auto',
+      },
     },
 
     expandedHeight: 0,

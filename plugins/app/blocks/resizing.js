@@ -68,9 +68,6 @@ resizing.update = (event) => {
       else
         elem[sizeProp].x = `${newWorldRect.size.x}px`
     }
-
-    // if (newClientRect.size.y !== clientRect.height)
-    //   elem[sizeProp].y = `${newWorldRect.size.y}px`
   }
 
   elem.pos = {

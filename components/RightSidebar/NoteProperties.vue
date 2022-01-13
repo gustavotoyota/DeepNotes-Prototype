@@ -177,6 +177,7 @@
       </div>
         
       <div class="mx-5 mt-4" style="display: flex">
+        
         <div style="flex: 1; width: 0">
           <div class="body-2 grey--text text--lighten-1"
           style="margin-left: 1px">
@@ -196,27 +197,7 @@
           v-model="width">
           </v-select>
         </div>
-
-        <Gap width="16px" style="flex: none"/>
-
-        <div style="flex: 1">
-          <div class="body-2 grey--text text--lighten-1"
-          style="margin-left: 1px">
-            Height:
-          </div>
-
-          <Gap height="2px"/>
-
-          <v-select dense outlined hide-details
-          background-color="#181818"
-          :items="[
-            { text: 'Auto', value: 'auto' },
-            { text: 'Custom', value: 'custom' },
-          ]" item-text="text" item-value="value"
-          :menu-props="{ top: false, offsetY: true }"
-          v-model="height">
-          </v-select>
-        </div>
+        
       </div>
 
       <v-divider class="mt-4"/>
@@ -319,26 +300,6 @@ export default {
             elem[sizeProp].x = `${$app.sizes.screenToWorld1D(clientRect.width)}px`
           } else
             elem[sizeProp].x = value
-        }
-      },
-    },
-    height: {
-      get() {
-        if ($getters.elem[this.sizeProp].y.endsWith('px'))
-          return 'custom'
-        else
-          return $getters.elem[this.sizeProp].y
-      },
-      set(value) {
-        for (const elem of $getters.elems) {
-          const sizeProp = $app.elems.getSizeProp(elem)
-
-          if (value === 'custom') {
-            const clientRect = $app.elems.getClientRect(elem)
-
-            elem[sizeProp].y = `${$app.sizes.screenToWorld1D(clientRect.height)}px`
-          } else
-            elem[sizeProp].y = value
         }
       },
     },
