@@ -43,13 +43,14 @@
       
       <!-- Background -->
 
-      <div style="border-radius: 7px;
+      <v-sheet style="border-radius: 7px;
       border: 1px solid #212121;
       border-left-color: #757575;
       border-top-color: #757575;
       height: 100%;
       overflow: hidden"
-      :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' }; 
+      elevation="6"
+      :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' };
       background-color: ${color}`"
       @pointerdown.left.stop="onPointerDown"
       @click.left.stop="onClick">
@@ -63,10 +64,9 @@
 
           <!-- Title content -->
 
-          <div style="flex: 1 /* Title content is horizontally flexible */"
-          :style="`padding: 9px;
-          width: auto /* Auto or 0 (custom) */;
-          padding-right: ${elem.collapsible && topSection === 'title' ? 0 : `9px`} /* Padding 0 when collapsible */`">
+          <div style="flex: 1 /* Title content is horizontally flexible */;
+          padding: 9px"
+          :style="`width: auto /* Auto or 0 (custom) */`">
 
             <SmartEditor ref="title-editor"
             :id="`elem-${elem.id}-title-editor`"
@@ -104,10 +104,9 @@
 
           <!-- Body content -->
 
-          <div style="flex: 1 /* Body content is horizontally flexible */"
-          :style="`padding: 9px;
-          width: auto /* Auto or 0 (custom) */;
-          padding-right: ${elem.collapsible && topSection === 'body' ? 0 : `9px`} /* Padding 0 when collapsible */`">
+          <div style="flex: 1 /* Body content is horizontally flexible */;
+          padding: 9px"
+          :style="`width: auto /* Auto or 0 (custom) */`">
 
             <SmartEditor ref="body-editor"
             :id="`elem-${elem.id}-body-editor`"
@@ -143,10 +142,11 @@
 
           <!-- Container content -->
 
-          <div style="flex: 1 /* Body content is horizontally flexible */"
-          :style="`padding: 9px;
-          width: auto /* Auto or 0 (custom) */;
-          padding-right: ${elem.collapsible && topSection === 'container' ? 0 : `9px`} /* Padding 0 when collapsible */`">
+          <div :id="`elem-${elem.id}-scrollbox`"
+          style="flex: 1 /* Body content is horizontally flexible */;
+          padding: 9px; overflow: auto;
+          display: flex; flex-direction: column"
+          :style="`width: auto /* Auto or 0 (custom) */`">
           
             <div v-if="elem.children.length === 0"
             style="padding: 8px;
@@ -173,24 +173,17 @@
               </div>
             </div>
 
-            <div v-else
-            :id="`elem-${elem.id}-scrollbox`"
-            style="height: 100%; overflow: auto;
-            display: flex; flex-direction: column">
-
-              <Element v-for="(child, idx) of elem.children" :key="child.id"
-              :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
-              :elem="child"/>
-            
-              <div class="container-drop-zone"
-              style="flex: 1"
-              :class="{ 'active' : $state.dragging.dropRegionId == elem.id
-                && $state.dragging.dropIndex === elem.children.length }"
-              @pointerenter="onContainerDropZonePointerEnter"
-              @pointerleave="onContainerDropZonePointerLeave"
-              @pointerup.left="onContainerDropZonePointerUp">
-              </div>
-
+            <Element v-for="(child, idx) of elem.children" :key="child.id"
+            :style="`margin-top: ${idx === 0 ? 0: '8px'}`"
+            :elem="child"/>
+          
+            <div class="container-drop-zone"
+            style="flex: 1"
+            :class="{ 'active' : $state.dragging.dropRegionId == elem.id
+              && $state.dragging.dropIndex === elem.children.length }"
+            @pointerenter="onContainerDropZonePointerEnter"
+            @pointerleave="onContainerDropZonePointerLeave"
+            @pointerup.left="onContainerDropZonePointerUp">
             </div>
 
           </div>
@@ -204,7 +197,7 @@
 
         </div>
 
-      </div>
+      </v-sheet>
 
     </div>
 

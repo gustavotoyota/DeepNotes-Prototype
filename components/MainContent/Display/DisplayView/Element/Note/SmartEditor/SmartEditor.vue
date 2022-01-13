@@ -73,6 +73,7 @@ export default {
   max-width: 100%;
 
   width: max-content;
+  height: max-content;
 }
 
 .quill-editor.wrap /deep/ .ql-editor {
