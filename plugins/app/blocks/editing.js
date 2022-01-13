@@ -17,7 +17,7 @@ editing.start = (elem, section) => {
   $nextTick(() => {
     section = section ?? $app.elems.getTopSection(elem)
     
-    const editor = $app.elems.getEditorNode(elem, section)
+    const editor = $app.elems.getNode(elem, `${section}-editor`)
     if (!editor)
       return
 

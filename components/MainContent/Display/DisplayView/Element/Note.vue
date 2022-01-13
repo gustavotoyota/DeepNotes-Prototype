@@ -68,8 +68,8 @@
           width: auto /* Auto or 0 (custom) */;
           padding-right: ${elem.collapsible && topSection === 'title' ? 0 : `9px`} /* Padding 0 when collapsible */`">
 
-            <SmartEditor ref="editor-title"
-            :id="`elem-${elem.id}-editor-title`"
+            <SmartEditor ref="title-editor"
+            :id="`elem-${elem.id}-title-editor`"
             v-model="elem.title"
             :disabled="!editing || elem.readOnly"
             :wrap="elem.wrapTitle"/>
@@ -109,8 +109,8 @@
           width: auto /* Auto or 0 (custom) */;
           padding-right: ${elem.collapsible && topSection === 'body' ? 0 : `9px`} /* Padding 0 when collapsible */`">
 
-            <SmartEditor ref="editor-body"
-            :id="`elem-${elem.id}-editor-body`"
+            <SmartEditor ref="body-editor"
+            :id="`elem-${elem.id}-body-editor`"
             v-model="elem.body"
             :disabled="!editing || elem.readOnly"
             :wrap="elem.wrapBody"/>
@@ -336,7 +336,7 @@ export default {
         event.stopPropagation()
 
         setTimeout(() => {
-          this.$refs[`editor-${section}`].quill.focus()
+          this.$refs[`${section}-editor`].quill.focus()
         })
       }
     },

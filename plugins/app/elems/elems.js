@@ -116,12 +116,6 @@ elems.getSizeProp = (elem) => {
 
 
 
-elems.getEditorNode = (elem, section) => {
-  return $app.elems.getNode(elem, `editor-${section}`)
-}
-
-
-
 elems.isOnTop = (elem) => {
   const regionArray = elems.getRegionArray(elem)
 
