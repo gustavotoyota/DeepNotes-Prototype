@@ -88,113 +88,121 @@
 
 
 
-        <!-- Divider -->
+        <div :style="`height: ${topSection === 'title' && elem.collapsed ? '0' : 'unset'}`">
 
-        <v-divider v-if="elem.hasTitle && elem.hasBody && !elem.collapsed"/>
+          <!-- Divider -->
+
+          <v-divider v-if="elem.hasTitle && elem.hasBody"/>
 
 
 
-        
-        <!-- Body -->
+          
+          <!-- Body -->
 
-        <div v-if="elem.hasBody"
-        style="display: flex /* Horizontal flex */"
-        @pointerdown.left="onEditorPointerDown($event, 'body')"
-        @dblclick.left="$app.editing.start(elem, 'body')">
+          <div v-if="elem.hasBody"
+          style="display: flex /* Horizontal flex */"
+          @pointerdown.left="onEditorPointerDown($event, 'body')"
+          @dblclick.left="$app.editing.start(elem, 'body')">
 
-          <!-- Body content -->
+            <!-- Body content -->
 
-          <div style="flex: 1 /* Body content is horizontally flexible */;
-          padding: 9px"
-          :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
+            <div style="flex: 1 /* Body content is horizontally flexible */;
+            padding: 9px"
+            :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
 
-            <SmartEditor ref="body-editor"
-            :id="`elem-${elem.id}-body-editor`"
-            v-model="elem.body"
-            :disabled="!editing || elem.readOnly"
-            :wrap="elem.wrapBody"/>
+              <SmartEditor ref="body-editor"
+              :id="`elem-${elem.id}-body-editor`"
+              v-model="elem.body"
+              :disabled="!editing || elem.readOnly"
+              :wrap="elem.wrapBody"/>
+
+            </div>
+
+
+
+
+            <!-- Body collapse button -->
+
+            <CollapseButton :elem="elem" section="body"/>
 
           </div>
 
 
 
 
-          <!-- Body collapse button -->
+          <div :style="`height: ${topSection === 'body' && elem.collapsed ? '0' : 'unset'}`">
 
-          <CollapseButton :elem="elem" section="body"/>
+            <!-- Divider -->
 
-        </div>
-
-
-
-
-        <!-- Divider -->
-
-        <v-divider v-if="(elem.hasTitle || elem.hasBody) && elem.container && !elem.collapsed"/>
+            <v-divider v-if="(elem.hasTitle || elem.hasBody) && elem.container"/>
 
 
 
-        
-        <!-- Container -->
+            
+            <!-- Container -->
 
-        <div v-if="elem.container"
-        style="display: flex /* Horizontal flex */">
+            <div v-if="elem.container"
+            style="display: flex /* Horizontal flex */">
 
-          <!-- Container content -->
+              <!-- Container content -->
 
-          <div :id="`elem-${elem.id}-scrollbox`"
-          style="flex: 1 /* Body content is horizontally flexible */;
-          padding: 9px; overflow: auto;
-          display: flex; flex-direction: column"
-          :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
-          
-            <div v-if="elem.children.length === 0"
-            style="padding: 8px;
-            position: relative;
-            height: 100%;
-            font-size: 13px;
-            background-color: #686868;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden">
-              Drop notes here
+              <div :id="`elem-${elem.id}-scrollbox`"
+              style="flex: 1 /* Body content is horizontally flexible */;
+              padding: 9px; overflow: auto;
+              display: flex; flex-direction: column"
+              :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
+              
+                <div v-if="elem.children.length === 0"
+                style="padding: 8px;
+                position: relative;
+                height: 100%;
+                font-size: 13px;
+                background-color: #686868;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden">
+                  Drop notes here
 
-              <div v-if="$state.dragging.active"
-              style="position: absolute;
-              left: 0; top: 0; right: 0; bottom: 0;
-              z-index: 1001"
-              class="drop-zone"
-              :class="{ 'active' : $state.dragging.dropRegionId == elem.id }"
-              @pointerenter="onContainerDropZonePointerEnter"
-              @pointerleave="onContainerDropZonePointerLeave"
-              @pointerup.left="onContainerDropZonePointerUp">
+                  <div v-if="$state.dragging.active"
+                  style="position: absolute;
+                  left: 0; top: 0; right: 0; bottom: 0;
+                  z-index: 1001"
+                  class="drop-zone"
+                  :class="{ 'active' : $state.dragging.dropRegionId == elem.id }"
+                  @pointerenter="onContainerDropZonePointerEnter"
+                  @pointerleave="onContainerDropZonePointerLeave"
+                  @pointerup.left="onContainerDropZonePointerUp">
+                  </div>
+                </div>
+
+                <Element v-for="(child, idx) of elem.children" :key="child.id"
+                :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
+                :elem="child"
+                :target-width="selfTargetWidth"/>
+              
+                <div class="container-drop-zone"
+                style="flex: 1"
+                :class="{ 'active' : $state.dragging.dropRegionId == elem.id
+                  && $state.dragging.dropIndex === elem.children.length }"
+                @pointerenter="onContainerDropZonePointerEnter"
+                @pointerleave="onContainerDropZonePointerLeave"
+                @pointerup.left="onContainerDropZonePointerUp">
+                </div>
+
               </div>
-            </div>
 
-            <Element v-for="(child, idx) of elem.children" :key="child.id"
-            :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
-            :elem="child"
-            :target-width="selfTargetWidth"/>
-          
-            <div class="container-drop-zone"
-            style="flex: 1"
-            :class="{ 'active' : $state.dragging.dropRegionId == elem.id
-              && $state.dragging.dropIndex === elem.children.length }"
-            @pointerenter="onContainerDropZonePointerEnter"
-            @pointerleave="onContainerDropZonePointerLeave"
-            @pointerup.left="onContainerDropZonePointerUp">
+
+
+
+              <!-- Container collapse button -->
+
+              <CollapseButton :elem="elem" section="container"/>
+
             </div>
 
           </div>
-
-
-
-
-          <!-- Container collapse button -->
-
-          <CollapseButton :elem="elem" section="container"/>
 
         </div>
 
@@ -278,6 +286,8 @@ export default {
     selfWidth() {
       if (this.elem.parentId != null)
         return 'auto'
+      else if (this.elem[this.sizeProp].x === 'expanded')
+        return this.elem.expandedSize.x
       else
         return this.elem[this.sizeProp].x
     },
