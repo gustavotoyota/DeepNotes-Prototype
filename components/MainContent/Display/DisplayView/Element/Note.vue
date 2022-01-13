@@ -116,7 +116,15 @@
 
           <!-- Divider -->
 
-          <v-divider v-if="elem.hasTitle && elem.hasBody"/>
+          <div v-if="elem.hasTitle && elem.hasBody"
+          style="position: relative">
+
+            <v-divider/>
+
+            <Handle v-if="selected"
+            :elem="elem" side="ns" section="title"/>
+
+          </div>
 
 
 
@@ -154,19 +162,27 @@
 
 
 
-          <div :style="`height: ${topSection === 'body' && elem.collapsed ? '0' : 'unset'}`">
+          <div v-if="elem.container"
+          :style="`height: ${topSection === 'body' && elem.collapsed ? '0' : 'unset'}`">
 
             <!-- Divider -->
+            
+            <div v-if="elem.hasTitle || elem.hasBody"
+            style="position: relative">
+            
+              <v-divider/>
 
-            <v-divider v-if="(elem.hasTitle || elem.hasBody) && elem.container"/>
+              <Handle v-if="selected"
+              :elem="elem" side="ns" :section="elem.hasBody ? 'body' : 'title'"/>
+
+            </div>
 
 
 
             
             <!-- Container -->
 
-            <div v-if="elem.container"
-            style="display: flex /* Horizontal flex */">
+            <div style="display: flex /* Horizontal flex */">
 
               <!-- Container content -->
 

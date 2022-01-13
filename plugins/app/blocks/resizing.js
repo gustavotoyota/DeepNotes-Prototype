@@ -10,7 +10,7 @@ resizing.reset = () => {
 }
 
 
-resizing.start = (event, elem, side) => {
+resizing.start = (event, elem, side, section) => {
   if (event.button !== 0)
     return
 
@@ -20,6 +20,7 @@ resizing.start = (event, elem, side) => {
     active: true,
 
     side: side,
+    section: section,
   }
 }
 
