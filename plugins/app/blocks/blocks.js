@@ -12,7 +12,7 @@ blocks.create = (overrides) => {
     anchor: { x: 0.5, y: 0.5 },
 
     hasTitle: false,
-    hasBody: true,
+    hasBody: false,
     
     title: '',
     body: '',
@@ -22,14 +22,22 @@ blocks.create = (overrides) => {
 
     expandedSize: {
       x: 'auto',
-      y: 'auto',
+
+      y: {
+        title: 'auto',
+        body: 'auto',
+        container: 'auto',
+      },
     },
     collapsedSize: {
       x: 'expanded',
-      y: 'auto',
+      
+      y: {
+        title: 'auto',
+        body: 'auto',
+        container: 'auto',
+      },
     },
-
-    expandedHeight: 0,
 
     movable: true,
     resizable: true,
@@ -38,6 +46,9 @@ blocks.create = (overrides) => {
     wrapBody: true,
     
     readOnly: false,
+
+    container: false,
+    children: [],
 
     ...overrides,
   })

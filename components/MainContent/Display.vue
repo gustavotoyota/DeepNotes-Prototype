@@ -8,7 +8,6 @@
 
     <Background/>
     <DisplayView/>
-    <HandlesView/>
     <BoxSelection/>
     <DisplayButtons/>
 
