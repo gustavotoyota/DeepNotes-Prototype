@@ -115,7 +115,8 @@
 
 
 
-        <div :style="`height: ${topSection === 'title' && elem.collapsed ? '0' : 'unset'}`">
+        <div v-if="!(elem.collapsed && topSection === 'title' && elem.collapsedSize.x === 'auto')"
+        :style="`height: ${topSection === 'title' && elem.collapsed ? '0' : 'unset'}`">
 
           <!-- Divider -->
 
@@ -168,7 +169,8 @@
 
 
 
-          <div v-if="elem.container"
+          <div v-if="elem.container
+          && !(elem.collapsed && topSection === 'body' && elem.collapsedSize.x === 'auto')"
           :style="`height: ${topSection === 'body' && elem.collapsed ? '0' : 'unset'}`">
 
             <!-- Divider -->
