@@ -128,6 +128,24 @@ elems.scrollIntoView = (elem) => {
   if (elem.parentId == null)
     return
 
+
+
+
+  const auxNode = $app.elems.getNode(elem, 'anchor')
+
+  while (auxNode != null) {
+    if ($utils.hasVertScrollbar(auxNode))
+      break
+
+    auxNode = auxNode.parentNode
+  }
+
+  if (auxNode == null)
+    return
+
+
+
+
   const elemNode = $app.elems.getNode(elem, 'frame')
   
   elemNode.scrollIntoView({
