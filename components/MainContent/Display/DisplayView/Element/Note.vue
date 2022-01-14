@@ -11,7 +11,7 @@
     <div :id="`elem-${elem.id}-frame`"
     :style="`position: ${elem.parentId == null ? 'absolute' : 'relative'}; ` +
     `min-width: ${minWidth}; ` +
-    `width: ${selfWidth}; height: auto; ` +
+    `width: ${selfWidth}; ` +
     (elem.parentId == null ? `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` : '') +
     (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
 
@@ -82,14 +82,17 @@
         <!-- Title -->
 
         <div v-if="elem.hasTitle"
-        style="display: flex /* Horizontal flex */"
+        style="display: flex /* Horizontal flex */;
+        min-height: 36.453px"
+        :style="`height: ${getSectionHeight('title')}`"
         @pointerdown.left="onEditorPointerDown($event, 'title')"
         @dblclick.left="$app.editing.start(elem, 'title')">
 
           <!-- Title content -->
 
           <div style="flex: 1 /* Title content is horizontally flexible */;
-          padding: 9px"
+          padding: 9px;
+          overflow: auto"
           :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
 
             <SmartEditor ref="title-editor"
@@ -122,7 +125,7 @@
             <v-divider/>
 
             <Handle v-if="selected"
-            :elem="elem" side="ns" section="title"/>
+            :elem="elem" side="s" section="title"/>
 
           </div>
 
@@ -132,14 +135,17 @@
           <!-- Body -->
 
           <div v-if="elem.hasBody"
-          style="display: flex /* Horizontal flex */"
+          style="display: flex /* Horizontal flex */;
+          min-height: 36.453px"
+          :style="`height: ${getSectionHeight('body')}`"
           @pointerdown.left="onEditorPointerDown($event, 'body')"
           @dblclick.left="$app.editing.start(elem, 'body')">
 
             <!-- Body content -->
 
             <div style="flex: 1 /* Body content is horizontally flexible */;
-            padding: 9px"
+            padding: 9px;
+            overflow: auto"
             :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
 
               <SmartEditor ref="body-editor"
@@ -173,7 +179,7 @@
               <v-divider/>
 
               <Handle v-if="selected"
-              :elem="elem" side="ns" :section="elem.hasBody ? 'body' : 'title'"/>
+              :elem="elem" side="s" :section="elem.hasBody ? 'body' : 'title'"/>
 
             </div>
 
@@ -182,7 +188,9 @@
             
             <!-- Container -->
 
-            <div style="display: flex /* Horizontal flex */">
+            <div style="display: flex /* Horizontal flex */;
+            min-height: 56.453px"
+            :style="`height: ${getSectionHeight('container')}`">
 
               <!-- Container content -->
 
@@ -360,6 +368,21 @@ export default {
 
 
   methods: {
+
+    getSectionHeight(section) {
+      if (this.elem.collapsed
+      && this.elem.collapsedSize.y[section] === 'auto'
+      && this.topSection === section) {
+        if (this.numSections === 1)
+          return '0'
+        else
+          return this.elem.expandedSize.y[section]
+      } else
+        return this.elem[this.sizeProp].y[section]
+    },
+
+
+
 
     onPointerDown(event) {
       // Stop selecting element on scrollbar click

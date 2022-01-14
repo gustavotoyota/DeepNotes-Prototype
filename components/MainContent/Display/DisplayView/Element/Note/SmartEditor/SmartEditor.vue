@@ -62,8 +62,6 @@ export default {
 
 .quill-editor {
   min-width: 1px;
-  
-  height: 100%;
 }
 
 .quill-editor /deep/ .ql-editor {
@@ -79,6 +77,8 @@ export default {
     "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
+
+  overflow: visible;
 }
 
 .quill-editor.wrap /deep/ .ql-editor {
