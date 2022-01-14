@@ -48,17 +48,19 @@
       style="position: absolute; pointer-events: none;
       left: 0; right: 0; top: 0; bottom: 0">
 
-        <Handle :elem="elem" side="s"/>
-
         <div v-if="elem.parentId == null">
-          <Handle :elem="elem" side="nw"/>
-          <Handle :elem="elem" side="n"/>
-          <Handle :elem="elem" side="ne"/>
+          <Handle :elem="elem" side="nw" :section="topSection"/>
+          <Handle :elem="elem" side="n" :section="topSection"/>
+          <Handle :elem="elem" side="ne" :section="topSection"/>
+          
           <Handle :elem="elem" side="w"/>
           <Handle :elem="elem" side="e"/>
-          <Handle :elem="elem" side="sw"/>
-          <Handle :elem="elem" side="se"/>
+
+          <Handle :elem="elem" side="sw" :section="bottomSection"/>
+          <Handle :elem="elem" side="se" :section="bottomSection"/>
         </div>
+
+        <Handle :elem="elem" side="s" :section="bottomSection"/>
         
       </div>
 
@@ -381,7 +383,9 @@ export default {
           return '0'
         else
           return this.elem.expandedSize.y[section]
-      } else
+      } else if (this.elem[this.sizeProp].y[section] === 'auto')
+        return this.elem.expandedSize.y[section]
+      else
         return this.elem[this.sizeProp].y[section]
     },
 

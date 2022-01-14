@@ -39,8 +39,6 @@ blocks.create = (overrides) => {
       },
     },
 
-    expandedHeight: 0,
-
     movable: true,
     resizable: true,
 

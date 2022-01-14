@@ -59,8 +59,8 @@ elems.getNode = (elem, part) => {
   else
     return document.getElementById(`elem-${elem.id}-${part}`)
 }
-elems.getClientRect = (elem) => {
-  const node = $app.elems.getNode(elem, 'frame')
+elems.getClientRect = (elem, part) => {
+  const node = $app.elems.getNode(elem, part ?? 'frame')
 
   return node.getBoundingClientRect()
 }

@@ -5,7 +5,8 @@
   pointer-events: auto;
   border-radius: 999px;
   width: 10px; height: 10px;
-  transform: translate(-50%, -50%)"
+  transform: translate(-50%, -50%);
+  z-index: 1"
   :style="`left: ${left}%; top: ${top}%;
   cursor: ${side}-resize; ` +
   ($state.dragging.active ? `pointer-events: none; opacity: 0.7` : ``)"
