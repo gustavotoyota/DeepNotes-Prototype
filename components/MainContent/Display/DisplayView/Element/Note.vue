@@ -199,8 +199,7 @@
 
               <!-- Container content -->
 
-              <div :id="`elem-${elem.id}-scrollbox`"
-              style="flex: 1 /* Body content is horizontally flexible */;
+              <div style="flex: 1 /* Body content is horizontally flexible */;
               padding: 9px; overflow: auto;
               display: flex; flex-direction: column"
               :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">

@@ -128,15 +128,9 @@ elems.scrollIntoView = (elem) => {
   if (elem.parentId == null)
     return
 
-  const parentElem = $app.elems.getById(elem.parentId)
-  const scrollBoxNode = $app.elems.getNode(parentElem, 'scrollbox')
-
-  if (scrollBoxNode.scrollHeight <= scrollBoxNode.clientHeight)
-    return
-
-  const node = $app.elems.getNode(elem, 'frame')
+  const elemNode = $app.elems.getNode(elem, 'frame')
   
-  node.scrollIntoView({
+  elemNode.scrollIntoView({
     behavior: 'smooth',
     block: 'nearest',
   })
