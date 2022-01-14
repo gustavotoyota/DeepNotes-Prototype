@@ -82,6 +82,7 @@
         <!-- Title -->
 
         <div v-if="elem.hasTitle"
+        :id="`elem-${elem.id}-title`"
         style="display: flex /* Horizontal flex */;
         min-height: 36.453px"
         :style="`height: ${getSectionHeight('title')}`"
@@ -136,6 +137,7 @@
           <!-- Body -->
 
           <div v-if="elem.hasBody"
+          :id="`elem-${elem.id}-body`"
           style="display: flex /* Horizontal flex */;
           min-height: 36.453px"
           :style="`height: ${getSectionHeight('body')}`"
@@ -190,7 +192,8 @@
             
             <!-- Container -->
 
-            <div style="display: flex /* Horizontal flex */;
+            <div :id="`elem-${elem.id}-container`"
+            style="display: flex /* Horizontal flex */;
             min-height: 56.453px"
             :style="`height: ${getSectionHeight('container')}`">
 
