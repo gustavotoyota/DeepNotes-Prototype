@@ -12,6 +12,10 @@
 
     </v-toolbar>
 
+
+
+    
+    <!-- Linked page -->
     
     <div style="flex: 1; overflow-y: auto" class="pb-4">
       
@@ -38,6 +42,11 @@
         <NewPageDialog/>
       </div>
 
+
+
+
+      <!-- Default properties -->
+
       <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
@@ -52,6 +61,11 @@
           Copy default properties
         </v-btn>
       </div>
+
+
+
+
+      <!-- Title/Body -->
 
       <v-divider class="mt-4"/>
         
@@ -88,6 +102,11 @@
         </v-btn>
       </div>
 
+
+
+
+      <!-- Container -->
+
       <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
@@ -100,6 +119,11 @@
           elem.hasBody = elem.hasBody || $app.elems.getNumSections(elem) === 0
         })"/>
       </div>
+
+
+
+
+      <!-- Anchor -->
 
       <v-divider class="mt-4"/>
         
@@ -151,6 +175,11 @@
         </div>
       </div>
 
+
+
+
+      <!-- Collapsible/Collapsed -->
+
       <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
@@ -175,6 +204,13 @@
         })">
         </v-checkbox>
       </div>
+
+
+
+
+      <!-- Width -->
+
+      <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4" style="display: flex">
         
@@ -200,6 +236,95 @@
         
       </div>
 
+
+
+
+      <!-- Title height -->
+        
+      <div class="mx-5 mt-4" style="display: flex">
+        
+        <div style="flex: 1; width: 0">
+          <div class="body-2 grey--text text--lighten-1"
+          style="margin-left: 1px">
+            Title height:
+          </div>
+
+          <Gap height="2px"/>
+
+          <v-select dense outlined hide-details
+          background-color="#181818"
+          :items="[
+            { text: 'Auto', value: 'auto' },
+            { text: 'Custom', value: 'custom' },
+          ]" item-text="text" item-value="value"
+          :menu-props="{ top: false, offsetY: true }"
+          v-model="titleHeight">
+          </v-select>
+        </div>
+        
+      </div>
+
+
+
+
+      <!-- Body height -->
+        
+      <div class="mx-5 mt-4" style="display: flex">
+        
+        <div style="flex: 1; width: 0">
+          <div class="body-2 grey--text text--lighten-1"
+          style="margin-left: 1px">
+            Body height:
+          </div>
+
+          <Gap height="2px"/>
+
+          <v-select dense outlined hide-details
+          background-color="#181818"
+          :items="[
+            { text: 'Auto', value: 'auto' },
+            { text: 'Custom', value: 'custom' },
+          ]" item-text="text" item-value="value"
+          :menu-props="{ top: false, offsetY: true }"
+          v-model="bodyHeight">
+          </v-select>
+        </div>
+        
+      </div>
+
+
+
+
+      <!-- Container height -->
+        
+      <div class="mx-5 mt-4" style="display: flex">
+        
+        <div style="flex: 1; width: 0">
+          <div class="body-2 grey--text text--lighten-1"
+          style="margin-left: 1px">
+            Container height:
+          </div>
+
+          <Gap height="2px"/>
+
+          <v-select dense outlined hide-details
+          background-color="#181818"
+          :items="[
+            { text: 'Auto', value: 'auto' },
+            { text: 'Custom', value: 'custom' },
+          ]" item-text="text" item-value="value"
+          :menu-props="{ top: false, offsetY: true }"
+          v-model="containerHeight">
+          </v-select>
+        </div>
+        
+      </div>
+
+
+
+
+      <!-- Movable/Resizable -->
+
       <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
@@ -221,6 +346,11 @@
         })"/>
       </div>
 
+
+
+
+      <!-- Wrapping -->
+
       <v-divider class="mt-4"/>
         
       <div class="mx-5 mt-4"
@@ -241,6 +371,11 @@
           elem.wrapBody = value
         })"/>
       </div>
+
+
+
+
+      <!-- Read-only -->
 
       <v-divider class="mt-4"/>
         
@@ -300,6 +435,72 @@ export default {
             elem[sizeProp].x = `${$app.sizes.screenToWorld1D(clientRect.width)}px`
           } else
             elem[sizeProp].x = value
+        }
+      },
+    },
+
+    titleHeight: {
+      get() {
+        if ($getters.elem[this.sizeProp].y.title.endsWith('px'))
+          return 'custom'
+        else
+          return $getters.elem[this.sizeProp].y.title
+      },
+      set(value) {
+        for (const elem of $getters.elems) {
+          const sizeProp = $app.elems.getSizeProp(elem)
+
+          if (value === 'custom') {
+            const node = $app.elems.getNode(elem, 'title')
+            const clientRect = node.getBoundingClientRect()
+
+            elem[sizeProp].y.title = `${$app.sizes.screenToWorld1D(clientRect.height)}px`
+          } else
+            elem[sizeProp].y.title = value
+        }
+      },
+    },
+
+    bodyHeight: {
+      get() {
+        if ($getters.elem[this.sizeProp].y.body.endsWith('px'))
+          return 'custom'
+        else
+          return $getters.elem[this.sizeProp].y.body
+      },
+      set(value) {
+        for (const elem of $getters.elems) {
+          const sizeProp = $app.elems.getSizeProp(elem)
+
+          if (value === 'custom') {
+            const node = $app.elems.getNode(elem, 'body')
+            const clientRect = node.getBoundingClientRect()
+
+            elem[sizeProp].y.body = `${$app.sizes.screenToWorld1D(clientRect.height)}px`
+          } else
+            elem[sizeProp].y.body = value
+        }
+      },
+    },
+
+    containerHeight: {
+      get() {
+        if ($getters.elem[this.sizeProp].y.container.endsWith('px'))
+          return 'custom'
+        else
+          return $getters.elem[this.sizeProp].y.container
+      },
+      set(value) {
+        for (const elem of $getters.elems) {
+          const sizeProp = $app.elems.getSizeProp(elem)
+
+          if (value === 'custom') {
+            const node = $app.elems.getNode(elem, 'container')
+            const clientRect = node.getBoundingClientRect()
+
+            elem[sizeProp].y.container = `${$app.sizes.screenToWorld1D(clientRect.height)}px`
+          } else
+            elem[sizeProp].y.container = value
         }
       },
     },
