@@ -10147,7 +10147,7 @@
         "createdAt": "2022-01-11T16:58:00.577Z",
         "modifiedAt": "2022-01-11T16:58:00.577Z",
         "elems": {
-          "nextId": 104,
+          "nextId": 105,
           "blocks": [
             {
               "anchor": {
@@ -10189,6 +10189,94 @@
               },
               "container": true,
               "children": [
+                {
+                  "parentId": 0,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Fix first element drop zone</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "expandedSize": {
+                    "x": "186.140625px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "container": false,
+                  "children": [],
+                  "type": "block",
+                  "pos": {
+                    "x": 100.99222080649554,
+                    "y": 213.28125852726544
+                  },
+                  "id": 104,
+                  "expandedHeight": 0
+                },
+                {
+                  "parentId": 0,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Optimize block component</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "expandedSize": {
+                    "x": "169.71878051757812px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "container": false,
+                  "children": [],
+                  "type": "block",
+                  "pos": {
+                    "x": 105.65625278891741,
+                    "y": 184.21875852726544
+                  },
+                  "id": 102,
+                  "expandedHeight": 0
+                },
                 {
                   "parentId": 0,
                   "linkedPageId": null,
@@ -13346,50 +13434,6 @@
                   },
                   "hasTitle": true,
                   "hasBody": false,
-                  "title": "<p>Organize note component for optimization</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "container": false,
-                  "children": [],
-                  "type": "block",
-                  "pos": {
-                    "x": -396.93929774819196,
-                    "y": 217.9123315253123
-                  },
-                  "id": 102,
-                  "expandedHeight": 0
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
                   "title": "<p>Organize space code</p>",
                   "body": "",
                   "collapsible": false,
@@ -13970,9 +14014,11 @@
             }
           ],
           "arrows": [],
-          "regionId": null,
-          "selected": {},
-          "activeId": null,
+          "regionId": 0,
+          "selected": {
+            "104": true
+          },
+          "activeId": 104,
           "editing": false
         },
         "camera": {
