@@ -1,9 +1,9 @@
 <template>
 
-  <Block v-if="elem.type === 'block'"
+  <BlockElement v-if="elem.type === 'block'"
   :elem="elem" :target-width="targetWidth"/>
   
-  <Arrow v-else-if="elem.type === 'arrow'"
+  <ArrowElement v-else-if="elem.type === 'arrow'"
   :elem="elem"/>
     
 </template>

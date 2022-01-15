@@ -13970,11 +13970,9 @@
             }
           ],
           "arrows": [],
-          "regionId": 0,
-          "selected": {
-            "96": true
-          },
-          "activeId": 96,
+          "regionId": null,
+          "selected": {},
+          "activeId": null,
           "editing": false
         },
         "camera": {
