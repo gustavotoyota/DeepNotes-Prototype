@@ -133,3 +133,10 @@ $utils.hasHorizScrollbar = (node) => {
   return node.scrollWidth > node.clientWidth
     && node.offsetHeight > node.clientHeight
 }
+
+
+
+
+$utils.capitalizeFirst = (text) => {
+  return text.charAt(0).toUpperCase() + text.slice(1)
+}

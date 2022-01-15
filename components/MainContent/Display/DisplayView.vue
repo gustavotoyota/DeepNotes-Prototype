@@ -8,7 +8,7 @@
     transform: scale(${$getters.page.camera.zoom}) ` +
     `translate(${-$getters.page.camera.pos.x}px, ${-$getters.page.camera.pos.y}px)`">
       
-      <Element
+      <DisplayElement
       v-for="elem in $getters.page.elems.blocks" :key="elem.id"
       :elem="elem"/>
 
