@@ -6,9 +6,9 @@
   @wheel="onWheel"
   @pointerdown.middle.prevent="onPointerDown">
 
-    <Background/>
+    <DisplayBackground/>
     <DisplayView/>
-    <BoxSelection/>
+    <DisplayBoxSelection/>
     <DisplayButtons/>
 
   </div>

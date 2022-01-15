@@ -1,6 +1,6 @@
 <template>
 
-  <div v-if="$getters.elem && ['note', 'container'].includes($getters.elem.type)"
+  <div v-if="$getters.elem && $getters.elem.type === 'block'"
   style="height: 100%"
   class="d-flex flex-column">
 
