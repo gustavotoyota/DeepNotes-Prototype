@@ -3,7 +3,7 @@ const editing = module.exports = {}
 
 
 
-editing.start = (elem, editorIdx) => {
+editing.start = (elem, section) => {
   if (elem.readOnly)
     return
 
@@ -15,10 +15,9 @@ editing.start = (elem, editorIdx) => {
   $getters.page.elems.editing = true
 
   $nextTick(() => {
-    if (editorIdx == null)
-      editorIdx = elem.hasTitle ? 0 : 1
+    section = section ?? $app.elems.getTopSection(elem)
     
-    const editor = $app.elems.getEditorNode(elem, editorIdx)
+    const editor = $app.elems.getNode(elem, `${section}-editor`)
     if (!editor)
       return
 

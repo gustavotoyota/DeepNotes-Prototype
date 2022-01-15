@@ -12,13 +12,6 @@ collapsing.collapse = (elem) => {
   if (!elem.collapsible)
     return
 
-  const bodyElem = document.getElementById(`elem-${elem.id}-body`)
-
-  if (bodyElem) {
-    const clientRect = bodyElem.getBoundingClientRect()
-    elem.expandedHeight = $app.sizes.screenToWorld1D(clientRect.height)
-  }
-
   elem.collapsed = true
   
   $app.elems.bringToTop(elem)

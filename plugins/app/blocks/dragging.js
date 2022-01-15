@@ -66,9 +66,9 @@ dragging.update = (event) => {
         selectedElem.pos.y = rectWorldPos.y + worldRect.y * selectedElem.anchor.y
 
         if (selectedElem.collapsed && selectedElem.collapsedSize.x === 'expanded')
-          selectedElem.expandedSize.x = worldRect.x
+          selectedElem.expandedSize.x = `${worldRect.x}px`
         else
-          selectedElem[$app.elems.getSizeProp(selectedElem)].x = worldRect.x
+          selectedElem[$app.elems.getSizeProp(selectedElem)].x = `${worldRect.x}px`
       }
 
       $app.selection.moveToRegion(null)

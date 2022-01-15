@@ -40,6 +40,8 @@ localStorage.saveProject = async function () {
     await writable.write($app.storage.createProjectBlob())
     await writable.close()
   } catch (err) {
+    $app.storage.reset()
+    
     console.log(err)
   }
 }

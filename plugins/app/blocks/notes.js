@@ -8,6 +8,8 @@ notes.create = (clientPos) => {
     type: 'note',
 
     pos: $app.coords.clientToWorld(clientPos),
+
+    hasBody: true,
   })
 
   $app.defaultProps.copy([elem])

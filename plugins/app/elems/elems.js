@@ -59,8 +59,8 @@ elems.getNode = (elem, part) => {
   else
     return document.getElementById(`elem-${elem.id}-${part}`)
 }
-elems.getClientRect = (elem) => {
-  const node = $app.elems.getNode(elem, 'frame')
+elems.getClientRect = (elem, part) => {
+  const node = $app.elems.getNode(elem, part ?? 'frame')
 
   return node.getBoundingClientRect()
 }
@@ -116,12 +116,6 @@ elems.getSizeProp = (elem) => {
 
 
 
-elems.getEditorNode = (elem, editorIdx) => {
-  return $app.elems.getNode(elem, `editor-${editorIdx}`)
-}
-
-
-
 elems.isOnTop = (elem) => {
   const regionArray = elems.getRegionArray(elem)
 
@@ -134,15 +128,27 @@ elems.scrollIntoView = (elem) => {
   if (elem.parentId == null)
     return
 
-  const parentElem = $app.elems.getById(elem.parentId)
-  const scrollBoxNode = $app.elems.getNode(parentElem, 'scrollbox')
 
-  if (scrollBoxNode.scrollHeight <= scrollBoxNode.clientHeight)
+
+
+  const auxNode = $app.elems.getNode(elem, 'anchor')
+
+  while (auxNode != null) {
+    if ($utils.hasVertScrollbar(auxNode))
+      break
+
+    auxNode = auxNode.parentNode
+  }
+
+  if (auxNode == null)
     return
 
-  const node = $app.elems.getNode(elem, 'frame')
+
+
+
+  const elemNode = $app.elems.getNode(elem, 'frame')
   
-  node.scrollIntoView({
+  elemNode.scrollIntoView({
     behavior: 'smooth',
     block: 'nearest',
   })
@@ -154,4 +160,37 @@ elems.getIndex = (elem) => {
   const regionArray = $app.elems.getRegionArray(elem)
 
   return regionArray.findIndex(item => item === elem)
+}
+
+
+
+elems.getTopSection = (elem) => {
+  if (elem.hasTitle)
+    return 'title'
+  else if (elem.hasBody)
+    return 'body'
+  else if (elem.container)
+    return 'container'
+}
+elems.getBottomSection = (elem) => {
+  if (elem.collapsed)
+    return $app.elems.getTopSection(elem)
+  else if (elem.container)
+    return 'container'
+  else if (elem.hasBody)
+    return 'body'
+  else if (elem.hasTitle)
+    return 'title'
+}
+elems.getNumSections = (elem) => {
+  let numSections = 0
+
+  if (elem.hasTitle)
+    ++numSections
+  if (elem.hasBody)
+    ++numSections
+  if (elem.container)
+    ++numSections
+
+  return numSections
 }
