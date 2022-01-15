@@ -529,6 +529,8 @@ export default {
 }
 
 
+
+
 .drop-zone {
   position: absolute;
   left: 0; right: 0;
@@ -539,6 +541,17 @@ export default {
   z-index: 1000;
 }
 .drop-zone.active {
+  opacity: 0.25;
+}
+
+
+
+
+.container-drop-zone {
+  background-color: #42A5F5;
+  opacity: 0;
+}
+.container-drop-zone.active {
   opacity: 0.25;
 }
 </style>
