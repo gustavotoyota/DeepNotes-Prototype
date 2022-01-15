@@ -131,7 +131,7 @@ elems.scrollIntoView = (elem) => {
 
 
 
-  const auxNode = $app.elems.getNode(elem, 'anchor')
+  let auxNode = $app.elems.getNode(elem, 'anchor')
 
   while (auxNode != null) {
     if ($utils.hasVertScrollbar(auxNode))
