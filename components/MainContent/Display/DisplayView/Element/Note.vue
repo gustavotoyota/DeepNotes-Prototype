@@ -87,16 +87,16 @@
         :id="`elem-${elem.id}-title`"
         style="display: flex /* Horizontal flex */;
         min-height: 36.453px"
-        :style="`height: ${getSectionHeight('title')}`"
-        @pointerdown.left="onEditorPointerDown($event, 'title')"
-        @dblclick.left="$app.editing.start(elem, 'title')">
+        :style="`height: ${getSectionHeight('title')}`">
 
           <!-- Title content -->
 
           <div style="flex: 1 /* Title content is horizontally flexible */;
           padding: 9px;
           overflow: auto"
-          :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
+          :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`"
+          @pointerdown.left="onEditorPointerDown($event, 'title')"
+          @dblclick.left="$app.editing.start(elem, 'title')">
 
             <SmartEditor ref="title-editor"
             :id="`elem-${elem.id}-title-editor`"
@@ -142,16 +142,16 @@
           :id="`elem-${elem.id}-body`"
           style="display: flex /* Horizontal flex */;
           min-height: 36.453px"
-          :style="`height: ${getSectionHeight('body')}`"
-          @pointerdown.left="onEditorPointerDown($event, 'body')"
-          @dblclick.left="$app.editing.start(elem, 'body')">
+          :style="`height: ${getSectionHeight('body')}`">
 
             <!-- Body content -->
 
             <div style="flex: 1 /* Body content is horizontally flexible */;
             padding: 9px;
             overflow: auto"
-            :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
+            :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`"
+            @pointerdown.left="onEditorPointerDown($event, 'body')"
+            @dblclick.left="$app.editing.start(elem, 'body')">
 
               <SmartEditor ref="body-editor"
               :id="`elem-${elem.id}-body-editor`"
