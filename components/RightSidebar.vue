@@ -5,7 +5,7 @@
   permanent clipped touchless>
         
     <PageProperties/>
-    <NoteProperties/>
+    <BlockProperties/>
 
   </v-navigation-drawer>
 

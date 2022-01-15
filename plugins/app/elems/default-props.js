@@ -5,8 +5,7 @@ const defaultProps = module.exports = {}
 
 defaultProps.init = () => {
   $set($state.project, 'defaultProps', {
-    note: {},
-    container: {},
+    block: {},
     arrow: {},
   })
 }
