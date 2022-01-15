@@ -10147,676 +10147,8 @@
         "createdAt": "2022-01-11T16:58:00.577Z",
         "modifiedAt": "2022-01-11T16:58:00.577Z",
         "elems": {
-          "nextId": 100,
+          "nextId": 104,
           "blocks": [
-            {
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "hasTitle": true,
-              "hasBody": false,
-              "title": "<h2>Cancelled</h2>",
-              "body": "",
-              "collapsible": true,
-              "collapsed": true,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedSize": {
-                "x": "204.73065185546875px",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "310.9826354980469px"
-                }
-              },
-              "expandedHeight": 221.74999041607862,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "block",
-              "pos": {
-                "x": 120.154798795157,
-                "y": 93.10604854311612
-              },
-              "container": true,
-              "children": [
-                {
-                  "parentId": 57,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Scroll to active element on drop</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 38.45313468657375,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -374.0726597515013,
-                    "y": 326.2513942015378
-                  },
-                  "id": 58
-                }
-              ],
-              "parentId": null,
-              "id": 57
-            },
-            {
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "hasTitle": true,
-              "hasBody": false,
-              "title": "<h2>Later</h2>",
-              "body": "",
-              "collapsible": true,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedSize": {
-                "x": "204.73065185546875px",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "310.9826354980469px"
-                }
-              },
-              "expandedHeight": 221.74999041607862,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "block",
-              "pos": {
-                "x": -206.98920120484294,
-                "y": 156.53804854311656
-              },
-              "container": true,
-              "children": [
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Implement note text synced with page name</p>",
-                  "body": "<p>Replace content (title or body) with page id.</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "186.140625px",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 54.90625,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -291.00777919350446,
-                    "y": 191.28125852726544
-                  },
-                  "id": 56,
-                  "linkedPageId": 33
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Fix tooltip remaining alive on editor blur</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -373.111188006981,
-                    "y": 208.9123315253123
-                  },
-                  "id": 76
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Create UI for linked pages</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -373.111188006981,
-                    "y": 208.9123315253123
-                  },
-                  "id": 98
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Allow anchor page links</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -373.111188006981,
-                    "y": 208.9123315253123
-                  },
-                  "id": 99
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Position pasted notes next to active element if exists</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -373.111188006981,
-                    "y": 208.9123315253123
-                  },
-                  "id": 78
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Implement arrows</p>",
-                  "body": "<p>Show only on active element</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 54.90625,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -361.39472374674983,
-                    "y": -25.05819798081251
-                  },
-                  "id": 48
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Implement space container</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -319.1814699894029,
-                    "y": 366.9123315253123
-                  },
-                  "id": 70
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Implement positioned copying from container</p>",
-                  "body": "<p>Add elements to root temporarily</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 54.90625,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -419.50409874674983,
-                    "y": 18.39492701918749
-                  },
-                  "id": 49
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Implement shift-resizing</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 38.45313468657375,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -347.29316124674983,
-                    "y": 98.75430201918749
-                  },
-                  "id": 50
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Make element id global</p>",
-                  "body": "<p>May help later</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 36.453125,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -357.00409874674983,
-                    "y": 142.2074270191875
-                  },
-                  "id": 51
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Make positioning pixel-perfect</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 40.00001898973711,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -364.64472374674983,
-                    "y": 204.11370753676562
-                  },
-                  "id": 52
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Implement block color</p>",
-                  "body": "<p>Allow color inheritance</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 38.453125,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -353.37909874674983,
-                    "y": 266.0199575367656
-                  },
-                  "id": 53
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Implement button to reverse container children</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 38.45313468657375,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -412.69941124674983,
-                    "y": 309.4730825367656
-                  },
-                  "id": 54
-                }
-              ],
-              "parentId": null,
-              "id": 43
-            },
             {
               "anchor": {
                 "x": 0.5,
@@ -10857,6 +10189,48 @@
               },
               "container": true,
               "children": [
+                {
+                  "parentId": 0,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Make notes centered on creation</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "171px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": 148.62503330649554,
+                    "y": 191.96875852726544
+                  },
+                  "id": 96
+                },
                 {
                   "parentId": 0,
                   "linkedPageId": 23,
@@ -13389,6 +12763,134 @@
               },
               "hasTitle": true,
               "hasBody": false,
+              "title": "<h2>Next</h2>",
+              "body": "",
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedSize": {
+                "x": "206.14312744140625px",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "310.9826354980469px"
+                }
+              },
+              "expandedHeight": 259.4218935168955,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "block",
+              "pos": {
+                "x": 11.073292029338667,
+                "y": 155.6005536873231
+              },
+              "container": true,
+              "children": [],
+              "parentId": null,
+              "id": 55
+            },
+            {
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
+              "title": "<h2>Cancelled</h2>",
+              "body": "",
+              "collapsible": true,
+              "collapsed": true,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedSize": {
+                "x": "204.73065185546875px",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "310.9826354980469px"
+                }
+              },
+              "expandedHeight": 221.74999041607862,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "block",
+              "pos": {
+                "x": 120.154798795157,
+                "y": 93.10604854311612
+              },
+              "container": true,
+              "children": [
+                {
+                  "parentId": 57,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Scroll to active element on drop</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 38.45313468657375,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -374.0726597515013,
+                    "y": 326.2513942015378
+                  },
+                  "id": 58
+                }
+              ],
+              "parentId": null,
+              "id": 57
+            },
+            {
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
               "title": "<h2>A lot later</h2>",
               "body": "",
               "collapsible": true,
@@ -13802,7 +13304,7 @@
               },
               "hasTitle": true,
               "hasBody": false,
-              "title": "<h2>Next</h2>",
+              "title": "<h2>Later</h2>",
               "body": "",
               "collapsible": true,
               "collapsed": false,
@@ -13815,14 +13317,14 @@
                 }
               },
               "expandedSize": {
-                "x": "206.14312744140625px",
+                "x": "204.73065185546875px",
                 "y": {
                   "title": "auto",
                   "body": "auto",
                   "container": "310.9826354980469px"
                 }
               },
-              "expandedHeight": 259.4218935168955,
+              "expandedHeight": 221.74999041607862,
               "movable": true,
               "resizable": true,
               "wrapTitle": true,
@@ -13830,13 +13332,13 @@
               "readOnly": false,
               "type": "block",
               "pos": {
-                "x": 11.073292029338667,
-                "y": 155.6005536873231
+                "x": -206.98920120484294,
+                "y": 156.53804854311656
               },
               "container": true,
               "children": [
                 {
-                  "parentId": 55,
+                  "parentId": 43,
                   "linkedPageId": null,
                   "anchor": {
                     "x": 0,
@@ -13844,7 +13346,137 @@
                   },
                   "hasTitle": true,
                   "hasBody": false,
-                  "title": "<p>Make notes always centered on creation</p>",
+                  "title": "<p>Organize note component for optimization</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "container": false,
+                  "children": [],
+                  "type": "block",
+                  "pos": {
+                    "x": -396.93929774819196,
+                    "y": 217.9123315253123
+                  },
+                  "id": 102,
+                  "expandedHeight": 0
+                },
+                {
+                  "parentId": 43,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Organize space code</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "container": false,
+                  "children": [],
+                  "type": "block",
+                  "pos": {
+                    "x": -396.93929774819196,
+                    "y": 217.9123315253123
+                  },
+                  "id": 103,
+                  "expandedHeight": 0
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Implement note text synced with page name</p>",
+                  "body": "<p>Replace content (title or body) with page id.</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "186.140625px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 54.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -291.00777919350446,
+                    "y": 191.28125852726544
+                  },
+                  "id": 56,
+                  "linkedPageId": 33
+                },
+                {
+                  "parentId": 43,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Fix tooltip remaining alive on editor blur</p>",
                   "body": "",
                   "collapsible": false,
                   "collapsed": false,
@@ -13857,7 +13489,7 @@
                     }
                   },
                   "expandedSize": {
-                    "x": "169.71878051757812px",
+                    "x": "auto",
                     "y": {
                       "title": "auto",
                       "body": "auto",
@@ -13872,20 +13504,477 @@
                   "readOnly": false,
                   "type": "block",
                   "pos": {
-                    "x": -37.34374721108259,
-                    "y": 206.48438352726544
+                    "x": -373.111188006981,
+                    "y": 208.9123315253123
                   },
-                  "id": 96
+                  "id": 76
+                },
+                {
+                  "parentId": 43,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Create UI for linked pages</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -373.111188006981,
+                    "y": 208.9123315253123
+                  },
+                  "id": 98
+                },
+                {
+                  "parentId": 43,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Allow anchor page links</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -373.111188006981,
+                    "y": 208.9123315253123
+                  },
+                  "id": 99
+                },
+                {
+                  "parentId": 43,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Position pasted notes next to active element if exists</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -373.111188006981,
+                    "y": 208.9123315253123
+                  },
+                  "id": 78
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Implement arrows</p>",
+                  "body": "<p>Show only on active element</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 54.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -361.39472374674983,
+                    "y": -25.05819798081251
+                  },
+                  "id": 48
+                },
+                {
+                  "parentId": 43,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Implement space container</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -319.1814699894029,
+                    "y": 366.9123315253123
+                  },
+                  "id": 70
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Implement positioned copying from container</p>",
+                  "body": "<p>Add elements to root temporarily</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 54.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -419.50409874674983,
+                    "y": 18.39492701918749
+                  },
+                  "id": 49
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Implement shift-resizing</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 38.45313468657375,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -347.29316124674983,
+                    "y": 98.75430201918749
+                  },
+                  "id": 50
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Make element id global</p>",
+                  "body": "<p>May help later</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 36.453125,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -357.00409874674983,
+                    "y": 142.2074270191875
+                  },
+                  "id": 51
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Make positioning pixel-perfect</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 40.00001898973711,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -364.64472374674983,
+                    "y": 204.11370753676562
+                  },
+                  "id": 52
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Implement block color</p>",
+                  "body": "<p>Allow color inheritance</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 38.453125,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -353.37909874674983,
+                    "y": 266.0199575367656
+                  },
+                  "id": 53
+                },
+                {
+                  "parentId": 43,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Implement button to reverse container children</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 38.45313468657375,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -412.69941124674983,
+                    "y": 309.4730825367656
+                  },
+                  "id": 54
                 }
               ],
               "parentId": null,
-              "id": 55
+              "id": 43
             }
           ],
           "arrows": [],
-          "regionId": null,
-          "selected": {},
-          "activeId": null,
+          "regionId": 0,
+          "selected": {
+            "96": true
+          },
+          "activeId": 96,
           "editing": false
         },
         "camera": {
