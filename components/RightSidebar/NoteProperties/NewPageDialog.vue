@@ -69,11 +69,12 @@ export default {
     onSubmit() {
       this.active = false
 
-      const activeElem = $getters.elem
+      const selectedElems = $app.selection.getElems()
       
       const page = $app.pages.create(this.name)
 
-      activeElem.linkedPageId = page.id
+      for (const selectedElem of selectedElems)
+        selectedElem.linkedPageId = page.id
     },
 
   },
