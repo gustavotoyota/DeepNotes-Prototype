@@ -59,16 +59,15 @@ dragging.update = (event) => {
     if ($getters.regionId != null) {
       for (const selectedElem of $getters.elems) {
         const clientRect = $app.elems.getClientRect(selectedElem)
-        const rectWorldPos = $app.coords.clientToWorld(clientRect)
-        const worldRect = $app.sizes.screenToWorld2D({ x: clientRect.width, y: clientRect.height })
+        const worldRect = $app.rects.clientToWorld(clientRect)
 
-        selectedElem.pos.x = rectWorldPos.x + worldRect.x * selectedElem.anchor.x
-        selectedElem.pos.y = rectWorldPos.y + worldRect.y * selectedElem.anchor.y
+        selectedElem.pos.x = worldRect.start.x + worldRect.size.x * selectedElem.anchor.x
+        selectedElem.pos.y = worldRect.start.y + worldRect.size.y * selectedElem.anchor.y
 
         if (selectedElem.collapsed && selectedElem.collapsedSize.x === 'expanded')
-          selectedElem.expandedSize.x = `${worldRect.x}px`
+          selectedElem.expandedSize.x = `${worldRect.size.x}px`
         else
-          selectedElem[$app.elems.getSizeProp(selectedElem)].x = `${worldRect.x}px`
+          selectedElem[$app.elems.getSizeProp(selectedElem)].x = `${worldRect.size.x}px`
       }
 
       $app.selection.moveToRegion(null)

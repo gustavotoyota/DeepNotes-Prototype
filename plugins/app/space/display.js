@@ -4,5 +4,9 @@ const display = module.exports = {}
 
 
 display.getClientRect = () => {
-  return document.getElementById('display').getBoundingClientRect()
+  const node = document.getElementById('display')
+
+  const domClientRect = node.getBoundingClientRect()
+
+  return $app.rects.fromDOM(domClientRect)
 }

@@ -15,6 +15,7 @@ $app.pages = require('./pages')
 $app.display = require('./space/display')
 $app.coords = require('./space/coords')
 $app.sizes = require('./space/sizes')
+$app.rects = require('./space/rects')
 
 $app.camera = require('./camera/camera')
 $app.zooming = require('./camera/zooming')

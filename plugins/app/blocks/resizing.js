@@ -38,14 +38,9 @@ resizing.update = (event) => {
 
   // Old client rect
 
-  const oldClientRect = {
-    start: { x: frameClientRect.x, y: sectionClientRect.y },
-    end: { x: frameClientRect.right, y: sectionClientRect.bottom },
-  }
-  oldClientRect.size = {
-    x: oldClientRect.end.x - oldClientRect.start.x,
-    y: oldClientRect.end.y - oldClientRect.start.y,
-  }
+  const oldClientRect = $app.rects.fromStartEnd(
+    { x: frameClientRect.left, y: sectionClientRect.top },
+    { x: frameClientRect.right, y: sectionClientRect.bottom })
 
 
 
@@ -63,38 +58,21 @@ resizing.update = (event) => {
   if ($state.resizing.side.includes('s'))
     newClientRect.end.y = event.clientY
 
-  newClientRect.size = {
-    x: newClientRect.end.x - newClientRect.start.x,
-    y: newClientRect.end.y - newClientRect.start.y,
-  }
+  $app.rects.updateSize(newClientRect)
 
 
 
 
   // Old world rect
 
-  const oldWorldRect = {
-    start: $app.coords.clientToWorld(oldClientRect.start),
-    end: $app.coords.clientToWorld(oldClientRect.end),
-  }
-  oldWorldRect.size = {
-    x: oldWorldRect.end.x - oldWorldRect.start.x,
-    y: oldWorldRect.end.y - oldWorldRect.start.y,
-  }
+  const oldWorldRect = $app.rects.clientToWorld(oldClientRect)
 
 
 
 
   // New world rect
-
-  const newWorldRect = {
-    start: $app.coords.clientToWorld(newClientRect.start),
-    end: $app.coords.clientToWorld(newClientRect.end),
-  }
-  newWorldRect.size = {
-    x: newWorldRect.end.x - newWorldRect.start.x,
-    y: newWorldRect.end.y - newWorldRect.start.y,
-  }
+  
+  const newWorldRect = $app.rects.clientToWorld(newClientRect)
 
 
 

@@ -24,11 +24,7 @@ notes.create = async (clientPos) => {
   await $nextTick()
 
   const clientRect = $app.elems.getClientRect(elem)
-
-  const worldSize = {
-    x: $app.sizes.screenToWorld1D(clientRect.width),
-    y: $app.sizes.screenToWorld1D(clientRect.height),
-  }
+  const worldSize = $app.sizes.screenToWorld2D(clientRect.size)
 
   elem.pos.x += worldSize.x * (elem.anchor.x - 0.5)
   elem.pos.y += worldSize.y * (elem.anchor.y - 0.5)

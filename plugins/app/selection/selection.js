@@ -99,7 +99,7 @@ selection.moveToRegion = (regionElem, dropIndex) => {
 
     elems.push({
       elem: elem,
-      posY: clientRect.y + clientRect.height * elem.anchor.y,
+      posY: clientRect.start.y + clientRect.size.y * elem.anchor.y,
     })
   }
 

@@ -35,11 +35,11 @@ camera.fitToScreen = () => {
   for (const elem of elems) {
     const clientRect = $app.elems.getClientRect(elem)
 
-    clientTopLeft.x = Math.min(clientTopLeft.x, clientRect.left)
-    clientTopLeft.y = Math.min(clientTopLeft.y, clientRect.top)
+    clientTopLeft.x = Math.min(clientTopLeft.x, clientRect.start.x)
+    clientTopLeft.y = Math.min(clientTopLeft.y, clientRect.start.y)
 
-    clientBottomRight.x = Math.max(clientBottomRight.x, clientRect.right)
-    clientBottomRight.y = Math.max(clientBottomRight.y, clientRect.bottom)
+    clientBottomRight.x = Math.max(clientBottomRight.x, clientRect.end.x)
+    clientBottomRight.y = Math.max(clientBottomRight.y, clientRect.end.y)
   }
 
 
@@ -63,9 +63,9 @@ camera.fitToScreen = () => {
     const displayRect = $app.display.getClientRect()
 
     $getters.page.camera.zoom = Math.min(
-      (Math.min(70, displayRect.width / 4) - displayRect.width / 2) /
+      (Math.min(70, displayRect.size.x / 4) - displayRect.size.x / 2) /
       (worldTopLeft.x - $getters.page.camera.pos.x),
-      (Math.min(35, displayRect.height / 4) - displayRect.height / 2) /
+      (Math.min(35, displayRect.size.y / 4) - displayRect.size.y / 2) /
       (worldTopLeft.y - $getters.page.camera.pos.y))
 
     $getters.page.camera.zoom = Math.min(Math.max($getters.page.camera.zoom, $app.configs.minZoom), 1)

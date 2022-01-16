@@ -432,7 +432,7 @@ export default {
           if (value === 'custom') {
             const clientRect = $app.elems.getClientRect(elem)
 
-            elem[sizeProp].x = `${$app.sizes.screenToWorld1D(clientRect.width)}px`
+            elem[sizeProp].x = `${$app.sizes.screenToWorld1D(clientRect.size.x)}px`
           } else
             elem[sizeProp].x = value
         }
