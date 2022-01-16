@@ -39,8 +39,8 @@ resizing.update = (event) => {
   // Old client rect
 
   const oldClientRect = $app.rects.fromStartEnd(
-    { x: frameClientRect.left, y: sectionClientRect.top },
-    { x: frameClientRect.right, y: sectionClientRect.bottom })
+    { x: frameClientRect.start.x, y: sectionClientRect.start.y },
+    { x: frameClientRect.end.x, y: sectionClientRect.end.y })
 
 
 
