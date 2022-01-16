@@ -3,14 +3,14 @@
   <div :id="`elem-${elem.id}-container`"
   style="display: flex /* Horizontal flex */;
   min-height: 56.453px"
-  :style="`height: ${getSectionHeight('container')}`">
+  :style="{ 'height': getSectionHeight('container') }">
 
     <!-- Container content -->
 
     <div style="flex: 1 /* Body content is horizontally flexible */;
     padding: 9px; overflow: auto;
     display: flex; flex-direction: column"
-    :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
+    :style="{ 'width': selfTargetWidth }">
     
       <div v-if="elem.children.length === 0"
       style="padding: 8px;
@@ -41,7 +41,7 @@
       </div>
 
       <DisplayElement v-for="(child, idx) of elem.children" :key="child.id"
-      :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
+      :style="{ 'margin-top': idx === 0 ? '0' : '5px' }"
       :elem="child"
       :target-width="selfTargetWidth"/>
     

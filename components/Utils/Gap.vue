@@ -1,7 +1,8 @@
 <template>
   <div :style="{
-    width, height,
-    display: inline ? 'inline-block' : ''
+    'width': width,
+    'height': height,
+    'display': inline ? 'inline-block' : null
   }">
   </div>
 </template>

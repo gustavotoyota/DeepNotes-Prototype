@@ -4,14 +4,14 @@
   :id="`elem-${elem.id}-${section}`"
   style="display: flex /* Horizontal flex */;
   min-height: 36.453px"
-  :style="`height: ${getSectionHeight(section)}`">
+  :style="{ 'height': getSectionHeight(section) }">
 
     <!-- Section content -->
 
     <div style="flex: 1 /* Section content is horizontally flexible */;
     padding: 9px;
     overflow: auto"
-    :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`"
+    :style="{ 'width': selfTargetWidth }"
     @pointerdown.left="onContentPointerDown"
     @dblclick.left="$app.editing.start(elem, section)">
 

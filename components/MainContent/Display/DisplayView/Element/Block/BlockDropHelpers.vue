@@ -6,7 +6,7 @@
     :class="{ 'active' : $state.dragging.dropRegionId == parentElem.id
       && $state.dragging.dropIndex === index }"
     style="bottom: 50%"
-    :style="`top: ${index === 0 ? '0': '-5px'}`"
+    :style="{ 'top': index === 0 ? '0': '-5px' }"
     @pointerenter="onDropZonePointerEnter($event, 0)"
     @pointerleave="onDropZonePointerLeave($event, 0)"
     @pointerup.left.stop="onDropZonePointerUp($event, 0)">

@@ -6,7 +6,7 @@
     <v-btn plain tile
     style="min-width: 0 /* Allows reducing collapse button width */;
     width: 32px /* Reduces collapse button width to 32px */"
-    :style="`height: ${numSections === 1 ? '38.45px' : '100%'}`"
+    :style="{ 'height': numSections === 1 ? '38.45px' : '100%' }"
     @pointerdown.left.stop
     @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
     @dblclick.left.stop>

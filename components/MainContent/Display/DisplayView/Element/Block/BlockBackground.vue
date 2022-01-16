@@ -7,8 +7,10 @@
   height: 100%;
   overflow: hidden"
   elevation="6"
-  :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' };
-  background-color: ${color}`"
+  :style="{
+    'cursor': (elem.linkedPageId == null || selected) ? null : 'pointer',
+    'background-color': color,
+  }"
   @pointerdown.left.stop="onPointerDown"
   @click.left.stop="onClick">
 

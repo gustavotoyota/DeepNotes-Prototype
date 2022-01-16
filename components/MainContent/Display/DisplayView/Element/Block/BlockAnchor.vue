@@ -2,7 +2,10 @@
 
   <div :id="`elem-${elem.id}-anchor`"
   :class="{ anchor: elem.parentId == null }"
-  :style="`left: ${elem.pos.x}px; top: ${elem.pos.y}px`">
+  :style="{
+    'left': `${elem.pos.x}px`,
+    'top': `${elem.pos.y}px`,
+  }">
 
     <slot/>
 
