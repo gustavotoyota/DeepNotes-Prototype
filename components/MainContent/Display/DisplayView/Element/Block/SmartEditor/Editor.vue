@@ -4,7 +4,8 @@
   v-on="$listeners" v-bind="$attrs"
   :options="editorOptions"
   v-model="model"
-  @ready="onEditorReady"/>
+  @ready="onReady"
+  @blur="onBlur"/>
 
 </template>
 
@@ -76,12 +77,18 @@ export default {
 
   methods: {
 
-    onEditorReady(quill) {
+    onReady(quill) {
       this.quill = quill
 
       quill.history.clear()
 
       this.$emit('ready', quill)
+    },
+
+
+
+    onBlur(quill) {
+      quill.theme.tooltip.hide()
     },
 
   },

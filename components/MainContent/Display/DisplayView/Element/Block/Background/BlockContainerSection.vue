@@ -14,6 +14,9 @@
     
       <div v-if="elem.children.length === 0"
       style="padding: 8px;
+      border: 1px solid;
+      color: #e0e0e0;
+      border-color: rgb(33, 33, 33) #888888 #888888 rgb(33, 33, 33);
       position: relative;
       height: 100%;
       font-size: 13px;

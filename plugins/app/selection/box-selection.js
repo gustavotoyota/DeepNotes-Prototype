@@ -57,8 +57,8 @@ boxSelection.finish = (event) => {
   for (const elem of $getters.page.elems.blocks) {
     const clientRect = $app.elems.getClientRect(elem)
 
-    if (clientRect.left < topLeft.x || clientRect.top < topLeft.y
-    || clientRect.right > bottomRight.x || clientRect.bottom > bottomRight.y)
+    if (clientRect.start.x < topLeft.x || clientRect.start.y < topLeft.y
+    || clientRect.end.x > bottomRight.x || clientRect.end.y > bottomRight.y)
       continue
 
     if ($app.selection.has(elem) && !event.shiftKey)

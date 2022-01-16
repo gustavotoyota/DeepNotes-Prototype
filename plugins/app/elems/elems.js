@@ -62,7 +62,9 @@ elems.getNode = (elem, part) => {
 elems.getClientRect = (elem, part) => {
   const node = $app.elems.getNode(elem, part ?? 'frame')
 
-  return node.getBoundingClientRect()
+  const domClientRect = node.getBoundingClientRect()
+
+  return $app.rects.fromDOM(domClientRect)
 }
 
 

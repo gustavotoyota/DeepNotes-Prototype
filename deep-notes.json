@@ -763,132 +763,6 @@
               },
               "hasTitle": true,
               "hasBody": false,
-              "title": "<h1>Academic</h1>",
-              "body": "",
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedSize": {
-                "x": "187px",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedHeight": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "block",
-              "pos": {
-                "x": -251,
-                "y": -269.5
-              },
-              "container": true,
-              "children": [
-                {
-                  "parentId": 1,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<h2>History</h2>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -235,
-                    "y": -160.390625
-                  },
-                  "id": 2
-                },
-                {
-                  "parentId": 1,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<h2>Geography</h2>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -277.59375,
-                    "y": -110.90625
-                  },
-                  "id": 3
-                }
-              ],
-              "id": 1
-            },
-            {
-              "parentId": null,
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "hasTitle": true,
-              "hasBody": false,
               "title": "<h1>Philosophy</h1>",
               "body": "",
               "collapsible": false,
@@ -1007,6 +881,132 @@
                 }
               ],
               "id": 15
+            },
+            {
+              "parentId": null,
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
+              "title": "<h1>Academic</h1>",
+              "body": "",
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedSize": {
+                "x": "187px",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "block",
+              "pos": {
+                "x": -251,
+                "y": -269.5
+              },
+              "container": true,
+              "children": [
+                {
+                  "parentId": 1,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<h2>History</h2>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -235,
+                    "y": -160.390625
+                  },
+                  "id": 2
+                },
+                {
+                  "parentId": 1,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<h2>Geography</h2>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "auto",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -277.59375,
+                    "y": -110.90625
+                  },
+                  "id": 3
+                }
+              ],
+              "id": 1
             }
           ],
           "arrows": [],
@@ -1081,47 +1081,6 @@
               },
               "hasTitle": true,
               "hasBody": false,
-              "title": "<h1>Visual SQL</h1>",
-              "body": "",
-              "collapsible": false,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedSize": {
-                "x": "auto",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedHeight": 0,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "block",
-              "pos": {
-                "x": -186,
-                "y": -153.5
-              },
-              "id": 1
-            },
-            {
-              "parentId": null,
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "hasTitle": true,
-              "hasBody": false,
               "title": "<h1>MemUp</h1>",
               "body": "",
               "collapsible": false,
@@ -1155,6 +1114,47 @@
               },
               "id": 2,
               "linkedPageId": 36
+            },
+            {
+              "parentId": null,
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
+              "title": "<h1>Visual SQL</h1>",
+              "body": "",
+              "collapsible": false,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedSize": {
+                "x": "auto",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedHeight": 0,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "block",
+              "pos": {
+                "x": -186,
+                "y": -153.5
+              },
+              "id": 1
             }
           ],
           "arrows": [],
@@ -2546,49 +2546,6 @@
               },
               "hasTitle": true,
               "hasBody": false,
-              "title": "<h2>Later</h2>",
-              "body": "",
-              "collapsible": true,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedSize": {
-                "x": "204.73065185546875px",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedHeight": 221.74999041607862,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "block",
-              "pos": {
-                "x": -224.0811794704801,
-                "y": -279.3299242228119
-              },
-              "container": true,
-              "children": [],
-              "parentId": null,
-              "id": 30
-            },
-            {
-              "anchor": {
-                "x": 0,
-                "y": 0
-              },
-              "hasTitle": true,
-              "hasBody": false,
               "title": "<h2>Next</h2>",
               "body": "",
               "collapsible": true,
@@ -2643,7 +2600,7 @@
                     }
                   },
                   "expandedSize": {
-                    "x": "auto",
+                    "x": "186.140625px",
                     "y": {
                       "title": "auto",
                       "body": "auto",
@@ -2658,14 +2615,57 @@
                   "readOnly": false,
                   "type": "block",
                   "pos": {
-                    "x": 4.397465529656716,
-                    "y": -219.89213088137802
+                    "x": -16.296875,
+                    "y": -220.39062918404716
                   },
                   "id": 61
                 }
               ],
               "parentId": null,
               "id": 39
+            },
+            {
+              "anchor": {
+                "x": 0,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
+              "title": "<h2>Later</h2>",
+              "body": "",
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedSize": {
+                "x": "204.73065185546875px",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedHeight": 221.74999041607862,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "block",
+              "pos": {
+                "x": -224.0811794704801,
+                "y": -279.3299242228119
+              },
+              "container": true,
+              "children": [],
+              "parentId": null,
+              "id": 30
             }
           ],
           "arrows": [],
@@ -10147,7 +10147,7 @@
         "createdAt": "2022-01-11T16:58:00.577Z",
         "modifiedAt": "2022-01-11T16:58:00.577Z",
         "elems": {
-          "nextId": 104,
+          "nextId": 106,
           "blocks": [
             {
               "anchor": {
@@ -10189,6 +10189,180 @@
               },
               "container": true,
               "children": [
+                {
+                  "parentId": 0,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Fix tooltip remaining alive on editor blur</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "169.71871948242188px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": 138.6562625846832,
+                    "y": 204.03125626670402
+                  },
+                  "id": 76
+                },
+                {
+                  "parentId": 0,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Organize space code</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "expandedSize": {
+                    "x": "171px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "container": false,
+                  "children": [],
+                  "type": "block",
+                  "pos": {
+                    "x": 143.62498206710507,
+                    "y": 207.96875626670402
+                  },
+                  "id": 103,
+                  "expandedHeight": 0
+                },
+                {
+                  "parentId": 0,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Fix first element drop zone</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "expandedSize": {
+                    "x": "186.140625px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "container": false,
+                  "children": [],
+                  "type": "block",
+                  "pos": {
+                    "x": 100.99222080649554,
+                    "y": 213.28125852726544
+                  },
+                  "id": 104,
+                  "expandedHeight": 0
+                },
+                {
+                  "parentId": 0,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Optimize block component</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "expandedSize": {
+                    "x": "169.71878051757812px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "container": false,
+                  "children": [],
+                  "type": "block",
+                  "pos": {
+                    "x": 105.65625278891741,
+                    "y": 184.21875852726544
+                  },
+                  "id": 102,
+                  "expandedHeight": 0
+                },
                 {
                   "parentId": 0,
                   "linkedPageId": null,
@@ -12763,49 +12937,6 @@
               },
               "hasTitle": true,
               "hasBody": false,
-              "title": "<h2>Next</h2>",
-              "body": "",
-              "collapsible": true,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedSize": {
-                "x": "206.14312744140625px",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "310.9826354980469px"
-                }
-              },
-              "expandedHeight": 259.4218935168955,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "block",
-              "pos": {
-                "x": 11.073292029338667,
-                "y": 155.6005536873231
-              },
-              "container": true,
-              "children": [],
-              "parentId": null,
-              "id": 55
-            },
-            {
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "hasTitle": true,
-              "hasBody": false,
               "title": "<h2>Cancelled</h2>",
               "body": "",
               "collapsible": true,
@@ -13339,94 +13470,6 @@
               "children": [
                 {
                   "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Organize note component for optimization</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "container": false,
-                  "children": [],
-                  "type": "block",
-                  "pos": {
-                    "x": -396.93929774819196,
-                    "y": 217.9123315253123
-                  },
-                  "id": 102,
-                  "expandedHeight": 0
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Organize space code</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "container": false,
-                  "children": [],
-                  "type": "block",
-                  "pos": {
-                    "x": -396.93929774819196,
-                    "y": 217.9123315253123
-                  },
-                  "id": 103,
-                  "expandedHeight": 0
-                },
-                {
-                  "parentId": 43,
                   "anchor": {
                     "x": 0,
                     "y": 0
@@ -13466,48 +13509,6 @@
                   },
                   "id": 56,
                   "linkedPageId": 33
-                },
-                {
-                  "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Fix tooltip remaining alive on editor blur</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -373.111188006981,
-                    "y": 208.9123315253123
-                  },
-                  "id": 76
                 },
                 {
                   "parentId": 43,
@@ -13595,48 +13596,6 @@
                 },
                 {
                   "parentId": 43,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Position pasted notes next to active element if exists</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -373.111188006981,
-                    "y": 208.9123315253123
-                  },
-                  "id": 78
-                },
-                {
-                  "parentId": 43,
                   "anchor": {
                     "x": 0,
                     "y": 0
@@ -13684,10 +13643,10 @@
                     "y": 0
                   },
                   "hasTitle": true,
-                  "hasBody": false,
+                  "hasBody": true,
                   "title": "<p>Implement space container</p>",
-                  "body": "",
-                  "collapsible": false,
+                  "body": "<p>Use Display</p>",
+                  "collapsible": true,
                   "collapsed": false,
                   "collapsedSize": {
                     "x": "expanded",
@@ -13716,48 +13675,8 @@
                     "x": -319.1814699894029,
                     "y": 366.9123315253123
                   },
-                  "id": 70
-                },
-                {
-                  "parentId": 43,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Implement positioned copying from container</p>",
-                  "body": "<p>Add elements to root temporarily</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "auto",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 54.90625,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -419.50409874674983,
-                    "y": 18.39492701918749
-                  },
-                  "id": 49
+                  "id": 70,
+                  "container": false
                 },
                 {
                   "parentId": 43,
@@ -13967,6 +13886,133 @@
               ],
               "parentId": null,
               "id": 43
+            },
+            {
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
+              "title": "<h2>Next</h2>",
+              "body": "",
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedSize": {
+                "x": "206.14312744140625px",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "310.9826354980469px"
+                }
+              },
+              "expandedHeight": 259.4218935168955,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "block",
+              "pos": {
+                "x": 11.073292029338667,
+                "y": 155.6005536873231
+              },
+              "container": true,
+              "children": [
+                {
+                  "parentId": 55,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Position pasted notes next to active element if exists</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "169.71871948242188px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -133.3437374153168,
+                    "y": 264.484381266704
+                  },
+                  "id": 78
+                },
+                {
+                  "parentId": 55,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Implement positioned copying from container</p>",
+                  "body": "<p>Add elements to root temporarily</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "169.71871948242188px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 54.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -85.34373741531681,
+                    "y": 240.84375626670402
+                  },
+                  "id": 49
+                }
+              ],
+              "parentId": null,
+              "id": 55
             }
           ],
           "arrows": [],
@@ -13977,8 +14023,8 @@
         },
         "camera": {
           "pos": {
-            "x": 6.5607022518080385,
-            "y": 305.6388940253123
+            "x": 8.732770153042594,
+            "y": 293.73380143271964
           },
           "zoom": 1,
           "lockPos": false,
@@ -16103,7 +16149,8 @@
       0,
       4,
       1,
-      24
+      24,
+      33
     ],
     "depth": 3,
     "recent": [
@@ -16118,9 +16165,7 @@
       23,
       27,
       15,
-      29,
       34,
-      33,
       35,
       14,
       12,
@@ -16130,19 +16175,21 @@
       36,
       26,
       2,
-      32,
-      9,
       5,
       7,
-      31,
       16,
       21,
       30,
-      19,
       3,
-      0,
+      19,
+      32,
+      31,
+      9,
+      29,
       4,
       1,
+      0,
+      33,
       24
     ]
   },
