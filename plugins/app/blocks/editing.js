@@ -32,18 +32,5 @@ editing.start = (elem, section) => {
 
 
 editing.stop = () => {
-  if (!$getters.editing)
-    return
-
-  const elem = $app.elems.getById($getters.elemId)
-  if (!elem)
-    return
-
-  const editors = document.querySelectorAll(`#elem-${elem.id}-frame .quill-editor`)
-
-  for (const editor of editors)
-    if (editor.__vue__.quill)
-      editor.__vue__.quill.theme.tooltip.hide()
-
   $getters.page.elems.editing = false
 }
