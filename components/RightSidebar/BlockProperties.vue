@@ -123,6 +123,36 @@
 
 
 
+      <!-- Collapsible/Collapsed -->
+
+      <v-divider class="mt-4"/>
+        
+      <div class="mx-5 mt-4"
+      style="display: flex">
+        <v-checkbox hide-details label="Collapsible"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        :input-value="$getters.elem.collapsible"
+        @change="changeProp($event, (elem, value) => {
+          elem.collapsible = value
+          elem.collapsed = elem.collapsed && value
+        })">
+        </v-checkbox>
+
+        <Gap width="16px" style="flex: none"/>
+        
+        <v-checkbox hide-details label="Collapsed"
+        style="flex: 1; margin-top: 0; padding-top: 0"
+        :disabled="!$getters.elem.collapsible"
+        :input-value="$getters.elem.collapsed"
+        @change="changeProp($event, (elem, value) => {
+          $app.collapsing.setCollapsed(elem, value)
+        })">
+        </v-checkbox>
+      </div>
+
+
+
+
       <!-- Anchor -->
 
       <v-divider class="mt-4"/>
@@ -173,36 +203,6 @@
             elem.anchor.y = value
           })"/>
         </div>
-      </div>
-
-
-
-
-      <!-- Collapsible/Collapsed -->
-
-      <v-divider class="mt-4"/>
-        
-      <div class="mx-5 mt-4"
-      style="display: flex">
-        <v-checkbox hide-details label="Collapsible"
-        style="flex: 1; margin-top: 0; padding-top: 0"
-        :input-value="$getters.elem.collapsible"
-        @change="changeProp($event, (elem, value) => {
-          elem.collapsible = value
-          elem.collapsed = elem.collapsed && value
-        })">
-        </v-checkbox>
-
-        <Gap width="16px" style="flex: none"/>
-        
-        <v-checkbox hide-details label="Collapsed"
-        style="flex: 1; margin-top: 0; padding-top: 0"
-        :disabled="!$getters.elem.collapsible"
-        :input-value="$getters.elem.collapsed"
-        @change="changeProp($event, (elem, value) => {
-          $app.collapsing.setCollapsed(elem, value)
-        })">
-        </v-checkbox>
       </div>
 
 

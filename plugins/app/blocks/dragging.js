@@ -40,7 +40,6 @@ dragging.update = (event) => {
 
 
   const clientMousePos = $app.coords.getClientPos(event)
-  const worldMousePos = $app.coords.clientToWorld(clientMousePos)
 
 
 
