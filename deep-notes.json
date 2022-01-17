@@ -10191,177 +10191,8 @@
         "createdAt": "2022-01-11T16:58:00.577Z",
         "modifiedAt": "2022-01-11T16:58:00.577Z",
         "elems": {
-          "nextId": 109,
+          "nextId": 111,
           "blocks": [
-            {
-              "anchor": {
-                "x": 0.5,
-                "y": 0
-              },
-              "hasTitle": true,
-              "hasBody": false,
-              "title": "<h2>Next</h2>",
-              "body": "",
-              "collapsible": true,
-              "collapsed": false,
-              "collapsedSize": {
-                "x": "expanded",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "auto"
-                }
-              },
-              "expandedSize": {
-                "x": "206.14312744140625px",
-                "y": {
-                  "title": "auto",
-                  "body": "auto",
-                  "container": "310.9826354980469px"
-                }
-              },
-              "expandedHeight": 259.4218935168955,
-              "movable": true,
-              "resizable": true,
-              "wrapTitle": true,
-              "wrapBody": true,
-              "readOnly": false,
-              "type": "block",
-              "pos": {
-                "x": 11.073292029338667,
-                "y": 155.6005536873231
-              },
-              "container": true,
-              "children": [
-                {
-                  "parentId": 55,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Implement note text synced with page name</p>",
-                  "body": "<p>Replace content (title or body) with page id.</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "169.71871948242188px",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 54.90625,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -113.34373741531681,
-                    "y": 190.21875626670402
-                  },
-                  "id": 56,
-                  "linkedPageId": 33
-                },
-                {
-                  "parentId": 55,
-                  "linkedPageId": null,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": false,
-                  "title": "<p>Position pasted notes next to active element if exists</p>",
-                  "body": "",
-                  "collapsible": false,
-                  "collapsed": false,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "186.140625px",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 0,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -65.00783043289493,
-                    "y": 256.6406312667041
-                  },
-                  "id": 78
-                },
-                {
-                  "parentId": 55,
-                  "anchor": {
-                    "x": 0,
-                    "y": 0
-                  },
-                  "hasTitle": true,
-                  "hasBody": true,
-                  "title": "<p>Implement positioned copying from container</p>",
-                  "body": "<p>Add elements to root temporarily</p>",
-                  "collapsible": true,
-                  "collapsed": true,
-                  "collapsedSize": {
-                    "x": "expanded",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedSize": {
-                    "x": "169.71871948242188px",
-                    "y": {
-                      "title": "auto",
-                      "body": "auto",
-                      "container": "auto"
-                    }
-                  },
-                  "expandedHeight": 54.90625,
-                  "movable": true,
-                  "resizable": true,
-                  "wrapTitle": true,
-                  "wrapBody": true,
-                  "readOnly": false,
-                  "type": "block",
-                  "pos": {
-                    "x": -85.34373741531681,
-                    "y": 240.84375626670402
-                  },
-                  "id": 49
-                }
-              ],
-              "parentId": null,
-              "id": 55
-            },
             {
               "anchor": {
                 "x": 0.5,
@@ -10623,7 +10454,7 @@
                   "title": "<p>Implement space container</p>",
                   "body": "<p>Use Display</p>",
                   "collapsible": true,
-                  "collapsed": false,
+                  "collapsed": true,
                   "collapsedSize": {
                     "x": "expanded",
                     "y": {
@@ -11667,7 +11498,7 @@
                     "y": 0
                   },
                   "hasTitle": true,
-                  "hasBody": true,
+                  "hasBody": false,
                   "title": "<p>Design overhaul</p>",
                   "body": "",
                   "collapsible": true,
@@ -14183,6 +14014,175 @@
               "parentId": null,
               "linkedPageId": null,
               "id": 0
+            },
+            {
+              "anchor": {
+                "x": 0.5,
+                "y": 0
+              },
+              "hasTitle": true,
+              "hasBody": false,
+              "title": "<h2>Next</h2>",
+              "body": "",
+              "collapsible": true,
+              "collapsed": false,
+              "collapsedSize": {
+                "x": "expanded",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "auto"
+                }
+              },
+              "expandedSize": {
+                "x": "206.14312744140625px",
+                "y": {
+                  "title": "auto",
+                  "body": "auto",
+                  "container": "310.9826354980469px"
+                }
+              },
+              "expandedHeight": 259.4218935168955,
+              "movable": true,
+              "resizable": true,
+              "wrapTitle": true,
+              "wrapBody": true,
+              "readOnly": false,
+              "type": "block",
+              "pos": {
+                "x": 11.073292029338667,
+                "y": 155.6005536873231
+              },
+              "container": true,
+              "children": [
+                {
+                  "parentId": 55,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Implement note text synced with page name</p>",
+                  "body": "<p>Replace content (title or body) with page id.</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "169.71871948242188px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 54.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -113.34373741531681,
+                    "y": 190.21875626670402
+                  },
+                  "id": 56,
+                  "linkedPageId": 33
+                },
+                {
+                  "parentId": 55,
+                  "linkedPageId": null,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": false,
+                  "title": "<p>Position pasted notes next to active element if exists</p>",
+                  "body": "",
+                  "collapsible": false,
+                  "collapsed": false,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "186.140625px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 0,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -65.00783043289493,
+                    "y": 256.6406312667041
+                  },
+                  "id": 78
+                },
+                {
+                  "parentId": 55,
+                  "anchor": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "hasTitle": true,
+                  "hasBody": true,
+                  "title": "<p>Implement positioned copying from container</p>",
+                  "body": "<p>Add elements to root temporarily</p>",
+                  "collapsible": true,
+                  "collapsed": true,
+                  "collapsedSize": {
+                    "x": "expanded",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedSize": {
+                    "x": "169.71871948242188px",
+                    "y": {
+                      "title": "auto",
+                      "body": "auto",
+                      "container": "auto"
+                    }
+                  },
+                  "expandedHeight": 54.90625,
+                  "movable": true,
+                  "resizable": true,
+                  "wrapTitle": true,
+                  "wrapBody": true,
+                  "readOnly": false,
+                  "type": "block",
+                  "pos": {
+                    "x": -85.34373741531681,
+                    "y": 240.84375626670402
+                  },
+                  "id": 49
+                }
+              ],
+              "parentId": null,
+              "id": 55
             }
           ],
           "arrows": [],
@@ -14193,8 +14193,8 @@
         },
         "camera": {
           "pos": {
-            "x": -113.26722984695743,
-            "y": 296.73380143271964
+            "x": -234.4338965136241,
+            "y": 324.06713476605296
           },
           "zoom": 1,
           "lockPos": false,

@@ -1,12 +1,6 @@
 <template>
   
-  <div style="position: absolute;
-  background-color: #2196F3;
-  pointer-events: auto;
-  border-radius: 999px;
-  width: 10px; height: 10px;
-  transform: translate(-50%, -50%);
-  z-index: 1"
+  <div class="block-handle"
   :style="{
     'left': left,
     'top': top,
@@ -67,5 +61,15 @@ export default {
 </script>
 
 <style scoped>
+.block-handle {
+  position: absolute;
 
+  border-radius: 999px;
+  width: 10px; height: 10px;
+  transform: translate(-50%, -50%);
+
+  background-color: #2196F3;
+  pointer-events: auto;
+  z-index: 1;
+}
 </style>
