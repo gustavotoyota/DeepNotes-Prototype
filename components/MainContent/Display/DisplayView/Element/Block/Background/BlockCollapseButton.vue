@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 .block-collapse-button {
-  min-width: 0;
+  min-width: 0 !important;
   width: 32px;
 }
 </style>
