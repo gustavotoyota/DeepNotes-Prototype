@@ -1,15 +1,13 @@
 <template>
   
-  <div style="position: absolute;
-  background-color: #2196F3;
-  pointer-events: auto;
-  border-radius: 999px;
-  width: 10px; height: 10px;
-  transform: translate(-50%, -50%);
-  z-index: 1"
-  :style="`left: ${left}%; top: ${top}%;
-  cursor: ${side}-resize; ` +
-  ($state.dragging.active ? `pointer-events: none; opacity: 0.7` : ``)"
+  <div class="block-handle"
+  :style="{
+    'left': left,
+    'top': top,
+    'cursor': `${side}-resize`,
+    'pointer-events': $state.dragging.active ? 'none' : 'auto',
+    'opacity': $state.dragging.active ? '0.7' : null,
+  }"
   @pointerdown.left.stop="onPointerDown">
   </div>
   
@@ -41,20 +39,20 @@ export default {
 
     left() {
       if (this.side.includes('w'))
-        return 0
+        return '0%'
       else if (this.side.includes('e'))
-        return 100
+        return '100%'
       else
-        return 50
+        return '50%'
     },
 
     top() {
       if (this.side.includes('n'))
-        return 0
+        return '0%'
       else if (this.side.includes('s'))
-        return 100
+        return '100%'
       else
-        return 50
+        return '50%'
     },
     
   },
@@ -63,5 +61,15 @@ export default {
 </script>
 
 <style scoped>
+.block-handle {
+  position: absolute;
 
+  border-radius: 999px;
+  width: 10px; height: 10px;
+  transform: translate(-50%, -50%);
+
+  background-color: #2196F3;
+  pointer-events: auto;
+  z-index: 1;
+}
 </style>

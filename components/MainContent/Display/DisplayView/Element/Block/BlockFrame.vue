@@ -1,11 +1,16 @@
 <template>
 
   <div :id="`elem-${elem.id}-frame`"
-  :style="`position: ${elem.parentId == null ? 'absolute' : 'relative'}; ` +
-  `min-width: ${minWidth}; ` +
-  `width: ${selfWidth}; ` +
-  (elem.parentId == null ? `transform: translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%); ` : '') +
-  (dragging ? `opacity: 0.7; pointer-events: none` : ``)">
+  :style="{
+    'min-width': minWidth,
+    'width': selfWidth,
+
+    'position': elem.parentId == null ? 'absolute' : 'relative',
+    'transform': elem.parentId == null ? `translate(${-elem.anchor.x * 100}%, ${-elem.anchor.y * 100}%)` : null,
+    
+    'opacity': dragging ? '0.7' : null,
+    'pointer-events': dragging ? 'none' : null,
+  }">
 
     <slot/>
 

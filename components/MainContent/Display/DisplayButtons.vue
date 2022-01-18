@@ -1,6 +1,8 @@
 <template>
 
-  <div style="position: absolute; right: 16px; top: 16px">
+  <div style="position: absolute;
+  right: 16px; top: 16px;
+  opacity: 0.9">
     
     <div style="margin-top: 1px">
 

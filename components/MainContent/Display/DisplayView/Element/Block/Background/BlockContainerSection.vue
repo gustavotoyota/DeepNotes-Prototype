@@ -1,38 +1,23 @@
 <template>
 
   <div :id="`elem-${elem.id}-container`"
-  style="display: flex /* Horizontal flex */;
-  min-height: 56.453px"
-  :style="`height: ${getSectionHeight('container')}`">
+  class="block-container"
+  :style="{ 'height': getSectionHeight('container') }">
 
-    <!-- Container content -->
+    <!-- Content -->
 
-    <div style="flex: 1 /* Body content is horizontally flexible */;
-    padding: 9px; overflow: auto;
-    display: flex; flex-direction: column"
-    :style="`width: ${selfTargetWidth} /* Auto or 0 (custom) */`">
+    <div class="container-content"
+    :style="{ 'width': selfTargetWidth }">
+
+      <!-- Placeholder -->
     
       <div v-if="elem.children.length === 0"
-      style="padding: 8px;
-      border: 1px solid;
-      color: #e0e0e0;
-      border-color: rgb(33, 33, 33) #888888 #888888 rgb(33, 33, 33);
-      position: relative;
-      height: 100%;
-      font-size: 13px;
-      background-color: #686868;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden">
+      class="container-placeholder">
         Drop notes here
 
         <div v-if="$state.dragging.active"
-        style="position: absolute;
-        left: 0; top: 0; right: 0; bottom: 0;
-        z-index: 1001"
-        class="container-drop-zone"
+        class="container-drop-zone
+        container-placeholder-drop-zone"
         :class="{ 'active' : $state.dragging.dropRegionId == elem.id }"
         @pointerenter="onContainerDropZonePointerEnter"
         @pointerleave="onContainerDropZonePointerLeave"
@@ -41,7 +26,7 @@
       </div>
 
       <DisplayElement v-for="(child, idx) of elem.children" :key="child.id"
-      :style="`margin-top: ${idx === 0 ? 0: '5px'}`"
+      :style="{ 'margin-top': idx === 0 ? '0' : '5px' }"
       :elem="child"
       :target-width="selfTargetWidth"/>
     
@@ -113,8 +98,70 @@ export default {
 </script>
 
 <style scoped>
+.block-container {
+  display: flex;
+
+  min-height: 56.453px;
+}
+
+
+
+
+.container-content {
+  flex: 1;
+
+  padding: 9px;
+
+  display: flex;
+  flex-direction: column;
+  
+  overflow: auto;
+}
+
+
+
+
+.container-placeholder {
+  position: relative;
+
+  height: 100%;
+
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: rgb(33, 33, 33) #888888 #888888 rgb(33, 33, 33);
+
+  padding: 8px;
+
+  color: #e0e0e0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  
+  font-size: 13px;
+  background-color: #686868;
+}
+
+
+
+
+.container-placeholder-drop-zone {
+  position: absolute;
+
+  left: 0; top: 0;
+  right: 0; bottom: 0;
+
+  z-index: 1001;
+}
+
+
+
+
 .container-drop-zone {
   background-color: #42A5F5;
+
   opacity: 0;
 }
 .container-drop-zone.active {

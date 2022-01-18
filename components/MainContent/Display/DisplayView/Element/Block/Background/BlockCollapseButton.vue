@@ -1,12 +1,11 @@
 <template>
   
   <div v-if="elem.collapsible && topSection === section"
-  style="flex: none /* Button is horizontally inflexible */">
+  style="flex: none">
 
     <v-btn plain tile
-    style="min-width: 0 /* Allows reducing collapse button width */;
-    width: 32px /* Reduces collapse button width to 32px */"
-    :style="`height: ${numSections === 1 ? '38.45px' : '100%'}`"
+    class="block-collapse-button"
+    :style="{ 'height': numSections === 1 ? '38.45px' : '100%' }"
     @pointerdown.left.stop
     @click.left.stop="$app.collapsing.toggleCollapsed(elem)"
     @dblclick.left.stop>
@@ -47,6 +46,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.block-collapse-button {
+  min-width: 0;
+  width: 32px;
+}
 </style>

@@ -1,8 +1,7 @@
 <template>
 
   <div v-if="selected && elem.resizable"
-  style="position: absolute; pointer-events: none;
-  left: 0; right: 0; top: 0; bottom: 0">
+  class="block-handles">
 
     <div v-if="elem.parentId == null">
       <BlockHandle :elem="elem" side="nw" :section="topSection"/>
@@ -38,4 +37,11 @@ export default {
 </script>
 
 <style scoped>
+.block-handles {
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+
+  pointer-events: none;
+}
 </style>

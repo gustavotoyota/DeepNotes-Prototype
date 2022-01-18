@@ -1,14 +1,11 @@
 <template>
 
-  <v-sheet style="border-radius: 7px;
-  border: 1px solid #212121;
-  border-left-color: #757575;
-  border-top-color: #757575;
-  height: 100%;
-  overflow: hidden"
+  <v-sheet class="block-background"
   elevation="6"
-  :style="`cursor: ${(elem.linkedPageId == null || selected) ? 'auto' : 'pointer' };
-  background-color: ${color}`"
+  :style="{
+    'cursor': (elem.linkedPageId == null || selected) ? null : 'pointer',
+    'background-color': color,
+  }"
   @pointerdown.left.stop="onPointerDown"
   @click.left.stop="onClick">
 
@@ -80,6 +77,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.block-background {
+  border-radius: 7px;
+  border: 1px solid #212121;
+  border-left-color: #757575;
+  border-top-color: #757575;
 
+  height: 100%;
+
+  overflow: hidden;
+}
 </style>
