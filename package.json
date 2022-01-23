@@ -6,8 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "postinstall": "patch-package"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
@@ -17,7 +16,6 @@
     "highlight.js": "^11.3.1",
     "nuxt": "^2.15.8",
     "patch-package": "^6.4.7",
-    "postinstall-postinstall": "^2.1.0",
     "quill-image-drop-module": "^1.0.3",
     "quill-image-resize-module": "^3.0.0",
     "vue": "^2.6.14",

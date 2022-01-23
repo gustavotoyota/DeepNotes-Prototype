@@ -4,11 +4,11 @@ WORKDIR '/app'
 COPY package*.json ./
 
 RUN npm i -g yarn --force
+RUN yarn install
 
 COPY . .
 
-RUN yarn install
-
+RUN yarn patch-package
 RUN yarn build
 
 ENV HOST 0.0.0.0
