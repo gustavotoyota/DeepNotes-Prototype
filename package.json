@@ -31,5 +31,9 @@
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.12.3"
+  },
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.x"
   }
 }
