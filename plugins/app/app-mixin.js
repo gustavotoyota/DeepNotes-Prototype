@@ -27,10 +27,12 @@ export default async function ({ app }) {
       globalThis.$getters = $store.getters
       globalThis.$commit = $store.commit
 
-      Object.defineProperty(globalThis, '$state', {
-        get() { return $store.state },
-        set(value) { $store.replaceState(value) },
-      })
+      if (!globalThis.$state) {
+        Object.defineProperty(globalThis, '$state', {
+          get() { return $store.state },
+          set(value) { $store.replaceState(value) },
+        })
+      }
     },
 
     created() {
